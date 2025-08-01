@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "course-sm"
+  title: "Social Movements in Germany"
   navbar:
     left:
       - href: index.qmd
