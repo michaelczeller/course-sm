@@ -8,8 +8,15 @@ Webpage: <https://michaelzeller.de/>
 Office hour: Wednesdays, 11.00 - 12.00    
 Office: GSI (Oettingenstr. 67) Room H105    
 
+<!-- NOTES FROM PREVIOUS CLASS EVALUATION (2024) -->
+<!-- - "Weniger" Inhalt pro Sitzung da, dass zeitlich nicht immer alles passt -->
+<!-- - Assigning everyone a social movement is good in theory but most people seemed to bring up other examples in class so maybe this isn’t necessary -->
+<!-- - Etwas weniger Fallbeispiele als Pflichtlektüre, eher Fokussierung auf ein paar wenige musterhafte Fälle, die dann als Orientierung gelten können, wenn man die vermittelten Inhalte selbst auf Beispiele anwenden will. -->
+<!-- - manchmal sollte die Zeit besser eingehalten werden, also vllt ein bisschen weniger Stofffülle und bessere Darstellung von Zusammenhängen auf der Power Point -->
 
-
+<!-- NOTES FROM far right course EVALUATION (2025) FOR ONLINE MATERIALS: -->
+<!-- - Maybe encourage to make mistakes regarding the english language (I sometimes did not raise my hand because I was "too shy" to speak up compared to the students with very good english, as they had a bigger academic vocabulary than I did -->
+<!-- - The website is a little bit confusing at first. For me, it was not very intuitive. I couldn't find where the readings were (ı thought it would be under content and not under schedule) at first, but once I got used to it, it got easier. -->
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)

@@ -1,0 +1,2521 @@
+---
+title: "Readings"
+engine: knitr 
+reading:
+  pdf1a: "readings/1_Tarrow2011_intro_and_ch1.pdf"
+  pdf2a: "readings/2_Boudreau1996.pdf"
+  pdf2b: "readings/2_Kitschelt1986.pdf"
+  pdf2c: "readings/2x_GiugniETAL.pdf"
+  pdf2d: "readings/2x_Guzman-Concha2015.pdf"
+  pdf2e: "readings/2x_McCartheyZald1977.pdf"
+  pdf3a: "readings/3_BenfordSnow2000.pdf"
+  pdf3b: "readings/3_Berman1997.pdf"
+  pdf3c: "readings/3x_Heinrich2005.pdf"
+  pdf3d: "readings/3x_Ziegler2010.pdf"
+  pdf4a: "readings/4_dellaPortaDiani2006_ch5.pdf"
+  pdf4b: "readings/4_Tarrow2011_ch6.pdf"
+  pdf4c: "readings/4x_DaphiETAL2021.pdf"
+  pdf4d: "readings/4x_GorskiETAL2018.pdf"
+  pdf4e: "readings/4x_HellmeierVuellers2022.pdf"
+  pdf5a: "readings/5_PollettaJasper2001.pdf"
+  pdf5b: "readings/5x_dellaPortaDiani2006_ch4.pdf"
+  pdf5c: "readings/5x_GuentherETAL2015.pdf"
+  pdf5d: "readings/5x_Ransan-CooperETAL2018.pdf"
+  pdf6a: "readings/6_dellaPortaDiani2006_ch6.pdf"
+  pdf6b: "readings/6_McAdam1983.pdf"
+  pdf6c: "readings/6x_DuncombeHarrebye2022.pdf"
+  pdf6d: "readings/6x_Rojas2006.pdf"
+  pdf6e: "readings/6x_StaggenborgLecomte2009.pdf"
+  pdf7a: "readings/7_JenningsSaunders2019.pdf"
+  pdf7b: "readings/7x_dellaPortaDiani2006_ch8.pdf"
+  pdf7c: "readings/7x_McCarthyETAL1996.pdf"
+  pdf8a: "readings/8_HeinzeWeisskircher2023.pdf"
+  pdf8b: "readings/8x_Holdo2019.pdf"
+  pdf8c: "readings/8x_McCammonETAL2015.pdf"
+  pdf9a: "readings/9_BerntzenWeisskircher2016.pdf"
+  pdf9b: "readings/9x_dellaPortaDiani2006_ch8.pdf"
+  pdf10a: "readings/10_MeyerStaggenberg1996.pdf"
+  pdf10b: "readings/10_Reynolds-StensonEarl2018.pdf"
+  pdf10c: "readings/10x_Farrington2008.pdf"
+  pdf10d: "readings/10x_GoldPena2019.pdf"
+  pdf10e: "readings/10x_HagerETAL2022.pdf"
+  pdf10f: "readings/10x_Hamdaoui2022.pdf"
+  pdf10g: "readings/10x_Inclan2012.pdf"
+  pdf10h: "readings/10x_Sewell2020.pdf"
+  pdf11a: "readings/11_Diani2000.pdf"
+  pdf11b: "readings/11_Volk2021.pdf"
+  pdf11c: "readings/11x_Buelow2018.pdf"
+  pdf12a: "readings/12_AmentaETAL2010.pdf"
+  pdf12b: "readings/12_MadestamETAL2013.pdf"
+  pdf12c: "readings/12x_CressSnow2000.pdf"
+  pdf12d: "readings/12x_GiugniYamasaki2009.pdf"
+  pdf12e: "readings/12x_HuangSun2020.pdf"
+  pdf12f: "readings/12x_Mazumder2017.pdf"
+  pdf12g: "readings/12x_Mazumder2018.pdf"
+  pdf13a: "readings/13_Zeller2021.pdf"
+  pdf13b: "readings/13x_Demirel-Pegg2017.pdf"
+  pdf13c: "readings/13x_KwokChan2022.pdf"
+  pdf14a: "readings/14_RoneFielitz2023.pdf"
+  pdf14b: "readings/14_Zhang2023.pdf"
+  pdf14c: "readings/14x_BarrieETAL2023.pdf"
+  pdf14d: "readings/14x_MolsJetten2014.pdf"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(timeDate)
+library(tibble)
+library(dplyr)
+library(knitr)
+
+# https://www.benlinzmeier.rocks/post/an-rmarkdown-syllabus-template/
+# http://svmiller.com/blog/2016/07/r-markdown-syllabus/
+
+library(lubridate) # for submission date of assignments
+
+# library(RefManageR)
+# bib <- ReadBib("library.bib")
+# myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
+
+# https://www.lmu.de/en/workspace-for-students/abc-study-guide/lecture-periods/index.html
+# https://www.ferienwiki.de/feiertage/de/bayern
+
+#This code chunk sets up a table of meeting days for the course.
+#You can set days of the week for course meetings (e.g. Monday and Wednesday).
+#Semester start and end dates are selected and then university holidays like spring break are specified.
+#Days of the week that the course meets. Must be full day name in quotes.
+Days <- c("Thursday")
+#Semester start date for classes as YYYY/M/D.
+SemesterStart <- as.Date("2025/10/16")
+#Semester end date for classes as YYYY/M/D.
+SemesterEnd <- as.Date("2026/2/7")
+#Fall break start and stop date.
+WinterBreak <-
+  seq.Date(
+    from = as.Date("2025/12/22"),
+    to = as.Date("2026/1/6"),
+    by = "day"
+  )
+#Spring break start and stop date.
+# SpringBreak <-
+#   seq.Date(
+#     from = as.Date("2022/02/28"),
+#     to = as.Date("2022/03/06"),
+#     by = "day"
+#   )
+#Creates a list of days within the semester.
+SemesterDays <-
+  seq.Date(from = SemesterStart, to = SemesterEnd, by = "day")
+#Add day before Thanksgiving.
+#Add day before Thanksgiving.
+# DayBeforeThnks<-as.Date(holiday(
+#     year = getRmetricsOptions("currentYear"),
+#     Holiday = c("USThanksgivingDay")))-1
+#Full list of holidays that there are no classes including breaks.
+Holidays <-
+  c(as.Date(holiday(
+    year = getRmetricsOptions("currentYear"),
+    Holiday = c("USLaborDay", "USThanksgivingDay", "USMLKingsBirthday")
+  )), WinterBreak)
+#Create a list of semester days excluding holidays.
+SemesterDays <- SemesterDays[!SemesterDays %in% Holidays]
+#Make dataframe with all semester days.
+ClassDays <- data.frame(index = 1:length(SemesterDays))
+#Insert dates.
+ClassDays$Date <- SemesterDays
+#Insert weekday designation.
+ClassDays$Weekday <- weekdays(ClassDays$Date)
+#Limit to the class meeting days.
+MeetingDays <- ClassDays[ClassDays$Weekday %in% Days, ]
+#Create numeric list of weeks.
+Week <- cut.Date(MeetingDays$Date, breaks = "week")
+levels(Week) <- 1:length(levels(Week))
+MeetingDays$Week <- Week
+MeetingDays$Class <- 1:nrow(MeetingDays)
+
+Lecture_Topic <- c("Introduction and the development of social movements (SMs)", # Class 1 - (Tarrows intro and chapter 1)
+                   "SM theories: collective behaviour, resource mobilisation, political processes", # Class 2
+                   "SM theories: framing, civil society", # Class 3
+                   "Mobilisation, recruitment, participation", # Class 4
+                   "Collective identity and emotions", # Class 5
+                   "Organisation, strategies and tactics", # Class 6
+                   "SMs and the media", # Class 7 
+                   "SM coalitions", # Class 8
+                   "State responses", # Class 9
+                   "Counter-mobilisation and countermovements", # Class 10
+                   "SMs online", # Class 11
+                   "SM impact", # Class 12
+                   "Demobilisation", # Class 13
+                   "Contemporary social movements and beyond: climate, migration") # Class 14
+                   # "NO CLASS MEETING TODAY") # Class 15"
+
+          
+links <- c("#class1","#class2","#class3","#class4","#class5","#class6","#class7","#class8","#class9","#class10","#class11","#class12","#class13","#class14")
+
+MeetingDays <- bind_cols(MeetingDays, Lecture = Lecture_Topic)
+#### Grade table ####
+Grades <- tribble( ~ Grade,
+                   ~ Range,
+                   "A",
+                   "90-100",
+                   "B",
+                   "80-89",
+                   "C",
+                   "70-79",
+                   "D",
+                   "60-69",
+                   "F",
+                   "< 60")
+####Assignment weight table####
+Weights <- tribble(
+                    ~ Item,
+                    ~ Weight,
+                    "Writing scaffolding",
+                    "20 %",
+                    "Semester Project",
+                    "25 %",
+                    "Labratory Assignments",
+                    "20 %",
+                    "Midterm Exam",
+                    "15 %",
+                    "Final Exam",
+                    "20 %"
+                  )
+```
+
+
+```{r include=FALSE}
+biblio <- bibtex::read.bib("library.bib")
+```
+
+
+```{r Plan, echo=FALSE}
+#| message: false
+#| warning: false
+#| paged-print: false
+# Load necessary library
+library(dplyr)
+library(kableExtra)
+
+plan <- data.frame(
+  block=c("social movement theories", "social movement theories", "social movement theories", "aspects of social movement activity", "aspects of social movement activity", "aspects of social movement activity", "aspects of social movement activity", "aspects of social movement activity", "aspects of social movement activity", "aspects of social movement activity", "social movements online, in effect, dying out, and going forward", "social movements online, in effect, dying out, and going forward", "social movements online, in effect, dying out, and going forward", "social movements online, in effect, dying out, and going forward"),
+  theme=c("1. Introduction and the development of social movements (SMs)", # Class 1 - (Tarrows intro and chapter 1)
+          "2. SM theories: collective behaviour, resource mobilisation, political processes", # Class 2
+          "3. SM theories: framing, civil society", # Class 3
+          "4. Mobilisation, recruitment, participation", # Class 4
+          "5. Collective identity and emotions", # Class 5
+          "6. Organisation, strategies and tactics", # Class 6
+          "7. SMs and the media", # Class 7 
+          "8. SM coalitions", # Class 8
+          "9. State responses", # Class 9
+          "10. Counter-mobilisation and countermovements", # Class 10
+          "11. SMs online", # Class 11
+          "12. SM impact", # Class 12
+          "13. Demobilisation", # Class 13
+          "14. Contemporary social movements and beyond: climate, migration"),
+  content=c("","grievance, relative deprivation; strategy, tactics, resources, organisations; opportunity structures, threats", "diagnostic, prognostic, motivational frames (among others); (un)civil society", "mobilising structures; social networks; recruitment and influencers", "intersectionality; collective identity", "hierarchical and horizontal organisation; direct/disruptive and indirect/ demonstrative action", "agenda-setting; gatekeepers", "coalition; bridging", "accommodation, disregard, opposition; repression", "counter-mobilisation characteristics", "social media platforms; transnationalisation", "individual, group, political, cultural impacts", "internal and external demobilising factors", "contemporary climate- and migration-related activism"),
+  actors=c("","groups/ organisations (agency); institutions (structure)", "movement organisations; civil society actors", "movement organisations; social networks", "movement organisations; collective actors", "movement organisations; leaders", "movement organisations; news media actors", "movements; movement organisations", "movements; movement organisations; state authorities; political parties", "(counter-)movements; (counter-)movement organisations", "individuals; activists; networks", "movement organisations; activists", "individuals; movement organisations", "movements; movement organisations"),
+  literature=c("Tarrow","Boudreau; Kitschelt", "Benford and Snow; Berman", "della Porta and Diani; Tarrow", "Polletta and Jasper", "della Porta and Diani; McAdam", "Jennings and Saunders; McCarthy", "Heinze and Weisskircher; McCammon", "Berntzen and Weisskircher", "Meyer and Staggenborg", "Diani; Volk", "Amenta; Madestam; Cress and Snow", "Zeller", "Rone and Fielitz; Zhang")
+  # KlausurConnection=c()
+)
+
+plan$Date <- MeetingDays$Date
+
+plan <- plan %>% select(block, Date, theme, content, actors, literature)
+
+# plan$theme <- paste0("[", plan$theme, "](", links, ")")
+plan$theme <- paste0('<a href="', links, '">', plan$theme, '</a>')
+
+# paste0('<a href="#', plan$Theme, '">', plan$Theme, '</a>')
+
+colnames(plan)<-c("Block","Date","Theme","Content","Key Actors","Key literature")
+
+# kable(plan, format = "latex")  # For LaTeX output
+# kable(plan, format = "html")   # For HTML output
+
+plan %>% 
+  group_by(Block) %>% 
+  kable("html", escape = FALSE) %>% 
+  column_spec(1, bold = TRUE) %>% 
+  collapse_rows(1, valign="middle") %>% 
+  column_spec(2, width = "80px") %>% 
+  column_spec(2, width = "120px")
+
+```
+
+
+<!-- **[Holidays]{style="color:red;"}: 1 May (Class 2), 29 May (Class 6), and 19 June (Class 9) are all holidays. [Class slides will be made available for these days]{style="color:red;"}** -->
+
+<!-- Adding syllabus information -->
+
+<!-- INTERACTIVE SLIDES: <https://www.youtube.com/watch?v=41yTFhQBXaE> -->
+
+
+```{r Schedule, message=FALSE, warning=FALSE}
+#| eval: false
+#| include: false
+
+library(kableExtra)
+
+# MeetingDays$Lecture <- paste0("[", MeetingDays$Lecture, "](", links, ")")
+
+kable(MeetingDays[,c("Date","Class","Week","Lecture")],
+      # caption = "Course Schedule.",
+      align = c("l","c","c","l"),
+      format = "simple"
+      ) %>% kableExtra::kable_styling(latex_options = "hold_position")
+```
+
+
+# Course outline and readings
+<!-- Studienleistungen -->
+
+## PART I - social movement theories
+
+*In the first sessions of the course we will focus first on understanding the overarching systems of theory that have been used to investigate social movements. What is a social movement? How should we try to understand them? With the basis provided by different bodies of theory, we can proceed to examining aspects of social movement activity.*
+
+## Class 1 - `r nth(MeetingDays$Lecture, 1)` {#class1}
+
+### Required reading
+
+- *__Introduction and Chapter 1__* from `r capture.output(print(biblio["Tarrow2011"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf1a`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf1a`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+<!-- ### Further reading -->
+
+## Class 2 - `r nth(MeetingDays$Lecture, 2)` {#class2}
+
+### Required reading
+
+- `r capture.output(print(biblio["Boudreau1996"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf2a`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf2a`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["Kitschelt1986"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf2b`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf2b`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+### Further reading
+
+- `r capture.output(print(biblio["Giugni2005"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf2c`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf2c`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["guzman-concha2015RadicalSocialMovements"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf2d`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf2d`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["McCarthy1977"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf2e`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf2e`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+
+## Class 3 - `r nth(MeetingDays$Lecture, 3)` {#class3}
+
+### Required reading
+
+- `r capture.output(print(biblio["Benford2000"]))` 
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf3a`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf3a`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["Berman1997"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf3b`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf3b`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+### Further reading
+
+- `r capture.output(print(biblio["Heinrich2005"]))` 
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf3c`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf3c`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["Ziegler2010"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf3d`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf3d`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+## PART II - Aspects of social movement activity
+
+*After laying the theoretical foundations for studying social movements, we proceed in this set of class sessions to examine various facets of social movement activity. This includes looking at how movements emerge and form, what characteristics and attributes they take on (and how important they are), how movements operate, and how they interact with the media, other public actors, and the state.*
+
+## Class 4 - `r nth(MeetingDays$Lecture, 4)` {#class4}
+
+### Required reading
+
+- *__Chapter 5__* from `r capture.output(print(biblio["dellaPortaDiani2009"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf4a`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf4a`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- *__Chapter 5__* from `r capture.output(print(biblio["Tarrow2011"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf4b`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf4b`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+### Further reading
+
+- `r capture.output(print(biblio["Daphi2021"]))` 
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf4c`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf4c`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["Gorski2018"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf4d`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf4d`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["hellmeier2022DynamicsDeterminantsRightwing"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf4e`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf4e`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+## Class 5 - `r nth(MeetingDays$Lecture, 5)` {#class5}
+
+### Required reading
+
+- `r capture.output(print(biblio["PollettaJasper2001"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf5a`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf5a`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+### Further reading
+
+- *__Chapter 4__* from `r capture.output(print(biblio["dellaPortaDiani2009"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf5b`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf5b`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["Guenther2015"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf5c`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf5c`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["Ransan-Cooper2018"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf5d`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf5d`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+## Class 6 - `r nth(MeetingDays$Lecture, 6)` {#class6}
+
+### Required reading
+
+- *__Chapter 6__* from `r capture.output(print(biblio["dellaPortaDiani2009"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf6a`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf6a`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["McAdam1983"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf6b`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf6b`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+### Further reading
+
+- `r capture.output(print(biblio["duncombe2022CopenhagenExperimentTesting"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf6c`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf6c`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["Rojas2006"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf6d`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf6d`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["Staggenborg2009"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf6e`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf6e`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+
+## Class 7 - `r nth(MeetingDays$Lecture, 7)` {#class7}
+
+### Required reading
+
+- `r capture.output(print(biblio["JenningsSaunders2019"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf7a`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf7a`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+### Further reading
+
+- *__Chapter 8__* from `r capture.output(print(biblio["dellaPortaDiani2009"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf7b`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf7b`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["McCarthy1996"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf7c`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf7c`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+## Class 8 - `r nth(MeetingDays$Lecture, 8)` {#class8}
+
+### Required reading
+
+- `r capture.output(print(biblio["HeinzeWeisskricher2022"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf8a`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf8a`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+### Further reading
+
+- `r capture.output(print(biblio["Holdo2019"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf8b`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf8b`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["McCammon2015"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf8c`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf8c`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+## Class 9 - `r nth(MeetingDays$Lecture, 9)` {#class9}
+
+### Required reading
+
+- `r capture.output(print(biblio["BerntzenWeisskricher2016"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf9a`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf9a`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+### Further reading
+
+- *__Chapter 8__* from `r capture.output(print(biblio["dellaPortaDiani2009"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf9b`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf9b`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+## Class 10 - `r nth(MeetingDays$Lecture, 10)` {#class10}
+
+### Required reading
+
+- `r capture.output(print(biblio["Meyer1996"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf10a`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf10a`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["Reynolds-Stenson2018"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf10b`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf10b`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+### Further reading
+
+- `r capture.output(print(biblio["Farrington2008"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf10c`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf10c`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["Gold2018"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf10d`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf10d`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["HagerETAL2021"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf10e`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf10e`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["hamdaoui2022StylisticAntipopulismAnalysis"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf10f`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf10f`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["Inclan2012"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf10g`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf10g`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["sewell2020AntifascismNeighborhoodDaily"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf10h`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf10h`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+
+## PART III - Social movements online, in effect, dying out, and going forward
+
+*In this final set of class sessions, we will focus on some of the pivotal questions of the importance of social movements. First, we will look at how the proliferation of online spaces has changed (and not changed) social movement activity. Then, we turn to the outcomes of movements: what impacts, what effects do they have? Correspondingly, we will consider how movements demobilise, whether after successfully achieving their objectives or not. Finally, our last session will focus on some of the largest and most prolific movements in contemporary Germany.*
+
+## Class 11 - `r nth(MeetingDays$Lecture, 11)` {#class11}
+
+### Required reading
+
+- `r capture.output(print(biblio["Diani2000"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf11a`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf11a`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["volk2021PoliticalPerformancesControl"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf11b`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf11b`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+### Further reading
+
+- `r capture.output(print(biblio["VonBulow2018"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf11c`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf11c`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+## Class 12 - `r nth(MeetingDays$Lecture, 12)` {#class12}
+
+### Required reading
+
+- `r capture.output(print(biblio["Amenta2010"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf12a`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf12a`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["Madestam2013"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf12b`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf12b`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+### Further reading
+
+- `r capture.output(print(biblio["Cress2000"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf12c`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf12c`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["Giugni2009"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf12d`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf12d`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["Huang2019"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf12e`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf12e`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["Mazumder2017"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf12f`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf12f`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["mazumder2018PersistentEffectCivil"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf12g`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf12g`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+## Class 13 - `r nth(MeetingDays$Lecture, 13)` {#class13}
+
+### Required reading
+
+- `r capture.output(print(biblio["Zeller2021_qca"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf13a`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf13a`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+### Further reading
+
+- `r capture.output(print(biblio["Demirel-Pegg2017"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf13b`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf13b`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["kwok2022DataficationImplicatedNetworks"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf13c`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf13c`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+
+## Class 14 - `r nth(MeetingDays$Lecture, 14)` {#class14}
+
+### Required reading
+
+- `r capture.output(print(biblio["rone2023StopPactForeign"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf14a`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf14a`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["zhang2023DiffusionDynamicsDigital"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf14b`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf14b`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+
+### Further reading
+
+- `r capture.output(print(biblio["barrie2023DoesProtestInfluence"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf14c`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf14c`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+- `r capture.output(print(biblio["Mols2014"]))`
+
+::: {.callout-note collapse="true"}
+## Reading file
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$reading$pdf14d`" target="_blank">
+    <i class="bi-download"></i>&ensp;Download reading
+  </a>
+</p>
+
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$reading$pdf14d`" style="border: 0.5px"></iframe>
+</div>
+```
+:::
+
+
+<!-- # Class 2 -->
+
+<!-- ::: {.callout-caution collapse="true"} -->
+<!-- ## Reading X -->
+<!-- ```{css echo=FALSE} -->
+<!-- .embed-container { -->
+<!--     position: relative; -->
+<!--     padding-bottom: 129%; -->
+<!--     height: 0; -->
+<!--     overflow: hidden; -->
+<!--     max-width: 100%; -->
+<!-- } -->
+
+<!-- .embed-container iframe, -->
+<!-- .embed-container object, -->
+<!-- .embed-container embed { -->
+<!--     position: absolute; -->
+<!--     top: 0; -->
+<!--     left: 0; -->
+<!--     width: 100%; -->
+<!--     height: 100%; -->
+<!-- } -->
+<!-- ``` -->
+
+<!-- ```{=html} -->
+<!-- <p class="text-center"> -->
+<!--   <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$slides$pdf2`" target="_blank"> -->
+<!--     <i class="bi-download"></i>&ensp;Download class slides -->
+<!--   </a> -->
+<!-- </p> -->
+
+<!-- <div class="embed-container"> -->
+<!--   <iframe src="`r rmarkdown::metadata$slides$pdf2`" style="border: 0.5px"></iframe> -->
+<!-- </div> -->
+<!-- ``` -->
+<!-- ::: -->
+
