@@ -22,8 +22,8 @@ website:
 format:
   html:
     theme:
-      - cyborg
-      - brand
+      dark: darkly
+      light: flatly
     css: styles.css
     toc: true
 
