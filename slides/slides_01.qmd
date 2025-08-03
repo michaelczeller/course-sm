@@ -1,0 +1,104 @@
+---
+title: "Class 1: Social Movements in Germany"
+subtitle: "Introduction and the development of social movements"
+author: "[Dr. Michael C. Zeller](https://michaelzeller.de)"
+format: 
+  rladies-revealjs:
+    footer: ""
+    slide-number: c/t
+    toc: TRUE
+    toc-depth: 1
+    toc-title: Agenda for the day
+    menu: TRUE
+    theme: [default, custom_options]
+    background-transition: fade
+incremental: false
+embed-resources: true
+# runtime: shiny
+bibliography: ../../../library.bib
+---
+
+
+# Course Introduction {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="60%"}
+
+- What are 'social movements'?
+- How this course relates to Prof. Bolleyer's lecture
+- Course structure
+- Learning aims
+- Course assessments
+- Office hours and communication
+- Course website
+- Q & A
+- student introductions
+
+<!-- https://tenor.com/en-GB/view/crazy-german-flag-germany-trikot-gif-12722037627503073743 -->
+
+:::
+
+::: {.column width="40%" .right}
+
+<div class="tenor-gif-embed" data-postid="12722037627503073743" data-share-method="host" data-aspect-ratio="0.564257" data-width="70%">
+  <a href="https://tenor.com/view/crazy-german-flag-germany-trikot-gif-12722037627503073743">Crazy German GIF</a>
+  from <a href="https://tenor.com/search/crazy-gifs">Crazy GIFs</a>
+</div>
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+:::
+::::
+
+<!-- # Poll: course introduction {background-color="#2c844c"} -->
+
+<!-- :::: {.columns} -->
+<!-- :::{.column width="35%"} -->
+<!-- ![](slide_files/01/class1_poll_QR.png){fig-alt="A QR code for the survey."} -->
+
+<!-- ::: -->
+
+<!-- ::: {.column width="65%" .center} -->
+<!-- <!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code --> -->
+<!-- Take the survey at **<https://forms.gle/iXweLEsJ7VTANrmGA>** -->
+
+<!-- - Most significant cause of political violence? -->
+<!-- - Any politically violent groups you are interested in studying? -->
+<!-- - Have you taken any methods course? -->
+<!-- - Are you familiar with any analytical software (e.g., R, Python, Stata, SPSS)? -->
+<!-- - What is your biggest concern for this course? -->
+
+<!-- ::: -->
+<!-- ::::  -->
+
+
+## First...
+
+::: {style="text-align: center;"}
+**[Can you understand me?]{style="color:indigo; font-size:80px;"}** 
+:::
+
+. . . 
+
+- Lots of different languages represented in the room &rarr; but please don't be shy: [feel [empowered]{style="color:cadetblue;"} to participate, even if you are not so confident in your English skills]{style="color:red;"}
+    + I will avoid 'calling on' people to contribute
+
+## First task...
+
+[Read the syllabus!]{style="font-size:120px;"}
+
+<!-- <div style="font-size: 50px;">Read the syllabus!</div> -->
+
+- We have a shiny new (developing) website for the course
+    + <https://michaelzeller.de/course-pv/>
+
+- Before our next meeting, your task is to peruse the website
+    + especially the [Syllabus]{style="color:red;"} and [Readings]{style="color:red;"} pages. 
+
+
+```{r}
+pagedown::chrome_print(file.path("..", "docs/slides", "slides_01.html"))
+```
+
+
+## References
+
