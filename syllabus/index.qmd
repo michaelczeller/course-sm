@@ -247,6 +247,23 @@ rub %>%
 
 ## Examination (Klausur)
 
+<!-- PAST QUESTIONS: -->
+<!-- 2024-5 -->
+<!-- - What elements do social movement strategies consist of? How do different strategies seek to effect change? Discuss with examples. -->
+<!-- - Why do movement organisations form coalitions; what are the advantages and risks? What factors (within organisations, between organisations, and contextually) influence whether movement organisations form coalitions?  -->
+<!-- - What are three theories that explain why movements emerge, how they act, and whether they have an impact? Describe one concept from each theory and why it is important for understanding social movements.  -->
+<!-- - How do movements frame issues? What different sorts of frames are used? Why are they important for movements?	 -->
+<!-- - A core feature of social movements is that they generate a 'collective identity' among their members. What is collective identity, what does it consist of, how is it produced, and why is it important for movements?  -->
+<!-- - How can movements impact politics and society? Discuss with examples. -->
+
+<!-- 2023-4 -->
+<!-- - How do movements emerge? What key concepts help to understand how some people come together in a movement to engage in collective action?  -->
+<!-- - How do movements frame issues? What different sorts of frames are used? Why are they important for movements? -->
+<!-- - Movements often provoke responses from state and/or other social actors. Describe (with examples) how state actors can respond to movements; and describe (with examples) how other social actors (such as countermovements) can respond to movements.  -->
+<!-- - Why do people participate in movements? Consider the 'collective action problem' and how both individuals and (social movement) organisations are relevant to explaining why people participate.  -->
+<!-- - A core feature of social movements is that they generate a 'collective identity' among their members. What is collective identity, what does it consist of, how is it produced, and why is it important for movements?  -->
+<!-- - How can movements impact politics and society? Discuss with examples. -->
+
 Students will not have an examination in this course, but they will in the '**Einführung Politisches System der BRD**' course. During that examination, they will respond to one of three essay questions based on the content of this course.
 
 ### Information on examination
