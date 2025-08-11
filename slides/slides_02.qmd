@@ -1,0 +1,903 @@
+---
+title: "Class 2: Social Movements in Germany"
+subtitle: "Collective behaviour, resource mobilisation, political processes"
+author: "[Dr. Michael C. Zeller](https://michaelzeller.de)"
+format: 
+  rladies-revealjs:
+    footer: ""
+    slide-number: c/t
+    toc: TRUE
+    toc-depth: 1
+    toc-title: Agenda for the day
+    menu: TRUE
+    theme: [default, custom_options]
+    background-transition: fade
+incremental: false
+embed-resources: true
+# runtime: shiny
+bibliography: ../../../library.bib
+---
+
+# Opening notes {background-color="#2c844c"}
+
+::: {.tenor-gif-embed data-postid="14209777" data-share-method="host" data-aspect-ratio="1.94" data-width="70%"}
+<div class="tenor-gif-embed" data-postid="14209777" data-share-method="host" data-aspect-ratio="1.94" data-width="100%"><a href="https://tenor.com/view/open-gif-14209777">Open Sticker</a>from <a href="https://tenor.com/search/open-stickers">Open Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+
+```{=html}
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+```
+
+## Presentation groups
+
+Remember: topic to me at least by Week 4
+
+::: panel-tabset
+## December
+
+| Date    | Presenters                       | Method |
+| -------:|:---------------------------------|:------:|
+| 4 Dec:  |                                  | TBD    | 
+| 11 Dec: |                                  | TBD    | 
+| 18 Dec: |                                  | TBD    | 
+
+: Presentations line-up
+
+## January
+
+| Date    | Presenters                       | Method |
+| -------:|:---------------------------------|:------:|
+| 8 Jan:  |                                  | TBD    | 
+| 15 Jan: |                                  | TBD    | 
+| 22 Jan: |                                  | TBD    | 
+| 29 Jan: |                                  | TBD    | 
+
+: Presentations line-up
+
+:::
+
+<!-- []{style="font-size:10px;"} -->
+
+
+# Reviewing prominent social movement theories {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="60%"}
+- Collective behaviour theory
+- Resource mobilisation theory 
+- Political process theory 
+
+:::
+
+::: {.column width="40%" .right}
+<div class="tenor-gif-embed" data-postid="18582444" data-share-method="host" data-aspect-ratio="1.33333" data-width="100%"><a href="https://tenor.com/view/quotation-marks-chris-farley-air-quotes-supposedly-quote-gif-18582444">Quotation Marks Chris Farley GIF</a>from <a href="https://tenor.com/search/quotation+marks-gifs">Quotation Marks GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+## Collective behaviour theory (CBT)
+
+fundamental question: **[why]{style="color:violet;"} is this _thing_ happening?**
+
+- reckoning with legacy of interwar era: 
+    + why was their the national socialist movement? 
+    + why was their the Bolshevik revolution?
+    + why did people join such movements instead of participating in 'institutional politics'?
+
+## Collective behaviour theory (CBT)
+
+fundamental question: **[why]{style="color:violet;"} is this _thing_ happening?**
+
+- a mix of sociological and psychological approach---influenced by Durkheim and Marx
+- movements as consequences and manifestations of [strain]{style="color:darkred;"}, [deprivation]{style="color:darkred;"}, and [grievance]{style="color:darkred;"}
+    + movements are 'abnormal' (contrary to idea of 'movement society')
+- movements as part of '[emergent phenomena]{style="color:cadetblue;"},' ranging from trends and gossip, to collective action, up to and including insurrection and revolution
+
+## Collective behaviour theory (CBT)
+
+fundamental question: **[why]{style="color:violet;"} is this _thing_ happening?**
+
+- CBT struggles to [predict]{style="color:blue;"} [@Piazza2017]: not everyone is *[aggrieved]{style="color:darkred;"}* engages in collective action
+    + BUT several core concepts---[grievance]{style="color:darkred;"}, [(relative) deprivation]{style="color:darkred;"}---endure [e.g., @VanStekelenburg2013 on the social psychology of protest]
+        * Because... even if they are neither necessary nor solely sufficient, CBT concepts refer to *important motivations for many movement participants*
+
+## Resource mobilisation theory (RMT) 
+
+fundamental question: **[how]{style="color:violet;"} is this _thing_ happening?**
+
+- focus on organisations: how they **[mobilise]{style="color:darkred;"}** and **[campaign]{style="color:darkred;"}** in **[strategic]{style="color:darkred;"}** pursuit of goals
+
+*Types of resources*:
+
+. . . 
+
+- [material]{style="color:darkred;"} (finances, property, supplies), 
+
+. . . 
+
+- [human]{style="color:darkred;"} (quantity and expert quality of members/activists), 
+
+. . . 
+
+- [organisational]{style="color:darkred;"} (capacity to disseminate and enact strategy), 
+
+. . . 
+
+- [moral]{style="color:darkred;"} (solidarity support, legitimacy and sympathetic support)
+
+. . . 
+
+- [others]{style="color:indigo;"}?
+
+
+## Resource mobilisation theory (RMT)
+
+fundamental question: **[how]{style="color:violet;"} is this _thing_ happening?**
+
+- RMT rejects the CBT idea that movements are abnormal
+- Still, focus on organisations omits/obscures *contextual* factors
+
+- But organisation, strategy, leadership, resources remain important---but better understood with context [e.g., @guzman-concha2015RadicalSocialMovements; @Kern2015; @Williamson2018]
+
+## Political process theory (PPT)
+
+fundamental question: **[what]{style="color:violet;"} makes/shapes this _thing_ that is happening?**
+
+- situates RMT organisational focus within wider socio-political context
+- movements are products of the political environment in which they emerge, responding to socio-political changes (**[opportunity]{style="color:darkred;"}/[threat]{style="color:darkred;"}**) and being met with (broadly) [facilitation]{style="color:darkred;"} or [repression]{style="color:darkred;"} [@Tarrow2011] (or disregard)
+
+## Political process theory (PPT) - POS concept
+
+fundamental question: **[what]{style="color:violet;"} makes/shapes this _thing_ that is happening?**
+
+- key concept: **[political opportunity structure]{style="color:darkred;"}**
+
+> "are comprised of specific configurations of resources, institutional arrangements and historical precedents for social mobilisation, which facilitate the development of protest movements in some instances and constrain them in others" [@Kitschelt1986, p. 58]
+
+## Political process theory (PPT) - DOS concept
+
+fundamental question: **[what]{style="color:violet;"} makes/shapes this _thing_ that is happening?**
+
+- related to POS: [discursive opportunity structure]{style="color:darkred;"} [@Koopmans2004, pp. 202-205]: *aspects of the public discourse that determine a message’s chances of diffusion in the public sphere*
+
+## Political process theory (PPT) - DOS concept
+
+[discursive opportunity structure]{style="color:darkred;"} [@Koopmans2004, pp. 202-205]: *aspects of the public discourse that determine a message’s chances of diffusion in the public sphere*
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
+library(dplyr)
+
+df <- data.frame(
+  DOS = c(
+    "Visibility", 
+    "",
+    "", 
+    "", 
+    "Resonance", 
+    "", 
+    "Legitimacy", 
+    ""
+    ),
+  Descript = c(
+    "in public sphere, messages > available space (thus, competition)", 
+    "claim makers aim to get messages into public discourse",
+    "gatekeepers select, shape, amplify, or diminish messages", 
+    "Is the message visible? - a necessary condition to influence discourse", 
+    "Does the message provoke reactions from others in public sphere?", 
+    "Is the message supported? (consonance) --- Is the message opposed? (dissonance) (either can help replicate the message)", 
+    "to what degree is the message supported (vs. opposed) in the public sphere?", 
+    "highly legitimate messages may have no resonance at all because they are uncontroversial, while highly illegitimate messages may have strong resonance"
+  )
+)
+
+df$DOS <- as.factor(df$DOS)
+df$Descript <- as.factor(df$Descript)
+
+kable(df, booktabs = T,
+      align = c("l", "l"),
+      col.names = c("Discursive opportunity", "Description")) %>%
+  kable_paper("striped", full_width = FALSE, font_size = 26) %>% 
+  row_spec(1:4, bold = F, color = "black", background = "pink") %>% 
+  row_spec(5:6, bold = F, color = "black", background = "seagreen1") %>% 
+  row_spec(7:8, bold = F, color = "black", background = "gold")
+
+```
+
+
+<!-- Actions and tactics that are publicized by the mass media offer a model for successful public action to others who share the same goals -->
+
+## More on social movement theories next week
+
+- we will cover [framing]{style="color:cadetblue;"} and [civil society]{style="color:cadetblue;"}
+
+- other theories/approaches that we will *not* cover: constructivist approaches; 'new social movements'; political mediation model; field theory; relational/network approaches
+    + though we may encounter these in some of the readings
+
+# Political Opportunity Structures studies {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="60%"}
+- @Kitschelt1986
+    + research justification 
+    + case selection 
+        * comparative case design
+    + POS components and effects 
+
+- @Boudreau1996
+    + historical development
+    + select observations 
+
+:::
+
+::: {.column width="40%" .right}
+<div class="tenor-gif-embed" data-postid="16467703458233675055" data-share-method="host" data-aspect-ratio="1.33155" data-width="100%"><a href="https://tenor.com/view/knock-knock-open-the-door-jack-nicholson-the-shining-trendizisst-gif-16467703458233675055">Knock Knock Open The Door GIF</a>from <a href="https://tenor.com/search/knock+knock-gifs">Knock Knock GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+## @Kitschelt1986 - research justification
+
+POS: *Astra inclinant, sed non obligant.* ('The stars incline us, they do not bind us.')
+
+- translation [from @Kitschelt1986]: 
+
+> While they do not determine the course of social movements completely, careful comparisons among them can explain a good deal about the variations among social movements with similar demands in different settings, if other determinants are held constant.
+
+*In a nutshell, this is what Kitschelt sets out to test*
+
+## @Kitschelt1986 - quick student question on the reading 
+
+::: {style="text-align: center;"}
+**[What does Kitschelt mean here?]{style="color:indigo; font-size:60px;"}** 
+:::
+
+> A particularly useful outgrowth of this research is the identification of a curvilinear relationship between openness and movement mobilization, which shows that very closed regimes repress social movements, that very open and responsive ones assimilate them, and that moderately repressive ones allow for their broad articulation but do not accede readily to their demands.
+
+## @Kitschelt1986 - case selection
+
+- anti-nuclear movements in France, Sweden, US, W. Germany. Why? 
+
+. . . 
+
+- all share similar objective
+
+. . . 
+
+-  similar organisational origins (local, 1970s) 
+
+. . . 
+
+- similar contextual origins (same '[threat]{style="color:darkred;"}' of nuclear power in each)
+
+. . . 
+
+- similar mobilisation sources ('middle-class radicalism')
+
+. . . 
+
+- BUT: [different political/institutional contexts]{style="color:cadetblue;"}
+    + open/closed political input structures; strong/weak political output structures
+- what do we call this type of [case selection]{style="color:blue;"} strategy?
+
+## Comparative case selection
+
+x = causal variable; y = phenomenon to be explained
+
+:::: {.columns}
+:::{.column width="50%"}
+
+[MDSD]{style="color:blue;"} (most different systems design)
+
+| Case 1  | Case 2 | _            |
+|:-------|:-------:|:-------------|
+| a      | d       | overall      |
+| b      | e       | differences  |
+| c      | f       |              |
+| x      | x       | crucial      |
+| y      | y       | similarity   |
+
+:::
+
+::: {.column width="50%" .right}
+
+[MSSD]{style="color:blue;"} (most similar systems design)
+
+| Case 1 | Case 2  | _             |
+|:-------|:-------:|:--------------|
+| a      | a       | overall       |
+| b      | b       | similiarities |
+| c      | c       |               |
+| x      | not x   | crucial       |
+| y      | not y   | difference    |
+
+:::
+::::
+
+Further on case selection strategies, see @Gerring2007[e.g., pp. 89-90]
+
+## @Kitschelt1986 - 3 POS effect on movements
+
+1. What resources ('coercive, normative, remunerative and informational') can an emergent movement draw upon?
+    + note the improvement on RMT, resources depend on context
+
+<!-- mobilization depends upon the coercive, normative, remunerative and informational resources that an incipient movement can extract from its setting and can employ in its protest -->
+
+. . . 
+
+2. How can movements access the public sphere and political decision-making? (what laws regulate such access)
+
+<!-- the access of social movements to the public sphere and political decision-making is also governed by institutional rules, such as those reinforcing patterns of interaction between government and interest groups, and electoral laws. -->
+
+. . . 
+
+3. Are there other movements that model (and ease) mobilisation and movement emergence?
+
+<!-- a social movement faces opportunities to mobilize protest that change over time with the appearance and disappearance of other social movements. The mobilization of one movement, for example, may have a 'demonstration effect' on other incipient movements, encouraging them to follow suit -->
+
+## @Kitschelt1986 - POS components
+
+Kitschelt highlights to components of POS relevant to the movements he studies: (1) [political input structures]{style="color:cadetblue;"} and (2) [policy implementation capacity]{style="color:cadetblue;"}
+
+
+::: {style="text-align: center;"}
+**[This is part of *[concept formation]{style="color:blue;"}*]{style="font-size:60px;"}** 
+:::
+
+## Concept formation - @adcock2001MeasurementValid[p. 531]
+
+::: {.r-stack}
+![](slide_files/02/AdcockCollier_levels.png)
+
+:::
+
+## @Kitschelt1986 - POS components
+
+:::: {.columns}
+:::{.column width="55%"}
+(1) [political input structures]{style="color:cadetblue;"}
+    1. number of parties/electoral influences (more = more open)
+    2. legislative policy control (more = more open)
+    3. accessibility of executive to interest groups (more = more open)
+    4. mechanisms to aggregate demands and build policy coalitions (more = more open)
+
+:::
+
+::: {.column width="45%" .right}
+(2) [policy implementation capacity]{style="color:cadetblue;"}
+    1. state apparatus centralisation (more = stronger effective implementation)
+    2. government control over market (more = stronger effective implementation)
+    3. independence of the judiciary (more = weaker effective implementation)
+
+:::
+::::
+
+<!-- (1) [political input structures]{style="color:cadetblue;"} -->
+<!--     1. number of parties/electoral influences (more = more open) -->
+<!--     2. legislative policy control (more = more open) -->
+<!--     3. accessibility of executive to interest groups (more = more open) -->
+<!--     4. mechanisms to aggregate demands and build policy coalitions (more = more open) -->
+
+<!-- (2) [policy implementation capacity]{style="color:cadetblue;"} -->
+<!--     1. state apparatus centralisation (more = stronger effective implementation) -->
+<!--     2. government control over market (more = stronger effective implementation) -->
+<!--     3. independence of the judiciary (more = weaker effective implementation) -->
+
+## @Kitschelt1986 - case differences
+
+```{r}
+library(kableExtra)
+
+#   add_header_above(c("Political input structures" = 4))
+
+text_tbl <- data.frame(
+  A = c("", "Policy implementation capacity", "Policy implementation capacity"),
+  B = c("", "Weak", "Strong"),
+  C = c("Open and responsive", "United States", "Sweden"),
+  D = c("Closed and unresponsive", "West Germany", "France")
+)
+
+kbl(text_tbl, col.names = c("_", " ", " ", " ")
+    ) %>%
+  kable_paper(full_width=F) %>%
+  kableExtra::kable_styling(font_size = 35) %>% 
+  column_spec(1, bold=T, border_right=T) %>%
+  # column_spec(3, width="10em", background="") %>% 
+  # column_spec(4, width="10em", background="") %>% 
+  collapse_rows(1, valign="middle") %>% 
+  add_header_above(c("", "", "Political input structures"=2))
+
+```
+
+- (relatively) open and responsive input structures (Sweden, U.S.) = possibility to impact policy
+    + (relatively) closed insisted on pre-determined policies
+- Weak implementation capacity offers opportunity for disruption
+- Strong implementation capacity could shield policy from attacks
+
+<!-- -Kitschelt's 1986 study on anti-nuclear movements in France, Sweden, U.S., and W. Germany--relatively open and responsive political input structures (Sweden and US) yielded a search for new policies in response to anti-nuclear mobilisation; relatively closed (France and Germany) insisted on pre-determined policies. Where policy implementation capacity was weak (Germany and US), movement had a chance to disrupt policy; where capacity was stronger (Sweden and France), nuclear policy was shielded from attacks on its implementation  -->
+
+## @Kitschelt1986 - hypotheses
+
+```{r}
+
+hypo_tbl <- data.frame(
+  A = c("", "Policy implementation capacity", "Policy implementation capacity"),
+  B = c("", "Weak", "Strong"),
+  C = c("Open and responsive", "(1) assimilative movement strategies dominant, (2) significant procedural impacts, (3) substantive impacts: tendancy towards policy stalemate; medium low innovation, (4) few structural pressures (United States)", "(1) assimilative movement strategies dominant, (2) significant procedural gains, (3) high substantive policy innovation, (4) few structural pressures (Sweden)"),
+  D = c("Closed and unresponsive", "(1) confrontational and assimilative movement strategies, (2) few procedural impacts, (3) few substantive impacts, tendency towards policy stalemate, very low innovation, (4) strong structural pressures (West Germany)", "(1) confrontational movement strategies dominant, (2) few procedural impacts, (3) limited substantive elite reform; low-medium innovation, (4) strong structural pressures (France)")
+)
+
+kbl(hypo_tbl, col.names = c("_", " ", " ", " ")
+    ) %>%
+  kable_paper(full_width=F) %>%
+  kableExtra::kable_styling(font_size = 23) %>% 
+  column_spec(1, width="5cm",bold=T, border_right=T) %>%
+  column_spec(2, width="2cm", background="") %>%
+  column_spec(3, width="20cm", background="") %>%
+  column_spec(4, width="20cm", background="") %>%
+  collapse_rows(1, valign="middle") %>% 
+  add_header_above(c("", "", "Political input structures"=2))
+
+```
+
+## @Kitschelt1986 - anti-nuclear strategies
+
+```{r strategies, echo=FALSE, message=FALSE, warning=FALSE}
+df <- data.frame(
+  countries = c("United States", "Sweden", "West Germany", "France"),
+  lp = c("high", "high", "low", "low"),
+  er = c("high", "high", "low (later: high)", "low (later: high)"),
+  ilp = c("high", "low", "high", "low"),
+  lc = c("high", "low", "high", "low"),
+  pd = c("low", "medium", "high", "high")
+)
+
+# Convert character variables to factors for proper alignment
+df$countries <- as.factor(df$countries)
+df$lp <- as.factor(df$lp)
+df$er <- as.factor(df$er)
+df$ilp <- as.factor(df$ilp)
+df$lc <- as.factor(df$lc)
+df$pd <- as.factor(df$pd)
+
+# Use kableExtra to create the table
+kbl(df, 
+      align = c("r", "c", "c", "c", "c", "c"),
+      col.names = c("", "Lobbying/ \n petitioning", "Elections/ \n referendums", "Interventions \n in licencsing", "Litigation \n in courts", "Demonstration,\n disobedience")) %>%
+  kable_styling(full_width = FALSE, font_size = 25) %>% 
+  add_header_above(c("", "Assimilative strategies \n aimed at political inputs"=2, "Assimilative strategies \n aimed at political outputs"=2, "Confrontational strategies against process"))
+
+# kbl(hypo_tbl, col.names = c("_", " ", " ", " ")
+#     ) %>%
+#   kable_paper(full_width=F) %>%
+#   kableExtra::kable_styling(font_size = 23) %>% 
+#   column_spec(1, width="5cm",bold=T, border_right=T) %>%
+#   column_spec(2, width="2cm", background="") %>%
+#   column_spec(3, width="20cm", background="") %>%
+#   column_spec(4, width="20cm", background="") %>%
+#   collapse_rows(1, valign="middle") %>% 
+#   add_header_above(c("", "", "Political input structures"=2))
+```
+
+
+
+## @Kitschelt1986 - procedural and substantive impacts
+
+- what procedural impacts did anti-nuclear movements have? what (other) procedural impacts could policy-oriented movements have?
+
+- what substantive impacts did anti-nuclear movements have (that Kitschelt examined)?
+
+## @Kitschelt1986 - findings
+
+- hypotheses generally confirmed
+    + Sweden and (to lesser extent) U.S. search for new policies
+    + France and (to lesser extent) W. Germany stayed on policy course
+    + U.S. and W. Germany movements had chance to disrupt implementation
+    + Sweden and France movements had no chance to disrupt implementation
+
+. . . 
+
+> Theories are fruitful only if they can be applied to cases beyond the ones they were first designed to explain. (p. 84)
+
+## @Kitschelt1986 - key takeaways
+
+- [what did you learn from this article]{style="color:indigo;"}?
+
+. . . 
+
+- POS shapes movements and some movements can shape POS
+- [concept formation]{style="color:blue;"} of POS should be specific to a given movement
+- even in high stakes policy arenas (e.g., energy politics) movements can have impact
+
+## @Boudreau1996 - set-up
+
+- social science theories (including PPT for social movements) are often developed in the 'North'
+    + theory requires adjustment
+- structural (cross-national) [@Kitschelt1986] or time-series [@McAdam1982; @Tarrow2011]
+
+. . . 
+
+- a dense proposal of how to study any type of movement, anywhere
+
+<!-- - **what particularly caught your attention in this article?** -->
+
+## @Boudreau1996 - historical development (Tilly)
+
+- state expansion (including improved communication networks, rising middle class, etc.) helps to create an *audience* 
+    + incentivises [demonstrations]{style="color:darkred;"} as collective action repertoire
+
+> seeks to accumulate influence within a political structure, to communicate a demand, convey resolve, and (where the polity is unresponsive) raise the costs of disregarding the movement. ... They play to the polity (and to allies) whose subsequent action resolves movement grievances. ... *Demonstrations inconvenience or embarrass authorities and establish the movement's social support but never themselves attain the collective goal*. (p. 181)
+        
+## @Boudreau1996 - historical development (Tilly)
+
+- state expansion (including improved communication networks, rising middle class, etc.) helps to create an *audience* 
+    + [direct action]{style="color:darkred;"} repertoires
+
+> seize [resources]{style="color:darkred;"} to satisfy their demands or take unilateral action to resolve a [grievance]{style="color:darkred;"}. ... *Direct action seeks itself to achieve collective goals*. (p. 181)
+
+- in line with @Kitschelt1986, POS shapes [mobilisation]{style="color:darkred;"}: 'closed' and 'centralised' more inviting for [direct action]{style="color:darkred;"}; 'open' and 'decentralised' more inviting for [demonstration]{style="color:darkred;"}
+
+<!-- ([Boudreau, 1996, p. 181](zotero://select/library/items/99NECTST)) To summarize: state expansion (to which one might add several related phenomena, such as improved communication networks, and a rising middle class) helps to create an audience—a ring of watchers—on whom demonstration need not necessarily be lost. As the seats of the social theater begin to fill, producing the drama of demonstration makes increasing sense, and may appear a wise use of movement resources. The constitution of this audience enables demonstration, without necessarily eradicating more direct struggle. State and social structures influence resistance by (in some cases) presenting the opportunity to articulate social movements into larger processes of representation and civil government, or (in other cases) rendering such civil demonstration palpably impossible or unwise. At the extremes—where audiences are either clearly present or unequivocally absent—these macrostructures strongly suggest specific patterns of collective action. Hence, before considering the murkier waters that lie in between, a brief look into the clearer relationships at the poles is in order -->
+
+<!-- ([Boudreau, 1996, p. 181](zotero://select/library/items/99NECTST)) DEMONSTRATIONS VS. DIRECT ACTION ----- The principal difference between strategies of demonstration and direct action (such as seizures or insurrections) lies in the relationships they construct (or perceive as possible) between the movement and authorities. Demonstration seeks to accumulate influence within a political structure, to communicate a demand, convey resolve, and (where the polity is unresponsive) raise the costs of disregarding the movement. Demonstrations inconvenience or embarrass authorities and establish the movement's social support but never themselves attain the collective goal. They play to the polity (and to allies) whose subsequent action resolves movement grievances (see Tarrow 1993). In contrast, direct action is less intent on staging a performance, and sometimes camouflages rather than publicizes (at least beforehand) uprisings and seizures. Participants seize resources to satisfy their demands or take unilateral action to resolve a grievance. Separatist movements withdraw from and defend against central authority. Other movements seek to overthrow the existing state and—at least in theory—systematically reform or restructure society (Migdal 1974). Direct action seeks itself to achieve collective goals -->
+
+<!-- ([Boudreau, 1996, p. 183](zotero://select/library/items/99NECTST)) different combinations of macropolitical structure and social need will elevate one collective strategy over others. A mixture of extensive open input structures11 and generally prosperous societies encourages aggrieved groups to make claims through tactics of demonstration and civil protest. Alternatively, a combination of closed or rudimentary state institutions and great poverty seems to direct claim making, when it occurs, toward more direct modes of struggle -->
+
+## @Boudreau1996[p. 178]
+
+> SMOs attract mass support by offering more promising avenues (massed demonstration, armed battle, land occupation) to achieve popular goals than existing modes of action
+
+## @Boudreau1996[p. 177] - sequence for research {.smaller}
+
+- identification of collective repertoires and their relationships to the new cases' structural environments
+    + [Political opportunity structure]{style="color:darkred;"} is specific---not general
+- how does short-term structural variation encourage [mobilisation]{style="color:darkred;"}
+- how do differences between differently structured states influence the frequency or intensity of mobilisation
+
+. . . 
+
+> McAdam's caution: "[I]t is critical that we be explicit about which [dependent variable]{style="color:blue;"} we are seeking to explain, and which dimensions of political opportunity are germane to that explanation."
+
+. . . 
+
+- Two principles (p. 186)
+    1. Social/political structures limit possible forms of [collective action]{style="color:darkred;"}, thus limiting opportunities
+    2. Opportunities influence activity by altering the prospects of different forms of struggle
+
+<!-- ([Boudreau, 1996, p. 186](zotero://select/library/items/99NECTST)) a set of principles by which one can account for a fuller range of basic variables. The first principle is that opportunity is everywhere contingent on forms of collective action. To meaningfully speak about political opportunity requires a reading of movement strategy. Social or political structures often influence collective struggle in ways that effectively confine tactics—and thus opportunities—to a narrow and easily specified range   -->
+<!-- ...   -->
+<!-- A second and related principle is that opportunity structures do not merely or mechanistically stimulate collective action. They influence activity by altering the apparent prospects of—and social support for—different forms of struggle. -->
+
+## @Boudreau1996 - select observations
+
+- Poverty and levels of oppression are fundamental *structural variables* underlying all POS (p. 179) [cf. @Piven1979; Scott (1985)]
+- [Campaigns]{style="color:darkred;"} must win/provide *benefits* or else face increasing [demobilising pressure]{style="color:darkred;"} (p. 183) [cf. @Gamson1990; @Davenport2015; @Demirel-Pegg2017; @Zeller2021_hess]
+- SM organisations have to weigh trade-offs between [demonstration strategies]{style="color:darkred;"} and [direct action strategies]{style="color:darkred;"} (p. 184) [cf. @Ganz2010]
+- Property of *inertia*:  initial conditions surrounding mobilisation powerfully influence on subsequent movement trajectories (p. 185) [cf. @PollettaJasper2001]
+
+<!-- POVERTY IS A STRUCTURAL VARIABLE THAT CANNOT BE IGNORED -->
+<!-- ([Boudreau, 1996, p. 179](zotero://select/library/items/99NECTST)) These two elements of solidarity—relying on collective behavior to address problems and reciprocal SMO obligations—are interrelated and tied to environmental conditions. Comprehensive constituent need, sweeping poverty, and oppression make individualistic life impossible and drive recruits with multifaceted demands into collective undertakings. During routine periods, collective action may consist of unremarkable mutual assistance or secretive everyday resistance. In extraordinary moments of protest, an SMO that represents the poor's claims acquires both a powerful measure of solidarity and material obligations to sustain its mass base. SMOs with tight bonds to impoverished masses must incorporate these responsibilities into their action program, a move which may constrain the SMO’s practical options. The analysis of poor people's movements in both the North and the South must therefore treat poverty, and its effect on movement society, as a central variable influencing movement tactics -->
+
+<!-- ([Boudreau, 1996, p. 183](zotero://select/library/items/99NECTST)) CAMPAIGNS MUST WIN BENEFITS   -->
+<!-- Protest that achieves no material victory usually depletes, rather than augments, organizational resources. A movement may resolutely stick to mass demonstrations, even as its base of support grows smaller, or it may begin passing endogenous resources between supporters. The former strategy risks massive depletion of movement membership, while the latter shores up the membership at the expense of collective resources. -->
+
+<!-- ([Boudreau, 1996, p. 183](zotero://select/library/items/99NECTST)) Demobilization occurs when participants' support for the movement wanes, often when political opportunities close. -->
+
+<!-- ([Boudreau, 1996, p. 184](zotero://select/library/items/99NECTST)) the task of mediating between these dual structures of opportunity falls to the SMO. Situated between the population and the macrostructure, the SMO conceives the trade-offs between one strategy and the next in aggregate tactical terms as they affect movement power and success. Indeed, the dilemmas are often nearly impossible: opportunities for civil participation generate insufficient material return from an entrenched polity, while direct action never generates the requisite social support to overpower or withstand authorities' sanctions. Hence, demonstrations become ineffective while direct action is removed to the criminal margins. -->
+
+<!-- ([Boudreau, 1996, p. 185](zotero://select/library/items/99NECTST)) TENDENCY TO CONTINUE INITIAL FORMS OF ACTION   -->
+<!-- Changes in the political structure that encourage mobilization produce the initial terms and logic of movement activity. ... The initial conditions surrounding mobilization exert a powerful influence on subsequent movement trajectories. ... The experience of mobilization leaves a stamp on the collective, and attunes it to one package of opportunity or another. Its future activity will depend on the continued utility of that form of collective action or its ability to convince its supporters to adopt different ones. -->
+
+# Social movements in/around Germany {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- roster of movement organisations
+- discussion of causes
+
+:::
+
+:::{.column width="50%"}
+<div class="tenor-gif-embed" data-postid="17835309" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/germany-history-funny-what-whats-happening-gif-17835309">Germany History GIF</a>from <a href="https://tenor.com/search/germany-gifs">Germany GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+## Social movements in/around Germany
+
+> “Those who only know one country, know no country” - Seymour Martin Lipset (inspired by Alexis de Tocqueville)
+
+- well-known and covered in media and research literature
+- diverse strategies, objectives, and ideological characteristics
+- active in Germany and/or EU
+
+## Social movements in/around Germany {.scrollable}
+
+*[Animal Rights Watch]{style="color:goldenrod;"}* (ARIWA),   
+*[Anti-Nuclear]{style="color:goldenrod;"}* (Anti-Atomkraft),   
+*[Autonome]{style="color:goldenrod;"}* (leftist),     
+*[Demos für Alle]{style="color:goldenrod;"}* (anti-gender),   
+*[Extinction Rebellion]{style="color:goldenrod;"}* (XR, climate),   
+*[Federation of Antifascists]{style="color:goldenrod;"}* (VVN-BdA),   
+*[Fridays for Future]{style="color:goldenrod;"}* (FFF, climate),   
+*[Identitarian]{style="color:goldenrod;"}* (ethno-pluralism),   
+*[Letzte Generation]{style="color:goldenrod;"}* (LG, climate),   
+*['Ohne mich' Bewegung]{style="color:goldenrod;"}* (peace movement),   
+*[PEGIDA]{style="color:goldenrod;"}* (ethno-pluralism),   
+*[Reichsbürgerbewegung]{style="color:goldenrod;"}* (sovereigntist),   
+*[Querdenken 711]{style="color:goldenrod;"}* (anti-vaccination/lockdown),   
+*[Sozialistischer Deutscher Studentenbund]{style="color:goldenrod;"}* (leftist, 68ers),    
+*[Squatters movement]{style="color:goldenrod;"}* (leftist, housing),  
+*[Vier Pfoten]{style="color:goldenrod;"}* (animal rights)    
+
+## Animal Rights Watch (ARIWA)
+
+:::: {.columns}
+:::{.column width="50%"}
+- Issue: animal rights
+- Active: 2004-present
+- Membership: small, but professionalised
+- Repertoire of actions: demonstrations, lobbying, awareness-raising
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/de_movement_logos/ariwa.png)
+:::
+::::
+
+## Anti-Atomkraft
+
+:::: {.columns}
+:::{.column width="50%"}
+- Issue: nuclear energy
+- Active: 1950s-2000s
+- Membership: large
+- Repertoire of actions: demonstrations, lobbying, party-building and electioneering
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/de_movement_logos/anti-atom.png)
+:::
+::::
+
+## Autonome Bewegung
+
+:::: {.columns}
+:::{.column width="50%"}
+- Issue: anarchism
+- Active: 1970s-present
+- Membership: large
+- Repertoire of actions: demonstrations ('black bloc'), squats
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/de_movement_logos/autonome.png)
+:::
+::::
+
+## Demos für alle
+
+:::: {.columns}
+:::{.column width="50%"}
+- Issue: anti-'gender ideology'
+- Active: 2010s
+- Membership: moderate
+- Repertoire of actions: demonstrations, lobbying, transnational advocacy
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/de_movement_logos/demos_fuer_alle.png)
+:::
+::::
+
+
+
+## Extinction Rebellion
+
+:::: {.columns}
+:::{.column width="50%"}
+- Issue: climate change
+- Active: 2010s-present
+- Membership: large
+- Repertoire of actions: demonstrations, disruptive actions, symbolic protest
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/de_movement_logos/er.png)
+:::
+::::
+
+## Federation of Antifascists (VVN-BdA)
+
+'*Vereinigung der Verfolgten des Naziregimes – Bund der Antifaschistinnen und Antifaschisten*'
+
+:::: {.columns}
+:::{.column width="60%"}
+- Issue: anti-fascism
+- Active: 1947-present
+- Membership: large
+- Repertoire of actions: politics of memory work, transitional justice advocacy, demonstrations
+
+:::
+
+:::{.column width="40%"}
+![](slide_files/02/de_movement_logos/vvn-bda.png)
+:::
+::::
+
+## Fridays for Future
+
+:::: {.columns}
+:::{.column width="50%"}
+- Issue: climate change
+- Active: 2010s-present
+- Membership: large
+- Repertoire of actions: demonstrations/'strikes', disruptive actions, policy processes
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/de_movement_logos/fff.png)
+:::
+::::
+
+## Hausbesetzung (Squatters) movement
+
+:::: {.columns}
+:::{.column width="60%"}
+- Issue: housing/property usage
+- Active: 1970s-present
+- Membership: small
+- Repertoire of actions: occupations
+
+:::
+
+:::{.column width="40%"}
+![](slide_files/02/de_movement_logos/squatters.png)
+:::
+::::
+
+## Identitarians
+
+:::: {.columns}
+:::{.column width="50%"}
+- Issue: European ethno-cultural identity
+- Active: 2000s-present
+- Membership: moderate
+- Repertoire of actions: symbolic (social media) protest, demonstrations, transnational
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/de_movement_logos/identitarian.png)
+:::
+::::
+
+## Letzte Generation
+
+:::: {.columns}
+:::{.column width="50%"}
+- Issue: climate change
+- Active: 2021-present
+- Membership: moderate, quite professionalised
+- Repertoire of actions: disruptive actions/blockades, symbolic protest, demonstrations
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/de_movement_logos/lg.png)
+:::
+::::
+
+## 'Ohne mich'/Peace movement
+
+:::: {.columns}
+:::{.column width="50%"}
+- Issue: peace, stopping armed conflict
+- Active: 1950s-present
+- Membership: moderate (many eras)
+- Repertoire of actions: demonstrations, awareness-raising, electioneering
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/de_movement_logos/frieden.png)
+:::
+::::
+
+## PEGIDA
+
+:::: {.columns}
+:::{.column width="50%"}
+- Issue: German ethno-cultural identity
+- Active: 2014-2024
+- Membership: moderate
+- Repertoire of actions: demonstrations
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/de_movement_logos/pegida.png)
+:::
+::::
+
+## Reichsbürgerbewegung
+
+:::: {.columns}
+:::{.column width="50%"}
+- Issue: state legitimacy, sovereignty 
+- Active: (significantly since) 2010s-present 
+- Membership: large 
+- Repertoire of actions: civil disobedience, political violence 
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/de_movement_logos/reichsbuerger.png)
+:::
+::::
+
+## Querdenken 711
+
+:::: {.columns}
+:::{.column width="50%"}
+- Issue: COVID-19 policy
+- Active: 2020-2022
+- Membership: moderate
+- Repertoire of actions: civil disobedience, demonstrations, symbolic protest
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/de_movement_logos/querdenken.png)
+:::
+::::
+
+## Sozialistischer Deutscher Studentenbund
+
+:::: {.columns}
+:::{.column width="50%"}
+- Issue: promote anti-authoritarian socialism
+- Active: 1946-1970
+- Membership: large
+- Repertoire of actions: demonstrations, disruptive actions, electioneering, subversion
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/de_movement_logos/sds.png)
+:::
+::::
+
+## Vier Pfoten
+
+:::: {.columns}
+:::{.column width="50%"}
+- Issue: animal rights
+- Active: 1988-present
+- Membership: small, professionalised 
+- Repertoire of actions: animal rescue, awareness-raising
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/de_movement_logos/vier-pfoten.png)
+:::
+::::
+
+# Any questions, concerns, feedback for this class? {background-color="#2c844c"}
+
+Anonymous feedback here: <https://forms.gle/AjHt6fcnwZxkSg4X8>
+
+Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+pagedown::chrome_print(file.path("..", "docs/slides", "slides_02.html"))
+```
+
+
+## References
+
