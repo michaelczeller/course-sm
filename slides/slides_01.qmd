@@ -331,6 +331,7 @@ kable(data.frame(
 - [concepts]{style="color:darkred;"} (dark red) - building blocks of social science, important elements in every class session
 - [discussion point]{style="color:indigo;"} (indigo) - a question or prompt to discuss as a class (essential component of a *seminar*) 
 - [finding]{style="color:darkorange;"} (dark orange) - a noteworthy finding from one or more studies 
+- [methods point]{style="color:blue;"} (blue) - element of research design or methodology 
 - [important point]{style="color:red;"} (red) - something particularly noteworthy
 
 . . . 
