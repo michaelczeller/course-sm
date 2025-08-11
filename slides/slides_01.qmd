@@ -81,6 +81,8 @@ Take the survey at **<https://forms.gle/iXweLEsJ7VTANrmGA>**
 
 - Lots of different languages represented in the room &rarr; but please don't be shy: [feel [empowered]{style="color:cadetblue;"} to participate, even if you are not so confident in your English skills]{style="color:red;"}
     + I will avoid 'calling on' people to contribute
+    + when you speak, please speak up (*I'm rapidly ageing and my hearing is not what it once was*)
+
 
 ## First task...
 
@@ -349,7 +351,7 @@ kable(data.frame(
 ## Course website 
 
 - no use of Moodle
-- [we have a new, shiny, developing, purpose-built website:]{style="color:red;"}: <https://michaelzeller.de/course-sm/>
+- [we have a new, shiny, developing, purpose-built website]{style="color:red;"}: <https://michaelzeller.de/course-sm/>
     + all readings available
     + slides available before class
     + in case of class cancellation, video lecture will be available 
@@ -724,7 +726,19 @@ plot_concern = Plot.plot({
 ```
 
 
-# Quick intro to concepts
+# Quick intro to concepts {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- concept formation [cf. @adcock2001MeasurementValid]
+- types of concepts 
+
+:::
+
+::: {.column width="50%" .right}
+<div class="tenor-gif-embed" data-postid="24464999" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/concept-gif-24464999">Concept GIF</a>from <a href="https://tenor.com/search/concept-gifs">Concept GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+:::: 
 
 ## Concept formation
 
