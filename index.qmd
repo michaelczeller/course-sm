@@ -72,7 +72,7 @@ SemesterDays <-
 Holidays <-
   c(as.Date(holiday(
     year = getRmetricsOptions("currentYear"),
-    Holiday = c("USLaborDay", "USThanksgivingDay", "USMLKingsBirthday")
+    Holiday = c("USLaborDay", "USMLKingsBirthday")
   )), WinterBreak)
 #Create a list of semester days excluding holidays.
 SemesterDays <- SemesterDays[!SemesterDays %in% Holidays]
@@ -103,11 +103,11 @@ Lecture_Topic <- c("Introduction and the development of social movements (SMs)",
                    "SMs online", # Class 11
                    "SM impact", # Class 12
                    "Demobilisation", # Class 13
-                   "Contemporary social movements and beyond: climate, migration") # Class 14
-                   # "NO CLASS MEETING TODAY") # Class 15"
+                   "Contemporary social movements and beyond: climate, migration", # Class 14
+                   "NO CLASS MEETING TODAY") # Class 15"
 
           
-links <- c("#class1","#class2","#class3","#class4","#class5","#class6","#class7","#class8","#class9","#class10","#class11","#class12","#class13","#class14")
+links <- c("#class1","#class2","#class3","#class4","#class5","#class6","#class7","#class8","#class9","#class10","#class11","#class12","#class13","#class14","#class15")
 
 MeetingDays <- bind_cols(MeetingDays, Lecture = Lecture_Topic)
 #### Grade table ####

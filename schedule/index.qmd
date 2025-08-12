@@ -87,7 +87,7 @@ library(lubridate) # for submission date of assignments
 #Days of the week that the course meets. Must be full day name in quotes.
 Days <- c("Thursday")
 #Semester start date for classes as YYYY/M/D.
-SemesterStart <- as.Date("2025/10/16")
+SemesterStart <- as.Date("2025/10/15")
 #Semester end date for classes as YYYY/M/D.
 SemesterEnd <- as.Date("2026/2/7")
 #Fall break start and stop date.
@@ -116,7 +116,7 @@ SemesterDays <-
 Holidays <-
   c(as.Date(holiday(
     year = getRmetricsOptions("currentYear"),
-    Holiday = c("USLaborDay", "USThanksgivingDay", "USMLKingsBirthday")
+    Holiday = c("USLaborDay", "USMLKingsBirthday")
   )), WinterBreak)
 #Create a list of semester days excluding holidays.
 SemesterDays <- SemesterDays[!SemesterDays %in% Holidays]
@@ -147,41 +147,14 @@ Lecture_Topic <- c("Introduction and the development of social movements (SMs)",
                    "SMs online", # Class 11
                    "SM impact", # Class 12
                    "Demobilisation", # Class 13
-                   "Contemporary social movements and beyond: climate, migration") # Class 14
-                   # "NO CLASS MEETING TODAY") # Class 15"
+                   "Contemporary social movements and beyond: climate, migration", # Class 14
+                   "NO CLASS MEETING TODAY") # Class 15"
 
           
-links <- c("#class1","#class2","#class3","#class4","#class5","#class6","#class7","#class8","#class9","#class10","#class11","#class12","#class13","#class14")
+links <- c("#class1","#class2","#class3","#class4","#class5","#class6","#class7","#class8","#class9","#class10","#class11","#class12","#class13","#class14","#class15")
 
 MeetingDays <- bind_cols(MeetingDays, Lecture = Lecture_Topic)
-#### Grade table ####
-Grades <- tribble( ~ Grade,
-                   ~ Range,
-                   "A",
-                   "90-100",
-                   "B",
-                   "80-89",
-                   "C",
-                   "70-79",
-                   "D",
-                   "60-69",
-                   "F",
-                   "< 60")
-####Assignment weight table####
-Weights <- tribble(
-                    ~ Item,
-                    ~ Weight,
-                    "Writing scaffolding",
-                    "20 %",
-                    "Semester Project",
-                    "25 %",
-                    "Labratory Assignments",
-                    "20 %",
-                    "Midterm Exam",
-                    "15 %",
-                    "Final Exam",
-                    "20 %"
-                  )
+
 ```
 
 
@@ -199,7 +172,7 @@ library(dplyr)
 library(kableExtra)
 
 plan <- data.frame(
-  block=c("social movement theories", "social movement theories", "social movement theories", "aspects of social movement activity", "aspects of social movement activity", "aspects of social movement activity", "aspects of social movement activity", "aspects of social movement activity", "aspects of social movement activity", "aspects of social movement activity", "social movements online, in effect, dying out, and going forward", "social movements online, in effect, dying out, and going forward", "social movements online, in effect, dying out, and going forward", "social movements online, in effect, dying out, and going forward"),
+  block=c("social movement theories", "social movement theories", "social movement theories", "aspects of social movement activity", "aspects of social movement activity", "aspects of social movement activity", "aspects of social movement activity", "aspects of social movement activity", "aspects of social movement activity", "aspects of social movement activity", "social movements online, in effect, dying out, and going forward", "social movements online, in effect, dying out, and going forward", "social movements online, in effect, dying out, and going forward", "social movements online, in effect, dying out, and going forward", " "),
   theme=c("1. Introduction and the development of social movements (SMs)", # Class 1 - (Tarrows intro and chapter 1)
           "2. SM theories: collective behaviour, resource mobilisation, political processes", # Class 2
           "3. SM theories: framing, civil society", # Class 3
@@ -213,10 +186,10 @@ plan <- data.frame(
           "11. SMs online", # Class 11
           "12. SM impact", # Class 12
           "13. Demobilisation", # Class 13
-          "14. Contemporary social movements and beyond: climate, migration"),
-  content=c("","grievance, relative deprivation; strategy, tactics, resources, organisations; opportunity structures, threats", "diagnostic, prognostic, motivational frames (among others); (un)civil society", "mobilising structures; social networks; recruitment and influencers", "intersectionality; collective identity", "hierarchical and horizontal organisation; direct/disruptive and indirect/ demonstrative action", "agenda-setting; gatekeepers", "coalition; bridging", "accommodation, disregard, opposition; repression", "counter-mobilisation characteristics", "social media platforms; transnationalisation", "individual, group, political, cultural impacts", "internal and external demobilising factors", "contemporary climate- and migration-related activism"),
-  actors=c("","groups/ organisations (agency); institutions (structure)", "movement organisations; civil society actors", "movement organisations; social networks", "movement organisations; collective actors", "movement organisations; leaders", "movement organisations; news media actors", "movements; movement organisations", "movements; movement organisations; state authorities; political parties", "(counter-)movements; (counter-)movement organisations", "individuals; activists; networks", "movement organisations; activists", "individuals; movement organisations", "movements; movement organisations"),
-  literature=c("Tarrow","Boudreau; Kitschelt", "Benford and Snow; Berman", "della Porta and Diani; Tarrow", "Polletta and Jasper", "della Porta and Diani; McAdam", "Jennings and Saunders; McCarthy", "Heinze and Weisskircher; McCammon", "Berntzen and Weisskircher", "Meyer and Staggenborg", "Diani; Volk", "Amenta; Madestam; Cress and Snow", "Zeller", "Rone and Fielitz; Zhang")
+          "14. Contemporary social movements and beyond: climate, migration", "15. NO CLASS MEETING TODAY"),
+  content=c("","grievance, relative deprivation; strategy, tactics, resources, organisations; opportunity structures, threats", "diagnostic, prognostic, motivational frames (among others); (un)civil society", "mobilising structures; social networks; recruitment and influencers", "intersectionality; collective identity", "hierarchical and horizontal organisation; direct/disruptive and indirect/ demonstrative action", "agenda-setting; gatekeepers", "coalition; bridging", "accommodation, disregard, opposition; repression", "counter-mobilisation characteristics", "social media platforms; transnationalisation", "individual, group, political, cultural impacts", "internal and external demobilising factors", "contemporary climate- and migration-related activism", " "),
+  actors=c("","groups/ organisations (agency); institutions (structure)", "movement organisations; civil society actors", "movement organisations; social networks", "movement organisations; collective actors", "movement organisations; leaders", "movement organisations; news media actors", "movements; movement organisations", "movements; movement organisations; state authorities; political parties", "(counter-)movements; (counter-)movement organisations", "individuals; activists; networks", "movement organisations; activists", "individuals; movement organisations", "movements; movement organisations", " "),
+  literature=c("Tarrow","Boudreau; Kitschelt", "Benford and Snow; Berman", "della Porta and Diani; Tarrow", "Polletta and Jasper", "della Porta and Diani; McAdam", "Jennings and Saunders; McCarthy", "Heinze and Weisskircher; McCammon", "Berntzen and Weisskircher", "Meyer and Staggenborg", "Diani; Volk", "Amenta; Madestam; Cress and Snow", "Zeller", "Rone and Fielitz; Zhang", " ")
   # KlausurConnection=c()
 )
 
@@ -2480,6 +2453,8 @@ kable(MeetingDays[,c("Date","Class","Week","Lecture")],
 </div>
 ```
 :::
+
+## Class 15 - `r nth(MeetingDays$Lecture, 15)` {#class15}
 
 
 <!-- # Class 2 -->
