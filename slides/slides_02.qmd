@@ -1,5 +1,5 @@
 ---
-title: "Class 2: Social Movements in Germany"
+title: "Class 2: Social Movement Theories"
 subtitle: "Collective behaviour, resource mobilisation, political processes"
 author: "[Dr. Michael C. Zeller](https://michaelzeller.de)"
 format: 

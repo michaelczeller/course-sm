@@ -1,0 +1,996 @@
+---
+title: "Class 3: Social Movement Theories"
+subtitle: "Framing, civil society"
+author: "[Dr. Michael C. Zeller](https://michaelzeller.de)"
+format: 
+  rladies-revealjs:
+    footer: ""
+    slide-number: c/t
+    toc: TRUE
+    toc-depth: 1
+    toc-title: Agenda for the day
+    menu: TRUE
+    theme: [default, custom_options]
+    background-transition: fade
+incremental: false
+embed-resources: true
+# runtime: shiny
+bibliography: ../../../library.bib
+---
+
+# Opening notes {background-color="#2c844c"}
+
+::: {.tenor-gif-embed data-postid="14209777" data-share-method="host" data-aspect-ratio="1.94" data-width="70%"}
+<div class="tenor-gif-embed" data-postid="14209777" data-share-method="host" data-aspect-ratio="1.94" data-width="100%"><a href="https://tenor.com/view/open-gif-14209777">Open Sticker</a>from <a href="https://tenor.com/search/open-stickers">Open Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+
+```{=html}
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+```
+
+## Presentation groups
+
+Remember: topic to me at least by Week 4
+
+::: panel-tabset
+## December
+
+| Date    | Presenters                       | Method |
+| -------:|:---------------------------------|:------:|
+| 4 Dec:  |                                  | TBD    | 
+| 11 Dec: |                                  | TBD    | 
+| 18 Dec: |                                  | TBD    | 
+
+: Presentations line-up
+
+## January
+
+| Date    | Presenters                       | Method |
+| -------:|:---------------------------------|:------:|
+| 8 Jan:  |                                  | TBD    | 
+| 15 Jan: |                                  | TBD    | 
+| 22 Jan: |                                  | TBD    | 
+| 29 Jan: |                                  | TBD    | 
+
+: Presentations line-up
+
+:::
+
+<!-- []{style="font-size:10px;"} -->
+
+
+# Social movement theories covered so far {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- Collective behaviour theory
+- Resource mobilisation theory 
+- Political process theory 
+
+:::
+
+::: {.column width="50%" .right}
+<div class="tenor-gif-embed" data-postid="4485172671334812188" data-share-method="host" data-aspect-ratio="1.45614" data-width="100%"><a href="https://tenor.com/view/david-mitchell-theory-wilty-that%27s-what-i-thought-guess-gif-4485172671334812188">David Mitchell Theory GIF</a>from <a href="https://tenor.com/search/david+mitchell-gifs">David Mitchell GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+## Recall overview from @Tarrow2011 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
+library(dplyr)
+
+df <- data.frame(
+  Parent_Scholarship = c(
+    "Marx and Engels, class conflict", 
+    "structuralist (leaves little room for the mechanisms that actually draw individuals in collective action)",
+    "legacy for SMS: class forces and other cleavages spurring collective action", 
+    "Lenin and resource mobilisation", 
+    "vanguardism", 
+    "legacy for SMS: focus on leaders/organisers (mobilising interests) and organisations", 
+    "Gramsci and cultural hegemony", 
+    "counterculture of working class can overcome bourgeois hegemonic culture", 
+    "legacy for SMS: constructivism, prefiguration, and movement impact on culture", 
+    "Tilly's Polity Model", 
+    "the structure of the state/polity", 
+    "legacy for SMS: repertoires of contention, WUNC (worthiness, unity, numbers, committed)"
+    ),
+  SMS = c(
+    "Collective behaviour theory", 
+    "(grievances, [relative] deprivation)", 
+    "", 
+    "Resource mobilisation theory", 
+    "",
+    "leadership, organisations, and various resources", 
+    "Framing and Collective identity theories", 
+    "'cultural turn' (from anthropology, sociology)", 
+    "forming consensus in movements", 
+    "Political process theory", 
+    "opportunities, constraints, and the structure of contentious politics", 
+    ""
+  )
+)
+
+df$Parent_Scholarship <- as.factor(df$Parent_Scholarship)
+df$SMS <- as.factor(df$SMS)
+
+kable(df, booktabs = T,
+      align = c("l", "l"),
+      col.names = c("Parent Scholarship", "Social Movement Studies (SMS)")) %>%
+  kable_paper("striped", full_width = FALSE, font_size = 23) %>% 
+  row_spec(1:3, bold = F, color = "white", background = "#D7261E") %>% 
+  row_spec(4:6, bold = F, color = "black", background = "pink") %>% 
+  row_spec(7:9, bold = F, color = "black", background = "gold") %>% 
+  row_spec(10:12, bold = F, color = "white", background = "dodgerblue2")
+
+```
+
+
+# Framing {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- background: the 'cultural turn'
+- main types of frames: *diagnostic*, *prognostic*, *motivational*
+- other types of frames: *injustice*, *master frame*, *counter frame*
+- framing dynamics: *framing contest*, *frame bridging*, *frame amplification*, *frame extension*, *frame transformation*, *frame resonance*
+
+:::
+
+::: {.column width="50%" .right}
+<div class="tenor-gif-embed" data-postid="21676839" data-share-method="host" data-aspect-ratio="1.76796" data-width="100%"><a href="https://tenor.com/view/the-office-pam-beesly-im-gonna-frame-it-i-am-gonna-frame-it-frame-it-gif-21676839">The Office Pam Beesly GIF</a>from <a href="https://tenor.com/search/the+office-gifs">The Office GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+## The 'cultural turn' and new social movements {auto-animate=true auto-animate-easing="ease-in-out"}
+
+- origins: [Gramscian]{style="color:red;"} concentration on internal life of movements, values and [meaning-making]{style="color:red;"}; otherwise the central contribution of '[new social movements]{style="color:red;"}' is missed
+
+:::: {.columns}
+:::{.column width="50%"}
+- some key scholars: E. Goffmann, A. Melucci, F. Polletta, J. Jasper, R. Benford, D. Snow  
+- key concepts: 
+    + [collective identity]{style="color:darkred;"} <!-- - boundaries of who 'we' and 'they' are -->
+    + [emotions]{style="color:darkred;"} 
+    + [framing]{style="color:darkred;"} <!-- [@Benford2000]: diagnostic, prognostic, motivational -->
+
+:::
+
+::: {.column width="50%" .right}
+
+:::: {.columns}
+:::{.column width="35%"}
+[framing]{.center style="color: forestgreen;"}
+
+:::
+
+:::{.column width="30%"}
+[emotion work]{.center style="color: goldenrod;"}
+
+:::
+
+:::{.column width="30%"}
+[identity construction]{.center style="color: darkred;"}
+
+:::
+::::
+
+::: {.r-hstack}
+::: {data-id="box1" auto-animate-delay="0" style="background: forestgreen; width: 200px; height: 150px; margin: 10px;"}
+:::
+
+::: {data-id="box2" auto-animate-delay="0.1" style="background: goldenrod; width: 200px; height: 150px; margin: 10px;"}
+
+:::
+
+::: {data-id="box3" auto-animate-delay="0.2" style="background: darkred; width: 200px; height: 150px; margin: 10px;"}
+:::
+:::
+
+:::
+::::
+
+## The 'cultural turn' and new social movements {auto-animate=true auto-animate-easing="ease-in-out"}
+
+- origins: [Gramscian]{style="color:red;"} concentration on internal life of movements, values and [meaning-making]{style="color:red;"}; otherwise the central contribution of '[new social movements]{style="color:red;"}' is missed
+
+:::: {.columns}
+:::{.column width="50%"}
+- some key scholars: E. Goffmann, A. Melucci, F. Polletta, J. Jasper, R. Benford, D. Snow  
+- key concepts: 
+    + [collective identity]{style="color:darkred;"} <!-- - boundaries of who 'we' and 'they' are -->
+    + [emotions]{style="color:darkred;"} 
+    + [framing]{style="color:darkred;"} <!-- [@Benford2000]: diagnostic, prognostic, motivational -->
+
+:::
+
+::: {.column width="50%" .right}
+
+:::: {.columns}
+:::{.column width="35%"}
+[framing]{.center style="color: forestgreen;"}
+
+:::
+
+:::{.column width="30%"}
+[emotion work]{.center style="color: goldenrod;"}
+
+:::
+
+:::{.column width="30%"}
+[identity construction]{.center style="color: darkred;"}
+
+:::
+::::
+
+::: {.r-stack}
+::: {data-id="box1" style="background: forestgreen; width: 350px; height: 350px; border-radius: 200px;"}
+:::
+
+::: {data-id="box2" style="background: goldenrod; width: 250px; height: 250px; border-radius: 200px;"}
+:::
+
+::: {data-id="box3" style="background: darkred; width: 150px; height: 150px; border-radius: 200px;"}
+[movement solidarity]{style="color:white; font-size:35px;"}
+:::
+:::
+
+:::
+::::
+
+## Framing - definition and origins
+
+- broadly, **[framing]{style="color:darkred;"}** refers to the meanings individuals or groups attach to events, developments, activities, and other individuals/groups.
+    + previously, this had also been covered by referring to **[ideology]{style="color:cadetblue;"}**
+
+\vspace{5mm}
+
+- origins of '[framing]{style="color:darkred;"}': Erving Goffman's *Frame Analysis* (1974)
+    + frames link **[objective conditions]{style="color:violet;"}** to **[subjective perceptions]{style="color:violet;"}**
+- Benford and Snow (1986) connect this concept to social movements
+    + how do collective actors collectively determine *what's going on here* --- and once they make that determination, how do they try to convince others?
+
+## Framing - why? 
+
+- Is there a problem?
+- Can it be fixed?
+- How can it be fixed?
+- What must be done?
+
+- **[Frames provide answers to these questions]{style="color:cadetblue;"}---they are essential to movement activity**
+
+## Framing - why?
+
+- Is there a problem?
+- Can it be fixed?
+- How can it be fixed?
+- What must be done?
+
+- **[Frames provide answers to these questions]{style="color:cadetblue;"}---they are essential to movement activity**
+
+- types of **[frames]{style="color:darkred;"}**: 
+    + *[diagnostic]{style="color:darkred;"}*: what's the problem and who's to blame
+    + *[prognostic]{style="color:darkred;"}*: how can the problem be solved
+    + *[motivational]{style="color:darkred;"}*: why should we go solve this problem
+
+## Framing - an example
+
+- types of **[frames]{style="color:darkred;"}**: *[diagnostic]{style="color:darkred;"}*: what's the problem and who's to blame; *[prognostic]{style="color:darkred;"}*: how can the problem be solved; *[motivational]{style="color:darkred;"}*: why should we go solve this problem
+
+*deaths from drunk driving*
+
+- previously, 'just' sad, but bound to happen, like other [accidents]{style="color:seagreen;"}
+
+. . . 
+
+- But then (re-)framed:
+    + Some [immoral person]{style="color:violet;"} drank and drove 
+    + People should not drive drunk
+    + It is not [fair]{style="color:violet;"} for a person to die because of another's immorality
+
+. . . 
+
+- [Examples from cases you know: how do movements frame issues?]{style="color:indigo;"}
+
+## Injustice frames (Gamson, 2013)
+
+- When impersonal, abstract forces are perceived as responsible for problems/wrongs/suffering, people tend to accept, tolerate, and cope
+
+. . . 
+
+BUT...
+
+. . . 
+
+- When problems/wrongs/suffering are attributed to individuals' or groups' *ignorance*, *indifference*, or *malice*, the result is a **[sense of injustice]{style="color:darkred;"}**
+
+. . . 
+
+Injustice frames are often the core of **[diagnosing]{style="color:darkred;"}** issues that movements care about
+
+## Further types of frames
+
+- **[Master frame]{style="color:darkred;"}**: an overarching frame that smaller/sub-issue frames fit into
+    + e.g., the '[Great Replacement]{style="color:goldenrod;"}'
+        * can accommodate subordinate frames about welfare provision, ethno-cultural identity, maintaining liberal democracy, religious heritage and/or freedom, etc.
+
+## Further types of frames 
+
+- **[Counter frame]{style="color:darkred;"}**: a frame created to oppose another group's frame [cf. @Mayer1995; @Meyer1996; @Meyer2008]
+    + e.g., abortion contention in the U.S.:
+        * one side: '*pro-choice*', freedom to choose to abort or not 
+        * other side: 'where is the baby's *choice*? (rights of unborn) 
+
+## Further types of frames 
+
+- **[Counter frame]{style="color:darkred;"}**: a frame created to oppose another group's frame [cf. @Mayer1995; @Meyer1996; @Meyer2008]
+    + e.g., abortion contention in the U.S.:
+        * one side: '*pro-choice*', freedom to choose to abort or not 
+        * other side: 'where is the baby's *choice*? (rights of unborn) 
+        * one side: women's *right* 
+        * other side: *regret* of women who have aborted 
+
+. . . 
+
+- '[framing contest]{style="color:darkred;"}' -- which frame is doing better among opposing movements
+    + this is [traceable]{style="color:blue;"}/[measureable]{style="color:blue;"} in different arenas: mass media, political debates, court cases, etc.
+
+## Framing contest (Alex Wong, Getty Images)
+
+![](slide_files/03/abortion_frames.png)
+
+[other examples?]{style="color:indigo;"}
+
+## Frame alignment [@Benford2000]
+
+- **[frame bridging]{style="color:darkred;"}** - linking of two or more ideologically congruent but structurally unconnected frames regarding a particular issue or problem
+    + e.g., German activists against World Bank and IMF, linking their frames to those of peace, ecosystem, women's, localism, and labour movements
+- **[frame amplification]{style="color:darkred;"}** - idealization, embellishment, clarification, or invigoration of existing values or beliefs
+    + e.g., white supremacists stressing 'white *pride*' or preserving white race (e.g., 14 words)
+
+## Frame alignment [@Benford2000]
+
+- **[frame extension]{style="color:darkred;"}** - depicting an SMO’s interests and frame(s) as extending beyond its primary interests to include issues and concerns that are presumed to be of importance to potential adherents
+    + e.g., peace movement: money spent on military could be used for education, infrastructure, social programmes, etc. --- so groups that want more funding are potential recruits
+- **[frame transformation]{style="color:darkred;"}** - changing old understandings and meanings and/or generating new ones
+    + e.g., drunk driving example: accident &rarr; moral failing
+
+## Frame resonance [@Benford2000]
+
+> [resonance]{style="color:darkred;"} - degree to which a movement's framing aligns with beliefs, values, experiences of consituents/audience/public
+
+- **[Credibility]{style="color:cadetblue;"}**:
+    + *[consistency]{style="color:forestgreen;"}* - congruency of SMO’s beliefs, claims, and actions
+        * e.g., [do Klima-Kleber actions align with claims]{style="color:indigo;"}?
+    + *[empirical credibility]{style="color:forestgreen;"}* - can claims be verified
+        * e.g., climate change: complex, but measurable and traceable
+    + *[credibility of claim-maker]{style="color:forestgreen;"}* - are the movement actors (esp. leaders) seen as reliable, knowledgeable, respectable
+        * e.g., we should listen to Einstein and Sakharov about nuclear disarmament because they understand how the bombs work
+
+## Frame resonance [@Benford2000]
+
+> [resonance]{style="color:darkred;"} - degree to which a movement's framing aligns with beliefs, values, experiences of consituents/audience/public
+
+- **[Salience]{style="color:cadetblue;"}**:
+    + *[centrality]{style="color:forestgreen;"}* - does it **matter** to potential members/participants?
+    + *[experiential commensurability]{style="color:forestgreen;"}* - does it fit with the experience of potential members/participants? 
+    + *[narrative fidelity]{style="color:forestgreen;"}* - does it accord with wider cultural narratives/traditions?
+
+## Further on framing... interview with William Gamson:
+
+<!-- Aspect ratios include 1x1, 4x3, 16x9 (the default), and 21x9. -->
+<!-- aspect-ratio="21x9"  -->
+{{< video https://www.youtube.com/watch?v=6JP4fQry3Us
+    start="1"
+    width="90%" 
+    height="90%" >}}
+
+
+# Poll: framing, SMs/CSOs, democracy  {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="35%"}
+![](slide_files/03/SMclass3_poll_QR.png){fig-alt="A QR code for the survey."}
+
+:::
+
+::: {.column width="65%" .center}
+<!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
+Take the survey at **<https://forms.gle/zTF1dhs9whMV5H5t7>**
+
+- Do movements always challenge dominant frames within a society?
+- Does 'frame bridging' increase a movement's chances of having an impact?
+- Do framing strategies differ significantly in authoritarian vs. democratic regimes?
+
+:::
+:::: 
+
+- Movement activism is a good thing for democratic societies
+- A large civil society, with many citizens participating in voluntary associations, is beneficial for liberal democratic political systems
+
+
+--- 
+
+```{ojs}
+md`## Poll results (Respondents: ${respondentCount})`
+```
+
+
+```{ojs}
+
+import { liveGoogleSheet } from "@jimjamslam/live-google-sheet";
+import { aq, op } from "@uwdata/arquero";
+
+// UPDATE THE LINK FOR A NEW POLL
+surveyResults = liveGoogleSheet(
+  "https://docs.google.com/spreadsheets/d/e/" +
+    "2PACX-1vRwB36vEVw_NGCWiGAMCHF1FBRTLsyXWjKi3ScVry70JZkroCM-e57vMzeThSLA17Yvd8EywIOIhfW1/" +
+    "pub?gid=1055461632&single=true&output=csv",
+  10000, 1, 6); // adjust the last number to select all relevant columns 
+
+respondentCount = surveyResults.length;
+
+```
+
+:::: {.columns}
+:::{.column width="50%"}
+Do movements always challenge dominant frames within a society?
+
+```{ojs}
+challengeCounts = aq.from(surveyResults)
+  .select("challenge")
+  .groupby("challenge")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+challenge_maxCountRE = Math.max(...challengeCounts.objects().map(d => d.count));
+
+plot_challenge = Plot.plot({
+  marks: [
+    Plot.barY(challengeCounts, {
+      x: "challenge",
+      y: "count",
+      fill: "challenge",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Yes",
+      "No",
+      "Maybe"
+    ],
+    range: [
+      "forestgreen",
+      "darkred",
+      "goldenrod"
+    ]
+  },
+  marginBottom: 80,
+  x: { label: "", tickSize: 2, tickRotate: -1, padding: 0.2,
+    domain: ["Yes", "No", "Maybe"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(challengeCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, challenge_maxCountRE]
+  },
+  facet: { data: challengeCounts, x: "measure", label: "" },
+  marginLeft: 60,
+  style: {
+    width: 1600,
+    height: 500,
+    fontSize: 40,
+  },
+});
+
+```
+ 
+:::
+
+::: {.column width="50%"}
+
+Does *[frame bridging]{style="color:darkred;"}* increase a movement's chances of having an impact?
+
+```{ojs}
+bridgingCounts = aq.from(surveyResults)
+  .select("bridging")
+  .groupby("bridging")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+bridging_maxCountRE = Math.max(...bridgingCounts.objects().map(d => d.count));
+
+plot_bridging = Plot.plot({
+  marks: [
+    Plot.barY(bridgingCounts, {
+      x: "bridging",
+      y: "count",
+      fill: "bridging",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Yes",
+      "No",
+      "Maybe"
+    ],
+    range: [
+      "forestgreen",
+      "darkred",
+      "goldenrod"
+    ]
+  },
+  marginBottom: 80,
+  x: { label: "", tickSize: 2, tickRotate: -1, padding: 0.2,
+    domain: ["Yes", "No", "Maybe"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(bridgingCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, bridging_maxCountRE]
+  },
+  facet: { data: bridgingCounts, x: "measure", label: "" },
+  marginLeft: 60,
+  style: {
+    width: 1600,
+    height: 500,
+    fontSize: 40,
+  },
+});
+
+```
+ 
+:::
+::::
+
+
+
+# Civil society: An alternative approach to understand social movements? {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- concept of civil society 
+- civil society and democracy 
+- (un)civil society [@Berman1997]
+
+:::
+
+::: {.column width="50%" .right}
+<div class="tenor-gif-embed" data-postid="21957116" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%"><a href="https://tenor.com/view/without-people-like-me-civil-society-collapses-completely-liz-lemon-tina-fey-30rock-people-like-me-holds-this-society-together-gif-21957116">Without People Like Me Civil Society Collapses Completely Liz Lemon GIF</a>from <a href="https://tenor.com/search/without+people+like+me+civil+society+collapses+completely-gifs">Without People Like Me Civil Society Collapses Completely GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+## Introducing concept of civil society
+
+- **[civil society]{style="color:darkred;"}**: organised (non-state, non-market) societal activity <!-- apart from state and market spheres -->
+    + composed of *[voluntary association]{style="color:cadetblue;"}* based on *[shared interests]{style="color:cadetblue;"}*
+    + fuzzy conceptual boundaries
+    + *Bolleyer*: voluntary members, non-profit, private, self-governing, formalised infrastructure
+
+- Alexis de Tocqueville: **[free association]{style="color:darkorange;"}** essential for democracy
+
+. . . 
+
+- other perspectives on **[civil society]{style="color:darkred;"}** concept: 
+    + [social contract theory]{style="color:seagreen;"}: surrender of (some) freedom for civil(ised) society --- escaping 'state of nature'
+    + [Marxian]{style="color:seagreen;"}: dissolution of civil society in favour of state
+    + [Gramscian]{style="color:seagreen;"}: part of arena for battling for *cultural hegemony*
+
+## Larry Diamond on civil society and democracy (until 2.20): {.smaller}
+
+<!-- Aspect ratios include 1x1, 4x3, 16x9 (the default), and 21x9. -->
+<!-- aspect-ratio="21x9"  -->
+{{< video https://www.youtube.com/watch?v=gtcMUC-OBfc
+    start="1"
+    width="70%" 
+    height="70%" >}}
+
+. . . 
+
+- (i) monitoring government performance; (ii) mobilising political participation (voting is bare minimum---democracy needs more engagement); (iii) force [parties] to become more democratic internally; (iv) form coalitions to push through reforms
+
+*so lots of parallels with conceptions of [social movement sector]{style="color:red;"}*
+
+## Civil society and democracy
+
+- organisational participation (contributing to [democratic citizenry]{style="color:seagreen;"})
+- interest representation (similar function to [parties]{style="color:seagreen;"})
+- societal responsiveness (alternative mechanism of [political input]{style="color:seagreen;"})
+
+
+## Civil society and democracy
+
+- organisational participation (contributing to [democratic citizenry]{style="color:seagreen;"})
+- interest representation (similar function to [parties]{style="color:seagreen;"})
+- societal responsiveness (alternative mechanism of [political input]{style="color:seagreen;"})
+
+:::: {.columns}
+:::{.column width="15%"}
+
+:::
+
+:::{.column width="15%"}
+&darr;
+:::
+::::
+
+
+**[democratic culture]{style="color:red;"}**
+
+. . . 
+
+- BUT... assumption that political engagement is democratically positive
+- [is this a *fair weather* theory: civil society contributes to democracy only in already healthy democratic settings? Can it combat strains/crises]{style="color:indigo;"}?
+
+
+## Movements/Civil society and Democracy
+
+:::: {.columns}
+:::{.column width="50%"}
+- movement activism *good* for democracy
+
+```{ojs}
+goodCounts = aq.from(surveyResults)
+  .select("good")
+  .groupby("good")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+good_maxCountRE = Math.max(...goodCounts.objects().map(d => d.count));
+
+plot_good = Plot.plot({
+  marks: [
+    Plot.barY(goodCounts, {
+      x: "good",
+      y: "count",
+      fill: "good",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Strongly disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly agree"
+    ],
+    range: [
+      "red",
+      "pink",
+      "lightgrey",
+      "lightgreen",
+      "forestgreen"
+    ]
+  },
+  marginBottom: 180,
+  x: { label: "", tickSize: 2, tickRotate: -45,
+    domain: ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(goodCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, good_maxCountRE]
+  },
+  facet: { data: goodCounts, x: "measure", label: "" },
+  marginLeft: 140,
+  style: {
+    width: 1350,
+    height: 500,
+    fontSize: 30,
+  }
+});
+
+```
+
+
+:::
+
+::: {.column width="50%"}
+
+large civil society is beneficial for liberal democracy
+
+```{ojs}
+beneficialCounts = aq.from(surveyResults)
+  .select("beneficial")
+  .groupby("beneficial")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+beneficial_maxCountRE = Math.max(...beneficialCounts.objects().map(d => d.count));
+
+plot_beneficial = Plot.plot({
+  marks: [
+    Plot.barY(beneficialCounts, {
+      x: "beneficial",
+      y: "count",
+      fill: "beneficial",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Strongly disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly agree"
+    ],
+    range: [
+      "red",
+      "pink",
+      "lightgrey",
+      "lightgreen",
+      "forestgreen"
+    ]
+  },
+  marginBottom: 180,
+  x: { label: "", tickSize: 2, tickRotate: -45,
+    domain: ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(beneficialCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, beneficial_maxCountRE]
+  },
+  facet: { data: beneficialCounts, x: "measure", label: "" },
+  marginLeft: 140,
+  style: {
+    width: 1350,
+    height: 500,
+    fontSize: 30,
+  }
+});
+
+```
+
+:::
+::::
+
+
+## @Berman1997 - Civil society in Weimar - theory
+
+- Tocqueville
+    + neo-Tocquevillian scholars: Putnam's focus on community and social capital (e.g., *Bowling Alone*)
+        * **[associationism]{style="color:darkorange;"}** both indicator of healthy democracy and prerequisite for it
+- W. Kornhauser, H. Arendt: '[mass society]{style="color:cadetblue;"}' (collapse of intermediate associations)
+    + industrialisation and modernity estranged citizens from each other --- lack of *belonging*
+
+## Theory puzzle
+
+- neo-Tocquevillean theories:
+    + high levels of associationism = good for democracy
+- Huntingtonian institutionalist theories:
+    + without high **[political institutionalisation]{style="color:darkorange;"}**, active and mobilised citizenry degenerates into instability, disorder, and even violence
+
+<!-- “Yet in contrast to what neo-Tocquevillean theories would predict, high levels of associationism, absent strong and responsive national government and political parties, served to fragment rather than unite German society. It was weak political institutionalization rather than a weak civil society that was Germany's main problem during the Wilhelmine and Weimar eras” ([Berman, 1997, p. 3](zotero://select/library/items/TJAKENM7)) ([pdf](zotero://open-pdf/library/items/AW2W2AME?page=3&annotation=G64QGL5H)) THESIS SUMMARY -->
+
+<!-- “As Samuel Huntington noted almost three decades ago, societies with highly active and mobilized publics and low levels of political institutionalization often degenerate into instability, disorder, and even violence” ([Berman, 1997, p. 3](zotero://select/library/items/TJAKENM7)) ([pdf](zotero://open-pdf/library/items/AW2W2AME?page=3&annotation=LXZK9VKX)) THEORY PUZZLE -->
+
+## Types of puzzles [@day2019FindingQuestion] {.smaller .scrollable}
+
+- [Empirical puzzles]{style="color:blue;"}
+    + Contra expectations - against conventional wisdom or theoretical expectation
+        * e.g., Soviet liberalisation and disintegration---no one expected it!
+    + Divergence/convergence - (D) multiple cases that look similar experience different outcomes; (C) multiple cases that look different experience the same outcome
+        * e.g., (D) post-Soviet transition – looks the same, but... 
+        * e.g., (C) third wave of democratisation - Portugal, Latin America, Philippines, South Korea, Taiwan
+    + Variation over time - conditions appear stable but suddenly change
+        * e.g., Mugabe ouster (in power 37 years, 1980-2017)---all seemed stable...
+        
+- [Theoretical puzzles]{style="color:blue;"}
+    + Conceptual omission - necessary concept missing from theoretical framework
+        * e.g., private agents in repressive action (Jennifer Earl, social control)
+    + Theoretical convergence - one body of literature weighs in on another
+        * e.g., @Schock2005: non-violence theory to modify social movement theory
+        * e.g., 'Punctuated equilibrium' (evolutionary biology) used in institutionalism
+    + Squaring the circle - contradictory theoretical arguments against each other
+
+- [Methodological puzzles]{style="color:blue;"}
+    + Measurement - new way to measure a concept <!-- (e.g., Steven Pinker) -->
+        * e.g., Steven Pinker - human society is getting better (new groupings and collection of data to measure; estimated numbers on violent deaths globally, over time)
+    + Technique - applying a new method <!-- (e.g., QCA to democratisation studies) -->
+        * e.g., QCA to studies of democratisation (necessary and sufficient conditions)
+        * @russett1967PearlHarborDeterrence single (deviant) case study in IR, Pearl Harbour disputing Deterrence Theory in favour of Decision Theory
+
+
+## Contextual background - *Wilhelmine Germany*
+
+- various spurts of associational growth in 19th and early 20th century
+    + legal liberalisation, expanding wealth (rise of bourgeoisie), universal suffrage granted --- BUT...
+    + failure of liberal political parties to aggregate interests and bolster institutional politics
+    + economic deprivation
+        * trend of associations emerging in response to strain
+        * nationalist/anti-democratic actors targeted dissatisfied for recruitment
+
+## Casing
+
+- [influential/crucial case]{style="color:blue;"} [@Gerring2007]
+    + Weimar as 'crucial theoretical testing ground'
+    + (Wilhelmine) Germany as comparable to U.S. for high level of associationalism (*Vereinsmeierei*)
+
+## Civil society in Weimar
+
+::: {.r-stack}
+![](slide_files/03/weimar.png){.absolute .fragment top="50" right="1" width="440"}
+
+:::
+
+. . . 
+
+:::: {.columns}
+:::{.column width="60%"}
+- post-WWI, another spurt of associational growth 
+    + corresponding exodus from centrist parties, which were numerous and fractious --- and seen as not representing the needs of constituents (tool of 'big capitalists') 
+
+:::
+
+::: {.column width="40%" .right}
+ 
+:::
+::::
+
+- influential civil society organisations like Stahlhelm -- promote nationalist agenda
+- NSDAP capitalises on foundations of nationalist associationalism and others dissatisfied with status quo
+
+## Civil society in Weimar
+
+![](slide_files/03/weimar.png){.absolute top="50" right="1" width="440"}
+
+:::: {.columns}
+:::{.column width="60%"}
+- post-WWI, another spurt of associational growth 
+    + corresponding exodus from centrist parties, which were numerous and fractious --- and seen as not representing the needs of constituents (tool of 'big capitalists') 
+
+:::
+
+::: {.column width="40%" .right}
+ 
+:::
+::::
+
+> Without the opportunity to exploit Weimar's rich associational network, in short, the Nazis would not have been able to capture important sectors of the German electorate so quickly and efficiently. (p421-422)
+
+<!-- ## [Civil society in Weimar]{style="color:red;"} {background="#43464B" background-image="slide_files/03/weimar.png" width="400"} -->
+
+<!-- - post-WWI, another spurt of associational growth  -->
+
+## Civil society in Weimar
+
+> What occurred in Germany was no less than an [inversion of neo-Tocquevillean theory]{style="color:cadetblue;"}; not only did participation in **[civil society organizations fail to contribute to republican virtue]{style="color:darkorange;"}**, but it in fact **[subverted it]{style="color:darkorange;"}**. ... Private associations were correctly seen to offer benefits that the traditional bourgeois parties were failing to provide, such as a sense of community and unity. (p417)
+
+[cf. @Allen1984]
+
+* **[what do you know about associational activity in the Weimar era?]{style="color:indigo;"}**
+
+## Findings
+
+- "*It was weak political institutionalization rather than a weak civil society that was Germany's main problem...*" <!-- during the Wilhelmine and Weimar eras. -->
+- NSDAP rise: not through attracting apolitical Germans---instead, attracting highly active individuals [&darr;]{style="color:red;"} <!-- &#8628; --> <!-- $\downarrow$  -->
+    + expand party's appeal and consolidate position
+
+
+> Civil society activity alone, in short, could not overcome the country's social divisions or provide the political cohesion that would have been necessary to weather the crises which beset Germany beginning in 1914. For this, strong and flexible political institutions, particularly political parties, were necessary.
+
+. . . 
+
+- [Problems/issues?]{style="color:indigo;"}
+
+## Findings
+
+- "*It was weak political institutionalization rather than a weak civil society that was Germany's main problem...*" <!-- during the Wilhelmine and Weimar eras. -->
+- NSDAP rise: not through attracting apolitical Germans---instead, attracting highly active individuals [&darr;]{style="color:red;"} <!-- &#8628; --> <!-- $\downarrow$  -->
+    + expand party's appeal and consolidate position
+
+
+> Civil society activity alone, in short, could not overcome the country's social divisions or provide the political cohesion that would have been necessary to weather the crises which beset Germany beginning in 1914. For this, strong and flexible political institutions, particularly political parties, were necessary.
+
+- [Problems/issues?]{style="color:indigo;"}: isolating [causal impact]{style="color:blue;"}; do the [findings travel]{style="color:blue;"}?
+
+## Coda: authoritarian vs. democratic contexts
+
+Do framing strategies differ significantly in authoritarian vs. democratic regimes?
+
+```{ojs}
+auth_demCounts = aq.from(surveyResults)
+  .select("auth_dem")
+  .groupby("auth_dem")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+auth_dem_maxCountRE = Math.max(...auth_demCounts.objects().map(d => d.count));
+
+plot_auth_dem = Plot.plot({
+  marks: [
+    Plot.barY(auth_demCounts, {
+      x: "auth_dem",
+      y: "count",
+      fill: "auth_dem",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Yes",
+      "No",
+      "Maybe"
+    ],
+    range: [
+      "forestgreen",
+      "darkred",
+      "goldenrod"
+    ]
+  },
+  marginBottom: 80,
+  x: { label: "", tickSize: 2, tickRotate: -1, padding: 0.2,
+    domain: ["Yes", "No", "Maybe"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(auth_demCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, auth_dem_maxCountRE]
+  },
+  facet: { data: auth_demCounts, x: "measure", label: "" },
+  marginLeft: 60,
+  style: {
+    width: 1600,
+    height: 500,
+    fontSize: 40,
+  },
+});
+
+```
+ 
+
+
+# Any questions, concerns, feedback for this class? {background-color="#2c844c"}
+
+Anonymous feedback here: <https://forms.gle/AjHt6fcnwZxkSg4X8>
+
+Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+pagedown::chrome_print(file.path("..", "docs/slides", "slides_03.html"))
+```
+
+
+## References
+

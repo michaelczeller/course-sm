@@ -1158,7 +1158,7 @@ includes [*social movements*]{style="color:forestgreen;"}
 :::
 
 :::{.column width="22%"}
-[Contentious politics]{style="color:darkorange;"}
+[Contentious politics]{style="color:red;"}
 :::
 ::::
 
