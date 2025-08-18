@@ -1,0 +1,1143 @@
+---
+title: "Class 4: Aspects of Social Movement Activity"
+subtitle: "Mobilisation, recruitment, and participation"
+author: "[Dr. Michael C. Zeller](https://michaelzeller.de)"
+format: 
+  rladies-revealjs:
+    footer: ""
+    slide-number: c/t
+    toc: TRUE
+    toc-depth: 1
+    toc-title: Agenda for the day
+    menu: TRUE
+    theme: [default, custom_options]
+    background-transition: fade
+incremental: false
+embed-resources: true
+# runtime: shiny
+bibliography: ../../../library.bib
+---
+
+# Opening notes {background-color="#2c844c"}
+
+::: {.tenor-gif-embed data-postid="14209777" data-share-method="host" data-aspect-ratio="1.94" data-width="70%"}
+<div class="tenor-gif-embed" data-postid="14209777" data-share-method="host" data-aspect-ratio="1.94" data-width="100%"><a href="https://tenor.com/view/open-gif-14209777">Open Sticker</a>from <a href="https://tenor.com/search/open-stickers">Open Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+
+```{=html}
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+```
+
+## Presentation groups
+
+::: panel-tabset
+## December
+
+| Date    | Presenters                       | Method |
+| -------:|:---------------------------------|:------:|
+| 4 Dec:  |                                  | TBD    | 
+| 11 Dec: |                                  | TBD    | 
+| 18 Dec: |                                  | TBD    | 
+
+: Presentations line-up
+
+## January
+
+| Date    | Presenters                       | Method |
+| -------:|:---------------------------------|:------:|
+| 8 Jan:  |                                  | TBD    | 
+| 15 Jan: |                                  | TBD    | 
+| 22 Jan: |                                  | TBD    | 
+| 29 Jan: |                                  | TBD    | 
+
+: Presentations line-up
+
+:::
+
+<!-- []{style="font-size:10px;"} -->
+
+# Klausur preview {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- structure of an essay
+    1. Broad introductory response
+    2. Elaborate in (sufficient) detail to answer the questions
+    3. Describe examples
+    4. Concluding summary
+
+:::
+
+::: {.column width="50%" .right}
+<div class="tenor-gif-embed" data-postid="23948694" data-share-method="host" data-aspect-ratio="1.00946" data-width="100%"><a href="https://tenor.com/view/bean-gif-23948694">Bean GIF</a>from <a href="https://tenor.com/search/bean-gifs">Bean GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+## Klausur preview (1) {auto-animate=true}
+
+:::: {.columns}
+:::{.column width="25%"}
+1. Broad introduction 
+:::
+
+:::{.column width="25%"}
+2. Elaborate in detail  
+:::
+
+:::{.column width="25%"}
+3. Describe examples 
+:::
+
+:::{.column width="25%"}
+4. Concluding summary 
+:::
+::::
+
+*What does 'political opportunity structure' mean? How does it help us understand how movements emerge and (potentially) have an impact? Discuss with examples*
+
+## Klausur preview (1) {auto-animate=true}
+
+
+:::: {.columns}
+:::{.column width="25%"}
+
+:::
+
+:::{.column width="25%"}
+2. Elaborate in detail  
+:::
+
+:::{.column width="25%"}
+3. Describe examples 
+:::
+
+:::{.column width="25%"}
+4. Concluding summary 
+:::
+::::
+
+*What does 'political opportunity structure' mean? How does it help us understand how movements emerge and (potentially) have an impact? Discuss with examples*
+
+::: {style="margin-top: -50px; margin-bottom: -80px; font-size: 2em; color: red;"}
+1. Broad introduction 
+:::
+
+[Political opportunity structure (POS) refers to availabilities of resources, institutional arrangements, and histories of mobilisation that shape (facilitating/hindering) movement activity. Different aspects of these components are relevant to different movements. But POS in all cases is an important part of explaining if and how movements form, how they operate, and whether and what kinds of impacts they can have. ...]{style="font-size:23px;"} 
+
+## Klausur preview (2) {auto-animate=true}
+
+:::: {.columns}
+:::{.column width="25%"}
+1. Broad introduction 
+:::
+
+:::{.column width="25%"}
+2. Elaborate in detail  
+:::
+
+:::{.column width="25%"}
+3. Describe examples 
+:::
+
+:::{.column width="25%"}
+4. Concluding summary 
+:::
+::::
+
+*What does 'political opportunity structure' mean? How does it help us understand how movements emerge and (potentially) have an impact? Discuss with examples*
+
+## Klausur preview (2) {auto-animate=true}
+
+:::: {.columns}
+:::{.column width="25%"}
+1. Broad introduction 
+:::
+
+:::{.column width="25%"}
+
+:::
+
+:::{.column width="25%"}
+3. Describe examples 
+:::
+
+:::{.column width="25%"}
+4. Concluding summary 
+:::
+::::
+
+*What does 'political opportunity structure' mean? How does it help us understand how movements emerge and (potentially) have an impact? Discuss with examples*
+
+::: {style="margin-top: -50px; margin-bottom: -80px; font-size: 2em; color: red;"}
+2. Elaborate in detail  
+:::
+
+[POS defines what resources are available for emergent movements to use, whether they can access the public sphere and/or political decision-making, and whether there are viable models of mobilisation and campaigning. While individuals and groups always have some possibility of exercising their *agency*, the *structure* referred to by POS is a powerful constraining set of factors. ...]{style="font-size:23px;"} 
+
+## Klausur preview (3) {auto-animate=true}
+
+:::: {.columns}
+:::{.column width="25%"}
+1. Broad introduction 
+:::
+
+:::{.column width="25%"}
+2. Elaborate in detail  
+:::
+
+:::{.column width="25%"}
+3. Describe examples 
+:::
+
+:::{.column width="25%"}
+4. Concluding summary 
+:::
+::::
+
+*What does 'political opportunity structure' mean? How does it help us understand how movements emerge and (potentially) have an impact? Discuss with examples*
+
+## Klausur preview (3) {auto-animate=true .scrollable}
+
+
+:::: {.columns}
+:::{.column width="25%"}
+1. Broad introduction 
+:::
+
+:::{.column width="25%"}
+2. Elaborate in detail  
+:::
+
+:::{.column width="25%"}
+ 
+:::
+
+:::{.column width="25%"}
+4. Concluding summary 
+:::
+::::
+
+*What does 'political opportunity structure' mean? How does it help us understand how movements emerge and (potentially) have an impact? Discuss with examples*
+
+::: {style="margin-top: -50px; margin-bottom: -80px; font-size: 2em; color: red;"}
+3. Describe examples 
+:::
+
+[At a most basic level, POS can refer to the freedom for movements to form, to mobilise and campaign for certain goals. Authoritarian states typically restrict this freedom and offer less space for movements than in liberal democratic states like Germany. Looking closely at specific examples can demonstrate how POS shapes movements. The anti-nuclear movement in Germany, for example, benefited by forming in the wake of 1968-era mobilisations, so models existed for mobilising. Germany's federal state structure presented more 'opportunities' for movements to disrupt implementation of nuclear projects. Critical events, such as Cold War missile installation and the Chernobyl accident, strengthened the movement. And Germany's (PR) electoral system made the creation of a political party (i.e., institutionalisation and creation of elite allies) a viable option. Germany's virtually non-existent nuclear power infrastructure is evidence of the anti-nuclear movements success in Germany, contrasted with less successful movement activity in, e.g., France. ...]{style="font-size:23px;"} 
+
+## Klausur preview (4) {auto-animate=true}
+
+:::: {.columns}
+:::{.column width="25%"}
+1. Broad introduction 
+:::
+
+:::{.column width="25%"}
+2. Elaborate in detail  
+:::
+
+:::{.column width="25%"}
+3. Describe examples 
+:::
+
+:::{.column width="25%"}
+4. Concluding summary 
+:::
+::::
+
+*What does 'political opportunity structure' mean? How does it help us understand how movements emerge and (potentially) have an impact? Discuss with examples*
+
+## Klausur preview (4) {auto-animate=true}
+
+:::: {.columns}
+:::{.column width="25%"}
+1. Broad introduction 
+:::
+
+:::{.column width="25%"}
+2. Elaborate in detail  
+:::
+
+:::{.column width="25%"}
+3. Describe examples 
+:::
+
+:::{.column width="25%"}
+ 
+:::
+::::
+
+*What does 'political opportunity structure' mean? How does it help us understand how movements emerge and (potentially) have an impact? Discuss with examples*
+
+::: {style="margin-top: -50px; margin-bottom: -80px; font-size: 2em; color: red;"}
+4. Concluding summary 
+:::
+
+[To assess whether and in what ways movements can emerge, whether and in what ways movements can have an impact, it is essential to consider relevant POS aspects. Movements exercise their agency within the limitations created by POS.]{style="font-size:23px;"} 
+
+# Networks {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- opening questions 
+- network membership 
+- social network example 
+- mobilising networks and collective action
+
+:::
+
+::: {.column width="50%" .right}
+<div class="tenor-gif-embed" data-postid="12765145" data-share-method="host" data-aspect-ratio="1.408" data-width="100%"><a href="https://tenor.com/view/networking-you-gotta-networking-work-get-work-gif-12765145">Networking GIF</a>from <a href="https://tenor.com/search/networking-gifs">Networking GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+## Opening question
+
+::: {style="text-align: center;"}
+**[What types of social networks exist? Where? (When?)]{style="color:indigo; font-size:80px;"}** 
+:::
+
+## Network membership 
+
+:::: {.columns}
+:::{.column width="50%"}
+- (nearly) everyone is a member of *multiple* [social networks]{style="color:darkred;"}
+    + some *[informal]{style="color:darkred;"}* and loose
+    + others *[formalised]{style="color:darkred;"}*, with clearly defined structure
+
+:::
+
+::: {.column width="50%" .right}
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=5}
+# library(eulerr) 
+# 
+# fit <- euler(c("cultural \n artefacts \n and frames"=3, 
+#                "networks and \n organisations"=3,
+#                "opportunities \n and constraints"=3,
+#                "cultural \n artefacts \n and frames&networks and \n organisations"=3, 
+#                "opportunities \n and constraints&networks and \n organisations"=3, 
+#                "opportunities \n and constraints&cultural \n artefacts \n and frames"=3, 
+#                "cultural \n artefacts \n and frames&networks and \n organisations&opportunities \n and constraints"=3))
+# 
+# # plot(fit, fills = list(fill = c("#E56997", "#FBC740", "#66D2D6"), alpha = 0.8),
+# #      labels = list(font = 2, fontsize=9))
+# 
+#      # quantities = list(type = c("counts"), cex = 1),
+#      # par(mar = c(8, 8, 8, 8)))
+# 
+# plot(fit, fills = list(fill = c("#FBC740", "red", "#66D2D6"), alpha = 0.8),
+#      labels = list(font = 2, fontsize=9))
+
+library(ggvenn)
+
+a <- list(A = c("cultural", "artefacts", "& frames", "campaigns"),
+          B = c("opportunities", "& constraints", "campaigns"),
+          C = c("networks &", "organisations", "campaigns"))
+ggvenn(a, 
+       fill_color = c("#FBC740", "#66D2D6", "red"), fill_alpha = 0.8,
+       show_elements = TRUE, 
+       set_name_color = "white", set_name_size = 0.1,
+       text_color = "black", text_size = 6,
+       label_sep = "\n")
+
+```
+ 
+:::
+::::
+
+
+## Network membership 
+
+:::: {.columns}
+:::{.column width="50%"}
+- (nearly) everyone is a member of *multiple social networks*
+    + some *informal* and loose
+    + others *formalised*, with clearly defined structure
+- networks have many functions
+    + knowledge/info. sharing 
+    + coordinating action
+    + [others?]{style="color:indigo;"} <!-- what do you get from networks you are a part of? -->
+
+:::
+
+::: {.column width="50%" .right}
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=5}
+# library(eulerr) 
+# 
+# fit <- euler(c("cultural \n artefacts \n and frames"=3, 
+#                "networks and \n organisations"=3,
+#                "opportunities \n and constraints"=3,
+#                "cultural \n artefacts \n and frames&networks and \n organisations"=3, 
+#                "opportunities \n and constraints&networks and \n organisations"=3, 
+#                "opportunities \n and constraints&cultural \n artefacts \n and frames"=3, 
+#                "cultural \n artefacts \n and frames&networks and \n organisations&opportunities \n and constraints"=3))
+# 
+# # plot(fit, fills = list(fill = c("#E56997", "#FBC740", "#66D2D6"), alpha = 0.8),
+# #      labels = list(font = 2, fontsize=9))
+# 
+#      # quantities = list(type = c("counts"), cex = 1),
+#      # par(mar = c(8, 8, 8, 8)))
+# 
+# plot(fit, fills = list(fill = c("#FBC740", "red", "#66D2D6"), alpha = 0.8),
+#      labels = list(font = 2, fontsize=9))
+
+library(ggvenn)
+
+a <- list(A = c("cultural", "artefacts", "& frames", "campaigns"),
+          B = c("opportunities", "& constraints", "campaigns"),
+          C = c("networks &", "organisations", "campaigns"))
+ggvenn(a, 
+       fill_color = c("#FBC740", "#66D2D6", "red"), fill_alpha = 0.8,
+       show_elements = TRUE, 
+       set_name_color = "white", set_name_size = 0.1,
+       text_color = "black", text_size = 6,
+       label_sep = "\n")
+
+```
+ 
+:::
+::::
+
+
+## Network membership 
+
+:::: {.columns}
+:::{.column width="50%"}
+- (nearly) everyone is a member of *multiple social networks*
+    + some *informal* and loose
+    + others *formalised*, with clearly defined structure
+- networks have many functions
+    + knowledge/info. sharing 
+    + coordinating action
+    + [others?]{style="color:indigo;"} <!-- what do you get from networks you are a part of? -->
+- BUT... it is not necessarily clear who is important in a network and how 
+
+:::
+
+::: {.column width="50%" .right}
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=5}
+# library(eulerr) 
+# 
+# fit <- euler(c("cultural \n artefacts \n and frames"=3, 
+#                "networks and \n organisations"=3,
+#                "opportunities \n and constraints"=3,
+#                "cultural \n artefacts \n and frames&networks and \n organisations"=3, 
+#                "opportunities \n and constraints&networks and \n organisations"=3, 
+#                "opportunities \n and constraints&cultural \n artefacts \n and frames"=3, 
+#                "cultural \n artefacts \n and frames&networks and \n organisations&opportunities \n and constraints"=3))
+# 
+# # plot(fit, fills = list(fill = c("#E56997", "#FBC740", "#66D2D6"), alpha = 0.8),
+# #      labels = list(font = 2, fontsize=9))
+# 
+#      # quantities = list(type = c("counts"), cex = 1),
+#      # par(mar = c(8, 8, 8, 8)))
+# 
+# plot(fit, fills = list(fill = c("#FBC740", "red", "#66D2D6"), alpha = 0.8),
+#      labels = list(font = 2, fontsize=9))
+
+library(ggvenn)
+
+a <- list(A = c("cultural", "artefacts", "& frames", "campaigns"),
+          B = c("opportunities", "& constraints", "campaigns"),
+          C = c("networks &", "organisations", "campaigns"))
+ggvenn(a, 
+       fill_color = c("#FBC740", "#66D2D6", "red"), fill_alpha = 0.8,
+       show_elements = TRUE, 
+       set_name_color = "white", set_name_size = 0.1,
+       text_color = "black", text_size = 6,
+       label_sep = "\n")
+
+```
+ 
+:::
+::::
+
+## Social network example - @Barabási2016[p. 17]
+
+:::: {.columns}
+:::{.column width="50%"}
+- Hungarian company noticed misleading internal information about plans of upper management
+
+![](slide_files/04/barbasi1.png)
+
+:::
+
+::: {.column width="50%" .right}
+
+![](slide_files/04/barbasi2.png)
+
+- network scientists asked employees who they rely on for company information
+- here, two individuals are connected if one nominated the other as his/her source of
+
+:::
+::::
+
+## Social network example - @Barabási2016[p. 17]
+
+- now, identifying network influence of ranks in company hierarchy
+- no [directors]{style="color:red;"} are hubs. Nor are the [top managers]{style="color:cadetblue;"} 
+- biggest hub (most influential individual) is an ordinary employee
+
+![](slide_files/04/barbasi3.png)
+
+## Social network example - @Barabási2016[p. 17] {.smaller}
+
+- many employees at most two links from the big hub, an employee in charge of safety issues 
+    + regularly visits each location and talks with the employees; connected to everyone except the top management; acts as a gossip centre
+
+![](slide_files/04/barbasi4.png)
+
+## Mobilising networks and collective action [@dellaPortaDiani2009, p. 115-6]
+
+- circular relationship of social networks and movements:
+    a. networks facilitate collective action
+        * get people involved
+        * share information
+        * coordinate activity
+    b. collective action forms/reshapes networks
+        * participation creates new connections, which can affect subsequent decisions
+        * in particular, **[network embeddedness]{style="color:darkred;"}** is often powerful explanatory factor for **[continued participation]{style="color:darkorange;"}**
+
+<!-- # @dellaPortaDiani2009 - Chapter 5: Individuals, Networks, and Participation -->
+
+<!-- “networks facilitating involvement in social movement activities may be regarded as one particular version of “social capital”” ([Porta and Diani, 2009, p. 117](zotero://select/library/items/RQGKC77E)) ([pdf](zotero://open-pdf/library/items/Y462PYK5?page=128&annotation=P7QLAK3I)) ARE NETWORKS 'SOCIAL CAPITAL'? -->
+
+<!-- “Embeddedness in social networks not only matters for recruitment; it also works as an antidote to leaving, and as a support to continued participation. For example, members of voluntary associations in America whose social ties are mostly to other organization members are more likely to remain committed to those organizations than are those who instead have a greater share of connections to nonmembers (McPherson, Popielarz, and Drobnic 1992).” ([Porta and Diani, 2009, p. 118](zotero://select/library/items/RQGKC77E)) ([pdf](zotero://open-pdf/library/items/Y462PYK5?page=129&annotation=ISKVWB9M)) NETWORK EMBEDDEDNESS PROMOTES CONTINUATION -->
+
+## Networks and individuals' decisions to participate {.smaller}
+
+How do social networks affect decisions to participate in collective action? [-@dellaPortaDiani2009, p. 118-9] <!-- Passy 2003 -->
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, engine = 'tikz'}
+
+\begin{tikzpicture}[node distance=4cm]
+
+\tikzstyle{BOX} = [rectangle, rounded corners, minimum width=2cm, minimum height=0.5cm,text centered, text width=3cm, draw=black, fill=red!30]
+\tikzstyle{RECT} = [rectangle, minimum width=1cm, minimum height=0.5cm, text centered, text width=3cm, draw=black, fill=orange!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\node (NETZ) [BOX] {Networks in mobilisation processes};
+\node (SC)   [RECT, below of=NETZ, yshift=1cm] {\textbf{structural connection} \linebreak higher likelihood of connecting to orgs.};
+\node (SO)   [RECT, left of=SC] {\textbf{socialisation} \linebreak creates predispositions about issues and whether to participate};
+\node (DS)   [RECT, right of=SC] {\textbf{decision-shaping} \linebreak individuals decisions shaped by others in network};
+
+\draw[red, line width=0.8mm] (NETZ) -- (SC);
+\draw[red, line width=0.8mm] (NETZ) -- (SO);
+\draw[red, line width=0.8mm] (NETZ) -- (DS);
+
+\draw[line width=0.5mm, ->] (SO) to (SC);
+\draw[line width=0.5mm, ->] (SC) to (DS);
+
+\end{tikzpicture}
+
+```
+
+> Mobilization in social movements frequently occurs through mechanisms of “**bloc recruitment**” (Oberschall, 1973): cells, branches, or simply significant groups of members of existing organizations are **recruited as a whole to a new movement**, or contribute to the start of new campaigns [@dellaPortaDiani2009, p. 120]
+
+## Networks and individuals' decisions to participate {.smaller}
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, engine = 'tikz'}
+
+\begin{tikzpicture}[node distance=4cm]
+
+\tikzstyle{BOX} = [rectangle, rounded corners, minimum width=2cm, minimum height=0.5cm,text centered, text width=3cm, draw=black, fill=red!30]
+\tikzstyle{RECT} = [rectangle, minimum width=1cm, minimum height=0.5cm, text centered, text width=3cm, draw=black, fill=orange!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\node (NETZ) [BOX] {Networks in mobilisation processes};
+\node (SC)   [RECT, below of=NETZ, yshift=1cm] {\textbf{structural connection} \linebreak higher likelihood of connecting to orgs.};
+\node (SO)   [RECT, left of=SC] {\textbf{socialisation} \linebreak creates predispositions about issues and whether to participate};
+\node (DS)   [RECT, right of=SC] {\textbf{decision-shaping} \linebreak individuals decisions shaped by others in network};
+
+\draw[red, line width=0.8mm] (NETZ) -- (SC);
+\draw[red, line width=0.8mm] (NETZ) -- (SO);
+\draw[red, line width=0.8mm] (NETZ) -- (DS);
+
+\draw[line width=0.5mm, ->] (SO) to (SC);
+\draw[line width=0.5mm, ->] (SC) to (DS);
+
+\end{tikzpicture}
+
+```
+
+> Mobilization in social movements frequently occurs through mechanisms of “**[bloc recruitment]{style="color:darkorange;"}**” (Oberschall, 1973): cells, branches, or simply significant groups of members of existing organizations are **[recruited as a whole to a new movement]{style="color:darkorange;"}**, or contribute to the start of new campaigns [@dellaPortaDiani2009, p. 120]
+
+[what are the mobilising networks in cases you know of?]{style="color:indigo; font-size:40px;"}
+
+## Individuals in networks, summing up
+
+- [networks]{style="color:darkred;"} perform many functions
+    + [socialisation]{style="color:darkred;"} (i.e., acquiring [political] values, beliefs, behaviours)
+    + influencing individuals' decisions/sympathies
+        * should I stay involved?
+        * should I advocate for more radical actions?
+        * should I support different leadership?
+
+. . . 
+
+- *[weak ties]{style="color:darkorange;"}* can serve as better source for **[mobilisation]{style="color:darkred;"}** than *[strong ties]{style="color:darkorange;"}* because weak ties are more likely to be inclusive and link to organisations/opportunities to engage [@Granovetter1973]
+    + U.S. Civil Rights Movement relied on 'weak-tie networks'; *Brigate Rosse* (IT), on 'strong-tie networks' (family, friends)
+
+## Individuals in networks, summing up
+
+- networks are important, but *[not necessary and not solely sufficient]{style="color:darkorange;"}* for mobilisation of an individual
+    + powerful combination of **[strong commitment]{style="color:darkorange;"}** and **[strong ties to other participants]{style="color:darkorange;"}** = *[continued participation]{style="color:darkorange;"}*
+    + amenable networks and [frame resonance]{style="color:darkred;"} are sufficient to mobilise individuals (without need of prior connection to an org.) [cf. @dellaPortaDiani2009, p. 125]
+
+
+## Further on networks...  with Manuel Castells:
+
+<!-- Aspect ratios include 1x1, 4x3, 16x9 (the default), and 21x9. -->
+<!-- aspect-ratio="21x9"  -->
+{{< video https://www.youtube.com/watch?v=0lfPg_5iaGQ 
+    start="1"
+    width="90%" 
+    height="90%" >}}
+
+
+# Poll: org. change and youth  {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="35%"}
+![](slide_files/04/SMclass4_poll_QR.png){fig-alt="A QR code for the survey."}
+
+:::
+
+::: {.column width="65%" .center}
+<!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
+Take the survey at **<https://forms.gle/soCtvvSX5TKuURp57>**
+
+- social media networks have eased mobilisation and expanded movement participation?
+- offline, 'brick and mortar' organisations are as important as ever for movement activism
+
+:::
+::::
+
+- young people more prominent, numerous in activism?
+- if young people are more present in movement activism, is it an advantage or disadvantage?
+
+---
+
+```{ojs}
+md`## Poll results (Respondents: ${respondentCount})`
+```
+
+
+```{ojs}
+
+import { liveGoogleSheet } from "@jimjamslam/live-google-sheet";
+import { aq, op } from "@uwdata/arquero";
+
+// UPDATE THE LINK FOR A NEW POLL
+surveyResults = liveGoogleSheet(
+  "https://docs.google.com/spreadsheets/d/e/" +
+    "2PACX-1vQ_vXVZg2dn-UeLLm42vrQ86JP46u9GsVgg-glRy2xK8MfLnZ1ehr2sObgDpDsoYMmuN3GBKCJAHz1L/" +
+    "pub?gid=1510353834&single=true&output=csv",
+  10000, 1, 5); // adjust the last number to select all relevant columns
+
+respondentCount = surveyResults.length;
+
+```
+
+:::: {.columns}
+:::{.column width="50%"}
+social media eased [mobilisation]{style="color:darkred;"}, expanded participation?
+
+```{ojs}
+social_mediaCounts = aq.from(surveyResults)
+  .select("social_media")
+  .groupby("social_media")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+social_media_maxCountRE = Math.max(...social_mediaCounts.objects().map(d => d.count));
+
+plot_social_media = Plot.plot({
+  marks: [
+    Plot.barY(social_mediaCounts, {
+      x: "social_media",
+      y: "count",
+      fill: "social_media",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Strongly disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly agree"
+    ],
+    range: [
+      "red",
+      "pink",
+      "lightgrey",
+      "lightgreen",
+      "forestgreen"
+    ]
+  },
+  marginBottom: 180,
+  x: { label: "", tickSize: 2, tickRotate: -45,
+    domain: ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(social_mediaCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, social_media_maxCountRE]
+  },
+  facet: { data: social_mediaCounts, x: "measure", label: "" },
+  marginLeft: 140,
+  style: {
+    width: 1350,
+    height: 500,
+    fontSize: 30,
+  }
+});
+
+```
+
+:::
+
+::: {.column width="50%"}
+offline, orgs as important as ever
+
+```{ojs}
+brick_and_mortarCounts = aq.from(surveyResults)
+  .select("brick_and_mortar")
+  .groupby("brick_and_mortar")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+brick_and_mortar_maxCountRE = Math.max(...brick_and_mortarCounts.objects().map(d => d.count));
+
+plot_brick_and_mortar = Plot.plot({
+  marks: [
+    Plot.barY(brick_and_mortarCounts, {
+      x: "brick_and_mortar",
+      y: "count",
+      fill: "brick_and_mortar",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Strongly disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly agree"
+    ],
+    range: [
+      "red",
+      "pink",
+      "lightgrey",
+      "lightgreen",
+      "forestgreen"
+    ]
+  },
+  marginBottom: 180,
+  x: { label: "", tickSize: 2, tickRotate: -45,
+    domain: ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(brick_and_mortarCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, brick_and_mortar_maxCountRE]
+  },
+  facet: { data: brick_and_mortarCounts, x: "measure", label: "" },
+  marginLeft: 140,
+  style: {
+    width: 1350,
+    height: 500,
+    fontSize: 30,
+  }
+});
+
+```
+
+:::
+::::
+
+## Old-school organisation (American CRM)
+
+:::: {.columns}
+:::{.column width="35%"}
+![](slide_files/04/mlk.png)
+
+![](slide_files/04/rustin.png)
+
+:::
+
+::: {.column width="65%" .right}
+
+
+:::
+::::
+
+## Old-school organisation (American CRM)
+
+:::: {.columns}
+:::{.column width="35%"}
+![](slide_files/04/mlk.png)
+
+![](slide_files/04/rustin.png)
+
+:::
+
+::: {.column width="65%" .right}
+- MLK's 'I have a dream' speech (28.8.1963)
+    + delivered previously, in N. Carolina (27.11.1962) and in Detroit (23.6.1963)
+
+:::
+::::
+
+
+## Old-school organisation (American CRM)
+
+:::: {.columns}
+:::{.column width="35%"}
+![](slide_files/04/mlk.png)
+
+![](slide_files/04/rustin.png)
+
+:::
+
+::: {.column width="65%" .right}
+- MLK's 'I have a dream' speech (28.8.1963)
+    + delivered previously, in N. Carolina (27.11.1962) and in Detroit (23.6.1963)
+
+- Bayard Rustin: capable, competent organisers in key positions
+    + instead of standard 1000-2000 USD sound system, 16,000 USD state-of-the-art system
+
+:::
+::::
+
+## @Tufekci2017 on twitter netz, old-school orgs
+
+from start until 5.12
+
+<!-- Aspect ratios include 1x1, 4x3, 16x9 (the default), and 21x9. -->
+<!-- aspect-ratio="21x9"  -->
+{{< video https://www.youtube.com/watch?v=Mo2Ai7ESNL8 
+    start="1"
+    width="70%" 
+    height="70%" >}}
+
+. . . 
+
+::: {style="margin-top: -50px"}
+[which social media platforms are you on? Could you imagine getting 'mobilised' via them?]{style="color:indigo;"} 
+:::
+
+# Organisations {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- opening question 
+- 'necessity' of organisations
+- emergence and persistence 
+- types of organisations
+- key developments
+
+:::
+
+::: {.column width="50%" .right}
+<div class="tenor-gif-embed" data-postid="17596638" data-share-method="host" data-aspect-ratio="1.64948" data-width="100%"><a href="https://tenor.com/view/1u-industrial-industrial-workers-of-the-world-injury-iww-gif-17596638">1u Industrial GIF</a>from <a href="https://tenor.com/search/1u-gifs">1u GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+<!-- <div class="tenor-gif-embed" data-postid="12416042" data-share-method="host" data-aspect-ratio="2.26364" data-width="100%"><a href="https://tenor.com/view/leslie-knope-parks-and-rec-compliment-gif-12416042">Leslie Knope Parks GIF</a>from <a href="https://tenor.com/search/leslie+knope-gifs">Leslie Knope GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> -->
+
+## Opening question
+
+::: {style="text-align: center;"}
+**[What types of social movement organisations exist? What are the key differentiating attributes?]{style="color:indigo; font-size:80px;"}** 
+:::
+
+## Necessity of organisations
+
+> Movements are not based on networks alone; without some degree of **[formal organization]{style="color:cadetblue;"}**, movements frequently fade away or dissipate their energies. [@Tarrow2011, p. 146]
+
+. . . 
+
+BUT... to what extent/degree is *[organisation]{style="color:goldenrod;"}* helpful?
+
+@Tarrow2011[p. 160]: if organisations formalise/institutionalise, may lose capacity for [disruption]{style="color:darkred;"}; but if they lack infrastructure, they may be unable to [sustain]{style="color:darkred;"} interaction with allies, authorities, supporters 
+
+- cf. @Piven1979: movements' strength lies in their power to [disrupt]{style="color:darkred;"}
+    + @Michels1962: '[iron law of oligarchy]{style="color:darkorange;"}' - over time, organisations give up their original goals, fall into routine, and ultimately accept the rules of the existing system
+
+<!-- ARE ORGANISATIONS HELPFUL FOR SMs -->
+<!-- “Yet others are persuaded that, far from inspiring people to action, organizational leaders can deprive them of their major power – the power to disrupt (Piven and Cloward 1977). This is what Frances Fox Piven and Richard Cloward found in their analysis of the welfare rights movement that emerged in the United States in the 1960s. Theoretical support for Piven and Cloward’s position came from Robert Michels’ famous “Iron Law of Oligarchy,” which held that, over time, organizations displace their original goals, become wedded to routine, and ultimately accept the rules of the game of the existing system (Michels 1962; Clemens and Minkoff 2004, Rucht 1999).” ([Tarrow, 2011, p. 145](zotero://select/library/items/A8E7IGEW)) ([pdf](zotero://open-pdf/library/items/PZVS4MUM?page=145&annotation=HBN7TPXL)) ARE ORGS GOOD FOR MOVEMENTS -->
+
+## Organisations: emergence and persistence
+
+:::: {.columns}
+:::{.column width="65%"}
+
+1. orgs emerge out of episodes of contention
+2. orgs begin locally and scale up/spread through contention 
+    + [has the internet changed this?]{style="color:indigo;"}
+3. key to org survival is interpersonal networks within them [cf. @Ganz2010 on org. structure enhancing strategic capacity]
+
+:::
+
+::: {.column width="35%" .right}
+
+:::
+::::
+
+## Organisations: emergence and persistence
+
+:::: {.columns}
+:::{.column width="65%"}
+
+1. orgs emerge out of episodes of contention
+2. orgs begin locally and scale up/spread through contention 
+    + [has the internet changed this?]{style="color:indigo;"}
+3. key to org survival is interpersonal networks within them [cf. @Ganz2010 on org. structure enhancing strategic capacity]
+
+- difference between [bureaucratic organisations]{style="color:darkred;"} and [grassroots radical organisations]{style="color:darkred;"} – one common org. type distinction
+
+:::
+
+::: {.column width="35%" .right}
+
+:::
+::::
+
+
+## Organisations: emergence and persistence
+
+:::: {.columns}
+:::{.column width="65%"}
+
+1. orgs emerge out of episodes of contention
+2. orgs begin locally and scale up/spread through contention 
+    + [has the internet changed this?]{style="color:indigo;"}
+3. key to org survival is interpersonal networks within them [cf. @Ganz2010 on org. structure enhancing strategic capacity]
+
+- difference between [bureaucratic organisations]{style="color:darkred;"} and [grassroots radical organisations]{style="color:darkred;"} – one common org. type distinction
+
+:::
+
+::: {.column width="35%" .right}
+![](slide_files/04/afl-cio.png)
+
+::: {style="margin-top: -50px"}
+[AFL-CIO: heavily formalised org., traditional bargaining tactics (ineffective), *failed to win concessions from growers*]{style="font-size:14px;"} 
+::: 
+
+::: {style="margin-top: -30px"} 
+![](slide_files/04/ufw.png)
+::: 
+
+::: {style="margin-top: -55px"}
+[UFW: experienced leaders willing to listen to new ideas, org structure facilitating vertical exchange (creates tactical innovation and strategic capactity), *won concessions*]{style="font-size:14px;"} 
+::: 
+
+:::
+::::
+
+## Different types of movement orgs. [per @Tarrow2011]
+
+- **[Exclusive affiliations]{style="color:darkred;"}**:
+    + demand long membership accession, rigid discipline, high level of commitment
+    + closed off to outside
+- **[Multiple affiliations]{style="color:darkred;"}**:
+    + not monopolising members' commitment
+    + multiple commitments is a source of strength
+    + facilitates circulation of information, especially through informal/interpersonal networks 
+
+<!-- DRAW WHAT THESE LOOK LIKE IN A NETWORK -->
+
+. . . 
+
+[How do these different types relate to our discussion of framing]{style="color:indigo;"}?    
+- recall [frame alignment]{style="color:darkred;"} (esp. '[bridging]{style="color:darkred;"}' and '[extenstion]{style="color:darkred;"}')
+
+## SM orgs. - key developments [@Tarrow2011, p. 133f]
+
+1. enhanced **[availability of the media]{style="color:cadetblue;"}** (TV, internet) in diffusing the influence of movement organisations
+2. increased **[amount of money, free time, and expertise available to young people]{style="color:cadetblue;"}** since the beginning of the postwar boom years
+3. **[financial and administrative resources available]{style="color:cadetblue;"}** to movement organisations from foundations, from governments, and even, in some cases, from business and civic groups
+
+. . . 
+
+- uses of internet/social media
+    + fundraising, share ideology and propaganda, provide training and recruitment opportunities, overcome constraints/counteraction of authorities/opponents
+
+<!-- @Tarrow2011 P.123 - As must be obvious, some leaders, working through certain kinds of organizations, in particular situations, do transform contention into successful movements and sustain conflict with opponents, but others do not. Equally obvious, some movements emerge without formal leadership, often producing leaders out of the experience of struggle – or from cognate groups from which they borrow resources or organizational forms. -->
+
+<!-- ABEYANCE STRUCTURES -->
+<!-- “Nor does the polarity between bureaucratic organizations and grassroots radical groups exhaust the varieties of movement organization today.” ([Tarrow, 2011, p. 151](zotero://select/library/items/A8E7IGEW)) ([pdf](zotero://open-pdf/library/items/PZVS4MUM?page=151&annotation=RBE8G2HN))  -->
+
+<!-- “Edna Reid and Hsinchen Chen coded the Web sites of 84 extremist groups in the United States and the Middle East, they found that in addition to their communications functions, these sites worked to increase fundraising, share ideology and propaganda, provide training and recruitment opportunities, and overcome environmental challenges from law enforcement and the military (Reid and Chen 2007).” ([Tarrow, 2011, p. 159](zotero://select/library/items/A8E7IGEW)) ([pdf](zotero://open-pdf/library/items/PZVS4MUM?page=159&annotation=VEBKMC9G)) USES OF DIGITAL MEDIA -->
+
+## Concluding considerations 
+
+:::: {.columns}
+:::{.column width="50%"}
+young people more prominent, numerous in activism?
+
+```{ojs}
+youngCounts = aq.from(surveyResults)
+  .select("young")
+  .groupby("young")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+young_maxCountRE = Math.max(...youngCounts.objects().map(d => d.count));
+
+plot_young = Plot.plot({
+  marks: [
+    Plot.barY(youngCounts, {
+      x: "young",
+      y: "count",
+      fill: "young",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Yes",
+      "No",
+      "Maybe"
+    ],
+    range: [
+      "forestgreen",
+      "darkred",
+      "goldenrod"
+    ]
+  },
+  marginBottom: 80,
+  x: { label: "", tickSize: 2, tickRotate: -1, padding: 0.2,
+    domain: ["Yes", "No", "Maybe"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(youngCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, young_maxCountRE]
+  },
+  facet: { data: youngCounts, x: "measure", label: "" },
+  marginLeft: 60,
+  style: {
+    width: 1600,
+    height: 500,
+    fontSize: 40,
+  },
+});
+
+```
+
+:::
+
+::: {.column width="50%" .right}
+if more young people in activism, advantage or disadvantage?
+
+```{ojs}
+advantage_disadvantageCounts = aq.from(surveyResults)
+  .select("advantage_disadvantage")
+  .groupby("advantage_disadvantage")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+advantage_disadvantage_maxCountRE = Math.max(...advantage_disadvantageCounts.objects().map(d => d.count));
+
+plot_advantage_disadvantage = Plot.plot({
+  marks: [
+    Plot.barY(advantage_disadvantageCounts, {
+      x: "advantage_disadvantage",
+      y: "count",
+      fill: "advantage_disadvantage",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "advantage", 
+      "disadvantage"
+    ],
+    range: [
+      "blue",
+      "red"
+    ]
+  },
+  marginBottom: 120,
+  x: { label: "", tickSize: 2, tickRotate: -40, padding: 0.2,
+    domain: ["advantage", "disadvantage"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(advantage_disadvantageCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, advantage_disadvantage_maxCountRE]
+  },
+  facet: { data: advantage_disadvantageCounts, x: "measure", label: "" },
+  marginLeft: 60,
+  style: {
+    width: 1600,
+    height: 500,
+    fontSize: 40,
+  },
+});
+
+```
+
+:::
+::::
+
+## Concluding considerations 
+
+<!-- Aspect ratios include 1x1, 4x3, 16x9 (the default), and 21x9. -->
+<!-- aspect-ratio="21x9"  -->
+{{< video https://www.youtube.com/watch?v=zySKwvQCpXE 
+    start="1"
+    width="90%" 
+    height="90%" >}}
+
+# Any questions, concerns, feedback for this class? {background-color="#2c844c"}
+
+Anonymous feedback here: <https://forms.gle/AjHt6fcnwZxkSg4X8>
+
+Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+pagedown::chrome_print(file.path("..", "docs/slides", "slides_04.html"))
+```
+
+
+## References
+

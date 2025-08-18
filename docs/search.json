@@ -158,7 +158,7 @@
     "href": "content/index.html",
     "title": "Slides",
     "section": "",
-    "text": "Class 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n\nClass 3"
+    "text": "Class 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n\nClass 3\n\n\nClass 4"
   },
   {
     "objectID": "schedule/index.html",
@@ -1650,5 +1650,271 @@
     "title": "Class 3: Social Movement Theories",
     "section": "Coda: authoritarian vs. democratic contexts",
     "text": "Coda: authoritarian vs. democratic contexts\nDo framing strategies differ significantly in authoritarian vs. democratic regimes?\n\nauth_demCounts = aq.from(surveyResults)\n  .select(\"auth_dem\")\n  .groupby(\"auth_dem\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nauth_dem_maxCountRE = Math.max(...auth_demCounts.objects().map(d =&gt; d.count));\n\nplot_auth_dem = Plot.plot({\n  marks: [\n    Plot.barY(auth_demCounts, {\n      x: \"auth_dem\",\n      y: \"count\",\n      fill: \"auth_dem\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Yes\",\n      \"No\",\n      \"Maybe\"\n    ],\n    range: [\n      \"forestgreen\",\n      \"darkred\",\n      \"goldenrod\"\n    ]\n  },\n  marginBottom: 80,\n  x: { label: \"\", tickSize: 2, tickRotate: -1, padding: 0.2,\n    domain: [\"Yes\", \"No\", \"Maybe\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(auth_demCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, auth_dem_maxCountRE]\n  },\n  facet: { data: auth_demCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});"
+  },
+  {
+    "objectID": "slides/slides_04.html#presentation-groups",
+    "href": "slides/slides_04.html#presentation-groups",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Presentation groups",
+    "text": "Presentation groups\n\nDecemberJanuary\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\n\nTBD\n\n\n11 Dec:\n\nTBD\n\n\n18 Dec:\n\nTBD\n\n\n\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n8 Jan:\n\nTBD\n\n\n15 Jan:\n\nTBD\n\n\n22 Jan:\n\nTBD\n\n\n29 Jan:\n\nTBD"
+  },
+  {
+    "objectID": "slides/slides_04.html#klausur-preview-1",
+    "href": "slides/slides_04.html#klausur-preview-1",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Klausur preview (1)",
+    "text": "Klausur preview (1)\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\nWhat does ‘political opportunity structure’ mean? How does it help us understand how movements emerge and (potentially) have an impact? Discuss with examples"
+  },
+  {
+    "objectID": "slides/slides_04.html#klausur-preview-1-1",
+    "href": "slides/slides_04.html#klausur-preview-1-1",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Klausur preview (1)",
+    "text": "Klausur preview (1)\n\n\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\nWhat does ‘political opportunity structure’ mean? How does it help us understand how movements emerge and (potentially) have an impact? Discuss with examples\n\n\nBroad introduction\n\n\nPolitical opportunity structure (POS) refers to availabilities of resources, institutional arrangements, and histories of mobilisation that shape (facilitating/hindering) movement activity. Different aspects of these components are relevant to different movements. But POS in all cases is an important part of explaining if and how movements form, how they operate, and whether and what kinds of impacts they can have. …"
+  },
+  {
+    "objectID": "slides/slides_04.html#klausur-preview-2",
+    "href": "slides/slides_04.html#klausur-preview-2",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Klausur preview (2)",
+    "text": "Klausur preview (2)\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\nWhat does ‘political opportunity structure’ mean? How does it help us understand how movements emerge and (potentially) have an impact? Discuss with examples"
+  },
+  {
+    "objectID": "slides/slides_04.html#klausur-preview-2-1",
+    "href": "slides/slides_04.html#klausur-preview-2-1",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Klausur preview (2)",
+    "text": "Klausur preview (2)\n\n\n\nBroad introduction\n\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\nWhat does ‘political opportunity structure’ mean? How does it help us understand how movements emerge and (potentially) have an impact? Discuss with examples\n\n\nElaborate in detail\n\n\n\nPOS defines what resources are available for emergent movements to use, whether they can access the public sphere and/or political decision-making, and whether there are viable models of mobilisation and campaigning. While individuals and groups always have some possibility of exercising their agency, the structure referred to by POS is a powerful constraining set of factors. …"
+  },
+  {
+    "objectID": "slides/slides_04.html#klausur-preview-3",
+    "href": "slides/slides_04.html#klausur-preview-3",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Klausur preview (3)",
+    "text": "Klausur preview (3)\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\nWhat does ‘political opportunity structure’ mean? How does it help us understand how movements emerge and (potentially) have an impact? Discuss with examples"
+  },
+  {
+    "objectID": "slides/slides_04.html#klausur-preview-3-1",
+    "href": "slides/slides_04.html#klausur-preview-3-1",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Klausur preview (3)",
+    "text": "Klausur preview (3)\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\n\n\nConcluding summary\n\n\nWhat does ‘political opportunity structure’ mean? How does it help us understand how movements emerge and (potentially) have an impact? Discuss with examples\n\n\nDescribe examples\n\n\nAt a most basic level, POS can refer to the freedom for movements to form, to mobilise and campaign for certain goals. Authoritarian states typically restrict this freedom and offer less space for movements than in liberal democratic states like Germany. Looking closely at specific examples can demonstrate how POS shapes movements. The anti-nuclear movement in Germany, for example, benefited by forming in the wake of 1968-era mobilisations, so models existed for mobilising. Germany’s federal state structure presented more ‘opportunities’ for movements to disrupt implementation of nuclear projects. Critical events, such as Cold War missile installation and the Chernobyl accident, strengthened the movement. And Germany’s (PR) electoral system made the creation of a political party (i.e., institutionalisation and creation of elite allies) a viable option. Germany’s virtually non-existent nuclear power infrastructure is evidence of the anti-nuclear movements success in Germany, contrasted with less successful movement activity in, e.g., France. …"
+  },
+  {
+    "objectID": "slides/slides_04.html#klausur-preview-4",
+    "href": "slides/slides_04.html#klausur-preview-4",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Klausur preview (4)",
+    "text": "Klausur preview (4)\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\nWhat does ‘political opportunity structure’ mean? How does it help us understand how movements emerge and (potentially) have an impact? Discuss with examples"
+  },
+  {
+    "objectID": "slides/slides_04.html#klausur-preview-4-1",
+    "href": "slides/slides_04.html#klausur-preview-4-1",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Klausur preview (4)",
+    "text": "Klausur preview (4)\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\n\nWhat does ‘political opportunity structure’ mean? How does it help us understand how movements emerge and (potentially) have an impact? Discuss with examples\n\n\nConcluding summary\n\n\nTo assess whether and in what ways movements can emerge, whether and in what ways movements can have an impact, it is essential to consider relevant POS aspects. Movements exercise their agency within the limitations created by POS."
+  },
+  {
+    "objectID": "slides/slides_04.html#further-on-framing-interview-with-william-gamson",
+    "href": "slides/slides_04.html#further-on-framing-interview-with-william-gamson",
+    "title": "Class 3: Aspects of Social Movement Activity",
+    "section": "Further on framing… interview with William Gamson:",
+    "text": "Further on framing… interview with William Gamson:\n\n\n\n\n\n\n\n\n\n\n–&gt; \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n–&gt;   \n\n\n\n\n\n\n\n\n–&gt;  –&gt; ” data-raw=“–&gt;”}         ]{.quarto-shortcode__ data-is-shortcode=“1” data-raw=“{{&lt; video https://www.youtube.com/watch?v=gtcMUC-OBfc –&gt;"
+  },
+  {
+    "objectID": "slides/slides_04.html#references",
+    "href": "slides/slides_04.html#references",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "References",
+    "text": "References\n\n\n\n\nBarabási, Albert-László. 2016. Network Science. Cambridge: Cambridge University Press. https://doi.org/10.1145/1557019.1557025.\n\n\ndella Porta, Donatella, and Mario Diani. 2009. Social Movements: An Introduction. Oxford: Oxford University Press. https://doi.org/10.1016/B978-008044910-4.00803-8.\n\n\nGanz, Marshall. 2010. Why David Sometimes Wins: Leadership, Organization, and Strategy in the California Farm Worker Movement. Oxford: Oxford University Press.\n\n\nGranovetter, Mark S. 1973. “The Strength of Weak Empathy.” American Journal of Sociology 78 (6): 1360–80. https://doi.org/10.1017/S0269889712000130.\n\n\nMichels, Robert. 1962. Political Parties: A Sociological Study of the Oligarchical Tendencies of Modern Democracy. New York: Collier Books.\n\n\nPiven, Francis Fox, and Richard A Cloward. 1979. Poor People’s Movements. New York: Vintage Books.\n\n\nTarrow, Sidney G. 2011. Power in Movement: Social Movements and Contentious Politics. Cambridge: Cambridge University Press. https://doi.org/10.1017/CBO9780511973529.\n\n\nTufekci, Zeynep. 2017. Twitter and Tear Gas: The Power and Fragility of Networked Protest. New Haven: Yale University Press."
+  },
+  {
+    "objectID": "slides/slides_04.html#opening-questions",
+    "href": "slides/slides_04.html#opening-questions",
+    "title": "Class 3: Aspects of Social Movement Activity",
+    "section": "Opening questions",
+    "text": "Opening questions"
+  },
+  {
+    "objectID": "slides/slides_04.html#network-membership",
+    "href": "slides/slides_04.html#network-membership",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Network membership",
+    "text": "Network membership\n\n\n\n(nearly) everyone is a member of multiple social networks\n\nsome informal and loose\nothers formalised, with clearly defined structure"
+  },
+  {
+    "objectID": "slides/slides_04.html#network-membership-1",
+    "href": "slides/slides_04.html#network-membership-1",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Network membership",
+    "text": "Network membership\n\n\n\n(nearly) everyone is a member of multiple social networks\n\nsome informal and loose\nothers formalised, with clearly defined structure\n\nnetworks have many functions\n\nknowledge/info. sharing\ncoordinating action\nothers?"
+  },
+  {
+    "objectID": "slides/slides_04.html#network-membership-2",
+    "href": "slides/slides_04.html#network-membership-2",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Network membership",
+    "text": "Network membership\n\n\n\n(nearly) everyone is a member of multiple social networks\n\nsome informal and loose\nothers formalised, with clearly defined structure\n\nnetworks have many functions\n\nknowledge/info. sharing\ncoordinating action\nothers? \n\nBUT… it is not necessarily clear who is important in a network and how"
+  },
+  {
+    "objectID": "slides/slides_04.html#opening-question",
+    "href": "slides/slides_04.html#opening-question",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Opening question",
+    "text": "Opening question\n\nWhat types of social networks exist? Where? (When?)"
+  },
+  {
+    "objectID": "slides/slides_04.html#social-network-example---barabási2016-p.-17",
+    "href": "slides/slides_04.html#social-network-example---barabási2016-p.-17",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Social network example - Barabási (2016, 17)",
+    "text": "Social network example - Barabási (2016, 17)\n\n\n\nHungarian company noticed misleading internal information about plans of upper management\n\n\n\n\n\nnetwork scientists asked employees who they rely on for company information\nhere, two individuals are connected if one nominated the other as his/her source of"
+  },
+  {
+    "objectID": "slides/slides_04.html#opening-question-1",
+    "href": "slides/slides_04.html#opening-question-1",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Opening question",
+    "text": "Opening question\n\nWhat types of social movement organisations exist? What are the key differentiating attributes?"
+  },
+  {
+    "objectID": "slides/slides_04.html#social-network-example---barabási2016-p.-17-1",
+    "href": "slides/slides_04.html#social-network-example---barabási2016-p.-17-1",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Social network example - Barabási (2016, 17)",
+    "text": "Social network example - Barabási (2016, 17)\n\nnow, identifying network influence of ranks in company hierarchy\nno directors are hubs. Nor are the top managers\nbiggest hub (most influential individual) is an ordinary employee"
+  },
+  {
+    "objectID": "slides/slides_04.html#social-network-example---barabási2016-p.-17-2",
+    "href": "slides/slides_04.html#social-network-example---barabási2016-p.-17-2",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Social network example - Barabási (2016, 17)",
+    "text": "Social network example - Barabási (2016, 17)\n\nmany employees at most two links from the big hub, an employee in charge of safety issues\n\nregularly visits each location and talks with the employees; connected to everyone except the top management; acts as a gossip centre"
+  },
+  {
+    "objectID": "slides/slides_04.html#mobilising-networks-and-collective-action-dellaportadiani2009-p.-115-6",
+    "href": "slides/slides_04.html#mobilising-networks-and-collective-action-dellaportadiani2009-p.-115-6",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Mobilising networks and collective action (della Porta and Diani 2009, 115–16)",
+    "text": "Mobilising networks and collective action (della Porta and Diani 2009, 115–16)\n\ncircular relationship of social networks and movements:\n\nnetworks facilitate collective action\n\nget people involved\nshare information\ncoordinate activity\n\ncollective action forms/reshapes networks\n\nparticipation creates new connections, which can affect subsequent decisions\nin particular, network embeddedness is often powerful explanatory factor for continued participation"
+  },
+  {
+    "objectID": "slides/slides_04.html#networks-and-individuals-decisions-to-participate",
+    "href": "slides/slides_04.html#networks-and-individuals-decisions-to-participate",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Networks and individuals’ decisions to participate",
+    "text": "Networks and individuals’ decisions to participate\nHow do social networks affect decisions to participate in collective action? (2009, 118–19) \n\n\nMobilization in social movements frequently occurs through mechanisms of “bloc recruitment” (Oberschall, 1973): cells, branches, or simply significant groups of members of existing organizations are recruited as a whole to a new movement, or contribute to the start of new campaigns (della Porta and Diani 2009, 120)"
+  },
+  {
+    "objectID": "slides/slides_04.html#networks-and-individuals-decisions-to-participate-1",
+    "href": "slides/slides_04.html#networks-and-individuals-decisions-to-participate-1",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Networks and individuals’ decisions to participate",
+    "text": "Networks and individuals’ decisions to participate\n\n\nMobilization in social movements frequently occurs through mechanisms of “bloc recruitment” (Oberschall, 1973): cells, branches, or simply significant groups of members of existing organizations are recruited as a whole to a new movement, or contribute to the start of new campaigns (della Porta and Diani 2009, 120)\n\nwhat are the mobilising networks in cases you know of?"
+  },
+  {
+    "objectID": "slides/slides_04.html#individuals-in-networks-summing-up",
+    "href": "slides/slides_04.html#individuals-in-networks-summing-up",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Individuals in networks, summing up",
+    "text": "Individuals in networks, summing up\n\nnetworks perform many functions\n\nsocialisation (i.e., acquiring [political] values, beliefs, behaviours)\ninfluencing individuals’ decisions/sympathies\n\nshould I stay involved?\nshould I advocate for more radical actions?\nshould I support different leadership?\n\n\n\n\n\nweak ties can serve as better source for mobilisation than strong ties because weak ties are more likely to be inclusive and link to organisations/opportunities to engage (Granovetter 1973)\n\nU.S. Civil Rights Movement relied on ‘weak-tie networks’; Brigate Rosse (IT), on ‘strong-tie networks’ (family, friends)"
+  },
+  {
+    "objectID": "slides/slides_04.html#individuals-in-networks-summing-up-1",
+    "href": "slides/slides_04.html#individuals-in-networks-summing-up-1",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Individuals in networks, summing up",
+    "text": "Individuals in networks, summing up\n\nnetworks are important, but not necessary and not solely sufficient for mobilisation of an individual\n\npowerful combination of strong commitment and strong ties to other participants = continued participation\namenable networks and frame resonance are sufficient to mobilise individuals (without need of prior connection to an org.) (cf. della Porta and Diani 2009, 125)"
+  },
+  {
+    "objectID": "slides/slides_04.html#further-on-networks-with-manuel-castells",
+    "href": "slides/slides_04.html#further-on-networks-with-manuel-castells",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Further on networks… with Manuel Castells:",
+    "text": "Further on networks… with Manuel Castells:"
+  },
+  {
+    "objectID": "slides/slides_04.html#old-school-organisation-american-crm",
+    "href": "slides/slides_04.html#old-school-organisation-american-crm",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Old-school organisation (American CRM)",
+    "text": "Old-school organisation (American CRM)"
+  },
+  {
+    "objectID": "slides/slides_04.html#old-school-organisation-american-crm-1",
+    "href": "slides/slides_04.html#old-school-organisation-american-crm-1",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Old-school organisation (American CRM)",
+    "text": "Old-school organisation (American CRM)\n\n\n\n\n\n\nMLK’s ‘I have a dream’ speech (28.8.1963)\n\ndelivered previously, in N. Carolina (27.11.1962) and in Detroit (23.6.1963)"
+  },
+  {
+    "objectID": "slides/slides_04.html#old-school-organisation-american-crm-2",
+    "href": "slides/slides_04.html#old-school-organisation-american-crm-2",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Old-school organisation (American CRM)",
+    "text": "Old-school organisation (American CRM)\n\n\n\n\n\n\nMLK’s ‘I have a dream’ speech (28.8.1963)\n\ndelivered previously, in N. Carolina (27.11.1962) and in Detroit (23.6.1963)\n\nBayard Rustin: capable, competent organisers in key positions\n\ninstead of standard 1000-2000 USD sound system, 16,000 USD state-of-the-art system"
+  },
+  {
+    "objectID": "slides/slides_04.html#tufekci2017-on-twitter-netz-old-school-orgs",
+    "href": "slides/slides_04.html#tufekci2017-on-twitter-netz-old-school-orgs",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Tufekci (2017) on twitter netz, old-school orgs",
+    "text": "Tufekci (2017) on twitter netz, old-school orgs\nfrom start until 5.12\n\n\n\n\n\nwhich social media platforms are you on? Could you imagine getting ‘mobilised’ via them?"
+  },
+  {
+    "objectID": "slides/slides_04.html#concluding-considerations",
+    "href": "slides/slides_04.html#concluding-considerations",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Concluding considerations",
+    "text": "Concluding considerations\n\n\nyoung people more prominent, numerous in activism?\n\nyoungCounts = aq.from(surveyResults)\n  .select(\"young\")\n  .groupby(\"young\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nyoung_maxCountRE = Math.max(...youngCounts.objects().map(d =&gt; d.count));\n\nplot_young = Plot.plot({\n  marks: [\n    Plot.barY(youngCounts, {\n      x: \"young\",\n      y: \"count\",\n      fill: \"young\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Yes\",\n      \"No\",\n      \"Maybe\"\n    ],\n    range: [\n      \"forestgreen\",\n      \"darkred\",\n      \"goldenrod\"\n    ]\n  },\n  marginBottom: 80,\n  x: { label: \"\", tickSize: 2, tickRotate: -1, padding: 0.2,\n    domain: [\"Yes\", \"No\", \"Maybe\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(youngCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, young_maxCountRE]\n  },\n  facet: { data: youngCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nif more young people in activism, advantage or disadvantage?\n\nadvantage_disadvantageCounts = aq.from(surveyResults)\n  .select(\"advantage_disadvantage\")\n  .groupby(\"advantage_disadvantage\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nadvantage_disadvantage_maxCountRE = Math.max(...advantage_disadvantageCounts.objects().map(d =&gt; d.count));\n\nplot_advantage_disadvantage = Plot.plot({\n  marks: [\n    Plot.barY(advantage_disadvantageCounts, {\n      x: \"advantage_disadvantage\",\n      y: \"count\",\n      fill: \"advantage_disadvantage\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"advantage\", \n      \"disadvantage\"\n    ],\n    range: [\n      \"blue\",\n      \"red\"\n    ]\n  },\n  marginBottom: 120,\n  x: { label: \"\", tickSize: 2, tickRotate: -40, padding: 0.2,\n    domain: [\"advantage\", \"disadvantage\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(advantage_disadvantageCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, advantage_disadvantage_maxCountRE]\n  },\n  facet: { data: advantage_disadvantageCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});"
+  },
+  {
+    "objectID": "slides/slides_04.html#concluding-considerations-1",
+    "href": "slides/slides_04.html#concluding-considerations-1",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Concluding considerations",
+    "text": "Concluding considerations"
+  },
+  {
+    "objectID": "slides/slides_04.html#necessity-of-organisations",
+    "href": "slides/slides_04.html#necessity-of-organisations",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Necessity of organisations",
+    "text": "Necessity of organisations\n\nMovements are not based on networks alone; without some degree of formal organization, movements frequently fade away or dissipate their energies. (Tarrow 2011, 146)\n\n\nBUT… to what extent/degree is organisation helpful?\nTarrow (2011, 160): if organisations formalise/institutionalise, may lose capacity for disruption; but if they lack infrastructure, they may be unable to sustain interaction with allies, authorities, supporters\n\ncf. Piven and Cloward (1979): movements’ strength lies in their power to disrupt\n\nMichels (1962): ‘iron law of oligarchy’ - over time, organisations give up their original goals, fall into routine, and ultimately accept the rules of the existing system"
+  },
+  {
+    "objectID": "slides/slides_04.html#organisations-emergence-and-persistence",
+    "href": "slides/slides_04.html#organisations-emergence-and-persistence",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Organisations: emergence and persistence",
+    "text": "Organisations: emergence and persistence\n\n\n\norgs emerge out of episodes of contention\norgs begin locally and scale up/spread through contention\n\nhas the internet changed this?\n\nkey to org survival is interpersonal networks within them (cf. Ganz 2010 on org. structure enhancing strategic capacity)"
+  },
+  {
+    "objectID": "slides/slides_04.html#organisations-emergence-and-persistence-1",
+    "href": "slides/slides_04.html#organisations-emergence-and-persistence-1",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Organisations: emergence and persistence",
+    "text": "Organisations: emergence and persistence\n\n\n\norgs emerge out of episodes of contention\norgs begin locally and scale up/spread through contention\n\nhas the internet changed this?\n\nkey to org survival is interpersonal networks within them (cf. Ganz 2010 on org. structure enhancing strategic capacity)\n\n\ndifference between bureaucratic organisations and grassroots radical organisations – one common org. type distinction"
+  },
+  {
+    "objectID": "slides/slides_04.html#organisations-emergence-and-persistence-2",
+    "href": "slides/slides_04.html#organisations-emergence-and-persistence-2",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Organisations: emergence and persistence",
+    "text": "Organisations: emergence and persistence\n\n\n\norgs emerge out of episodes of contention\norgs begin locally and scale up/spread through contention\n\nhas the internet changed this?\n\nkey to org survival is interpersonal networks within them (cf. Ganz 2010 on org. structure enhancing strategic capacity)\n\n\ndifference between bureaucratic organisations and grassroots radical organisations – one common org. type distinction\n\n\n\n\nAFL-CIO: heavily formalised org., traditional bargaining tactics (ineffective), failed to win concessions from growers\n\n\n\n\n\nUFW: experienced leaders willing to listen to new ideas, org structure facilitating vertical exchange (creates tactical innovation and strategic capactity), won concessions"
+  },
+  {
+    "objectID": "slides/slides_04.html#different-types-of-movement-orgs.-per-tarrow2011",
+    "href": "slides/slides_04.html#different-types-of-movement-orgs.-per-tarrow2011",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "Different types of movement orgs. (per Tarrow 2011)",
+    "text": "Different types of movement orgs. (per Tarrow 2011)\n\nExclusive affiliations:\n\ndemand long membership accession, rigid discipline, high level of commitment\nclosed off to outside\n\nMultiple affiliations:\n\nnot monopolising members’ commitment\nmultiple commitments is a source of strength\nfacilitates circulation of information, especially through informal/interpersonal networks\n\n\n\n\nHow do these different types relate to our discussion of framing?\n- recall frame alignment (esp. ‘bridging’ and ‘extenstion’)"
+  },
+  {
+    "objectID": "slides/slides_04.html#sm-orgs.---key-developments-tarrow2011-p.-133f",
+    "href": "slides/slides_04.html#sm-orgs.---key-developments-tarrow2011-p.-133f",
+    "title": "Class 4: Aspects of Social Movement Activity",
+    "section": "SM orgs. - key developments (Tarrow 2011, 133f)",
+    "text": "SM orgs. - key developments (Tarrow 2011, 133f)\n\nenhanced availability of the media (TV, internet) in diffusing the influence of movement organisations\nincreased amount of money, free time, and expertise available to young people since the beginning of the postwar boom years\nfinancial and administrative resources available to movement organisations from foundations, from governments, and even, in some cases, from business and civic groups\n\n\n\nuses of internet/social media\n\nfundraising, share ideology and propaganda, provide training and recruitment opportunities, overcome constraints/counteraction of authorities/opponents"
   }
 ]
