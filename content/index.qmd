@@ -3,8 +3,9 @@ title: "Slides"
 engine: knitr 
 ---
 
-# Class 1
+* *[battery warning]{style="color:orange;"}*: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.
 
+# Class 1
 
 ```{r show-slide-tabs, echo=FALSE, results="asis"}
 #| warning: false
