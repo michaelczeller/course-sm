@@ -1,0 +1,789 @@
+---
+title: "Class 6: Aspects of Social Movement Activity"
+subtitle: "Organisation, strategies and tactics"
+author: "[Dr. Michael C. Zeller](https://michaelzeller.de)"
+format: 
+  rladies-revealjs:
+    footer: ""
+    slide-number: c/t
+    toc: TRUE
+    toc-depth: 1
+    toc-title: Agenda for the day
+    menu: TRUE
+    theme: [default, custom_options]
+    background-transition: fade
+incremental: false
+embed-resources: true
+# runtime: shiny
+bibliography: ../../../library.bib
+---
+
+# Opening notes {background-color="#2c844c"}
+
+::: {.tenor-gif-embed data-postid="14209777" data-share-method="host" data-aspect-ratio="1.94" data-width="70%"}
+<div class="tenor-gif-embed" data-postid="14209777" data-share-method="host" data-aspect-ratio="1.94" data-width="100%"><a href="https://tenor.com/view/open-gif-14209777">Open Sticker</a>from <a href="https://tenor.com/search/open-stickers">Open Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+
+```{=html}
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+```
+
+## Presentation groups
+
+::: panel-tabset
+## December
+
+| Date    | Presenters                       | Method |
+| -------:|:---------------------------------|:------:|
+| 4 Dec:  |                                  | TBD    | 
+| 11 Dec: |                                  | TBD    | 
+| 18 Dec: |                                  | TBD    | 
+
+: Presentations line-up
+
+## January
+
+| Date    | Presenters                       | Method |
+| -------:|:---------------------------------|:------:|
+| 8 Jan:  |                                  | TBD    | 
+| 15 Jan: |                                  | TBD    | 
+| 22 Jan: |                                  | TBD    | 
+| 29 Jan: |                                  | TBD    | 
+
+: Presentations line-up
+
+:::
+
+<!-- []{style="font-size:10px;"} -->
+
+# A conceptual framework of *strategy* {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- strategy defined
+- elements of strategy
+- drivers of strategy selection
+- example from a non-violent but disruptive group
+- example from a violent group
+
+:::
+
+::: {.column width="50%" .right}
+<div class="tenor-gif-embed" data-postid="14201105381996209314" data-share-method="host" data-aspect-ratio="1.62745" data-width="100%"><a href="https://tenor.com/view/strategery-snl-skit-will-ferrell-strategy-gw-bush-gif-14201105381996209314">Strategery Snl Skit GIF</a>from <a href="https://tenor.com/search/strategery-gifs">Strategery GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+## Basic, intuitive definition of *strategy*
+
+[strategy]{style="color:darkred;"} refers to the approach of an actor(s) to achieve their (political) objectives---connecting [actions]{style="color:red;"} to [goals]{style="color:red;"} (*means* to an *end*)
+
+. . . 
+
+- extant definitions identify some elements, e.g.,
+    + "a combination of a claim (or demand), a tactic, and a site (or venue)" (Meyer 2007, 82)
+    + @Ganz2010[p. 9]: targeting, tactics, timing
+
+. . . 
+
+- many groups use [mixed strategies]{style="color:goldenrod;"} of [violence]{style="color:violet;"} and [non-violence]{style="color:seagreen;"}
+
+## Elements of strategy 
+
+- informative element: [objective(s)]{style="color:cadetblue;"} (*why*): what are the actor(s) goals? [minimalist]{style="color:darkred;"} vs. [maximalist]{style="color:darkred;"} objectives
+
+. . . 
+
+- [target]{style="color:cadetblue;"} (what/who) - what entity is being acted upon? 
+    + involves choice to commit resources to specific outcomes
+
+. . . 
+
+- [tactics]{style="color:cadetblue;"} (how) - types of collective action and their form
+    + attempt to deploy *strengths*, exploit target's *weaknesses*
+
+. . . 
+
+- [site/venue]{style="color:cadetblue;"} (where) - what place or what forum type is action taken? 
+
+. . . 
+
+- [timing]{style="color:cadetblue;"} (when) - when are tactics employed against targets
+    + 'some moments, often fleeting, promise greater opportunity than others' ... [cf. @Grzymala-Busse2011]
+
+## Elements of strategy 
+
+- informative element: [objective(s)]{style="color:cadetblue;"} (*why*): what are the actor(s) goals? [minimalist]{style="color:darkred;"} vs. [maximalist]{style="color:darkred;"} objectives
+- [target]{style="color:cadetblue;"} (what/who) - what entity is being acted upon? 
+- [tactics]{style="color:cadetblue;"} (how) - types of collective action and their form
+- [site/venue]{style="color:cadetblue;"} (where) - what place or what forum type is action taken? 
+- [timing]{style="color:cadetblue;"} (when) - when are tactics employed against targets
+
+::: {style="text-align: center;"}
+**[What are the strategic elements of politically violent groups you know?]{style="color:indigo; font-size:60px;"}** 
+:::
+
+## Drivers of strategy selection 
+
+- [strategy]{style="color:darkred;"} is be a product of (rational) choice
+
+BUT...
+
+. . . 
+
+- it is also a part [collective identity]{style="color:darkred;"} [cf. @PollettaJasper2001]
+    + strategy also involves *moral and emotional committments* 
+
+## An example from the news...
+
+::: {style="text-align: center;"}
+**[How can we characterise the group's *strategy* here?]{style="color:indigo; font-size:40px;"}** 
+:::
+
+<!-- Aspect ratios include 1x1, 4x3, 16x9 (the default), and 21x9. -->
+<!-- aspect-ratio="21x9"  -->
+{{< video https://www.youtube.com/watch?v=mhM37Y_97CM 
+    start="1"
+    width="80%" 
+    height="80%" >}}
+
+*Tagesschau*   
+<https://www.youtube.com/watch?v=eT9nr9_em0k&pp=ygUebGFzdCBnZW5lcmF0aW9uIHByb3Rlc3QgYmVybGlu>
+
+## An example from 'the 43 Group'
+
+<video src="slide_files/06/43Group_vid.mp4" width="99%" 
+controls controlslist="nodownload"
+poster="slide_files/06/43Group.png"></video>
+
+## An example from 'the 43 Group'
+
+post-war Labour government, witnessing low-level fascist-party organising and agitation...
+
+@Beckman2013: 
+
+> On Tuesday May 21st [1946], [James] Chuter Ede, the Home Secretary, received a deputation from the JDC [Jewish Defence Committee, part of the Board of Deputies of British Jews] led by the Chairman, Gordon Liverman ... They listened to the deputation and said they would consider all the points raised, but nothing tangible happened.
+
+[documentary about 43 Group: <https://www.youtube.com/watch?v=oBusQBSCAHY>]{style="font-size:23px;"} 
+
+# Poll: strategy formation and effect {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="35%"}
+![](slide_files/06/SMclass6_poll_QR.png){fig-alt="A QR code for the survey."}
+
+:::
+
+::: {.column width="65%" .center}
+<!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
+Take the survey at **<https://forms.gle/6aVSF54HyFR2iNpDA>**
+
+- most important factor shaping movement org. strategy?
+- do maximalist goals require more extreme strategies?
+- is popular support necessary for strategic success?
+
+:::
+:::: 
+
+- is engagement in politics strategically necessary for long-term impact?
+- are disruptive tactics an effective way of generating awareness?
+
+--- 
+
+```{ojs}
+md`## Poll results (Respondents: ${respondentCount})`
+```
+
+
+```{ojs}
+
+import { liveGoogleSheet } from "@jimjamslam/live-google-sheet";
+import { aq, op } from "@uwdata/arquero";
+
+// UPDATE THE LINK FOR A NEW POLL
+surveyResults = liveGoogleSheet(
+  "https://docs.google.com/spreadsheets/d/e/" +
+    "2PACX-1vTvRa6dxxU7hLkg1jNGxxfk0KrQkR7urqaW96X9Mo70ZJWYsYI5UKUztMRDQj8H5otQgMzJ2U4hMcmo/" +
+    "pub?gid=2069282497&single=true&output=csv",
+  10000, 1, 6); // adjust the last number to select all relevant columns 
+
+respondentCount = surveyResults.length;
+
+```
+
+:::: {.columns}
+:::{.column width="50%"}
+
+most important factor shaping movement org. strategy?
+
+```{ojs}
+shapingCounts = aq.from(surveyResults)
+  .select("shaping")
+  .groupby("shaping")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+shaping_maxCountRE = Math.max(...shapingCounts.objects().map(d => d.count));
+
+plot_shaping = Plot.plot({
+  marks: [
+    Plot.barY(shapingCounts, {
+      x: "shaping",
+      y: "count",
+      fill: "shaping",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "ideology",
+      "resources",
+      "state posture/character",
+      "public support",
+      "other"
+    ],
+    range: [
+      "goldenrod",
+      "cadetblue",
+      "darkorange",
+      "forestgreen",
+      "violet"
+    ]
+  },
+  marginBottom: 400,
+  x: { label: "", tickSize: 2, tickRotate: -40, padding: 0.2,
+    domain: ["ideology", "resources", "state posture/character", "public support", "other"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(shapingCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, shaping_maxCountRE]
+  },
+  facet: { data: shapingCounts, x: "measure", label: "" },
+  marginLeft: 60,
+  style: {
+    width: 1600,
+    height: 500,
+    fontSize: 40,
+  },
+});
+
+```
+ 
+:::
+
+::: {.column width="50%"}
+ 
+do maximalist goals require more extreme strategies?
+
+```{ojs}
+max_goalsCounts = aq.from(surveyResults)
+  .select("max_goals")
+  .groupby("max_goals")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+max_goals_maxCountRE = Math.max(...max_goalsCounts.objects().map(d => d.count));
+
+plot_max_goals = Plot.plot({
+  marks: [
+    Plot.barY(max_goalsCounts, {
+      x: "max_goals",
+      y: "count",
+      fill: "max_goals",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Yes",
+      "No",
+      "Maybe"
+    ],
+    range: [
+      "forestgreen",
+      "darkred",
+      "goldenrod"
+    ]
+  },
+  marginBottom: 80,
+  x: { label: "", tickSize: 2, tickRotate: -1, padding: 0.2,
+    domain: ["Yes", "No", "Maybe"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(max_goalsCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, max_goals_maxCountRE]
+  },
+  facet: { data: max_goalsCounts, x: "measure", label: "" },
+  marginLeft: 60,
+  style: {
+    width: 1600,
+    height: 500,
+    fontSize: 40,
+  },
+});
+
+```
+ 
+:::
+::::
+
+## Poll results
+
+:::: {.columns}
+:::{.column width="33%"}
+
+popular support necessary for strategic success?
+
+```{ojs}
+pop_supportCounts = aq.from(surveyResults)
+  .select("pop_support")
+  .groupby("pop_support")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+pop_support_maxCountRE = Math.max(...pop_supportCounts.objects().map(d => d.count));
+
+plot_pop_support = Plot.plot({
+  marks: [
+    Plot.barY(pop_supportCounts, {
+      x: "pop_support",
+      y: "count",
+      fill: "pop_support",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Yes",
+      "No",
+      "Maybe"
+    ],
+    range: [
+      "forestgreen",
+      "darkred",
+      "goldenrod"
+    ]
+  },
+  marginBottom: 80,
+  x: { label: "", tickSize: 2, tickRotate: -1, padding: 0.2,
+    domain: ["Yes", "No", "Maybe"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(pop_supportCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, pop_support_maxCountRE]
+  },
+  facet: { data: pop_supportCounts, x: "measure", label: "" },
+  marginLeft: 60,
+  style: {
+    width: 1600,
+    height: 500,
+    fontSize: 40,
+  },
+});
+
+```
+
+:::
+
+:::{.column width="33%"}
+
+engagement in politics necessary for long-term impact?
+
+```{ojs}
+engagementCounts = aq.from(surveyResults)
+  .select("engagement")
+  .groupby("engagement")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+engagement_maxCountRE = Math.max(...engagementCounts.objects().map(d => d.count));
+
+plot_engagement = Plot.plot({
+  marks: [
+    Plot.barY(engagementCounts, {
+      x: "engagement",
+      y: "count",
+      fill: "engagement",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Strongly disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly agree"
+    ],
+    range: [
+      "red",
+      "pink",
+      "lightgrey",
+      "lightgreen",
+      "forestgreen"
+    ]
+  },
+  marginBottom: 180,
+  x: { label: "", tickSize: 2, tickRotate: -45,
+    domain: ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(engagementCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, engagement_maxCountRE]
+  },
+  facet: { data: engagementCounts, x: "measure", label: "" },
+  marginLeft: 140,
+  style: {
+    width: 1350,
+    height: 500,
+    fontSize: 30,
+  }
+});
+
+```
+
+:::
+
+::: {.column width="33%"}
+
+disrupting is effective for building awareness?
+
+```{ojs}
+disruptiveCounts = aq.from(surveyResults)
+  .select("disruptive")
+  .groupby("disruptive")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+disruptive_maxCountRE = Math.max(...disruptiveCounts.objects().map(d => d.count));
+
+plot_disruptive = Plot.plot({
+  marks: [
+    Plot.barY(disruptiveCounts, {
+      x: "disruptive",
+      y: "count",
+      fill: "disruptive",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Strongly disagree",
+      "Disagree",
+      "Neutral",
+      "Agree",
+      "Strongly agree"
+    ],
+    range: [
+      "red",
+      "pink",
+      "lightgrey",
+      "lightgreen",
+      "forestgreen"
+    ]
+  },
+  marginBottom: 180,
+  x: { label: "", tickSize: 2, tickRotate: -45,
+    domain: ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(disruptiveCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, disruptive_maxCountRE]
+  },
+  facet: { data: disruptiveCounts, x: "measure", label: "" },
+  marginLeft: 140,
+  style: {
+    width: 1350,
+    height: 500,
+    fontSize: 30,
+  }
+});
+
+```
+
+:::
+::::
+
+## Tactical frivolity [@Bogad2016]
+
+more of a humanities/dramaturgical perspective on movements and their tactics
+
+<!-- Aspect ratios include 1x1, 4x3, 16x9 (the default), and 21x9. -->
+<!-- aspect-ratio="21x9"  -->
+{{< video https://www.youtube.com/watch?v=psRuhwkwt5Q 
+    start="371"
+    width="80%" 
+    height="80%" >}}
+
+
+# Temporality {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- @Grzymala-Busse2011 on temporality
+    + overview
+    + definitions and examples 
+    + tempo and duration 
+
+:::
+
+::: {.column width="50%" .right}
+<div class="tenor-gif-embed" data-postid="12086181" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/timing-good-timing-on-time-clock-looking-at-the-clock-gif-12086181">Timing GIF</a>from <a href="https://tenor.com/search/timing-gifs">Timing GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+## @Grzymala-Busse2011 - overview
+
+- [mechanisms]{style="color:blue;"}: "recurrent causal links between specified initial conditions and outcomes. Specific sequences (orderings) of mechanisms and events then constitute processes."
+
+- Fundamentals of temporality: how long events take (**[duration]{style="color:darkred;"}**), how quickly they change (**[tempo]{style="color:darkred;"}**), whether they speed up or slow down (**[acceleration]{style="color:darkred;"}**), and when they occur (**[timing]{style="color:darkred;"}**)
+
+## @Grzymala-Busse2011 - definitions and examples
+
+```{r}
+library(kableExtra)
+library(tibble)
+
+data <- tribble(
+  ~Aspect, ~Definition, ~Examples,
+  "Duration", 
+  "Temporal length of an event; how much time elapses between the start and end of an action or event", 
+  "Time elapsed between the announcement that a new agency is founded and its demise, or the period between the takeoff of popular literacy and its full attainment",
+
+  "Tempo", 
+  "Amount of change per unit of time (dist./time interval); frequency of the 'subevents' in a larger event, or between events in a process.", 
+  "How much time elapses before each new state institution is established, between each new person gaining literacy",
+
+  "Acceleration (and deceleration)", 
+  "Derivative of velocity with respect to time (direction vector/direction tempo); rate of change", 
+  "Postcommunist privatization started to unfold very quickly, with a great deal of entrepreneurial activity and privatization auctions at the outset. In several countries, it then slowed down",
+
+  "Timing", 
+  "Position on a temporal timeline (itself composed of some units of time, such as electoral cycles or years)", 
+  "18th-century revolutions had pamphlets and word of mouth as their mobilizing techniques; 20th-century revolutions had television, radio, email, and cell phones at their disposal"
+)
+
+kable(data, "html", escape = FALSE, align = c("r", "l", "l")) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover"),
+                font_size = 22)
+
+```
+
+## @Grzymala-Busse2011 - tempo and duration
+
+```{r}
+library(kableExtra)
+library(tibble)
+
+data <- tribble(
+  ~` `, ~Faster, ~Slower,
+  "Shorter", 
+  "Radical processes: coups, revolutions, shock therapy, regime replacement, and some institutional creation (free elections)", 
+  "Abruptly ending processes: threshold effects, bargaining, establishing some institutions (cf. postcommunist clientelism)",
+
+  "Longer", 
+  "Lengthy instability: revolutions and wars, cascades, predation, postcommunist civil society growth, political party fission", 
+  "Gradual processes: demographic change, spread of literacy and nationalism, linguistic transformations, quasiparameter change"
+)
+
+kable(data, "html", escape = FALSE, align = c("r", "l", "l")) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover"),
+                font_size = 34)
+
+```
+
+<!-- ## Group discussion: -->
+
+<!-- \Large -->
+
+<!-- \begin{itemize} -->
+<!--     \item<1-> what \textbf{targets} and \textbf{tactics} has your group used? -->
+<!--     \item<1-> are there any conspicuous \textbf{timing} factors (e.g., around elections, connected to events, regularity/frequency)? -->
+<!--     \item<2-> now, some \textcolor{red}{\textbf{typology-forming}} work: what categories might help us form a comparative framework for groups' strategy/tactics? -->
+<!--     \begin{itemize} -->
+<!--         \item<2-> what are the key dimensions that help differentiate? -->
+<!--     \end{itemize} -->
+<!-- \end{itemize} -->
+
+<!-- @dellaPortaDiani2009, chapter 6 -->
+<!-- - hierarchical vs. horizontal -->
+<!-- - challenging vs. service provision -->
+<!--     + 'putting the goal into practice' (e.g., prefiguration) -->
+
+# Tactics and effecting change {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- connecting tactics to outcomes 
+- tactical innovation 
+- Spaßguerrillas 
+- Gene Sharp and nonviolence 
+- some fun examples 
+
+:::
+
+::: {.column width="50%"}
+<div class="tenor-gif-embed" data-postid="22419743" data-share-method="host" data-aspect-ratio="2.5" data-width="100%"><a href="https://tenor.com/view/talladega-nights-tactics-cal-gif-22419743">Talladega Nights GIF</a>from <a href="https://tenor.com/search/talladega-gifs">Talladega GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+
+## Connecting tactics to outcomes
+
+- @Gamson1990 found that violent social movements (incl. 'strikes and disruptive techniques') are more likely than nonviolent to achieve their goal
+    + more effective in attracting attention and imposing costs on targets/opponents
+    + similarly found by @Cress2000
+    + BUT... opposite found on regime-challenging movements by @Chenoweth2011
+    + Opposite also found in U.S. campus policy by @Rojas2006
+
+## Connecting tactics to outcomes
+
+- **[social control hypothesis]{style="color:cadetblue;"}** [e.g., @Piven1979]
+    + disruptive protests/tactics allow movements to win concessions in exchange for ending protests/tactics (*coercion* mechanism)
+- **[mass mobilisation/social pressure hypothesis]{style="color:cadetblue;"}** [e.g., @Chenoweth2011]
+    + gaining enough (visible) support to pressure decision-makers into concessions (*consensus/demonstrative/persuasion* mechanisms)
+        * implicit appeal to democratic norms
+
+## (necessity of) tactical innovation
+
+- @McAdam1983: tactical interaction
+    + movements *[disrupt]{style="color:violet;"}* as they mount a challenge
+    + authorities/targets *[adapt]{style="color:violet;"}* to tactics, dulling their impact
+    + movements *[innovate]{style="color:violet;"}* tactics to maintain effective strategy
+
+- With responsive authorities/targets, **this cycle places high demands on movements**
+    + (@McAdam1983 writes that by the end of the 1960s, U.S. black rights movement(s) had been made '*tactically impotent*')
+
+## Spaßguerrillas
+
+- problem in student movement of unexciting and/or intimidating modes of activism
+- Wolfgang Lefèvre (SDS leader):
+
+> ‘Every event or demonstration should be inventively planned so that it is exciting and fun for students.’
+
+- the 'fun-fighters' emerged from the *Sozialistischen Deutschen Studentenbund*
+    + Fritz Teufel, Rainer Langhans advocate **playful tactics**
+    + long legacy in German activism (e.g., 'Front Deutscher Äpfel')
+
+## Gene Sharp and nonviolence [@Sharp1973]
+
+- ‘*political ju-jitsu*’ (using opponents' strength against them): violent repression of nonviolent resistance strengthens resistance by creating sympathy for resisters
+
+:::: {.columns}
+:::{.column width="40%"}
+
+:::
+
+::: {.column width="20%"}
+
+$\downarrow$
+
+:::
+::::
+
+
+- accumulation of [198 methods of nonviolent action](https://www.brandeis.edu/peace-conflict/pdfs/198-methods-non-violent-action.pdf), e.g.:
+    + [many famous types]{style="color:goldenrod;"}: demonstrations, strikes, pickets
+    + [some less known options]{style="color:forestgreen;"}: prisoners' strike, slow compliance, 'Lysistratic nonaction'
+        * **[any ideas what these mean / examples?]{style="color:indigo;"}**
+
+- check out the list for more types of tactics: <https://nvdatabase.swarthmore.edu/browse-methods>
+
+## Tactics in practice, example
+
+- off and on since 1988, German neo-Nazi groups had organised 'memorial marches' in **Wunsiedel** [@Virchow2013a; @Zeller2021_hess]  
+- in 2014, anti-far-right activists organised 'involuntary walkathon'
+
+<!-- Aspect ratios include 1x1, 4x3, 16x9 (the default), and 21x9. -->
+<!-- aspect-ratio="21x9"  -->
+{{< video https://www.youtube.com/watch?v=KvjIYl_Nlao 
+    width="60%" 
+    height="60%" >}}
+
+(German version: <https://www.youtube.com/watch?v=mMrQge9hP5o>)
+
+## Tactics in practice, example
+
+:::: {.columns}
+:::{.column width="50%"}
+- 2016: U.S. state of Texas passes law allowing carrying handguns on university campuses
+- at the same time, state 'obsenity laws' forbid bringing dildoes onto campus
+- the 'cocks not glocks' campaign was born...
+
+:::
+
+::: {.column width="50%"}
+
+![](slide_files/06/cocks_not_glocks.png)
+
+:::
+::::
+
+## Tactics in practice, example
+
+'We're fighting absurdity with absurdity.'
+
+<!-- Aspect ratios include 1x1, 4x3, 16x9 (the default), and 21x9. -->
+<!-- aspect-ratio="21x9"  -->
+{{< video https://www.youtube.com/watch?v=UbJKhvmshGs&pp=ygUYZGFpbHkgc2hvdyBkaWxkb2VzIHRleGFz 
+    start="1"
+    width="80%" 
+    height="80%" >}}
+
+<!-- - dildoes in Texas to protest gun laws (daily show: <https://www.youtube.com/watch?v=UbJKhvmshGs&pp=ygUYZGFpbHkgc2hvdyBkaWxkb2VzIHRleGFz>; <https://www.theguardian.com/us-news/2016/aug/25/cocks-not-glocks-texas-campus-carry-gun-law-protest>) -->
+<!-- - overloading abortion reporting (vigilante law) system in southern U.S.: <https://apnews.com/article/technology-health-media-texas-social-media-c76b1dc146ede0b2f1bac70e6b18f39f> -->
+
+
+# Any questions, concerns, feedback for this class? {background-color="#2c844c"}
+
+Anonymous feedback here: <https://forms.gle/AjHt6fcnwZxkSg4X8>
+
+Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
+
+
+<!-- ```{r echo=FALSE, message=FALSE, warning=FALSE} -->
+<!-- pagedown::chrome_print(file.path("..", "docs/slides", "slides_06.html")) -->
+<!-- ``` -->
+
+
+## References
+
