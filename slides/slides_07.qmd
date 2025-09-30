@@ -330,7 +330,7 @@ plot_help_coverage = Plot.plot({
   },
   marginBottom: 400,
   x: { label: "", tickSize: 2, tickRotate: -40, padding: 0.2,
-    domain: ["protest size", "catchy slogans", "celebrity support", "counter-protests", "disruptiveness/violence", "topicality", "other"]
+    domain: ["protest size", "catchy slogans", "celebrity support", "counter-protests", "disruptiveness/violence", "topicality (coincidence with other news)", "other"]
   },  
   y: {
     label: "",
