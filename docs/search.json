@@ -158,7 +158,7 @@
     "href": "content/index.html",
     "title": "Slides",
     "section": "",
-    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n\nClass 3\n\n\nClass 4\n\n\nClass 5\n\n\nClass 6"
+    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n\nClass 3\n\n\nClass 4\n\n\nClass 5\n\n\nClass 6\n\n\nClass 7"
   },
   {
     "objectID": "schedule/index.html",
@@ -2301,5 +2301,180 @@
     "title": "Class 6: Aspects of Social Movement Activity",
     "section": "Tactics in practice, example",
     "text": "Tactics in practice, example\n‘We’re fighting absurdity with absurdity.’"
+  },
+  {
+    "objectID": "slides/slides_07.html#presentation-groups",
+    "href": "slides/slides_07.html#presentation-groups",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Presentation groups",
+    "text": "Presentation groups\n\nDecemberJanuary\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\n\nTBD\n\n\n11 Dec:\n\nTBD\n\n\n18 Dec:\n\nTBD\n\n\n\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n8 Jan:\n\nTBD\n\n\n15 Jan:\n\nTBD\n\n\n22 Jan:\n\nTBD\n\n\n29 Jan:\n\nTBD"
+  },
+  {
+    "objectID": "slides/slides_07.html#media-the-translator-of-social-movements",
+    "href": "slides/slides_07.html#media-the-translator-of-social-movements",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Media: the translator of social movements",
+    "text": "Media: the translator of social movements\nWhat are the mechanisms of…\n\nmovements advancing their frames (Class 3),\nmobilisation, recruitment, participation (Class 4),\ntactics and strategies achieving results (Class 6)?\n\noften it is the media (including social media)\n\nhow media covers a movement is often how most people know about it\n\nbig practical and theoretical stakes\noften plays a gatekeeper role"
+  },
+  {
+    "objectID": "slides/slides_07.html#past-and-present-eras-a-change-of-arena",
+    "href": "slides/slides_07.html#past-and-present-eras-a-change-of-arena",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Past and present eras: a change of arena",
+    "text": "Past and present eras: a change of arena"
+  },
+  {
+    "objectID": "slides/slides_07.html#past-and-present-eras-a-change-of-arena-1",
+    "href": "slides/slides_07.html#past-and-present-eras-a-change-of-arena-1",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Past and present eras: a change of arena",
+    "text": "Past and present eras: a change of arena\n\n\n\n\n\n\nprevious eras: direct action, confrontation between movements and authorities more common\n\nhere: barricade in Paris, 1848\n\nmodern era: indirect contention filtered through media more common\n\nhere: press pack ahead of movement press conference in Hong Kong\n‘the whole world is watching’ era \n\nthe prospect (for movements) and peril (for targets/authorities) now? the whole world may be watching"
+  },
+  {
+    "objectID": "slides/slides_07.html#poll-results---boosting-media-coverage",
+    "href": "slides/slides_07.html#poll-results---boosting-media-coverage",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Poll results - boosting media coverage",
+    "text": "Poll results - boosting media coverage\n\n\nshould movements tailor their messaging/framing to gain more attention?\n\ntailorCounts = aq.from(surveyResults)\n  .select(\"tailor\")\n  .groupby(\"tailor\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\ntailor_maxCountRE = Math.max(...tailorCounts.objects().map(d =&gt; d.count));\n\nplot_tailor = Plot.plot({\n  marks: [\n    Plot.barY(tailorCounts, {\n      x: \"tailor\",\n      y: \"count\",\n      fill: \"tailor\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Strongly disagree\",\n      \"Disagree\",\n      \"Neutral\",\n      \"Agree\",\n      \"Strongly agree\"\n    ],\n    range: [\n      \"red\",\n      \"pink\",\n      \"lightgrey\",\n      \"lightgreen\",\n      \"forestgreen\"\n    ]\n  },\n  marginBottom: 180,\n  x: { label: \"\", tickSize: 2, tickRotate: -45,\n    domain: [\"Strongly disagree\", \"Disagree\", \"Neutral\", \"Agree\", \"Strongly agree\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(tailorCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, tailor_maxCountRE]\n  },\n  facet: { data: tailorCounts, x: \"measure\", label: \"\" },\n  marginLeft: 140,\n  style: {\n    width: 1350,\n    height: 500,\n    fontSize: 30,\n  }\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nis traditional media coverage still necessary for movement success in an age of social media?\n\ntraditional_mediaCounts = aq.from(surveyResults)\n  .select(\"traditional_media\")\n  .groupby(\"traditional_media\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\ntraditional_media_maxCountRE = Math.max(...traditional_mediaCounts.objects().map(d =&gt; d.count));\n\nplot_traditional_media = Plot.plot({\n  marks: [\n    Plot.barY(traditional_mediaCounts, {\n      x: \"traditional_media\",\n      y: \"count\",\n      fill: \"traditional_media\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Strongly disagree\",\n      \"Disagree\",\n      \"Neutral\",\n      \"Agree\",\n      \"Strongly agree\"\n    ],\n    range: [\n      \"red\",\n      \"pink\",\n      \"lightgrey\",\n      \"lightgreen\",\n      \"forestgreen\"\n    ]\n  },\n  marginBottom: 180,\n  x: { label: \"\", tickSize: 2, tickRotate: -45,\n    domain: [\"Strongly disagree\", \"Disagree\", \"Neutral\", \"Agree\", \"Strongly agree\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(traditional_mediaCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, traditional_media_maxCountRE]\n  },\n  facet: { data: traditional_mediaCounts, x: \"measure\", label: \"\" },\n  marginLeft: 140,\n  style: {\n    width: 1350,\n    height: 500,\n    fontSize: 30,\n  }\n});"
+  },
+  {
+    "objectID": "slides/slides_07.html#poll-results---online",
+    "href": "slides/slides_07.html#poll-results---online",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Poll results - online",
+    "text": "Poll results - online\n\n\never personally supported a movement online?\n\npersonally_sharedCounts = aq.from(surveyResults)\n  .select(\"personally_shared\")\n  .groupby(\"personally_shared\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\npersonally_shared_maxCountRE = Math.max(...personally_sharedCounts.objects().map(d =&gt; d.count));\n\nplot_personally_shared = Plot.plot({\n  marks: [\n    Plot.barY(personally_sharedCounts, {\n      x: \"personally_shared\",\n      y: \"count\",\n      fill: \"personally_shared\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Yes\",\n      \"No\",\n      \"Maybe\"\n    ],\n    range: [\n      \"forestgreen\",\n      \"darkred\",\n      \"goldenrod\"\n    ]\n  },\n  marginBottom: 80,\n  x: { label: \"\", tickSize: 2, tickRotate: -1, padding: 0.2,\n    domain: [\"Yes\", \"No\", \"Maybe\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(personally_sharedCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, personally_shared_maxCountRE]\n  },\n  facet: { data: personally_sharedCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndoes social media encourage ‘slacktivism’?\n\nslacktivismCounts = aq.from(surveyResults)\n  .select(\"slacktivism\")\n  .groupby(\"slacktivism\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nslacktivism_maxCountRE = Math.max(...slacktivismCounts.objects().map(d =&gt; d.count));\n\nplot_slacktivism = Plot.plot({\n  marks: [\n    Plot.barY(slacktivismCounts, {\n      x: \"slacktivism\",\n      y: \"count\",\n      fill: \"slacktivism\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Yes\",\n      \"No\",\n      \"Maybe\"\n    ],\n    range: [\n      \"forestgreen\",\n      \"darkred\",\n      \"goldenrod\"\n    ]\n  },\n  marginBottom: 80,\n  x: { label: \"\", tickSize: 2, tickRotate: -1, padding: 0.2,\n    domain: [\"Yes\", \"No\", \"Maybe\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(slacktivismCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, slacktivism_maxCountRE]\n  },\n  facet: { data: slacktivismCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});"
+  },
+  {
+    "objectID": "slides/slides_07.html#references",
+    "href": "slides/slides_07.html#references",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "References",
+    "text": "References\n\n\n\n\nAtkinson, Matthew D., and Darin DeWitt. 2018. “Does Celebrity Issue Advocacy Mobilize Issue Publics?” Political Studies, no. 2. https://doi.org/10.1177/0032321717751294.\n\n\nBiggs, Michael. 2018. “Size Matters: Quantifying Protest by Counting Participants.” Sociological Methods and Research 47 (3): 351–83. https://doi.org/10.1177/0049124116629166.\n\n\nDenardo, James. 1985. Power in Numbers: The Political Strategy of Protest and Rebellion. Princeton: Princeton University Press.\n\n\nJennings, Will, and Clare Saunders. 2019. “Street Demonstrations and the Media Agenda: An Analysis of the Dynamics of Protest Agenda Setting.” Comparative Political Studies 52 (13-14): 2283–313. https://doi.org/10.1177/0010414019830736.\n\n\nMadestam, Andreas, Daniel Shoag, Stan Veuger, and David Yanagizawa-Drott. 2013. “Do Political Protests Matter? Evidence from the Tea Party Movement.” The Quarterly Journal of Economics 128 (4): 1633–85. https://doi.org/10.1093/qje/qjt021.Advance.\n\n\nMcCarthy, John D, Clark Mcphail, and Jackie Smith. 1996. “Images of Protest: Dimensions of Selection Bias in Media Coverage of Washington Demonstrations, 1982 and 1991.” American Sociological Review 61 (3): 478–99."
+  },
+  {
+    "objectID": "slides/slides_07.html#movements-and-traditional-media-coverage-1",
+    "href": "slides/slides_07.html#movements-and-traditional-media-coverage-1",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Movements and (traditional) media coverage",
+    "text": "Movements and (traditional) media coverage\nFactors that may affect media coverage\n\nday of the week (McCarthy, Mcphail, and Smith 1996)\n\n\n\nother news events (set number of ‘column inches’)\n\n\n\n\nweather (Madestam et al. 2013)\n\n\n\n\ncelebrities (Atkinson and DeWitt 2018)\n\n\n\n\nsize of event, violence/disruptiveness, whether there is a counterdemonstration (Denardo 1985; McCarthy, Mcphail, and Smith 1996; Biggs 2018)"
+  },
+  {
+    "objectID": "slides/slides_07.html#movements-and-traditional-media-coverage-2",
+    "href": "slides/slides_07.html#movements-and-traditional-media-coverage-2",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Movements and (traditional) media coverage",
+    "text": "Movements and (traditional) media coverage\nFactors that may affect media coverage\n\nsize of event, violence/disruptiveness, whether there is a counterdemonstration (Denardo 1985; McCarthy, Mcphail, and Smith 1996; Biggs 2018)\n\nlarger protests get reported – duh!\nmedia attention cycles (topicality) (McCarthy et al. 1996)\n\nif Germany’s energy is in the news, then energy/climate protests may get more attention\n\ncounterdemonstrations may help attract more attention (media bias for ‘both sides’)"
+  },
+  {
+    "objectID": "slides/slides_07.html#jenningssaunders2019---rqs",
+    "href": "slides/slides_07.html#jenningssaunders2019---rqs",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Jennings and Saunders (2019) - RQs",
+    "text": "Jennings and Saunders (2019) - RQs\n\nWhy do some protests get reported on and others not?\nWhat protests get covered over the long term and why?\n\n\n\nWhy? What’s at stake?\n\ndemonstrations are effective when they not only hit newspaper headlines, but create a “sustained shift in media focus, onto the issues that the demonstration raises” (p. 2287)"
+  },
+  {
+    "objectID": "slides/slides_07.html#jenningssaunders2019---data-and-methods",
+    "href": "slides/slides_07.html#jenningssaunders2019---data-and-methods",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Jennings and Saunders (2019) - data and methods",
+    "text": "Jennings and Saunders (2019) - data and methods\n\n48 street demonstrations in nine countries between 2009 - 2013\n\nsurveys – how do you think this is done?\nBelgium, Czechia, Denmark, Germany, Netherlands, Spain, Sweden, Switzerland, and United Kingdom\nany important contextual considerations?\n\n\n\n\nThe design of our study is large-N (based on a sample of demonstrations, avoiding the tautology endemic to many studies of media attention to protest, which select cases based on their being reported in the media), at the same time as putting protest in context. (pp. 2293-4)"
+  },
+  {
+    "objectID": "slides/slides_07.html#jenningssaunders2019---data-and-methods-1",
+    "href": "slides/slides_07.html#jenningssaunders2019---data-and-methods-1",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Jennings and Saunders (2019) - data and methods",
+    "text": "Jennings and Saunders (2019) - data and methods\n\n48 street demonstrations in nine countries between 2009 - 2013\n\nsurveys – how do you think this is done?\nBelgium, Czechia, Denmark, Germany, Netherlands, Spain, Sweden, Switzerland, and United Kingdom\n\nDV: level of national media attention to related issue over time\nIVs:\n\nnumber of participants\npresence of counterdemo\nextent of violence\npresence of trigger event\nany ‘omitted variables’ problems"
+  },
+  {
+    "objectID": "slides/slides_07.html#jenningssaunders2019---hypotheses",
+    "href": "slides/slides_07.html#jenningssaunders2019---hypotheses",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Jennings and Saunders (2019) - hypotheses",
+    "text": "Jennings and Saunders (2019) - hypotheses\n\n\n\n\n\nFeature\nStatic\nDynamic\n\n\n\n\nNumber of participants\nlarger = more coverage\nshort- and long-term coverage\n\n\nContentiousness\nhigh = more coverage\nshort- and long-term coverage\n\n\nExhibit violence\nviolence = more coverage\nshort-term coverage, long-term losses/costs\n\n\nTrigger event\ntrigger = more coverage\nshort-term coverage\n\n\n\n\n\n\n\ndo these expectations make sense to you? do you disagree with any?"
+  },
+  {
+    "objectID": "slides/slides_07.html#jenningssaunders2019---reg-table",
+    "href": "slides/slides_07.html#jenningssaunders2019---reg-table",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Jennings and Saunders (2019) - reg table",
+    "text": "Jennings and Saunders (2019) - reg table"
+  },
+  {
+    "objectID": "slides/slides_07.html#reading-a-regression-table",
+    "href": "slides/slides_07.html#reading-a-regression-table",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Reading a regression table",
+    "text": "Reading a regression table\n\nRemember: regression is a tool for understanding a phenomenon as a linear function (generally) → (y = mx + b)\n\nNumbers not in parentheses next to a variable: regression coefficient: expected change in DV for a one-unit increase in IV. NB: ositive or negative relationship?\nNumbers inside parentheses next to a variable: standard error: estimate of the standard deviation of the coefficient\nAsterisks/‘stars’: statistical significance: probability of results as extreme as observed result, under the assumption that the null hypothesis is correct. Smaller p-value means such an observation would be less likely under null hypothesis; hence, significance. Statistical significance suggests more precise estimates—NOT necessarily that one IV is more important than another."
+  },
+  {
+    "objectID": "slides/slides_07.html#jenningssaunders2019---reg-table-1",
+    "href": "slides/slides_07.html#jenningssaunders2019---reg-table-1",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Jennings and Saunders (2019) - reg table",
+    "text": "Jennings and Saunders (2019) - reg table\n\n\n\n\n\nNumbers not in parentheses next to a variable: regression coefficient: expected change in DV for a one-unit increase in IV.\nNumbers inside parentheses next to a variable: standard error: estimate of the standard deviation of the coefficient\nAsterisks/‘stars’: statistical significance: probability of results as extreme as observed result, under the assumption that the null hypothesis is correct. Smaller p-value means such an observation would be less likely under null hypothesis; hence, significance. Statistical significance suggests more precise estimates."
+  },
+  {
+    "objectID": "slides/slides_07.html#jenningssaunders2019---marginal-effects",
+    "href": "slides/slides_07.html#jenningssaunders2019---marginal-effects",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Jennings and Saunders (2019) - marginal effects",
+    "text": "Jennings and Saunders (2019) - marginal effects"
+  },
+  {
+    "objectID": "slides/slides_07.html#jenningssaunders2019---conclusions",
+    "href": "slides/slides_07.html#jenningssaunders2019---conclusions",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Jennings and Saunders (2019) - conclusions",
+    "text": "Jennings and Saunders (2019) - conclusions\n\ndemos increase media coverage, but effect decays quickly\n\npractical importance? ‘strike while the iron is hot’\n\nlarge size and police aggressiveness increase media coverage\ncounterdemos significantly reduced media coverage of protest issues in longer term\n\npuzzling finding"
+  },
+  {
+    "objectID": "slides/slides_07.html#from-hashtag-to-mobilisation",
+    "href": "slides/slides_07.html#from-hashtag-to-mobilisation",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "From #hashtag to mobilisation",
+    "text": "From #hashtag to mobilisation\n(USA Today on BLM)"
+  },
+  {
+    "objectID": "slides/slides_07.html#from-hashtag-to-mobilisation-1",
+    "href": "slides/slides_07.html#from-hashtag-to-mobilisation-1",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "From #hashtag to mobilisation",
+    "text": "From #hashtag to mobilisation\n(USA Today on BLM)\nsocial media breaks down traditional media gatekeeper roles\n\nhelped BLM form coalition of K-Pop fans, Anonymous, celebrities, etc.\nenhanced BLM’s ‘narrative capacity’ (i.e., efficacy in advancing frames, shifting status quo)\n\ncf. ‘disruptive capacity’ and ‘institutional/political capacity’"
+  },
+  {
+    "objectID": "slides/slides_07.html#movements-and-social-media---revisiting-a-debate",
+    "href": "slides/slides_07.html#movements-and-social-media---revisiting-a-debate",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Movements and social media - revisiting a debate",
+    "text": "Movements and social media - revisiting a debate\nClass 4: we listened to Tufecki and social media mobilisation and ‘old-school organisation’ - can attract more participants, but perhaps with less commitment\n\n“Slacktivism” & network structure of protest media coverage"
+  },
+  {
+    "objectID": "slides/slides_07.html#torches-of-freedom",
+    "href": "slides/slides_07.html#torches-of-freedom",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Torches of Freedom",
+    "text": "Torches of Freedom\n1929, Easter Sunday Parade: a Tabubruch? more emancipation for women?"
+  },
+  {
+    "objectID": "slides/slides_07.html#movements-media-and-astroturfing-1",
+    "href": "slides/slides_07.html#movements-media-and-astroturfing-1",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Movements, media, and astroturfing",
+    "text": "Movements, media, and astroturfing\nastroturfing - manipulation of public sphere (media, information, movement scene)\n\nfake ‘grassroots movements’ are a common form of astroturfing\n\na way of harnessing the ‘power of movement’\ne.g., ‘Tea Party movement’ - a ‘people’s’ movement funded by Koch Industries\n\nany examples, instances of this in/around your case?"
+  },
+  {
+    "objectID": "slides/slides_07.html#torches-of-freedom-1",
+    "href": "slides/slides_07.html#torches-of-freedom-1",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Torches of Freedom",
+    "text": "Torches of Freedom\n\n\n\nEdward Bernays (‘father of PR’)\nworking for American Tobacco Company from 1927\n\n‘smoke instead of eating’/thinness advertising\nmedical experts enlisted to promote smoking over eating sweets\n\nEaster Day Parade, 1929\n\nBernays paid feminist movement members to smoke on the parade\n‘while [the women] should be good looking, they should not look too model-y’\n\n1923: women accounted for 5 per cent of cigarette sales; 1929: 12 per cent; 1935: 18 per cent"
+  },
+  {
+    "objectID": "slides/slides_07.html#astroturfing-knock-on-effects",
+    "href": "slides/slides_07.html#astroturfing-knock-on-effects",
+    "title": "Class 7: Aspects of Social Movement Activity",
+    "section": "Astroturfing: knock-on effects",
+    "text": "Astroturfing: knock-on effects\n\nwhen movements are sometimes faked/manufactured, it undermines potential credibility of other movements\n\nare people being ‘paid to protest’? who is ‘behind’ this protest?\nquestioning motives/genuineness of movements\n\nLetzte Generation: funding from Climate Emergency Fund (U.S.), including Aileen Getty, heir of Getty Oil company\nJust Stop Oil (U.K.): large amounts of funding from Climate Emergency Fund, from Dale Vince (green energy industrialist)\n\nexamples of conspiracy beliefs in U.S. (George Soros, Sandy Hook, etc.)\n\n\nsee further, on the theory: Herman, E. S., & Chomsky, N. (1988). Manufacturing consent: The political economy of the mass media. Random House."
   }
 ]
