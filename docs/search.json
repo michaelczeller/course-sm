@@ -158,7 +158,7 @@
     "href": "content/index.html",
     "title": "Slides",
     "section": "",
-    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n\nClass 3\n\n\nClass 4\n\n\nClass 5\n\n\nClass 6\n\n\nClass 7"
+    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n\nClass 3\n\n\nClass 4\n\n\nClass 5\n\n\nClass 6\n\n\nClass 7\n\n\nClass 8"
   },
   {
     "objectID": "schedule/index.html",
@@ -2476,5 +2476,222 @@
     "title": "Class 7: Aspects of Social Movement Activity",
     "section": "Astroturfing: knock-on effects",
     "text": "Astroturfing: knock-on effects\n\nwhen movements are sometimes faked/manufactured, it undermines potential credibility of other movements\n\nare people being ‘paid to protest’? who is ‘behind’ this protest?\nquestioning motives/genuineness of movements\n\nLetzte Generation: funding from Climate Emergency Fund (U.S.), including Aileen Getty, heir of Getty Oil company\nJust Stop Oil (U.K.): large amounts of funding from Climate Emergency Fund, from Dale Vince (green energy industrialist)\n\nexamples of conspiracy beliefs in U.S. (George Soros, Sandy Hook, etc.)\n\n\nsee further, on the theory: Herman, E. S., & Chomsky, N. (1988). Manufacturing consent: The political economy of the mass media. Random House."
+  },
+  {
+    "objectID": "slides/slides_08.html#presentation-groups",
+    "href": "slides/slides_08.html#presentation-groups",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Presentation groups",
+    "text": "Presentation groups\n\nDecemberJanuary\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\n\nTBD\n\n\n11 Dec:\n\nTBD\n\n\n18 Dec:\n\nTBD\n\n\n\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n8 Jan:\n\nTBD\n\n\n15 Jan:\n\nTBD\n\n\n22 Jan:\n\nTBD\n\n\n29 Jan:\n\nTBD"
+  },
+  {
+    "objectID": "slides/slides_08.html#poll-results---why-coalition",
+    "href": "slides/slides_08.html#poll-results---why-coalition",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Poll results - why coalition",
+    "text": "Poll results - why coalition\n\n\nshort-term, limited coalitions more likely to achieve goals?\n\ntemporaryCounts = aq.from(surveyResults)\n  .select(\"temporary\")\n  .groupby(\"temporary\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\ntemporary_maxCountRE = Math.max(...temporaryCounts.objects().map(d =&gt; d.count));\n\nplot_temporary = Plot.plot({\n  marks: [\n    Plot.barY(temporaryCounts, {\n      x: \"temporary\",\n      y: \"count\",\n      fill: \"temporary\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Strongly disagree\",\n      \"Disagree\",\n      \"Neutral\",\n      \"Agree\",\n      \"Strongly agree\"\n    ],\n    range: [\n      \"red\",\n      \"pink\",\n      \"lightgrey\",\n      \"lightgreen\",\n      \"forestgreen\"\n    ]\n  },\n  marginBottom: 180,\n  x: { label: \"\", tickSize: 2, tickRotate: -45,\n    domain: [\"Strongly disagree\", \"Disagree\", \"Neutral\", \"Agree\", \"Strongly agree\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(temporaryCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, temporary_maxCountRE]\n  },\n  facet: { data: temporaryCounts, x: \"measure\", label: \"\" },\n  marginLeft: 140,\n  style: {\n    width: 1350,\n    height: 500,\n    fontSize: 30,\n  }\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmost important benefit for a movement in forming a coalition?\n\nbenefitCounts = aq.from(surveyResults)\n  .select(\"benefit\")\n  .groupby(\"benefit\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nbenefit_maxCountRE = Math.max(...benefitCounts.objects().map(d =&gt; d.count));\n\nplot_benefit = Plot.plot({\n  marks: [\n    Plot.barY(benefitCounts, {\n      x: \"benefit\",\n      y: \"count\",\n      fill: \"benefit\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"more resources\", \n      \"broader inclusion\", \n      \"more media attention\", \n      \"more political influence\", \n      \"other\"\n    ],\n    range: [\n      \"goldenrod\",\n      \"cadetblue\",\n      \"darkorange\",\n      \"forestgreen\",\n      \"violet\"\n    ]\n  },\n  marginBottom: 400,\n  x: { label: \"\", tickSize: 2, tickRotate: -40, padding: 0.2,\n    domain: [\"more resources\", \"broader inclusion\", \"more media attention\", \"more political influence\", \"other\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(benefitCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, benefit_maxCountRE]\n  },\n  facet: { data: benefitCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});"
+  },
+  {
+    "objectID": "slides/slides_08.html#poll-results---coalition-how",
+    "href": "slides/slides_08.html#poll-results---coalition-how",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Poll results - coalition how",
+    "text": "Poll results - coalition how\n\nWhat factors enable/hinder coalition formation?"
+  },
+  {
+    "objectID": "slides/slides_08.html#media-the-translator-of-social-movements",
+    "href": "slides/slides_08.html#media-the-translator-of-social-movements",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Media: the translator of social movements",
+    "text": "Media: the translator of social movements\nWhat are the mechanisms of…\n\nmovements advancing their frames (Class 3),\nmobilisation, recruitment, participation (Class 4),\ntactics and strategies achieving results (Class 6)?\n\noften it is the media (including social media)\n\nhow media covers a movement is often how most people know about it\n\nbig practical and theoretical stakes\noften plays a gatekeeper role"
+  },
+  {
+    "objectID": "slides/slides_08.html#references",
+    "href": "slides/slides_08.html#references",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "References",
+    "text": "References\nAllchorn, William. 2020. “Political Responses to Anti-Islamic Protest: Responses, Rationales and Role Evaluations.” British Politics 15: 393–410.\nChazan, M. (2016). Settler solidarities as praxis: Understanding ‘granny activism’ beyond the highly‐visible. Social Movement Studies, 15(5), 457–470.\n\n\n\n\nBorland, Elizabeth. 2008. “Social Movement Organizations and Coalitions: Comparisons from the Women’s Movement in Buenos Aires, Argentina.” In Research in Social Movements, Conflicts and Change, Volume 28, edited by Patrick G Coy, 83–112. Bingley: Emerald Group Publishing. https://doi.org/nicht verfügbar?\n\n\nChenoweth, Erica, and Maria J. Stephan. 2011. Why Civil Resistance Works: The Strategic Logic of Nonviolent Conflict. New York: Columbia University Press.\n\n\nHeinze, Anna Sophie, and Manès Weisskircher. 2022. “How Political Parties Respond to Pariah Street Protest: The Case of Anti-Corona Mobilisation in Germany.” German Politics 0 (0): 1–22. https://doi.org/10.1080/09644008.2022.2042518.\n\n\nHeinze, Anna-sophie. 2018. “Strategies of Mainstream Parties Towards Their Right-Wing Populist Challengers: Denmark, Norway, Sweden and Finland in Comparison.” West European Politics 41 (2): 287–309. https://doi.org/10.1080/01402382.2017.1389440.\n\n\nMcCammon, Holly J, Erin M Bergner, and Sandra C Arch. 2015. “\"Are You One of Those Women?\" Within-movement Conflict, Radical Flank Effects, and Social Movement Political Outcomes.” Mobilization: An International Quarterly 20 (2): 157–78.\n\n\nTufekci, Zeynep. 2017. Twitter and Tear Gas: The Power and Fragility of Networked Protest. New Haven: Yale University Press.\n\n\nVan Dyke, Nella, and Bryan Amos. 2017. “Social Movement Coalitions: Formation, Longevity, and Success.” Sociology Compass 11 (7): e12489. https://doi.org/10.1111/soc4.12489."
+  },
+  {
+    "objectID": "slides/slides_08.html#poll-results---coalition-how-1",
+    "href": "slides/slides_08.html#poll-results---coalition-how-1",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Poll results - coalition how",
+    "text": "Poll results - coalition how\n\n\nfactor most important in facilitating coalition formation?\n\nfacilitatingCounts = aq.from(surveyResults)\n  .select(\"facilitating\")\n  .groupby(\"facilitating\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nfacilitating_maxCountRE = Math.max(...facilitatingCounts.objects().map(d =&gt; d.count));\n\nplot_facilitating = Plot.plot({\n  marks: [\n    Plot.barY(facilitatingCounts, {\n      x: \"facilitating\",\n      y: \"count\",\n      fill: \"facilitating\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"social ties\", \n      \"organisational structures\", \n      \"compatible ideologies\", \n      \"shared threats/opportunities\", \n      \"other\"\n    ],\n    range: [\n      \"red\",\n      \"goldenrod\",\n      \"green\",\n      \"orange\",\n      \"gray\"\n    ]\n  },\n  marginBottom: 400,\n  x: { label: \"\", tickSize: 2, tickRotate: -40, padding: 0.2,\n    domain: [\"social ties\", \"organisational structures\", \"compatible ideologies\", \"shared threats/opportunities\", \"other\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(facilitatingCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, facilitating_maxCountRE]\n  },\n  facet: { data: facilitatingCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nidentity-based movements struggle more to form coalitions?\n\nidentityCounts = aq.from(surveyResults)\n  .select(\"identity\")\n  .groupby(\"identity\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nidentity_maxCountRE = Math.max(...identityCounts.objects().map(d =&gt; d.count));\n\nplot_identity = Plot.plot({\n  marks: [\n    Plot.barY(identityCounts, {\n      x: \"identity\",\n      y: \"count\",\n      fill: \"identity\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Strongly disagree\",\n      \"Disagree\",\n      \"Neutral\",\n      \"Agree\",\n      \"Strongly agree\"\n    ],\n    range: [\n      \"red\",\n      \"pink\",\n      \"lightgrey\",\n      \"lightgreen\",\n      \"forestgreen\"\n    ]\n  },\n  marginBottom: 180,\n  x: { label: \"\", tickSize: 2, tickRotate: -45,\n    domain: [\"Strongly disagree\", \"Disagree\", \"Neutral\", \"Agree\", \"Strongly agree\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(identityCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, identity_maxCountRE]\n  },\n  facet: { data: identityCounts, x: \"measure\", label: \"\" },\n  marginLeft: 140,\n  style: {\n    width: 1350,\n    height: 500,\n    fontSize: 30,\n  }\n});"
+  },
+  {
+    "objectID": "slides/slides_08.html#why-movements-make-coalitions",
+    "href": "slides/slides_08.html#why-movements-make-coalitions",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Why movements make coalitions",
+    "text": "Why movements make coalitions\nCoalitions…\n\n\nhelp build/enhance networks\n\n\n\n\nincrease resource availability\n\nboost mobilisation potential (again, networks)\n\n\n\n\n\nexpand tactical repertoires"
+  },
+  {
+    "objectID": "slides/slides_08.html#types-of-coalitions",
+    "href": "slides/slides_08.html#types-of-coalitions",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Types of coalitions",
+    "text": "Types of coalitions\nSome coalitions may be enduring; others may be event coalitions"
+  },
+  {
+    "objectID": "slides/slides_08.html#coalition-formation",
+    "href": "slides/slides_08.html#coalition-formation",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Coalition formation",
+    "text": "Coalition formation\nVan Dyke and Amos (2017) identify five factors critical to coalition formation:\n\nsocial ties - connections between organisations\n\n\n\nconducive organizational structures - structures that enable collaboration\n\n\n\n\nideology, culture, and identity - shared ideas\n\n\n\n\ninstitutional environment - opportunities and threats\n\n\n\n\nresources - pooling resources or competing"
+  },
+  {
+    "objectID": "slides/slides_08.html#coalition-formation---intra-inter-organisational-factors",
+    "href": "slides/slides_08.html#coalition-formation---intra-inter-organisational-factors",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Coalition formation - intra-/inter-organisational factors",
+    "text": "Coalition formation - intra-/inter-organisational factors\n\n‘exclusive affiliations’ orgs. or ‘multiple affiliations’ orgs.\n\nindividuals with (other) social ties: ‘coalition brokers’ or ‘bridge builders’\n\nbroad/multi-issue organisational goals = more likely to form coalition (e.g., Borland 2008)\n\nfits with our discussion of framing (e.g., bridging frames)\n\nstrong organisation (e.g., division of labour, professional leaders) = more likely to form coalition\n\ne.g., well organised movements can send representatives to others’ meetings (Borland 2008)\nnon-hierarchical or loose organisations will struggle (e.g., OWS)\nfits with discussion of orgs. in social media age (Tufekci 2017)"
+  },
+  {
+    "objectID": "slides/slides_08.html#coalition-formation---intra-inter-organisational-factors-1",
+    "href": "slides/slides_08.html#coalition-formation---intra-inter-organisational-factors-1",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Coalition formation - intra-/inter-organisational factors",
+    "text": "Coalition formation - intra-/inter-organisational factors\n\n\n\n\n\n\ncommonalities and connections between organisations\n\n‘plentiful resources and congruent ideologies’ (2015)\noverlapping collective identities (e.g., Memorial and Sakharov Centre)\n\nideological compatibility (a necessary condition?)\n\nsplits within movement (e.g., TERF vs. inclusive feminist groups) by ‘minor’ differences\nothers accommodate …"
+  },
+  {
+    "objectID": "slides/slides_08.html#coalition-formation---intra-inter-organisational-factors-2",
+    "href": "slides/slides_08.html#coalition-formation---intra-inter-organisational-factors-2",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Coalition formation - intra-/inter-organisational factors",
+    "text": "Coalition formation - intra-/inter-organisational factors\n\n\n\n\nothers accommodate, e.g., Raging Grannies: a rowdy aging women’s group in Canada that tempered its strategies to facilitate collaboration with indigenous environmental allies, creating space for indigenous activists at their gatherings, adopting mainstream dress, lending resources to Indigenous protests, and initiating action to ameliorate colonial abuses (Chazan 2016)"
+  },
+  {
+    "objectID": "slides/slides_08.html#coalition-formation---external-social-and-political-conditions",
+    "href": "slides/slides_08.html#coalition-formation---external-social-and-political-conditions",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Coalition formation - external social and political conditions",
+    "text": "Coalition formation - external social and political conditions\n\nrelated to opportunity structures\n\nopportunities - general or specific openings for mobilisation or movement activism\n\ne.g., northern Ireland civil rights groups found international partners in late 1960s partly due to generally high social mobilisation — access to others’/more/shared resources\n\nthreats:\n\ne.g., government repression often drives organisations to collaborate (e.g., For Fair Elections movement in Russia)"
+  },
+  {
+    "objectID": "slides/slides_08.html#coalition-formed-amid-government-repression",
+    "href": "slides/slides_08.html#coalition-formed-amid-government-repression",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Coalition formed amid government repression",
+    "text": "Coalition formed amid government repression\nFor Fair Elections (Russia, 2011-2012) - strange bedfellows"
+  },
+  {
+    "objectID": "slides/slides_08.html#coalition-formation---external-social-and-political-conditions-1",
+    "href": "slides/slides_08.html#coalition-formation---external-social-and-political-conditions-1",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Coalition formation - external social and political conditions",
+    "text": "Coalition formation - external social and political conditions\n\nrelated to opportunity structures\n\ninstitutional arrangements:\n\nObach (2010) suggests that U.S. governmental separation of labor and environmental protection into two separate policy arenas inhibits collaboration of labor and environmental groups even when issues are of interest to both.\n\n\nFree space facilitates the organization of coalitions:\n\n\nsettings within a community or movement that are removed from the direct control of dominant groups, are voluntarily participated in, and generate the cultural challenge that precedes or accompanies political mobilization” (Polletta, 1999: 1)."
+  },
+  {
+    "objectID": "slides/slides_08.html#coalition-formation---summary-and-potential",
+    "href": "slides/slides_08.html#coalition-formation---summary-and-potential",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Coalition formation - summary and ‘potential’",
+    "text": "Coalition formation - summary and ‘potential’\n\n\n\n\n\nGrouping\nFactors\n\n\n\n\n\nIntra-org\nexclusive vs. multiple affiliations\nany bridging social ties?\n\n\nbroad organisational goals\ne.g., bridging frames\n\n\nstrong organisation\ndivision (and availability) of labour, professional leaders, (at least some) hierarchy\n\n\nInter-org\ncommonalities\navailable resources, overlapping collective identities\n\n\nideological compatibility\nfactions vs. willingness to accommodate\n\n\nOpportunity structure\nopportunities\nfree space\n\n\nthreats\n\n\n\ninstitutional arrangements\n\n\n\n\n\n\n\n\n\n\nWhat’s the coalition potential of movement cases you know of? Have they formed enduring and/or event coalitions?"
+  },
+  {
+    "objectID": "slides/slides_08.html#risks-of-coalition-formation",
+    "href": "slides/slides_08.html#risks-of-coalition-formation",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Risks of coalition formation",
+    "text": "Risks of coalition formation\n\nwhere there is disparity/imbalance…\n\nresource-rich organisations may try to control resource-poor partner organisations"
+  },
+  {
+    "objectID": "slides/slides_08.html#coalitions-and-movement-outcomes---mccammon2015",
+    "href": "slides/slides_08.html#coalitions-and-movement-outcomes---mccammon2015",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Coalitions and movement outcomes - McCammon, Bergner, and Arch (2015)",
+    "text": "Coalitions and movement outcomes - McCammon, Bergner, and Arch (2015)\nradical flank effects - dynamics between (relatively) moderate and (relatively) radical parts of a movement and their target(s)\n\n\npositive radical flank effect - activity of radical part of movement compels target/authorities to accept moderate demands\n\ne.g., Martin Luther King Jr. and moderate NAACP made more appealing to U.S. (federal) government by presence of black nationalists and Malcolm X\n\nnegative radical flank effect - activity of radical part of movement spooks potential elite allies\n\ne.g., U.S. peace/student movement (late 1960s and 1970s) dominated by (radical) Youth International Party (‘Yippies’, Abby Hoffman and Jerry Rubin) more than (moderate) Students for a Democratic Society (SDS, Tom Hayden)\nSee Chenoweth on radical flanks and nonviolent/violent tactics: https://www.youtube.com/watch?v=aCms5ZNw0TI\n\n\nThese intra-movement dynamics play out in interaction with opportunity structure"
+  },
+  {
+    "objectID": "slides/slides_08.html#types-of-coalitions-1",
+    "href": "slides/slides_08.html#types-of-coalitions-1",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Types of coalitions",
+    "text": "Types of coalitions\nSome coalitions may be enduring; others may be event coalitions\n\n\nPeace protest, Berlin, 2022-02-27"
+  },
+  {
+    "objectID": "slides/slides_08.html#coalitions-and-movement-outcomes----mccammon2015",
+    "href": "slides/slides_08.html#coalitions-and-movement-outcomes----mccammon2015",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Coalitions and movement outcomes - (2015)",
+    "text": "Coalitions and movement outcomes - (2015)\nradical flank effects - dynamics between (relatively) moderate and (relatively) radical parts of a movement and their target(s)\n\n\npositive radical flank effect - activity of radical part of movement compels target/authorities to accept moderate demands\n\ne.g., Martin Luther King Jr. and moderate NAACP made more appealing to U.S. (federal) government by presence of black nationalists and Malcolm X\n\nnegative radical flank effect - activity of radical part of movement spooks potential elite allies\n\ne.g., U.S. peace/student movement (late 1960s and 1970s) dominated by (radical) Youth International Party (‘Yippies’, Abby Hoffman and Jerry Rubin) more than (moderate) Students for a Democratic Society (SDS, Tom Hayden)\nSee Chenoweth on radical flanks and nonviolent/violent tactics: https://www.youtube.com/watch?v=aCms5ZNw0TI\n\n\nThese intra-movement dynamics play out in interaction with opportunity structure"
+  },
+  {
+    "objectID": "slides/slides_08.html#coalitions-and-movement-outcomes--mccammon2015",
+    "href": "slides/slides_08.html#coalitions-and-movement-outcomes--mccammon2015",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Coalitions and movement outcomes (2015)",
+    "text": "Coalitions and movement outcomes (2015)\nradical flank effects - dynamics between (relatively) moderate and (relatively) radical parts of a movement and their target(s)\n\n\npositive radical flank effect - activity of radical part of movement compels target/authorities to accept moderate demands\n\ne.g., Martin Luther King Jr. and moderate NAACP made more appealing to U.S. (federal) government by presence of black nationalists and Malcolm X\n\nnegative radical flank effect - activity of radical part of movement spooks potential elite allies\n\ne.g., U.S. peace/student movement (late 1960s and 1970s) dominated by (radical) Youth International Party (‘Yippies’, Abby Hoffman and Jerry Rubin) more than (moderate) Students for a Democratic Society (SDS, Tom Hayden)"
+  },
+  {
+    "objectID": "slides/slides_08.html#radical-flanks-and-nonviolent-tactics-chenoweth2011",
+    "href": "slides/slides_08.html#radical-flanks-and-nonviolent-tactics-chenoweth2011",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Radical flanks and (non/violent) tactics (Chenoweth and Stephan 2011)",
+    "text": "Radical flanks and (non/violent) tactics (Chenoweth and Stephan 2011)\nPay attention to the mechanisms that Prof. Chenoweth specifies in her brief explanation"
+  },
+  {
+    "objectID": "slides/slides_08.html#radical-flanks-and-nonviolent-tactics-chenoweth2011-1",
+    "href": "slides/slides_08.html#radical-flanks-and-nonviolent-tactics-chenoweth2011-1",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Radical flanks and (non/violent) tactics (Chenoweth and Stephan 2011)",
+    "text": "Radical flanks and (non/violent) tactics (Chenoweth and Stephan 2011)\nPay attention to the mechanisms that Prof. Chenoweth specifies in her brief explanation\n\nnonviolent campaigns are better at eliciting broad and diverse support\nnonviolent campaigns create more defections among the opposition\nnonviolent campaigns have a broader set of tactics at their disposal\nnonviolent campaigns often maintain discipline even in the face of escalating oppression"
+  },
+  {
+    "objectID": "slides/slides_08.html#coalitions-and-movement-outcomes--mccammon2015-1",
+    "href": "slides/slides_08.html#coalitions-and-movement-outcomes--mccammon2015-1",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Coalitions and movement outcomes (2015)",
+    "text": "Coalitions and movement outcomes (2015)"
+  },
+  {
+    "objectID": "slides/slides_08.html#heinzeweisskricher2022---rq",
+    "href": "slides/slides_08.html#heinzeweisskricher2022---rq",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "A. S. Heinze and Weisskircher (2022) - RQ",
+    "text": "A. S. Heinze and Weisskircher (2022) - RQ\n\nHow have German political parties responded to anti-Corona street protests?\n\n\nWhat do you recall from the height of the pandemic? How did parties (in Germany and elsewhere) respond to mobilisation?"
+  },
+  {
+    "objectID": "slides/slides_08.html#types-of-party-responses",
+    "href": "slides/slides_08.html#types-of-party-responses",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Types of party responses",
+    "text": "Types of party responses\nA. Heinze (2018) on party reactions to radical parties (somewhat compelled to react):\n\n\nDisengage\n\nignore\nlegal restrictions\ncordon sanitaire (blocking coalitions)\ndemonise\ndefuse\nhold\n\n\nEngage\n\nadopt (co-opt) policies\n\ncollaborate (executive, legislative, electoral) [national, regional, local – e.g., cooperation with AfD at lower levels]"
+  },
+  {
+    "objectID": "slides/slides_08.html#types-of-party-responses-1",
+    "href": "slides/slides_08.html#types-of-party-responses-1",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Types of party responses",
+    "text": "Types of party responses\nA. S. Heinze and Weisskircher (2022) on party responses to movements (not necessarily compelled to react):\n\ndismissive: ignore or disregard the movement\naccommodative: legitimate or even collaborate with the movement\nadversarial: oppose/challenge the movement"
+  },
+  {
+    "objectID": "slides/slides_08.html#heinze-and-weisskricher--heinzeweisskricher2022---response-options",
+    "href": "slides/slides_08.html#heinze-and-weisskricher--heinzeweisskricher2022---response-options",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Heinze and Weisskricher (2022) - response options",
+    "text": "Heinze and Weisskricher (2022) - response options"
+  },
+  {
+    "objectID": "slides/slides_08.html#heinze-and-weisskricher--heinzeweisskricher2022---response-options-1",
+    "href": "slides/slides_08.html#heinze-and-weisskricher--heinzeweisskricher2022---response-options-1",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Heinze and Weisskricher (2022) - response options",
+    "text": "Heinze and Weisskricher (2022) - response options\n\n\n\n\n\n\nLevel\nAction\nDescription\n\n\n\n\nFormal level\nlegal restrictions\nmost exclusionary possibility: e.g., bans, forced dissolution, event restrictions\n\n\ncounterprotest\nparties can mobilise counterdemonstrations against pariah protest\n\n\ntolerate\nneutral acceptance of the right to protest, even for those that are regarded as pariahs; passive option\n\n\ncooperate\nact cooperatively with protest group; mobilise support base\n\n\nSubstantive level\nignore\ndisregard, refuse to comment on protest\n\n\ndemonise\nportray the actor as extreme, dangerous, irrational, or beyond the pale\n\n\ndefuse\ndownplay protest issue importance, shift public attention to other issue(s)\n\n\ndebate\nacknowledges the importance of an issue put forward by the protestors, with parties discussing different policy positions\n\n\nadopt\nadopting positions from protest arena becomes attractive if party considers the issue particularly relevant for competition, hoping to gain electoral advantage"
+  },
+  {
+    "objectID": "slides/slides_08.html#heinze-and-weisskricher--heinzeweisskricher2022---findings",
+    "href": "slides/slides_08.html#heinze-and-weisskricher--heinzeweisskricher2022---findings",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Heinze and Weisskricher (2022) - findings",
+    "text": "Heinze and Weisskricher (2022) - findings\n\nFormal level - response to Querdenken\n\n\n\n\n\n\n\n\nParty\nLegal Restrictions\nCounterprotest\nTolerate\nCooperate\n\n\n\n\nCDU\nYes\nNo\nYes\nNo\n\n\nSPD\nYes\nYes\nYes\nNo\n\n\nGreens\nYes\nYes\nYes\nNo\n\n\nLeft\nYes\nYes\nYes\nNo\n\n\nFDP\nYes\nNo\nYes\nNo\n\n\nAfD\nNo\nNo\nYes\nYes\n\n\n\n\n\n\n\n\n\n\nSubstantive level - response to Querdenken\n\n\n\n\n\n\n\n\nParty\nIgnore\nDemonise\nDefuse\nDebate\nAdopt\n\n\n\n\nCDU\nNo\nYes\nNo\nYes\nNo\n\n\nSPD\nNo\nYes\nNo\nYes\nNo\n\n\nGreens\nNo\nYes\nNo\nYes\nNo\n\n\nLeft\nNo\nYes\nNo\nYes\nNo\n\n\nFDP\nNo\nYes\nNo\nYes\nNo\n\n\nAfD\nNo\nYes\nNo\nYes\nYes"
+  },
+  {
+    "objectID": "slides/slides_08.html#further-questions",
+    "href": "slides/slides_08.html#further-questions",
+    "title": "Class 8: Aspects of Social Movement Activity",
+    "section": "Further questions",
+    "text": "Further questions\n\nwhat about movement responses/approaches to parties?\n\n(is it as relevant? does it matter? movements are not as empowered as parties)\n\n\nis the epitome of social movement ‘success’ becoming a party?"
   }
 ]
