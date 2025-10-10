@@ -1,0 +1,22 @@
+\documentclass[
+%% TIKZ_CLASSOPTION %%
+tikz
+]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{matrix}
+%% EXTRA_TIKZ_PREAMBLE_CODE %%
+\begin{document}
+%% TIKZ_CODE %%
+\begin{tikzpicture}[node distance=3cm]
+
+\node (STATE) [RECT] {STATE AUTHORITIE\textcolor{red}{\textbf{S}}};
+\node (move) [BOX, below of=STATE, xshift=-3cm, yshift=1cm] {movement};
+\node (cmove) [BOX, below of=STATE, xshift=3cm, yshift=1cm] {countermovement};
+\node [below of=STATE, yshift=1.5cm] {'opposing movements'};
+
+\draw[line width=0.5mm, <->] (STATE) to (move);
+\draw[line width=0.5mm, <->] (STATE) to (cmove);
+\draw[line width=0.5mm, <->] (move) to (cmove);
+
+\end{tikzpicture}
+\end{document}

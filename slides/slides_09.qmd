@@ -76,7 +76,7 @@ bibliography: ../../../library.bib
 :::
 ::::
 
-## Further questions
+## Opening questions
 
 ::: {style="text-align: center;"}
 [How (in what different ways) can state actors respond to movements?]{style="color:indigo; font-size:70px;"}
