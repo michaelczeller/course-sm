@@ -106,20 +106,22 @@ bibliography: ../../../library.bib
     + engage in relevant decision-making processes 
     + change policy 
 
-## One policy change example [@jones2022SpanishFascistFamily]
+## Movements and policy change [@jones2022SpanishFascistFamily]
 
 [anyone know what this place is?]{style="color:indigo;"}
 
 ![](slide_files/09/valley_of_fallen.png)
 
-## One policy change example [@jones2022SpanishFascistFamily]
+## Movements and policy change [@jones2022SpanishFascistFamily]
+
+::: panel-tabset
+## historical memory Spain
 
 :::: {.columns}
 :::{.column width="55%"}
 - Valley of the Fallen (incl., Catholic basilica), outside Madrid
 - monument constructed under Franco, using forced/convict labour
 - burial place for Franco (exhumed 24.10.2019) and Primo de Rivera (exhumed 23.4.2023)
-- *Ley de Memoria Histórica*: 
 
 :::
 
@@ -130,7 +132,37 @@ bibliography: ../../../library.bib
 :::
 :::: 
 
-> recognises and broadens "the rights and establishes measures in favour of those who suffered persecution or violence during the civil war and the dictatorship."
+> *Ley de Memoria Histórica*: recognises and broadens "the rights and establishes measures in favour of those who suffered persecution or violence during the civil war and the dictatorship."
+
+## historical memory Hungary {.smaller}
+
+:::: {.columns}
+:::{.column width="40%"}
+![](slide_files/09/bp_monument.png){height="550"}
+
+:::
+
+::: {.column width="20%"}
+$\leftarrow$  
+[Orban government's Memorial to the Victims of the German Occupation]{style="font-size:20px;"}   
+$\leftarrow$  
+
+::: {style="text-align: right;"}
+$\rightarrow$  
+[Counter-monument by independent historical memory activists]{style="font-size:20px;"}   
+$\rightarrow$  
+::: 
+
+:::
+
+::: {.column width="40%"}
+
+![](slide_files/09/bp_countermonument.png){height="550"}
+
+:::
+:::: 
+
+:::
 
 
 ## 3 dimensions of repression/social control [@Earl2003]
