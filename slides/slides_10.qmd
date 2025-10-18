@@ -1,5 +1,5 @@
 ---
-title: "Class 9: Aspects of Social Movement Activity"
+title: "Class 10: Aspects of Social Movement Activity"
 subtitle: "Counter-mobilisation and countermovements"
 author: "[Dr. Michael C. Zeller](https://michaelzeller.de)"
 format: 
