@@ -306,7 +306,7 @@ An [example data report](../report/index.qmd) is provided on this website. It is
 
 Finally, a suggested (purely voluntary, but perhaps to your ultimate benefit) mode of conducting work on your report: students may find it advantageous to work in [R](https://www.r-project.org/about.html) and [Rstudio](https://posit.co/download/rstudio-desktop/). This is a powerful data management and analysis tool. It combines the capability to import and visualise data, conduct sophisticated analyses, and even present them in nicely formatted documents (whether Word, PDF, or HTML). Students interested in working with datasets in their theses, going on to advanced academic studies, or pursuing a career in research will benefit enormously from engaging with this tool early and often. The course introduction will provide some tips for using this tool. For further information, please turn to the vast material related to R online or inquire with the instructor. Nevertheless, [students are free to work with whatever tools they are most comfortable with, including Microsoft Office programmes.]{style="color:red;"}
 
-**Once you have read this far: please send me an email before second class stating your favourite city and what (if any) politically violent groups you are particularly interested in learning about.**
+**Once you have read this far: please send me an email before second class stating your favourite city and what (if any) social movement(s) you are particularly interested in learning about.**
 
 ::: {.callout-caution collapse="true"}
 ## Scoring rubric
