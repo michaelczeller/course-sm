@@ -275,6 +275,24 @@ bibliography: ../../../library.bib
 
 [To assess whether and in what ways movements can emerge, whether and in what ways movements can have an impact, it is essential to consider relevant POS aspects. Movements exercise their agency within the limitations created by POS.]{style="font-size:23px;"} 
 
+# Forming presentation groups {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- 2-4 students
+- rank three possible dates for presentation
+- for later:  
+    1. find research article of interest 
+    2. what method is used: is it of interest too?
+
+:::
+
+::: {.column width="50%" .right}
+<div class="tenor-gif-embed" data-postid="25258332" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/the-show-looks-good-lizzo-lizzos-watch-out-for-the-big-grrrls-the-presentation-looks-good-the-performance-looks-good-gif-25258332">The Show Looks Good Lizzo GIF</a>from <a href="https://tenor.com/search/the+show+looks+good-gifs">The Show Looks Good GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+
 # Networks {background-color="#2c844c"}
 
 :::: {.columns}
