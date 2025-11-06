@@ -30,29 +30,34 @@ bibliography: ../../../library.bib
 
 ## Presentation groups
 
-::: panel-tabset
-## December
+<!-- ::: panel-tabset -->
+<!-- ## December -->
 
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
-| 4 Dec:  |                                  | TBD    | 
-| 11 Dec: |                                  | TBD    | 
-| 18 Dec: |                                  | TBD    | 
+| 4 Dec:  | Daichi, Seongyeon, Jehyun        | TBD    | 
+| 18 Dec: | Ayla, Tara, Theresa, Annabelle   | TBD    | 
+| 15 Jan: | Luna, Emilene, Raffa             | TBD    | 
 
 : Presentations line-up
 
-## January
+<!-- | 11 Dec: |                                  | TBD    |  -->
 
-| Date    | Presenters                       | Method |
-| -------:|:---------------------------------|:------:|
-| 8 Jan:  |                                  | TBD    | 
-| 15 Jan: |                                  | TBD    | 
-| 22 Jan: |                                  | TBD    | 
-| 29 Jan: |                                  | TBD    | 
 
-: Presentations line-up
+<!-- ## January -->
 
-:::
+<!-- | Date    | Presenters                       | Method | -->
+<!-- | -------:|:---------------------------------|:------:| -->
+<!-- | 15 Jan: | Luna, Emilene, Raffa             | TBD    |  -->
+
+<!-- : Presentations line-up -->
+
+<!-- | 8 Jan:  |                                  | TBD    |  -->
+<!-- | 22 Jan: |                                  | TBD    |  -->
+<!-- | 29 Jan: |                                  | TBD    |  -->
+
+<!-- ::: -->
+
 
 <!-- []{style="font-size:10px;"} -->
 
