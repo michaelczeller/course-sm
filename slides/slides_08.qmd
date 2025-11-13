@@ -37,7 +37,7 @@ bibliography: ../../../library.bib
 | -------:|:---------------------------------|:------:|
 | 4 Dec:  | Daichi, Seongyeon, Jehyun        | TBD    | 
 | 18 Dec: | Ayla, Tara, Theresa, Annabelle   | TBD    | 
-| 15 Jan: | Luna, Emilene, Raffa             | TBD    | 
+| 15 Jan: | Luna, Emilene, Raffa, Sofia      | TBD    | 
 
 : Presentations line-up
 
