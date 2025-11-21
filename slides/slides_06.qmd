@@ -36,7 +36,7 @@ bibliography: ../../../library.bib
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
 | 4 Dec:  | Daichi, Seongyeon, Jehyun        | TBD    | 
-| 18 Dec: | Ayla, Tara, Theresa, Annabelle   | TBD    | 
+| 18 Dec: | Ayla, Tara, Theresa, Annabelle   | discourse analysis | 
 | 15 Jan: | Luna, Emilene, Raffa, Sofia      | TBD    | 
 
 : Presentations line-up

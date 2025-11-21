@@ -248,6 +248,16 @@ rub %>%
 ## Examination (Klausur)
 
 <!-- PAST QUESTIONS: -->
+
+<!-- 2025-6 -->
+- A core feature of social movements is that they generate a 'collective identity' among their members. What is collective identity, what does it consist of, how is it produced, and why is it important for movements?
+- How can movements impact politics and society? Discuss with examples.
+- How do movements frame issues? What different sorts of frames are used? Why are they important for movements?
+
+- What are the elements of a social movement's strategy? How do movement organisations form their strategy? Discuss with examples. 
+- Movements often provoke responses from state and/or other social actors. Describe (with examples) how state actors can respond to movements; and describe (with examples) how other social actors (such as countermovements) can respond to movements.
+- Why do movement organisations form coalitions; what are the advantages and risks? What factors (within organisations, between organisations, and contextually) influence whether movement organisations form coalitions?
+
 <!-- 2024-5 -->
 <!-- - What elements do social movement strategies consist of? How do different strategies seek to effect change? Discuss with examples. -->
 <!-- - Why do movement organisations form coalitions; what are the advantages and risks? What factors (within organisations, between organisations, and contextually) influence whether movement organisations form coalitions?  -->
