@@ -35,7 +35,7 @@ bibliography: ../../../library.bib
 
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
-| 4 Dec:  | Daichi, Seongyeon, Jehyun        | TBD    | 
+| 4 Dec:  | Daichi, Seongyeon, Jehyun        | ethnography | 
 | 18 Dec: | Ayla, Tara, Theresa, Annabelle   | TBD    | 
 | 15 Jan: | Luna, Emilene, Raffa, Sofia      | TBD    | 
 
