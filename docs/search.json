@@ -158,7 +158,7 @@
     "href": "content/index.html",
     "title": "Slides",
     "section": "",
-    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\n\n\n\n\nClass 2 Lecture video - part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClass 2 Lecture video - part 2\n\n\n\n\n\n\n\n\n\n\n\nClass 3\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 4\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 5\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 6\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 7\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 8\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 9\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 10\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 11\n\n View all slides in new window  Download PDF of all slides"
+    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\n\n\n\n\nClass 2 Lecture video - part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClass 2 Lecture video - part 2\n\n\n\n\n\n\n\n\n\n\n\nClass 3\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 4\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 5\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 6\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 7\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 8\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 9\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 10\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 11\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 12"
   },
   {
     "objectID": "schedule/index.html",
@@ -3168,7 +3168,7 @@
     "href": "slides/slides_11.html#presentation-groups",
     "title": "Class 11: Social Movements online, in effect, dying out, and going forward",
     "section": "Presentation groups",
-    "text": "Presentation groups\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\nDaichi, Seongyeon, Jehyun\nethnography\n\n\n18 Dec:\nAyla, Tara, Theresa, Annabelle\nTBD\n\n\n15 Jan:\nLuna, Emilene, Raffa, Sofia\nTBD"
+    "text": "Presentation groups\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\nDaichi, Seongyeon, Jehyun\nethnography\n\n\n8 Jan:\nAyla, Tara, Theresa, Annabelle\ndiscourse analysis\n\n\n15 Jan:\nLuna, Emilene, Raffa, Sofia\nTBD"
   },
   {
     "objectID": "slides/slides_11.html#diani2000---theses-of-an-earlier-internet-age",
@@ -3259,7 +3259,7 @@
     "href": "slides/slides_11.html#poll-results-2",
     "title": "Class 11: Social Movements online, in effect, dying out, and going forward",
     "section": "Poll results",
-    "text": "Poll results\n\n\nshould online platforms be more regulated to prevent movements (and other actors) from spreading misinformation?\n\nregulationCounts = aq.from(surveyResults)\n  .select(\"regulation\")\n  .groupby(\"regulation\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nregulation_maxCountRE = Math.max(...regulationCounts.objects().map(d =&gt; d.count));\n\nplot_regulation = Plot.plot({\n  marks: [\n    Plot.barY(regulationCounts, {\n      x: \"regulation\",\n      y: \"count\",\n      fill: \"regulation\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Yes\",\n      \"No\",\n      \"Maybe\"\n    ],\n    range: [\n      \"forestgreen\",\n      \"darkred\",\n      \"goldenrod\"\n    ]\n  },\n  marginBottom: 80,\n  x: { label: \"\", tickSize: 2, tickRotate: -1, padding: 0.2,\n    domain: [\"Yes\", \"No\", \"Maybe\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(regulationCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, regulation_maxCountRE]\n  },\n  facet: { data: regulationCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmovements online face greater censorship and surveillance?\n\nchallengesCounts = aq.from(surveyResults)\n  .select(\"challenges\")\n  .groupby(\"challenges\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nchallenges_maxCountRE = Math.max(...challengesCounts.objects().map(d =&gt; d.count));\n\nplot_challenges = Plot.plot({\n  marks: [\n    Plot.barY(challengesCounts, {\n      x: \"challenges\",\n      y: \"count\",\n      fill: \"challenges\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Strongly disagree\",\n      \"Disagree\",\n      \"Neutral\",\n      \"Agree\",\n      \"Strongly agree\"\n    ],\n    range: [\n      \"red\",\n      \"pink\",\n      \"lightgrey\",\n      \"lightgreen\",\n      \"forestgreen\"\n    ]\n  },\n  marginBottom: 180,\n  x: { label: \"\", tickSize: 2, tickRotate: -45,\n    domain: [\"Strongly disagree\", \"Disagree\", \"Neutral\", \"Agree\", \"Strongly agree\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(challengesCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, challenges_maxCountRE]\n  },\n  facet: { data: challengesCounts, x: \"measure\", label: \"\" },\n  marginLeft: 140,\n  style: {\n    width: 1350,\n    height: 500,\n    fontSize: 30,\n  }\n});"
+    "text": "Poll results\n\n\nshould online platforms be more regulated to prevent movements (and other actors) from spreading misinformation?\n\nregulationCounts = aq.from(surveyResults)\n  .select(\"regulation\")\n  .groupby(\"regulation\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nregulation_maxCountRE = Math.max(...regulationCounts.objects().map(d =&gt; d.count));\n\nplot_regulation = Plot.plot({\n  marks: [\n    Plot.barY(regulationCounts, {\n      x: \"regulation\",\n      y: \"count\",\n      fill: \"regulation\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Yes\",\n      \"No\",\n      \"Maybe\"\n    ],\n    range: [\n      \"forestgreen\",\n      \"darkred\",\n      \"goldenrod\"\n    ]\n  },\n  marginBottom: 80,\n  x: { label: \"\", tickSize: 2, tickRotate: -1, padding: 0.2,\n    domain: [\"Yes\", \"No\", \"Maybe\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(regulationCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, regulation_maxCountRE]\n  },\n  facet: { data: regulationCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmovements online face greater censorship and surveillance?\n\nchallengesCounts = aq.from(surveyResults)\n  .select(\"challenges\")\n  .groupby(\"challenges\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nchallenges_maxCountRE = Math.max(...challengesCounts.objects().map(d =&gt; d.count));\n\nplot_challenges = Plot.plot({\n  marks: [\n    Plot.barY(challengesCounts, {\n      x: \"challenges\",\n      y: \"count\",\n      fill: \"challenges\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Yes\",\n      \"No\",\n      \"Maybe\"\n    ],\n    range: [\n      \"forestgreen\",\n      \"darkred\",\n      \"goldenrod\"\n    ]\n  },\n  marginBottom: 80,\n  x: { label: \"\", tickSize: 2, tickRotate: -1, padding: 0.2,\n    domain: [\"Yes\", \"No\", \"Maybe\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(challengesCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, challenges_maxCountRE]\n  },\n  facet: { data: challengesCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});"
   },
   {
     "objectID": "slides/slides_11.html#poll-results-3",
@@ -3413,7 +3413,7 @@
     "href": "slides/slides_11.html",
     "title": "Class 11: Social Movements online, in effect, dying out, and going forward",
     "section": "",
-    "text": "Open Stickerfrom Open Stickers\n\n\n\n\n\n\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\nDaichi, Seongyeon, Jehyun\nethnography\n\n\n18 Dec:\nAyla, Tara, Theresa, Annabelle\nTBD\n\n\n15 Jan:\nLuna, Emilene, Raffa, Sofia\nTBD"
+    "text": "Open Stickerfrom Open Stickers\n\n\n\n\n\n\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\nDaichi, Seongyeon, Jehyun\nethnography\n\n\n8 Jan:\nAyla, Tara, Theresa, Annabelle\nTBD\n\n\n15 Jan:\nLuna, Emilene, Raffa, Sofia\nTBD"
   },
   {
     "objectID": "slides/slides_10.html#next-meeting",
@@ -3421,5 +3421,495 @@
     "title": "Class 10: Aspects of Social Movement Activity",
     "section": "next meeting",
     "text": "next meeting\n\nsocial movements online\nin the meantime…\n\n\nIo Saturnalia! and happy holidays"
+  },
+  {
+    "objectID": "slides/slides_12.html#presentation-groups",
+    "href": "slides/slides_12.html#presentation-groups",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Presentation groups",
+    "text": "Presentation groups\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\nDaichi, Seongyeon, Jehyun\nethnography\n\n\n8 Jan:\nAyla, Tara, Theresa, Annabelle\ndiscourse analysis\n\n\n15 Jan:\nLuna, Emilene, Raffa, Sofia\nTBD"
+  },
+  {
+    "objectID": "slides/slides_12.html#opening-questions",
+    "href": "slides/slides_12.html#opening-questions",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Opening questions",
+    "text": "Opening questions\n\nHow have movements you know of had an impact on society?\n\n\nWhere and how can social movements have an impact? (Think in terms of categories or arenas of activism)\nHow might we differentiate between degrees of impact?"
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts",
+    "href": "slides/slides_12.html#movement-impacts",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts",
+    "text": "Movement impacts"
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts-1",
+    "href": "slides/slides_12.html#movement-impacts-1",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts",
+    "text": "Movement impacts\n\nicons created by Flaticon \n\n\n\ncultural"
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts-2",
+    "href": "slides/slides_12.html#movement-impacts-2",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts",
+    "text": "Movement impacts\n\nicons created by Flaticon \n\n\n\npolitical\n\n\ncultural"
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts-3",
+    "href": "slides/slides_12.html#movement-impacts-3",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts",
+    "text": "Movement impacts\n\nicons created by Flaticon \n\n\n\norganisational\n\n\npolitical\n\n\ncultural"
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts-4",
+    "href": "slides/slides_12.html#movement-impacts-4",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts",
+    "text": "Movement impacts\n\nicons created by Flaticon \n\n\n\nindividual\n\n\norganisational\n\n\npolitical\n\n\ncultural"
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts---individual",
+    "href": "slides/slides_12.html#movement-impacts---individual",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts - individual",
+    "text": "Movement impacts - individual\n\n\nindividual\n\n\n\ndid people who participated change? how?\n\ninterpersonal connections (likely future movement participation)\n\ndid people who encountered the movement change? how?\n\ndifferent issue attention/focus? different attitudes?\n\n\n\n\n\nparticipants, attitudinally: radicalised? disillusioned? behaviourally: more extreme? burnout?\nonlookers responses: on immigration, culture? support/oppose?"
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts-5",
+    "href": "slides/slides_12.html#movement-impacts-5",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts",
+    "text": "Movement impacts\n\nicons created by Flaticon \n\n\n\nindividual\n\n\norganisational\n\n\npolitical\n\n\ncultural"
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts---organisational",
+    "href": "slides/slides_12.html#movement-impacts---organisational",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts - organisational",
+    "text": "Movement impacts - organisational\n\n\norganisational\n\n\n\na targeted organisation?\n\nchanged behaviour? organisational decline?\n\nthe movement’s own (or connected) organisation(s)?\n\nprofessionalisation, institutionalisation\nnew affiliate organisations (perhaps parties, businesses)\n\n\n\n\n\ntargeted organisation: e.g., changed (political) financing activity, policies (as with platforms content moderation), hindered org.’s activity"
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts-6",
+    "href": "slides/slides_12.html#movement-impacts-6",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts",
+    "text": "Movement impacts\n\nicons created by Flaticon \n\n\n\nindividual\n\n\norganisational\n\n\npolitical\n\n\ncultural"
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts---political",
+    "href": "slides/slides_12.html#movement-impacts---political",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts - political",
+    "text": "Movement impacts - political\n\n\npolitical\n\n\n\nhave debates/discourse changed? (agenda setting)\nhave policies or laws changed? (legislative content; implementation/interpretation)\nhave dynamics between political actors changed? have new political actors emerged because of the movement? (political competition)\nsee Giugni, Mcadam, and Tilly (1999), Amenta and Young (1999), Amenta et al. (2010)"
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts-7",
+    "href": "slides/slides_12.html#movement-impacts-7",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts",
+    "text": "Movement impacts\n\nicons created by Flaticon \n\n\n\nindividual\n\n\norganisational\n\n\npolitical\n\n\ncultural"
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts---cultural",
+    "href": "slides/slides_12.html#movement-impacts---cultural",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts - cultural",
+    "text": "Movement impacts - cultural\n\n\ncultural\n\n\n\nhave cultural/societal norms changed because of the movement? how?\n\nare certain ideas, behaviours now acceptable or no longer acceptable in:\n\npublic opinion, lifestyle trends\nmedia and popular culture\nnon-political institutions (e.g., research and education, religion)\n\n\nsee Amenta and Polletta (2019)\n\n\n\n\n\ne.g., immigration views compared to two/three decades ago; acceptance of certain political rhetoric; approval of ‘strong man’ leadership in Western democracies"
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts-8",
+    "href": "slides/slides_12.html#movement-impacts-8",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts",
+    "text": "Movement impacts\n\nicons created by Flaticon \n\n\n\nindividual\n\n\norganisational\n\n\npolitical\n\n\ncultural"
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts-summarised",
+    "href": "slides/slides_12.html#movement-impacts-summarised",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts summarised",
+    "text": "Movement impacts summarised\n\n\nindividual\n\ndid the people who participated change? how?\n\ndid people who encountered the movement change? how?\n\norganisational\n\na targeted organisation?\nthe movement’s own (or connected) organisation?\n\ncultural\n\nhas the movement changed societal norms? how?\n\nideas, modes of behaviour no longer acceptable or (conversely) now expected?\n\n\npolitical\n\nhave debates/discourse changed?\nhave policies or laws changed?\nhave dynamics between political actors changed?\nhave new political actors emerged because of the movement?"
+  },
+  {
+    "objectID": "slides/slides_12.html#diani2000---cmc",
+    "href": "slides/slides_12.html#diani2000---cmc",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Diani (2000) - CMC",
+    "text": "Diani (2000) - CMC\n‘computer mediated communication’, CMC:\n\ninterpersonal communication through the use of computers or digital devices, now typically involving internet channels\n\nthen: (mass) email, message boards, instant messaging\nnow: social media, encrypted messaging with different message types (photo, video, audio), AI-generated material, other ways??\n\n\n\n\nsometimes easing how people communicate; sometimes changing it"
+  },
+  {
+    "objectID": "slides/slides_12.html#diani2000---types-of-communication",
+    "href": "slides/slides_12.html#diani2000---types-of-communication",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Diani (2000) - types of communication",
+    "text": "Diani (2000) - types of communication\n\n\n\n\n\n\nPrivate\nPublic\n\n\n\n\nDirect\n--face-to-face between activists\n--in public spaces (e.g., demos)\n\n\n\n--message restricted to group boundaries\n--communicating to person(s) (e.g., speeches, leafleting)\n\n\n\n\n--may overlap with attempts to attract media attention (i.e. ’public mediated’)\n\n\nMediated\n--messages within group boundaries but transmitted through tech\n--all media-related communication (e.g., press releases, adverts, 'manipulation of media through spectacular events')\n\n\n\n--(e.g., email, phone calls) with varying privacy"
+  },
+  {
+    "objectID": "slides/slides_12.html#features-and-facets-of-internet-tools",
+    "href": "slides/slides_12.html#features-and-facets-of-internet-tools",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Features and facets of internet tools",
+    "text": "Features and facets of internet tools\n\nAccessibility: public or ‘private’\n\nopen access or restricted\n\nalso, ‘digital divide’: many have no/less access to modern digital communication tools\n\n\nTemporality: asynchronous or synchronous\n\nreal-time, live or delayed\ntemporary or permanent\n\nIdentity: ‘in-real-life’ identity / anonymity / pseudonymity\n\nsame social stigmas as elsewhere or disinhibition\n\nAlgorithmic effects: present or not (and in what degree)\n\namplification / suppression / no role\ntrending?\necho chambers? filter bubbles?\n\nPlatform regulation: present or not (and in what degree)\n\nplatform policies and content moderation\nstate/regulator requirements\n\nother features?"
+  },
+  {
+    "objectID": "slides/slides_12.html#diani2000---organisations-and-communication",
+    "href": "slides/slides_12.html#diani2000---organisations-and-communication",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Diani (2000) - organisations and communication",
+    "text": "Diani (2000) - organisations and communication\nsome hypotheses about CMC and different movement organisations\n\n\n\n\n\nOrganisation type\nImportance of CMC\nEffects?\n\n\n\n\nOrgs. focusing on professional resources\nhigh\nCMC supports professionalised groups that sometimes require large mobilisation (e.g., Greenpeace), helping to 'get the word out'\n\n\nOrgs. mobilising participatory resources\nmoderate/low\nCMC reinforces already existing ties; these orgs. remain reliant on direct, face-to-face interactions to recruit, build collective identity, and maintain commitment\n\n\nOrgs. mobilising participatory resources\nmoderate/low\n\"Sustained collective action is unlikely to originate from purely virtual ties if they are not sustained by previous interaction\"\n\n\nTransnational networks\nmoderate\nCMC helps link (especially former) activists and militants (individuals and groups) to promote shared values, but little consequential effect for organising"
+  },
+  {
+    "objectID": "slides/slides_12.html#diani2000---theses-of-an-earlier-internet-age",
+    "href": "slides/slides_12.html#diani2000---theses-of-an-earlier-internet-age",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Diani (2000) - theses of an earlier internet age",
+    "text": "Diani (2000) - theses of an earlier internet age\nBroadly, internet tools (‘computer mediated communication’, CMC) allow…\n\n\ngreater speed (and accuracy) of communication\n\n\n\n\nless cost of communication\n\n\n\n\ngreater connectivity across distances\n\nunifying different national or regional parts of a movement\n\n\n\n\n\nAre these assertions still ‘as true’ as they were in 2000?"
+  },
+  {
+    "objectID": "slides/slides_12.html#diani2000---theses-of-an-earlier-internet-age-1",
+    "href": "slides/slides_12.html#diani2000---theses-of-an-earlier-internet-age-1",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Diani (2000) - theses of an earlier internet age",
+    "text": "Diani (2000) - theses of an earlier internet age\nCan CMC create new types of communities (if so, what kinds)? Can they create collective identity and enable durable/sustained activism?\n\n\ncan that happen with online anonymity?\n\n\nmost examples of personal interaction in electronic discussion groups actually miss some of the requirements usually associated with the idea of community. Participants in those lists often hide their personal identity, participate occasionally, are not tied in any sort of committed relationship and are mostly involved in dyadic or at most triadic interactions"
+  },
+  {
+    "objectID": "slides/slides_12.html#poll-results",
+    "href": "slides/slides_12.html#poll-results",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Poll results",
+    "text": "Poll results\n\n\nplatforms amplify movements of the marginalised?\n\namplifyCounts = aq.from(surveyResults)\n  .select(\"amplify\")\n  .groupby(\"amplify\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\namplify_maxCountRE = Math.max(...amplifyCounts.objects().map(d =&gt; d.count));\n\nplot_amplify = Plot.plot({\n  marks: [\n    Plot.barY(amplifyCounts, {\n      x: \"amplify\",\n      y: \"count\",\n      fill: \"amplify\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Yes\",\n      \"No\",\n      \"Maybe\"\n    ],\n    range: [\n      \"forestgreen\",\n      \"darkred\",\n      \"goldenrod\"\n    ]\n  },\n  marginBottom: 80,\n  x: { label: \"\", tickSize: 2, tickRotate: -1, padding: 0.2,\n    domain: [\"Yes\", \"No\", \"Maybe\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(amplifyCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, amplify_maxCountRE]\n  },\n  facet: { data: amplifyCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nplatforms not so useful since algorithms favour sensationalism?\n\nalgorithmsCounts = aq.from(surveyResults)\n  .select(\"algorithms\")\n  .groupby(\"algorithms\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nalgorithms_maxCountRE = Math.max(...algorithmsCounts.objects().map(d =&gt; d.count));\n\nplot_algorithms = Plot.plot({\n  marks: [\n    Plot.barY(algorithmsCounts, {\n      x: \"algorithms\",\n      y: \"count\",\n      fill: \"algorithms\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Strongly disagree\",\n      \"Disagree\",\n      \"Neutral\",\n      \"Agree\",\n      \"Strongly agree\"\n    ],\n    range: [\n      \"red\",\n      \"pink\",\n      \"lightgrey\",\n      \"lightgreen\",\n      \"forestgreen\"\n    ]\n  },\n  marginBottom: 180,\n  x: { label: \"\", tickSize: 2, tickRotate: -45,\n    domain: [\"Strongly disagree\", \"Disagree\", \"Neutral\", \"Agree\", \"Strongly agree\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(algorithmsCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, algorithms_maxCountRE]\n  },\n  facet: { data: algorithmsCounts, x: \"measure\", label: \"\" },\n  marginLeft: 140,\n  style: {\n    width: 1350,\n    height: 500,\n    fontSize: 30,\n  }\n});"
+  },
+  {
+    "objectID": "slides/slides_12.html#poll-results-1",
+    "href": "slides/slides_12.html#poll-results-1",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Poll results",
+    "text": "Poll results\nonline movement activity often encourages a “slacktivism”\n\nslacktivismCounts = aq.from(surveyResults)\n  .select(\"slacktivism\")\n  .groupby(\"slacktivism\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nslacktivism_maxCountRE = Math.max(...slacktivismCounts.objects().map(d =&gt; d.count));\n\nplot_slacktivism = Plot.plot({\n  marks: [\n    Plot.barY(slacktivismCounts, {\n      x: \"slacktivism\",\n      y: \"count\",\n      fill: \"slacktivism\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Strongly disagree\",\n      \"Disagree\",\n      \"Neutral\",\n      \"Agree\",\n      \"Strongly agree\"\n    ],\n    range: [\n      \"red\",\n      \"pink\",\n      \"lightgrey\",\n      \"lightgreen\",\n      \"forestgreen\"\n    ]\n  },\n  marginBottom: 180,\n  x: { label: \"\", tickSize: 2, tickRotate: -45,\n    domain: [\"Strongly disagree\", \"Disagree\", \"Neutral\", \"Agree\", \"Strongly agree\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(slacktivismCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, slacktivism_maxCountRE]\n  },\n  facet: { data: slacktivismCounts, x: \"measure\", label: \"\" },\n  marginLeft: 140,\n  style: {\n    width: 1350,\n    height: 500,\n    fontSize: 30,\n  }\n});"
+  },
+  {
+    "objectID": "slides/slides_12.html#poll-results-2",
+    "href": "slides/slides_12.html#poll-results-2",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Poll results",
+    "text": "Poll results\n\n\nshould online platforms be more regulated to prevent movements (and other actors) from spreading misinformation?\n\nregulationCounts = aq.from(surveyResults)\n  .select(\"regulation\")\n  .groupby(\"regulation\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nregulation_maxCountRE = Math.max(...regulationCounts.objects().map(d =&gt; d.count));\n\nplot_regulation = Plot.plot({\n  marks: [\n    Plot.barY(regulationCounts, {\n      x: \"regulation\",\n      y: \"count\",\n      fill: \"regulation\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Yes\",\n      \"No\",\n      \"Maybe\"\n    ],\n    range: [\n      \"forestgreen\",\n      \"darkred\",\n      \"goldenrod\"\n    ]\n  },\n  marginBottom: 80,\n  x: { label: \"\", tickSize: 2, tickRotate: -1, padding: 0.2,\n    domain: [\"Yes\", \"No\", \"Maybe\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(regulationCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, regulation_maxCountRE]\n  },\n  facet: { data: regulationCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmovements online face greater censorship and surveillance?\n\nchallengesCounts = aq.from(surveyResults)\n  .select(\"challenges\")\n  .groupby(\"challenges\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nchallenges_maxCountRE = Math.max(...challengesCounts.objects().map(d =&gt; d.count));\n\nplot_challenges = Plot.plot({\n  marks: [\n    Plot.barY(challengesCounts, {\n      x: \"challenges\",\n      y: \"count\",\n      fill: \"challenges\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Strongly disagree\",\n      \"Disagree\",\n      \"Neutral\",\n      \"Agree\",\n      \"Strongly agree\"\n    ],\n    range: [\n      \"red\",\n      \"pink\",\n      \"lightgrey\",\n      \"lightgreen\",\n      \"forestgreen\"\n    ]\n  },\n  marginBottom: 180,\n  x: { label: \"\", tickSize: 2, tickRotate: -45,\n    domain: [\"Strongly disagree\", \"Disagree\", \"Neutral\", \"Agree\", \"Strongly agree\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(challengesCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, challenges_maxCountRE]\n  },\n  facet: { data: challengesCounts, x: \"measure\", label: \"\" },\n  marginLeft: 140,\n  style: {\n    width: 1350,\n    height: 500,\n    fontSize: 30,\n  }\n});"
+  },
+  {
+    "objectID": "slides/slides_12.html#poll-results-3",
+    "href": "slides/slides_12.html#poll-results-3",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Poll results",
+    "text": "Poll results\nmost important online tool for SMs?\n\nImportantTools = aq.from(surveyResults)\n  .select(\"most_important_tool\")\n  .filter(d =&gt; d.most_important_tool) // to exclude empty (\"\") strings, 0s, FALSEs, nulls, etc\n\nImportantTools.array(\"most_important_tool\")"
+  },
+  {
+    "objectID": "slides/slides_12.html#otpor-milosevic-and-the-bulldozer-revolution",
+    "href": "slides/slides_12.html#otpor-milosevic-and-the-bulldozer-revolution",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Otpor, Milosevic, and the Bulldozer revolution",
+    "text": "Otpor, Milosevic, and the Bulldozer revolution\n\n\n(bulldozers were used by protesters in one action against the state’s media agency)\n\nUSAID provides funding to opposition groups in Serbia\n\nespecially to buy mobile phones and computers\n\nthe ‘Democratic Opposition of Serbia’ and Otpor! (‘Resistance’), use tech to…\n\nrecruit and train election monitors,\nspread awareness,\ncoordinate between groups and different parts of the country"
+  },
+  {
+    "objectID": "slides/slides_12.html#google-bombing",
+    "href": "slides/slides_12.html#google-bombing",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Google bombing",
+    "text": "Google bombing\n\n\n\n\n\nmanipulating a search enginge algorithm to rank highly certain websites\nExamples:"
+  },
+  {
+    "objectID": "slides/slides_12.html#google-bombing-1",
+    "href": "slides/slides_12.html#google-bombing-1",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Google bombing",
+    "text": "Google bombing\n\n\n\n\n\n\n\nmanipulating a search enginge algorithm to rank highly certain websites\nExamples:\n\nin 2006, Google searches for “failure” returned sites for George W. Bush’s biography"
+  },
+  {
+    "objectID": "slides/slides_12.html#google-bombing-2",
+    "href": "slides/slides_12.html#google-bombing-2",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Google bombing",
+    "text": "Google bombing\n\n\n\n\n\n\n\n\n\n\nmanipulating a search enginge algorithm to rank highly certain websites\nExamples:\n\nin 2006, Google searches for “failure” returned sites for George W. Bush’s biography\nin 2012, UK activists got search results for “EDL” to return, instead of English Defence League, pages for the English Disco Lovers"
+  },
+  {
+    "objectID": "slides/slides_12.html#google-bombing-3",
+    "href": "slides/slides_12.html#google-bombing-3",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Google bombing",
+    "text": "Google bombing\n\n\n\n\n\n\n\n\n\n\n\n\n\nmanipulating a search enginge algorithm to rank highly certain websites\nExamples:\n\nin 2006, Google searches for “failure” returned sites for George W. Bush’s biography\nin 2012, UK activists got search results for “EDL” to return, instead of English Defence League, pages for the English Disco Lovers\nin 2018, search results for “idiot” returned images of Donald Trump"
+  },
+  {
+    "objectID": "slides/slides_12.html#diani2000---cmcs-democratizing-impact",
+    "href": "slides/slides_12.html#diani2000---cmcs-democratizing-impact",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Diani (2000) - CMC’s democratizing impact",
+    "text": "Diani (2000) - CMC’s democratizing impact\n\nthe overall democratizing impact of CMC may be severely hampered by two types of resource constraints: while its contribution to networking among citizens’ organizations is undeniable, its contribution to the operations of social control agencies, the military, governments and corporations is – at least quantitatively – much greater; and access to CMC is at least for the time being heavily correlated to class and status\n\n\nWhat do you think? Is CMC a democratizing tool?\n\n\nThe case of Hong Kong…"
+  },
+  {
+    "objectID": "slides/slides_12.html#diani2000---cmcs-democratizing-impact-1",
+    "href": "slides/slides_12.html#diani2000---cmcs-democratizing-impact-1",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Diani (2000) - CMC’s democratizing impact",
+    "text": "Diani (2000) - CMC’s democratizing impact"
+  },
+  {
+    "objectID": "slides/slides_12.html#volk2021politicalperformancescontrol-research-design",
+    "href": "slides/slides_12.html#volk2021politicalperformancescontrol-research-design",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Volk (2021) research design",
+    "text": "Volk (2021) research design\n\nexplores how political actors in Germany performed control during the first wave of the COVID-19 pandemic, comparing the performances of control by two institutional actors and one counter-institutional grassroots actor\n\n\ndata generated through qualitative-interpretive methodology (familiar with this?)\n\nonline ethnography\ncomparative analysis\nobservation of in-person an “anti-lockdown” demonstration and virtual protest"
+  },
+  {
+    "objectID": "slides/slides_12.html#a-very-brief-introduction-to-interpretive-research",
+    "href": "slides/slides_12.html#a-very-brief-introduction-to-interpretive-research",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "A very brief introduction to interpretive research",
+    "text": "A very brief introduction to interpretive research\n\nInterpretivism - philosophical perspective that reality and knowledge are socially constructed\n\ncf. (post-)positivist perspectives: there is an ‘objective reality’ that can be measured and tested\n\nGalileo Galilei: ‘Count what is countable, measure what is measurable and what is not measurable, make measurable.’\n\nhas epistemological consequences: i.e., if reality is socially constructed, in what ways can we obtain knowledge about it?\n\nANSWER: techniques to identify and assess the meanings that people attach to events, actions, etc.\n\n\ninterpretivist findings dependent on researcher’s interpretation\n\nproblematic (according to some): difficulty of replicability, easy for ‘bias’ to slant interpretation, difficult to generalise"
+  },
+  {
+    "objectID": "slides/slides_12.html#volk2021politicalperformancescontrol---pegida-virtueller-abendspaziergang",
+    "href": "slides/slides_12.html#volk2021politicalperformancescontrol---pegida-virtueller-abendspaziergang",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Volk (2021) - PEGIDA ‘virtueller Abendspaziergang’",
+    "text": "Volk (2021) - PEGIDA ‘virtueller Abendspaziergang’"
+  },
+  {
+    "objectID": "slides/slides_12.html#volk2021politicalperformancescontrol---findings-1",
+    "href": "slides/slides_12.html#volk2021politicalperformancescontrol---findings-1",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Volk (2021) - findings (1)",
+    "text": "Volk (2021) - findings (1)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStyle\n\n\nIntended audience\n\n\nTransmission mode\n\n\n\nCases\nHabitus\nCommunication modes\nEmotional tone\nIntended audience\nTransmission mode\n\n\n\n\nMerkel\ninformer of the people\nmonological, unidirectional\nEmpathic, caring\nNational media audience\nConventional media\n\n\nKretschmer\nInterlocutor of the people\nDialogical, multidirectional\nEngaged, brave\nLocal immediate audience; regional and national media audience\nNew media; partially immediate\n\n\nPEGIDA\nEnlightened leader of the people\nMonological and plurilogical, unidirectional\nEnraged, mocking\nRegional, national, and transnational media audience\nNew media"
+  },
+  {
+    "objectID": "slides/slides_12.html#volk2021politicalperformancescontrol---findings-1-1",
+    "href": "slides/slides_12.html#volk2021politicalperformancescontrol---findings-1-1",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Volk (2021) - findings (1)",
+    "text": "Volk (2021) - findings (1)\nhow (if at all) do you recall Merkel’s televised address at the start of the pandemic? (https://www.youtube.com/watch?v=4YS20YQbVE4&pp=ygUXbWVya2VsIGNvcm9uYSBhbnNwcmFjaGU%3D)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStyle\n\n\nIntended audience\n\n\nTransmission mode\n\n\n\nCases\nHabitus\nCommunication modes\nEmotional tone\nIntended audience\nTransmission mode\n\n\n\n\nMerkel\ninformer of the people\nmonological, unidirectional\nEmpathic, caring\nNational media audience\nConventional media\n\n\nKretschmer\nInterlocutor of the people\nDialogical, multidirectional\nEngaged, brave\nLocal immediate audience; regional and national media audience\nNew media; partially immediate\n\n\nPEGIDA\nEnlightened leader of the people\nMonological and plurilogical, unidirectional\nEnraged, mocking\nRegional, national, and transnational media audience\nNew media"
+  },
+  {
+    "objectID": "slides/slides_12.html#volk2021politicalperformancescontrol---findings-2",
+    "href": "slides/slides_12.html#volk2021politicalperformancescontrol---findings-2",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Volk (2021) - findings (2)",
+    "text": "Volk (2021) - findings (2)\nStyles of communication align with implicit and/or explicit understanding of democracy:\n\n\n\n\n\n\n\n\n\n\n\n\n\nFloating meanings of 'democracy'\n\n\n\nCases\nDominant meaning\nHierarchical dynamics\nSafeguarded by\n\n\n\n\nMerkel\nOpenness of the decision-making procedures\nTop-down\nGovernmental accountability and transparency\n\n\nKretschmer\nCivil rights, especially freedom of speech\nBottom-up\nDialogue between elected representatives and citizens\n\n\nPEGIDA\nCivil rights, especially freedom of speech; Rule of law\nBottom-up\nCitizens’ activism and protest"
+  },
+  {
+    "objectID": "slides/slides_12.html#volk2021politicalperformancescontrol---key-assertions",
+    "href": "slides/slides_12.html#volk2021politicalperformancescontrol---key-assertions",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Volk (2021) - key assertions",
+    "text": "Volk (2021) - key assertions\n\nPolitical performances of control in Germany during the COVID-19 pandemic were characterised by constant appeals to the idea(l) of democracy.\nControl is something that needs to be constantly (re-)articulated in political performances.\nPerformances are carefully staged and purposefully disseminated discursive events that aim to articulate political meaning."
+  },
+  {
+    "objectID": "slides/slides_12.html#discussion-point-from-the-news",
+    "href": "slides/slides_12.html#discussion-point-from-the-news",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Discussion point from the news",
+    "text": "Discussion point from the news\n\nMeta (Facebook, Instagram, Threads—3 billion users worldwide) “drastically reduced factcheckers and beban to recommend more political content”\n\n\nZuckerberg intended to “dramatically reduce the amount of censorship” (framing contest: ‘censorship’ vs. ‘content moderation’)\nZuckerberg to “work with President Trump to push back on governments around the world that are going after American companies and pushing to censor more”. He cited Europe as a place with “an ever-increasing number of laws institutionalising censorship and making it difficult to build anything innovative”"
+  },
+  {
+    "objectID": "slides/slides_12.html#reconnecting-online-activism-to-offline-impact",
+    "href": "slides/slides_12.html#reconnecting-online-activism-to-offline-impact",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Reconnecting online activism to (offline) impact",
+    "text": "Reconnecting online activism to (offline) impact\nZeynep Tufekci (UNC Chapel Hill): How online social movements translate to offline results"
+  },
+  {
+    "objectID": "slides/slides_12.html#two-recent-findings-from-research-on-online-movement-activity",
+    "href": "slides/slides_12.html#two-recent-findings-from-research-on-online-movement-activity",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Two recent findings from research on online movement activity",
+    "text": "Two recent findings from research on online movement activity\n\ninfluencers on social media can have a massive impact on elections and other political events (e.g., Rezo anti-CDU video in 2019: Klüver (2024))\ndeplatforming from mainstream social media platforms has a major impact on movement actors and activists (e.g., Rauchfleisch and Kaiser 2024)"
+  },
+  {
+    "objectID": "slides/slides_12.html#references",
+    "href": "slides/slides_12.html#references",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "References",
+    "text": "References\n\n\n\n\nal-Anani, Khalil. 2019. “Rethinking the Repression-Dissent Nexus: Assessing Egypt’s Muslim Brotherhood’s Response to Repression Since the Coup of 2013.” Democratization 0 (0): 1–13. https://doi.org/10.1080/13510347.2019.1630610.\n\n\nAmenta, Edwin, Neal Caren, Elizabeth Chiarello, and Yang Su. 2010. “The Political Consequences of Social Movements.” Annual Review of Sociology 36 (1): 287–307. https://doi.org/10.1146/annurev-soc-070308-120029.\n\n\nAmenta, Edwin, Neal Caren, Sheera Joy Olasky, and Edwin Amenta. 2005. “Age for Leisure? Political and the Impact of the Mediation Pension Movement on U . S . Old-Age Policy.” American Sociological Review 70 (3): 516–38.\n\n\nAmenta, Edwin, and Francesca Polletta. 2019. “The Cultural Impacts of Social Movements.” Annual Review of Sociology 45: 279–99. https://doi.org/10.1146/annurev-soc-073018.\n\n\nAmenta, Edwin, and Michael P. Young. 1999. “Democratic States and Social Movements: Theoretical Arguments and Hypotheses.” Social Problems 46 (2): 153–68. https://doi.org/10.1525/sp.1999.46.2.03x0183a.\n\n\nCarty, Victoria. 2015. “Party in the Street: The Antiwar Movement and the Democratic Party After 9 / 11 by Michael T. Heaney and Fabio Rojas.” Political Science Quarterly, 202–3.\n\n\nGamson, William A. 1990. The Strategy of Social Protest. Belmont: Wadsworth Publishing.\n\n\nGaudette, Tiana, Ryan Scrivens, and Vivek Venkatesh. 2022. “Disengaged but Still Radical? Pathways Out of Violent Right-Wing Extremism.” Terrorism and Political Violence 00 (00): 1–26. https://doi.org/10.1080/09546553.2022.2082288.\n\n\nGiugni, Marco, Doug Mcadam, and Charles Tilly. 1999. How Social Movements Matter. Minneapolis: University of Minnesota Press.\n\n\nGundelach, Peter, and Jonas Toubøl. 2019. “High- and Low-Risk Activism: Differential Participation in a Refugee Solidarity Movement.” Mobilization: An International Quarterly 24 (2): 199–220. https://doi.org/10.17813/1086-671X-24-2-199.\n\n\nMadestam, Andreas, Daniel Shoag, Stan Veuger, and David Yanagizawa-Drott. 2013. “Do Political Protests Matter? Evidence from the Tea Party Movement.” The Quarterly Journal of Economics 128 (4): 1633–85. https://doi.org/10.1093/qje/qjt021.Advance.\n\n\nMueller, Lisa. 2022. “Crowd Cohesion and Protest Outcomes.” American Journal of Political Science, August, ajps.12725. https://doi.org/10.1111/ajps.12725.\n\n\nSetter, Davyd, and Sharon Erickson Nepstad. 2022. “How Social Movements Influence Public Opinion on Political Violence: Attitude Shifts in the Wake of the George Floyd Protests.” Mobilization: An International Quarterly 27 (4): 429–44. https://doi.org/10.17813/1086-671X-27-4-429.\n\n\nShoshan, Aya. 2018. “Habitus and Social Movements: How Militarism Affects Organizational Repertoires.” Social Movement Studies 17 (2): 144–58. https://doi.org/10.1080/14742837.2017.1408006."
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts-summarised-1",
+    "href": "slides/slides_12.html#movement-impacts-summarised-1",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts summarised",
+    "text": "Movement impacts summarised\n\nfor all of these: there is potential for backlash effects … including led by countermovements\n\n\n\nindividual\n\ndid the people who participated change? how?\n\ndid people who encountered the movement change? how?\n\norganisational\n\na targeted organisation?\nthe movement’s own (or connected) organisation?\n\ncultural\n\nhas the movement changed societal norms? how?\n\nideas, modes of behaviour no longer acceptable or (conversely) now expected?\n\n\npolitical\n\nhave debates/discourse changed?\nhave policies or laws changed?\nhave dynamics between political actors changed?\nhave new political actors emerged because of the movement?"
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts---individual-1",
+    "href": "slides/slides_12.html#movement-impacts---individual-1",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts - individual",
+    "text": "Movement impacts - individual\n\n\nindividual\n\n\n\nmore likely to be recruited into other movement activism (e.g., 2019)\nshapes how individuals think of movement participation (‘habitus’) (e.g., 2018)\nstrengthened attitudes around issues (even after disengagement) (e.g., 2022)\n‘only’ momentary participation (e.g., 2015)—participants might return to ‘normal’ life\ndespair and disengagement, e.g., (2019) … \n\n\n\n\n\nThe high cost of protesting and political participation coupled with frustration from the Brotherhood’s incapable leadership disenchanted several members who not only broke ties with the Brotherhood but also with politics as a whole."
+  },
+  {
+    "objectID": "slides/slides_12.html#example-the-me-too-movement-12",
+    "href": "slides/slides_12.html#example-the-me-too-movement-12",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Example: the Me Too movement (1/2)",
+    "text": "Example: the Me Too movement (1/2)"
+  },
+  {
+    "objectID": "slides/slides_12.html#example-the-me-too-movement-22",
+    "href": "slides/slides_12.html#example-the-me-too-movement-22",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Example: the Me Too movement (2/2)",
+    "text": "Example: the Me Too movement (2/2)"
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts-summarised-2",
+    "href": "slides/slides_12.html#movement-impacts-summarised-2",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts summarised",
+    "text": "Movement impacts summarised\n\nWhat influences if movements impact these areas?\n\n\n\nindividual\n\ndid the people who participated change? how?; (b) did people who encountered the movement change? how?\n\norganisational\n\na targeted organisation?; (b) movement’s own (or related) org.?\n\ncultural\n\nhas movement changed societal (ideas, behaviours) norms?\n\npolitical\n\nhave debates/discourse changed?; (b) have policies or laws changed?; (c) have dynamics between political actors changed?; (d) have new political actors emerged because of the movement?"
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts---cultural-1",
+    "href": "slides/slides_12.html#movement-impacts---cultural-1",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts - cultural",
+    "text": "Movement impacts - cultural\n\n\ncultural\n\n\n\n\nchanging attitudes\n\ne.g., BLM and acceptability of violence; MeToo and social/sexual norms\noften mediated by news coverage\n\n\n\n\n\nchanging behaviour\n\nconsumer purchasing behaviour\n\nveganism\nbuying sustainably\ndigital detoxification/minimalism\n\nmoral commitments\n\ne.g., abstinence pledge effect (likelier to delay sex; but less effect in homogeneous local community)"
+  },
+  {
+    "objectID": "slides/slides_12.html#movement-impacts---political-1",
+    "href": "slides/slides_12.html#movement-impacts---political-1",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Movement impacts - political",
+    "text": "Movement impacts - political\n\n\npolitical\n\n\n\n\ngaining ‘new advantages’\n\nvoting rights (e.g., Gamson 1990)\npension/welfare benefits (e.g., Amenta et al. 2005)\n\nformation of a new political party [e.g., Schwartz 2000]\n\n(Europe) Green parties; (US) Tea Party \\(\\rightarrow\\) Republican party (Madestam et al. 2013); (DE) Basis party\n\nwinning office\n\nrepresentatives may push for movements issues"
+  },
+  {
+    "objectID": "slides/slides_12.html#how-movements-have-an-impact-summary",
+    "href": "slides/slides_12.html#how-movements-have-an-impact-summary",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "How movements have an impact, summary",
+    "text": "How movements have an impact, summary\n(a lot falls under the headings of resources or opportunities, but let’s be more specific than that…)\n\norganisational attributes that facilitate coherent, sustained activism and getting attention\n\nprofessionalisation (e.g., a media department)\n(a minimum degree of) hierarchy\ncompetent leadership\n\nsound strategy\n\ncoherence between goals, frames, and actions/tactics\n\nwell done: U.S. civil rights (political, economic equality)\nnot so well done: Stop Oil and Letzte Generation…\n\n(perceived) moderateness of goals/demands"
+  },
+  {
+    "objectID": "slides/slides_12.html#how-movements-have-an-impact-summary-1",
+    "href": "slides/slides_12.html#how-movements-have-an-impact-summary-1",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "How movements have an impact, summary",
+    "text": "How movements have an impact, summary\n(a lot falls under the headings of resources or opportunities, but let’s be more specific than that…)\n\nframe resonance (i.e., ideas get broader/influential support)\n\nissue salience\nsubstantive agreement\nmediated by news coverage and social media\n\nelite allies (i.e., individuals in key positions to help a movement)\n\nfavourable partisan context (e.g., Roe v. Wade [good context for feminist activists], then Equal Rights Amendment [changed to bad context for feminist activists])\n\nmass support (i.e., too big to ignore by targets of mobilisation)\nabsence of a strong countermovement/opposing movement"
+  },
+  {
+    "objectID": "slides/slides_12.html#how-movements-have-an-impact-summary-2",
+    "href": "slides/slides_12.html#how-movements-have-an-impact-summary-2",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "How movements have an impact, summary",
+    "text": "How movements have an impact, summary\nAmenta and Polletta (2019, 292):\n\nWhile movements’ ability to effect change depends in part on how organized, resourced, and strategic they are, the real practical acumen comes in matching tactics to the institutional context in which movements operate. Whether the decision is to focus on raising consciousness or raising money, to lobby legislators or take to the streets, to tell stories or present statistics, the right choice depends both on features of the movement and on features of the institution."
+  },
+  {
+    "objectID": "slides/slides_12.html#how-movements-have-an-impact-a-question",
+    "href": "slides/slides_12.html#how-movements-have-an-impact-a-question",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "How movements have an impact, a question",
+    "text": "How movements have an impact, a question\n\nHow might this movement (be aiming to) have an impact?"
+  },
+  {
+    "objectID": "slides/slides_12.html#a-study-of-impact---setter2022howsocialmovemenst",
+    "href": "slides/slides_12.html#a-study-of-impact---setter2022howsocialmovemenst",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "A study of impact - Setter and Nepstad (2022)",
+    "text": "A study of impact - Setter and Nepstad (2022)\nat the intersection of individual and cultural impact: public opinion"
+  },
+  {
+    "objectID": "slides/slides_12.html#background-on-the-george-floyd-protests",
+    "href": "slides/slides_12.html#background-on-the-george-floyd-protests",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "background on the George Floyd protests",
+    "text": "background on the George Floyd protests\n\na short summary of the movement from a sympathetic source:\n\n\n\n\n\na longer history summary (Channel 4): https://www.youtube.com/watch?v=YG8GjlLbbvs"
+  },
+  {
+    "objectID": "slides/slides_12.html#setter2022howsocialmovemenst---design",
+    "href": "slides/slides_12.html#setter2022howsocialmovemenst---design",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Setter and Nepstad (2022) - design",
+    "text": "Setter and Nepstad (2022) - design\n\nRQ: When such events happen, how does this shape citizens’ views on politically-oriented violence?\nContext:\n\n‘U.S. citizens expect protesters to conduct themselves nonviolently…’ (p. 430)\nYET - “people find violence more acceptable when traditional political methods are incapable of adequately addressing social injustices”\n\nData:\n\nfrom the American National Election Study’s (ANES) 2016 and 2020 samples"
+  },
+  {
+    "objectID": "slides/slides_12.html#how-sms-influence-public-opinion---setter2022howsocialmovemenst",
+    "href": "slides/slides_12.html#how-sms-influence-public-opinion---setter2022howsocialmovemenst",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "how SMs influence public opinion - Setter and Nepstad (2022)",
+    "text": "how SMs influence public opinion - Setter and Nepstad (2022)"
+  },
+  {
+    "objectID": "slides/slides_12.html#how-sms-influence-public-opinion---setter2022howsocialmovemenst-1",
+    "href": "slides/slides_12.html#how-sms-influence-public-opinion---setter2022howsocialmovemenst-1",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "how SMs influence public opinion - Setter and Nepstad (2022)",
+    "text": "how SMs influence public opinion - Setter and Nepstad (2022)"
+  },
+  {
+    "objectID": "slides/slides_12.html#support-for-political-violence----setter2022howsocialmovemenst",
+    "href": "slides/slides_12.html#support-for-political-violence----setter2022howsocialmovemenst",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "support for political violence (%) - (2022)",
+    "text": "support for political violence (%) - (2022)\n\n\n\n\n\n\n\nDemographic\n2016\n2020\n\n\n\n\nSample Overall\n15.28\n14.34\n\n\nExtremely Liberal\n14.55\n30.79\n\n\nLiberal\n10.02\n17.36\n\n\nSlightly Liberal\n16.83\n16.23\n\n\nModerate\n15.93\n16.30\n\n\nSlightly Conservative\n14.84\n8.59\n\n\nConservative\n9.24\n5.45\n\n\nExtremely Conservative\n12.71\n8.22\n\n\nWhite\n11.79\n10.89\n\n\nBlack\n24.37\n24.41\n\n\nMen\n16.45\n14.13\n\n\nWomen\n14.17\n14.63\n\n\nAge 18-29\n28.40\n30.42\n\n\nAge 30-39\n16.42\n21.13\n\n\nAge 40-49\n14.54\n16.85\n\n\nAge 50-59\n13.12\n10.76\n\n\nAge 60-69\n9.86\n7.15\n\n\nAge 70-79\n9.35\n7.57\n\n\nAge 80+\n15.03\n6.02\n\n\nAttends Church\n16.10\n12.82\n\n\nDoes Not Attend Church\n14.00\n15.81\n\n\n\n\n\n\n\n\nany numbers that you think are noteworthy?"
+  },
+  {
+    "objectID": "slides/slides_12.html#support-for-political-violence----setter2022howsocialmovemenst-1",
+    "href": "slides/slides_12.html#support-for-political-violence----setter2022howsocialmovemenst-1",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "support for political violence (%) - (2022)",
+    "text": "support for political violence (%) - (2022)\n\n\n\n\n\n\n\nDemographic\n2016\n2020\n\n\n\n\nSample Overall\n15.28\n14.34\n\n\nExtremely Liberal\n14.55\n30.79\n\n\nLiberal\n10.02\n17.36\n\n\nSlightly Liberal\n16.83\n16.23\n\n\nModerate\n15.93\n16.30\n\n\nSlightly Conservative\n14.84\n8.59\n\n\nConservative\n9.24\n5.45\n\n\nExtremely Conservative\n12.71\n8.22\n\n\nWhite\n11.79\n10.89\n\n\nBlack\n24.37\n24.41\n\n\nMen\n16.45\n14.13\n\n\nWomen\n14.17\n14.63\n\n\nAge 18-29\n28.40\n30.42\n\n\nAge 30-39\n16.42\n21.13\n\n\nAge 40-49\n14.54\n16.85\n\n\nAge 50-59\n13.12\n10.76\n\n\nAge 60-69\n9.86\n7.15\n\n\nAge 70-79\n9.35\n7.57\n\n\nAge 80+\n15.03\n6.02\n\n\nAttends Church\n16.10\n12.82\n\n\nDoes Not Attend Church\n14.00\n15.81\n\n\n\n\n\n\n\n\n\n“liberals became much more likely to find political violence acceptable … conservatives became much less likely to find themselves in support of violence…”\n“Younger respondents were more likely to support political violence in 2020 … while their older counterparts were more opposed than before”"
+  },
+  {
+    "objectID": "slides/slides_12.html#support-for-political-violence----setter2022howsocialmovemenst-2",
+    "href": "slides/slides_12.html#support-for-political-violence----setter2022howsocialmovemenst-2",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "support for political violence (%) - (2022)",
+    "text": "support for political violence (%) - (2022)\n\n\n\n\n\n\n\nDemographic\n2016\n2020\n\n\n\n\nSample Overall\n15.28\n14.34\n\n\nExtremely Liberal\n14.55\n30.79\n\n\nLiberal\n10.02\n17.36\n\n\nSlightly Liberal\n16.83\n16.23\n\n\nModerate\n15.93\n16.30\n\n\nSlightly Conservative\n14.84\n8.59\n\n\nConservative\n9.24\n5.45\n\n\nExtremely Conservative\n12.71\n8.22\n\n\nWhite\n11.79\n10.89\n\n\nBlack\n24.37\n24.41\n\n\nMen\n16.45\n14.13\n\n\nWomen\n14.17\n14.63\n\n\nAge 18-29\n28.40\n30.42\n\n\nAge 30-39\n16.42\n21.13\n\n\nAge 40-49\n14.54\n16.85\n\n\nAge 50-59\n13.12\n10.76\n\n\nAge 60-69\n9.86\n7.15\n\n\nAge 70-79\n9.35\n7.57\n\n\nAge 80+\n15.03\n6.02\n\n\nAttends Church\n16.10\n12.82\n\n\nDoes Not Attend Church\n14.00\n15.81\n\n\n\n\n\n\n\n\n\nOne strange outlier is the 2016 survey’s proportion of 80+ year-olds who find political violence acceptable. We have checked the coding on this variable multiple times to ensure that there is nothing wrong with it, and it has remained accurate every time. Either the 2016 ANES just happened to capture a particularly rowdy set of senior citizens, or there was some cohort effect among that sample’s oldest respondents that was not shared among the 2020 cohort—such as lingering memories of WWII or the 1960s movements."
+  },
+  {
+    "objectID": "slides/slides_12.html#setter2022howsocialmovemenst---findings",
+    "href": "slides/slides_12.html#setter2022howsocialmovemenst---findings",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Setter and Nepstad (2022) - findings",
+    "text": "Setter and Nepstad (2022) - findings"
+  },
+  {
+    "objectID": "slides/slides_12.html#setter2022howsocialmovemenst---findings-1",
+    "href": "slides/slides_12.html#setter2022howsocialmovemenst---findings-1",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Setter and Nepstad (2022) - findings",
+    "text": "Setter and Nepstad (2022) - findings\n\nsupport for Black Lives Matter is significantly correlated with support for political violence.\n“The impact of age intensified between 2016 and 2020. In the 2016 model, each additional year of age corresponds to a .2% lower likelihood of supporting political violence. In 2020, each additional year corresponds to a decrease of .4%, two times the impact of the previous model. In other words, in 2016, a fifty-year-old respondent would be 6% less likely to support political violence than a twenty-year-old respondent, net of all other factors. In 2020, by contrast, they would be 12% less likely to support political violence, net of all other factors.”\nsignificance of higher education: having a college degree decreases support for political violence by 3.4%."
+  },
+  {
+    "objectID": "slides/slides_12.html#setter2022howsocialmovemenst---findings-revised-model",
+    "href": "slides/slides_12.html#setter2022howsocialmovemenst---findings-revised-model",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Setter and Nepstad (2022) - findings, revised model",
+    "text": "Setter and Nepstad (2022) - findings, revised model"
+  },
+  {
+    "objectID": "slides/slides_12.html#setter2022howsocialmovemenst---findings-2",
+    "href": "slides/slides_12.html#setter2022howsocialmovemenst---findings-2",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "Setter and Nepstad (2022) - findings",
+    "text": "Setter and Nepstad (2022) - findings\n\nthe George Floyd riots functioned as a new “situational variation” that shifted people’s attitudes, increasing the proportion of liberals and ardent BLM movement supporters who felt that the political violence was justifiable.”\n\n\n“people may shift their attitudes about political violence yet again when a different movement poses a new situational variation. In one instance, people can be supportive of political violence and then, in a different instance, be morally opposed to it. The key factor shaping beliefs in any particular moment is how a person feels about the movement that is using political violence.”"
+  },
+  {
+    "objectID": "slides/slides_12.html#how-movements-have-an-impact-a-coda",
+    "href": "slides/slides_12.html#how-movements-have-an-impact-a-coda",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "How movements have an impact, a coda",
+    "text": "How movements have an impact, a coda\nFrom Mueller (2022)\n\nthere is the ‘illusion of cohesion’ among protesters—who in fact represent a diverse array of views\nprotesters can enhance their odds of success by coordinating around a unified message\n\nmay clash with some activists’ preferences for “intersectional” messages\n\n\n\na compromise would be to voice specific demands sequentially, so that each protest event has a cohesive theme (and a decent shot at success) but every issue eventually has it moment in the spotlight"
+  },
+  {
+    "objectID": "slides/slides_12.html#how-sms-influence-public-opinion----setter2022howsocialmovemenst",
+    "href": "slides/slides_12.html#how-sms-influence-public-opinion----setter2022howsocialmovemenst",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "how SMs influence public opinion - (2022)",
+    "text": "how SMs influence public opinion - (2022)"
+  },
+  {
+    "objectID": "slides/slides_12.html#how-sms-influence-public-opinion----setter2022howsocialmovemenst-1",
+    "href": "slides/slides_12.html#how-sms-influence-public-opinion----setter2022howsocialmovemenst-1",
+    "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
+    "section": "how SMs influence public opinion - (2022)",
+    "text": "how SMs influence public opinion - (2022)"
   }
 ]

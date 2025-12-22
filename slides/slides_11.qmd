@@ -36,7 +36,7 @@ bibliography: ../../../library.bib
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
 | 4 Dec:  | Daichi, Seongyeon, Jehyun        | ethnography | 
-| 18 Dec: | Ayla, Tara, Theresa, Annabelle   | TBD    | 
+| 8 Jan:  | Ayla, Tara, Theresa, Annabelle   | discourse analysis | 
 | 15 Jan: | Luna, Emilene, Raffa, Sofia      | TBD    | 
 
 : Presentations line-up
@@ -700,23 +700,19 @@ plot_challenges = Plot.plot({
   ],
   color: {
     domain: [
-      "Strongly disagree",
-      "Disagree",
-      "Neutral",
-      "Agree",
-      "Strongly agree"
+      "Yes",
+      "No",
+      "Maybe"
     ],
     range: [
-      "red",
-      "pink",
-      "lightgrey",
-      "lightgreen",
-      "forestgreen"
+      "forestgreen",
+      "darkred",
+      "goldenrod"
     ]
   },
-  marginBottom: 180,
-  x: { label: "", tickSize: 2, tickRotate: -45,
-    domain: ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"]
+  marginBottom: 80,
+  x: { label: "", tickSize: 2, tickRotate: -1, padding: 0.2,
+    domain: ["Yes", "No", "Maybe"]
   },  
   y: {
     label: "",
@@ -728,12 +724,12 @@ plot_challenges = Plot.plot({
     domain: [0, challenges_maxCountRE]
   },
   facet: { data: challengesCounts, x: "measure", label: "" },
-  marginLeft: 140,
+  marginLeft: 60,
   style: {
-    width: 1350,
+    width: 1600,
     height: 500,
-    fontSize: 30,
-  }
+    fontSize: 40,
+  },
 });
 
 ```
