@@ -39,7 +39,7 @@ bibliography: ../../../library.bib
 | -------:|:---------------------------------|:------:|
 | 4 Dec:  | Daichi, Seongyeon, Jehyun        | ethnography | 
 | 8 Jan:  | Ayla, Tara, Theresa, Annabelle   | discourse analysis | 
-| 15 Jan: | Luna, Emilene, Raffa, Sofia      | TBD    | 
+| 15 Jan: | Luna, Emilene, Raffa             | interviewing | 
 
 : Presentations line-up
 
@@ -63,6 +63,19 @@ bibliography: ../../../library.bib
 <!-- []{style="font-size:10px;"} -->
 
 <!-- For a course on 'social movements' and a class on 'social movements online', can you suggest some discussion questions to ask students? Ideally, the questions should have multiple choice responses, or yes/no/maybe responses, or strongly agree/agree/disagree/strongly disagree responses? -->
+
+
+## Course feedback {background-color="#2c844c"}
+
+Please take a few minutes to fill in the course feedback survey (check your LMU email).
+
+If have an opinion on these points in the comments:
+
+- Would you have preferred getting a specific [assigned movement]{style="color:violet;"} to independently study in depth? [Yes]{style="color:blue;"}/[No]{style="color:red;"}
+- Would you have liked more [structured discussions]{style="color:violet;"} (e.g., set debates on class topics)? [Yes]{style="color:blue;"}/[No]{style="color:red;"}
+- Would you rather that class readings are drawn from [textbook(s)]{style="color:violet;"} than journal articles? [Yes]{style="color:blue;"}/[No]{style="color:red;"}
+- changes or additions to the course website?
+
 
 # Types of impact {background-color="#2c844c"}
 
