@@ -28,6 +28,8 @@ bibliography: ../../../library.bib
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 ```
 
+- **short synopsis** for final essay due **Friday (17 January)** (send to me via email)
+
 ## Presentation groups
 
 <!-- ::: panel-tabset -->
@@ -1050,7 +1052,7 @@ kable(volk2,
 ## Discussion point from the news
 
 ::: {style="text-align: center;"}
-**[Meta (Facebook, Instagram, Threads---3 billion users worldwide) "[drastically reduced factcheckers and beban to recommend more political content](https://www.theguardian.com/technology/2025/jan/07/meta-facebook-instagram-threads-mark-zuckerberg-remove-fact-checkers-recommend-political-content)"]{style="font-size:45px;"}** 
+**[Meta (Facebook, Instagram, Threads---3 billion users worldwide) '[drastically reduces factcheckers and recommends more political content](https://www.theguardian.com/technology/2025/jan/07/meta-facebook-instagram-threads-mark-zuckerberg-remove-fact-checkers-recommend-political-content)']{style="font-size:45px;"}** 
 :::
 
 - Zuckerberg intended to "_dramatically reduce the amount of **censorship**_" ([framing contest]{style="color:darkred;"}: 'censorship' vs. 'content moderation')

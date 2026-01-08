@@ -28,6 +28,8 @@ bibliography: ../../../library.bib
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 ```
 
+- **short synopsis** for final essay due **Friday (17 January)** (send to me via email)
+
 ## Presentation groups
 
 <!-- ::: panel-tabset -->
