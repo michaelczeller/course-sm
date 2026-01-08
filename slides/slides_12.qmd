@@ -720,11 +720,13 @@ at the intersection of *[individual]{style="color:darkred;"}* and *[cultural]{st
 
 ## background on the George Floyd protests 
 
-- a short summary of the movement from a sympathetic source:
+- a short summary of the background to the movement:
+
+<!-- "Why did George Floyd die? The history of police brutality in the U.S. - BBC" -->
 
 <!-- Aspect ratios include 1x1, 4x3, 16x9 (the default), and 21x9. -->
 <!-- aspect-ratio="21x9"  -->
-{{< video https://www.youtube.com/watch?v=QCLjCg4D-FQ 
+{{< video https://www.youtube.com/watch?v=fWQ6_BQii_U 
     start="1"
     width="75%" 
     height="75%" >}}
