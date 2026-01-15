@@ -1081,9 +1081,9 @@ Anonymous feedback here: <https://forms.gle/AjHt6fcnwZxkSg4X8>
 Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 
 
-<!-- ```{r echo=FALSE, message=FALSE, warning=FALSE} -->
-<!-- pagedown::chrome_print(file.path("..", "docs/slides", "slides_11.html")) -->
-<!-- ``` -->
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+pagedown::chrome_print(file.path("..", "docs/slides", "slides_11.html"))
+```
 
 
 ## References
