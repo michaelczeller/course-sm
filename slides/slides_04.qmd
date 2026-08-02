@@ -632,14 +632,21 @@ How do social networks affect decisions to participate in collective action? [-@
 <!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
 Take the survey at **<https://forms.gle/soCtvvSX5TKuURp57>**
 
-- social media networks have eased mobilisation and expanded movement participation?
-- offline, 'brick and mortar' organisations are as important as ever for movement activism
+::: {style="margin-top: -20px; font-size: 0.8em;"} 
+- social media networks have eased mobilisation?
+- are offline, 'brick and mortar' orgs as important as ever?
+- young people more prominent, numerous in activism?
+- is it advantageous to have more young people in activism?
+
+::: 
 
 :::
 ::::
 
-- young people more prominent, numerous in activism?
-- if young people are more present in movement activism, is it an advantage or disadvantage?
+
+::: {style="margin-top: -30px;"}
+[[Questions about movements]{style="color:violet;"}: (1) Does joining this movement require high level of commitment? (2) Does the movement rely heavily on social media? (3) Which setting plays the biggest role in mobilising support? (4) How are most participants recruited? (5) Which resource seems most important for this movement's success?]{style="font-size: 0.8em;"}
+:::
 
 ---
 
@@ -658,9 +665,41 @@ surveyResults = liveGoogleSheet(
   "https://docs.google.com/spreadsheets/d/e/" +
     "2PACX-1vQ_vXVZg2dn-UeLLm42vrQ86JP46u9GsVgg-glRy2xK8MfLnZ1ehr2sObgDpDsoYMmuN3GBKCJAHz1L/" +
     "pub?gid=1510353834&single=true&output=csv",
-  10000, 1, 5); // adjust the last number to select all relevant columns
+  10000, 1, 11); // adjust the last number to select all relevant columns
 
 respondentCount = surveyResults.length;
+
+likertOrder = [
+  "Strongly disagree",
+  "Disagree",
+  "Neutral",
+  "Agree",
+  "Strongly agree"
+];
+
+ynmOrder = [
+  "Yes",
+  "No",
+  "Maybe"
+];
+
+movementOrder = [
+  "Antifa",
+  "FFF",
+  "LG",
+  "PEGIDA",
+  "Identitarians",
+  "Querdenker"
+];
+
+movementColors = [
+  "black",
+  "green",
+  "darkorange",
+  "red",
+  "gold",
+  "purple"
+];
 
 ```
 
@@ -868,6 +907,340 @@ from start until 5.12
 ::: {style="margin-top: -50px"}
 [which social media platforms are you on? Could you imagine getting 'mobilised' via them?]{style="color:indigo;"} 
 :::
+
+## Movement responses - commitment
+
+joining requires high commitment
+
+```{ojs}
+// need to replace 'm_high_commitment'
+
+m_high_commitmentCounts = aq.from(surveyResults)
+  .groupby("m_high_commitment", "movement")
+  .count()
+  .objects();
+
+plot_m_high_commitment = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_high_commitmentCounts, {
+      fx: "m_high_commitment",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 140,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+
+## Movement responses - joining
+
+:::: {.columns}
+:::{.column width="48%"}
+Key setting for mobilising support?
+
+```{ojs}
+// need to replace 'm_mobilisation_setting'
+
+m_mobilisation_settingCounts = aq.from(surveyResults)
+  .groupby("m_mobilisation_setting", "movement")
+  .count()
+  .objects();
+
+plot_m_mobilisation_setting = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_mobilisation_settingCounts, {
+      fx: "m_mobilisation_setting",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 250,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+::: {.column width="48%"}
+Recruitment most likely through...
+
+```{ojs}
+// need to replace 'm_recruitment_through'
+
+m_recruitment_throughCounts = aq.from(surveyResults)
+  .groupby("m_recruitment_through", "movement")
+  .count()
+  .objects();
+
+plot_m_recruitment_through = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_recruitment_throughCounts, {
+      fx: "m_recruitment_through",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 250,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+::: 
+::::
+
+
+## Movement responses - social media
+
+movement relies heavily on social media
+
+```{ojs}
+// need to replace 'm_social_media_reliance'
+
+m_social_media_relianceCounts = aq.from(surveyResults)
+  .groupby("m_social_media_reliance", "movement")
+  .count()
+  .objects();
+
+plot_m_social_media_reliance = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_social_media_relianceCounts, {
+      fx: "m_social_media_reliance",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 140,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+
+
+## Movement responses - key resource
+
+movement's most importance resource for success?
+
+
+```{ojs}
+// need to replace 'm_most_important_resource'
+
+m_most_important_resourceCounts = aq.from(surveyResults)
+  .groupby("m_most_important_resource", "movement")
+  .count()
+  .objects();
+
+plot_m_most_important_resource = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_most_important_resourceCounts, {
+      fx: "m_most_important_resource",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 250,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
 
 # Organisations {background-color="#2c844c"}
 
@@ -1160,6 +1533,9 @@ Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 pagedown::chrome_print(file.path("..", "docs/slides", "slides_04.html"))
 ```
 
+<hr>
+
+[Questions about movements next meeting]{style="color:violet;"}: (1) Which identity is most strongly emphasised? (2) Which "out-group" is most frequently part of the group's narratives? (3) Are emotional appeals more important than factual or technical arguments? (4) Are positive emotions more important than negative emotions in sustaining participation? (5) Which emotion seems most central to the movement's mobilisation?
 
 ## References
 

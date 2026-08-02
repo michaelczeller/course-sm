@@ -74,16 +74,22 @@ bibliography: ../../../library.bib
 <!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
 Take the survey at **<https://forms.gle/qmXcNdhWNN3eNNPC8>**
 
+::: {style="margin-top: -20px; font-size: 0.8em;"} 
 - are coalitions helpful to achieve goals?
-- short-term, limited coalitions more likely to achieve goals?
-- factor most important in facilitating coalition formation?
+- short-term coalitions more likely to achieve goals?
+- factor most important in coalition formation?
+- biggest benefit in forming a coalition?
+- identity-based movements struggle to coalition?
+
+:::
 
 :::
 :::: 
 
-- most important benefit for a movement in forming a coalition?
-- identity-based movements struggle more to form coalitions?
+::: {style="margin-top: -55px;"}
+[[Questions about movements]{style="color:violet;"}: (1) coalition is important for this movement's success? (2) Has the movement participated in broad “umbrella coalitions” that bring together diverse actors? (3) Are coalition partners seen as just temporary allies? (4) Do coalition actions tend to be more effective than solo actions by the movement? (5) Are the movement’s coalitions are primarily local rather than national or international? (6) Does the movement have supportive allies in one or more political party?]{style="font-size: 0.8em;"}
 
+::: 
 
 <!-- - generally, coalitions with other movements/organisations are helpful to achieve goals -->
 <!--     + strongly agree, agree, neutral, disagree, strongly disagree -->
@@ -118,9 +124,41 @@ surveyResults = liveGoogleSheet(
   "https://docs.google.com/spreadsheets/d/e/" +
     "2PACX-1vSRrm-ab4dEZFOsXW186NEQVq8lVRTNif4EMM89t5v1p025myMQQUhw1XqyyKfi75ar-_WLv2zIQz7M/" +
     "pub?gid=1902471768&single=true&output=csv",
-  10000, 1, 6); // adjust the last number to select all relevant columns 
+  10000, 1, 13); // adjust the last number to select all relevant columns 
 
 respondentCount = surveyResults.length;
+
+likertOrder = [
+  "Strongly disagree",
+  "Disagree",
+  "Neutral",
+  "Agree",
+  "Strongly agree"
+];
+
+ynmOrder = [
+  "Yes",
+  "No",
+  "Maybe"
+];
+
+movementOrder = [
+  "Antifa",
+  "FFF",
+  "LG",
+  "PEGIDA",
+  "Identitarians",
+  "Querdenker"
+];
+
+movementColors = [
+  "black",
+  "green",
+  "darkorange",
+  "red",
+  "gold",
+  "purple"
+];
 
 ```
 
@@ -765,6 +803,414 @@ Pay attention to the mechanisms that Prof. Chenoweth specifies in her brief expl
 <!-- \end{tabular}} -->
 <!-- \end{table} -->
 
+## Movement responses - joining coalitions 
+
+:::: {.columns}
+:::{.column width="48%"}
+
+Coalition important for this movement's success
+<!-- likert -->
+
+```{ojs}
+// need to replace 'm_coalition_important'
+
+m_coalition_importantCounts = aq.from(surveyResults)
+  .groupby("m_coalition_important", "movement")
+  .count()
+  .objects();
+
+plot_m_coalition_important = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_coalition_importantCounts, {
+      fx: "m_coalition_important",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 140,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+::: {.column width="48%"}
+
+Movement has participated in 'umbrella coalitions'
+<!-- ynm -->
+
+```{ojs}
+// need to replace 'm_umbrella_coalitions'
+
+m_umbrella_coalitionsCounts = aq.from(surveyResults)
+  .groupby("m_umbrella_coalitions", "movement")
+  .count()
+  .objects();
+
+plot_m_umbrella_coalitions = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_umbrella_coalitionsCounts, {
+      fx: "m_umbrella_coalitions",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
+:::
+::::
+
+## Movement responses - partners
+
+:::: {.columns}
+:::{.column width="48%"}
+
+coalition partners seen as temporary allies
+<!-- ynm -->
+
+```{ojs}
+// need to replace 'm_coalition_partners'
+
+m_coalition_partnersCounts = aq.from(surveyResults)
+  .groupby("m_coalition_partners", "movement")
+  .count()
+  .objects();
+
+plot_m_coalition_partners = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_coalition_partnersCounts, {
+      fx: "m_coalition_partners",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+::: {.column width="48%"}
+
+movement's coalitions are primarily local
+<!-- likert -->
+
+```{ojs}
+// need to replace 'm_coalition_local'
+
+m_coalition_localCounts = aq.from(surveyResults)
+  .groupby("m_coalition_local", "movement")
+  .count()
+  .objects();
+
+plot_m_coalition_local = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_coalition_localCounts, {
+      fx: "m_coalition_local",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 140,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+:::
+::::
+
+## Movement responses - coalition efficacy
+
+coalition actions tend to be more effective
+<!-- ynm -->
+
+```{ojs}
+// need to replace 'm_coalition_action_effective'
+
+m_coalition_action_effectiveCounts = aq.from(surveyResults)
+  .groupby("m_coalition_action_effective", "movement")
+  .count()
+  .objects();
+
+plot_m_coalition_action_effective = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_coalition_action_effectiveCounts, {
+      fx: "m_coalition_action_effective",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
+## Movement responses - party allies 
+
+Movement has political party allies
+<!-- ynm -->
+
+```{ojs}
+// need to replace 'm_party_allies'
+
+m_party_alliesCounts = aq.from(surveyResults)
+  .groupby("m_party_allies", "movement")
+  .count()
+  .objects();
+
+plot_m_party_allies = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_party_alliesCounts, {
+      fx: "m_party_allies",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
 
 # Coalitions between parties and movements {background-color="#2c844c"}
 
@@ -1046,6 +1492,12 @@ Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 pagedown::chrome_print(file.path("..", "docs/slides", "slides_08.html"))
 ```
 
+<hr>
+
+::: {style="margin-top: -20px; font-size: 0.9em;"} 
+[Questions about movements next meeting]{style="color:violet;"}: (1) How has the state generally responded? (2) Do state responses focus more on the movement's tactics than on its political demands? (3) Do different state institutions respond differently? (4) Has the state's response changed significantly over time? (5) Do state authorities provide institutional channels through which the movement can pursue its goals? (6) Do participants often face coercive state responses? (7) Has the movement adapted its tactics in response to policing or legal actions? (8) Have state responses more strengthened or weakened the movement?
+
+:::
 
 ## References
 

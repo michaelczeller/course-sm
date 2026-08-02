@@ -182,15 +182,23 @@ post-war Labour government, witnessing low-level fascist-party organising and ag
 <!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
 Take the survey at **<https://forms.gle/6aVSF54HyFR2iNpDA>**
 
-- most important factor shaping movement org. strategy?
-- do maximalist goals require more extreme strategies?
+::: {style="margin-top: -20px; font-size: 0.8em;"} 
+- most important factor shaping strategy?
+- maximalist goals require extreme strategies?
 - is popular support necessary for strategic success?
+- political engagement necessary for big impact?
+- disruptive tactics an effective way of generating awareness?
+
+
+:::
 
 :::
 :::: 
 
-- is engagement in politics strategically necessary for long-term impact?
-- are disruptive tactics an effective way of generating awareness?
+::: {style="margin-top: -30px;"}
+[[Questions about movements]{style="color:violet;"}: (1) movement's organisational form? (2) movement relies on formal coordination structures (meetings, committees, roles)? (3) leadership plays a visible and strategic role in guiding the movement? (4) movement's main strategic orientation? (5) movement mainly uses conventional, legally permitted forms of protest? (6) movement's primary tactic of mobilisation?]{style="font-size: 0.8em;"}
+
+:::
 
 --- 
 
@@ -209,9 +217,41 @@ surveyResults = liveGoogleSheet(
   "https://docs.google.com/spreadsheets/d/e/" +
     "2PACX-1vTvRa6dxxU7hLkg1jNGxxfk0KrQkR7urqaW96X9Mo70ZJWYsYI5UKUztMRDQj8H5otQgMzJ2U4hMcmo/" +
     "pub?gid=2069282497&single=true&output=csv",
-  10000, 1, 6); // adjust the last number to select all relevant columns 
+  10000, 1, 13); // adjust the last number to select all relevant columns 
 
 respondentCount = surveyResults.length;
+
+likertOrder = [
+  "Strongly disagree",
+  "Disagree",
+  "Neutral",
+  "Agree",
+  "Strongly agree"
+];
+
+ynmOrder = [
+  "Yes",
+  "No",
+  "Maybe"
+];
+
+movementOrder = [
+  "Antifa",
+  "FFF",
+  "LG",
+  "PEGIDA",
+  "Identitarians",
+  "Querdenker"
+];
+
+movementColors = [
+  "black",
+  "green",
+  "darkorange",
+  "red",
+  "gold",
+  "purple"
+];
 
 ```
 
@@ -777,6 +817,402 @@ $\downarrow$
 <!-- - dildoes in Texas to protest gun laws (daily show: <https://www.youtube.com/watch?v=UbJKhvmshGs&pp=ygUYZGFpbHkgc2hvdyBkaWxkb2VzIHRleGFz>; <https://www.theguardian.com/us-news/2016/aug/25/cocks-not-glocks-texas-campus-carry-gun-law-protest>) -->
 <!-- - overloading abortion reporting (vigilante law) system in southern U.S.: <https://apnews.com/article/technology-health-media-texas-social-media-c76b1dc146ede0b2f1bac70e6b18f39f> -->
 
+## Movement responses - org. form
+
+movement's organisational form?
+
+```{ojs}
+// need to replace 'm_org_form'
+
+m_org_formCounts = aq.from(surveyResults)
+  .groupby("m_org_form", "movement")
+  .count()
+  .objects();
+
+plot_m_org_form = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_org_formCounts, {
+      fx: "m_org_form",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 250,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+
+## Movement responses - structure and leaders
+
+:::: {.columns}
+:::{.column width="48%"}
+
+movement relies on formal structures? 
+
+```{ojs}
+// need to replace 'm_formal_coord_structures'
+
+m_formal_coord_structuresCounts = aq.from(surveyResults)
+  .groupby("m_formal_coord_structures", "movement")
+  .count()
+  .objects();
+
+plot_m_formal_coord_structures = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_formal_coord_structuresCounts, {
+      fx: "m_formal_coord_structures",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+::: {.column width="48%"}
+
+leadership has visible and strategic role? 
+
+```{ojs}
+// need to replace 'm_leadership_visible_strategic'
+
+m_leadership_visible_strategicCounts = aq.from(surveyResults)
+  .groupby("m_leadership_visible_strategic", "movement")
+  .count()
+  .objects();
+
+plot_m_leadership_visible_strategic = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_leadership_visible_strategicCounts, {
+      fx: "m_leadership_visible_strategic",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 140,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+:::
+::::
+
+## Movement responses - strategy 
+
+movement's main strategic orientation? 
+
+```{ojs}
+// need to replace 'm_strategic_orientation'
+
+m_strategic_orientationCounts = aq.from(surveyResults)
+  .groupby("m_strategic_orientation", "movement")
+  .count()
+  .objects();
+
+plot_m_strategic_orientation = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_strategic_orientationCounts, {
+      fx: "m_strategic_orientation",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 250,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+
+## Movement responses - legal protest
+
+movement mainly uses legally permitted protest? 
+
+```{ojs}
+// need to replace 'm_legal_protest'
+
+m_legal_protestCounts = aq.from(surveyResults)
+  .groupby("m_legal_protest", "movement")
+  .count()
+  .objects();
+
+plot_m_legal_protest = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_legal_protestCounts, {
+      fx: "m_legal_protest",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 140,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+
+## Movement responses - tactics
+
+movement's primary tactic of mobilisation?
+
+```{ojs}
+// need to replace 'm_primary_tactic'
+
+m_primary_tacticCounts = aq.from(surveyResults)
+  .groupby("m_primary_tactic", "movement")
+  .count()
+  .objects();
+
+plot_m_primary_tactic = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_primary_tacticCounts, {
+      fx: "m_primary_tactic",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 250,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
 
 # Any questions, concerns, feedback for this class? {background-color="#2c844c"}
 
@@ -789,6 +1225,9 @@ Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 pagedown::chrome_print(file.path("..", "docs/slides", "slides_06.html"))
 ```
 
+<hr>
+
+[Questions about movements next meeting]{style="color:violet;"}: (1) Which type of media is most important for the movement’s visibility? (2) Does the movement strategically plan actions to generate media coverage? (3) Is media coverage of the movement generally favourable? (4) Which audience is the movement mainly trying to influence? (5) Does the movement often succeed in getting its narratives spread through the media?  (6) How successful has the movement been at influencing public debate?
 
 ## References
 

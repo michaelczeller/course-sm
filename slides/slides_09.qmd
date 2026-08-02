@@ -245,17 +245,23 @@ kable(table_data, "html", escape = FALSE,
 <!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
 Take the survey at **<https://forms.gle/jkBAGEAx5Ub9LeoT6>**
 
+::: {style="margin-top: -20px; font-size: 0.7em;"} 
 - good when state agrees to protest demands? 
 - non-violent protest inviolable?
 - state response to movement disruption of services? 
+- is state surveillance of a movement ever acceptable?
+- why is a movement treated as 'threatening'?
+- what happens after state represses a movement?
+- states harsher to 'marginalised group' movements? 
+
+:::
 
 :::
 :::: 
 
-- is state surveillance of a movement ever acceptable?
-- what determines whether movement treated as 'threatening'?
-- what typically happens after a state violently represses a movement?
-- states respond more harshly to 'marginalised group' movements? 
+::: {style="margin-top: -30px;"}
+[[Questions about movements]{style="color:violet;"}: (1) how has state responded to the movement? (2) state responses focus more on movement's tactics than on its demands? (3) different state institutions respond differently to the movement? (4) state's response changed over time? (5) are institutional channels available to the movement? (6) participants often face coercive state responses? (7) movement adapted its tactics after policing or legal actions? (8) state has strengthened or weakened the movement?]{style="font-size: 0.7em;"}
+:::
 
 <!-- When the state agrees to protest demands, it validates/encourages protest. Is that a good thing? -->
 <!-- Response: Yes / No / Maybe -->
@@ -317,9 +323,41 @@ surveyResults = liveGoogleSheet(
   "https://docs.google.com/spreadsheets/d/e/" +
     "2PACX-1vT3CB5F0YxqtGGIZfOEhdhime5_ChcJ9Uau4s0OETYdrpHOy25pqGt5cNyGc9Ig51LmkWjBfHDzfZB6/" +
     "pub?gid=1350101088&single=true&output=csv",
-  10000, 1, 8); // adjust the last number to select all relevant columns 
+  10000, 1, 17); // adjust the last number to select all relevant columns 
 
 respondentCount = surveyResults.length;
+
+likertOrder = [
+  "Strongly disagree",
+  "Disagree",
+  "Neutral",
+  "Agree",
+  "Strongly agree"
+];
+
+ynmOrder = [
+  "Yes",
+  "No",
+  "Maybe"
+];
+
+movementOrder = [
+  "Antifa",
+  "FFF",
+  "LG",
+  "PEGIDA",
+  "Identitarians",
+  "Querdenker"
+];
+
+movementColors = [
+  "black",
+  "green",
+  "darkorange",
+  "red",
+  "gold",
+  "purple"
+];
 
 ```
 
@@ -795,6 +833,539 @@ plot_protected = Plot.plot({
 :::
 ::::
 
+## Movement responses - state responses 
+
+state responses have mostly been...
+<!-- other -->
+
+```{ojs}
+// need to replace 'm_state_responses_generally'
+
+m_state_responses_generallyCounts = aq.from(surveyResults)
+  .groupby("m_state_responses_generally", "movement")
+  .count()
+  .objects();
+
+plot_m_state_responses_generally = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_state_responses_generallyCounts, {
+      fx: "m_state_responses_generally",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 250,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+
+## Movement responses - state responses 
+
+state responses focus more on tactics than demands 
+<!-- likert -->
+
+```{ojs}
+// need to replace 'm_state_focuses_on_tactics'
+
+m_state_focuses_on_tacticsCounts = aq.from(surveyResults)
+  .groupby("m_state_focuses_on_tactics", "movement")
+  .count()
+  .objects();
+
+plot_m_state_focuses_on_tactics = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_state_focuses_on_tacticsCounts, {
+      fx: "m_state_focuses_on_tactics",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 140,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+
+## Movement responses - state responses 
+
+:::: {.columns}
+:::{.column width="48%"}
+
+do different state institutions respond differently
+<!-- ynm -->
+
+```{ojs}
+// need to replace 'm_diff_state_diff_response'
+
+m_diff_state_diff_responseCounts = aq.from(surveyResults)
+  .groupby("m_diff_state_diff_response", "movement")
+  .count()
+  .objects();
+
+plot_m_diff_state_diff_response = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_diff_state_diff_responseCounts, {
+      fx: "m_diff_state_diff_response",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+::: {.column width="48%"}
+
+state response changed over time
+<!-- likert -->
+
+```{ojs}
+// need to replace 'm_state_responses_over_time'
+
+m_state_responses_over_timeCounts = aq.from(surveyResults)
+  .groupby("m_state_responses_over_time", "movement")
+  .count()
+  .objects();
+
+plot_m_state_responses_over_time = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_state_responses_over_timeCounts, {
+      fx: "m_state_responses_over_time",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 140,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+:::
+::::
+
+## Movement responses - institutional openness
+
+state provides open institutional channels
+<!-- likert -->
+
+```{ojs}
+// need to replace 'm_state_provides_channels'
+
+m_state_provides_channelsCounts = aq.from(surveyResults)
+  .groupby("m_state_provides_channels", "movement")
+  .count()
+  .objects();
+
+plot_m_state_provides_channels = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_state_provides_channelsCounts, {
+      fx: "m_state_provides_channels",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 140,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+
+## Movement responses - coercion 
+
+frequency of coercive state responses
+<!-- other -->
+
+```{ojs}
+// need to replace 'm_frequent_coercion'
+
+m_frequent_coercionCounts = aq.from(surveyResults)
+  .groupby("m_frequent_coercion", "movement")
+  .count()
+  .objects();
+
+plot_m_frequent_coercion = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_frequent_coercionCounts, {
+      fx: "m_frequent_coercion",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 250,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+
+## Movement responses - movement adaptation 
+
+movement adapted its tactics after police/legal actions
+<!-- ynm -->
+
+```{ojs}
+// need to replace 'm_adapted_tactics'
+
+m_adapted_tacticsCounts = aq.from(surveyResults)
+  .groupby("m_adapted_tactics", "movement")
+  .count()
+  .objects();
+
+plot_m_adapted_tactics = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_adapted_tacticsCounts, {
+      fx: "m_adapted_tactics",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
+## Movement responses - state effect 
+
+state responses strengthened or weakened movement
+<!-- other -->
+
+```{ojs}
+// need to replace 'm_strengthened_or_weakened'
+
+m_strengthened_or_weakenedCounts = aq.from(surveyResults)
+  .groupby("m_strengthened_or_weakened", "movement")
+  .count()
+  .objects();
+
+plot_m_strengthened_or_weakened = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_strengthened_or_weakenedCounts, {
+      fx: "m_strengthened_or_weakened",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 250,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+
+
 # Research closer look {background-color="#2c844c"}
 
 :::: {.columns}
@@ -969,5 +1540,8 @@ Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 pagedown::chrome_print(file.path("..", "docs/slides", "slides_09.html"))
 ```
 
+<hr>
+
+[Questions about movements next meeting]{style="color:violet;"}: (1) Which type of actor provides the strongest opposition to this movement? (2) Does the movement face sustained organised opposition from another movement(s)? (3) Has counter-mobilisation changed the movement's tactics? (4) Has counter-mobilisation increased political polarisation around the movement's main issue? (5) Has counter-mobilisation more strengthened or weakened the movement?
 
 ## References

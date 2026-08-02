@@ -639,6 +639,487 @@ If have an opinion on these points in the comments:
     width="90%" 
     height="90%" >}}
 
+# Poll: impacts {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="35%"}
+![](slide_files/12/SMclass12_poll_QR.png){fig-alt="A QR code for the survey."}
+
+:::
+
+::: {.column width="65%" .center}
+<!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
+Take the survey at **<https://forms.gle/Xcu29yvCx8CSDiWg8>**
+
+- how influential has the movement been? 
+- has participation in the movement had lasting effects on participants' lives?
+- has the movement inspired the formation of new organisations or initiatives? 
+
+:::
+::::
+
+- which political area has been most affected by the movement? 
+- which cultural impact has been most significant? 
+- which factor best explains this movement's success? 
+
+---
+
+```{ojs}
+md`## Poll results (Respondents: ${respondentCount})`
+```
+
+
+```{ojs}
+
+import { liveGoogleSheet } from "@jimjamslam/live-google-sheet";
+import { aq, op } from "@uwdata/arquero";
+
+// UPDATE THE LINK FOR A NEW POLL
+surveyResults = liveGoogleSheet(
+  "https://docs.google.com/spreadsheets/d/e/" +
+    "2PACX-1vR1eGKrmbNabBVKR-Kq4hC-bQ_irz5nLt9YJyv81r8B1I8_NORLAe0-ws1w_u4KZzKEicuyc7ks2TMS/" +
+    "pub?gid=1583580867&single=true&output=csv",
+  10000, 1, 8); // adjust the last number to select all relevant columns
+
+respondentCount = surveyResults.length;
+
+likertOrder = [
+  "Strongly disagree",
+  "Disagree",
+  "Neutral",
+  "Agree",
+  "Strongly agree"
+];
+
+ynmOrder = [
+  "Yes",
+  "No",
+  "Maybe"
+];
+
+movementOrder = [
+  "Antifa",
+  "FFF",
+  "LG",
+  "PEGIDA",
+  "Identitarians",
+  "Querdenker"
+];
+
+movementColors = [
+  "black",
+  "green",
+  "darkorange",
+  "red",
+  "gold",
+  "purple"
+];
+
+```
+
+
+overall, how influential has the movement been? 
+<!-- other -->
+
+```{ojs}
+// need to replace 'm_influence_overall'
+
+m_influence_overallCounts = aq.from(surveyResults)
+  .groupby("m_influence_overall", "movement")
+  .count()
+  .objects();
+
+plot_m_influence_overall = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_influence_overallCounts, {
+      fx: "m_influence_overall",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 250,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+## Movement responses - individuals and orgs.
+
+:::: {.columns}
+:::{.column width="48%"}
+
+has the movement had lasting effects on participants' lives?
+<!-- likert -->
+
+```{ojs}
+// need to replace 'm_effects_on_participants'
+
+m_effects_on_participantsCounts = aq.from(surveyResults)
+  .groupby("m_effects_on_participants", "movement")
+  .count()
+  .objects();
+
+plot_m_effects_on_participants = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_effects_on_participantsCounts, {
+      fx: "m_effects_on_participants",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 140,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+::: {.column width="48%"}
+
+has movement inspired new organisations or initiatives? 
+<!-- ynm -->
+
+```{ojs}
+// need to replace 'm_inspired_new_orgs'
+
+m_inspired_new_orgsCounts = aq.from(surveyResults)
+  .groupby("m_inspired_new_orgs", "movement")
+  .count()
+  .objects();
+
+plot_m_inspired_new_orgs = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_inspired_new_orgsCounts, {
+      fx: "m_inspired_new_orgs",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
+
+:::
+::::
+
+## Movement responses - political area effect 
+
+which political area has been most affected by the movement? 
+<!-- other -->
+
+
+```{ojs}
+// need to replace 'm_political_area_effect'
+
+m_political_area_effectCounts = aq.from(surveyResults)
+  .groupby("m_political_area_effect", "movement")
+  .count()
+  .objects();
+
+plot_m_political_area_effect = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_political_area_effectCounts, {
+      fx: "m_political_area_effect",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 250,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+## Movement responses - cultural impact 
+
+which cultural impact has been most significant? 
+<!-- other -->
+
+```{ojs}
+// need to replace 'm_cultural_area_effect'
+
+m_cultural_area_effectCounts = aq.from(surveyResults)
+  .groupby("m_cultural_area_effect", "movement")
+  .count()
+  .objects();
+
+plot_m_cultural_area_effect = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_cultural_area_effectCounts, {
+      fx: "m_cultural_area_effect",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 250,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+## Movement responses - explaining impact 
+
+which factor best explains this movement's success? 
+<!-- other -->
+
+```{ojs}
+// need to replace 'm_explains_impact'
+
+m_explains_impactCounts = aq.from(surveyResults)
+  .groupby("m_explains_impact", "movement")
+  .count()
+  .objects();
+
+plot_m_explains_impact = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(m_explains_impactCounts, {
+      fx: "m_explains_impact",
+      x: "movement",
+      y: "count",
+      fill: "movement",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: movementOrder,
+    range: movementColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: movementOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 250,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+
 # Determinants of impact {background-color="#2c844c"}
 
 :::: {.columns}
@@ -908,9 +1389,12 @@ Anonymous feedback here: <https://forms.gle/AjHt6fcnwZxkSg4X8>
 Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 
 
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-pagedown::chrome_print(file.path("..", "docs/slides", "slides_12.html"))
-```
+<!-- ```{r echo=FALSE, message=FALSE, warning=FALSE} -->
+<!-- pagedown::chrome_print(file.path("..", "docs/slides", "slides_12.html")) -->
+<!-- ``` -->
 
+<hr>
+
+[Questions about movements next meeting]{style="color:violet;"}: (1) How would you describe the movement's current level of mobilisation? (2) Has the movement successfully recovered after periods of decline? (3) What has been the most important demobilising pressure? (4) Has the movement become more institutionalised over time? (5) Even if mobilisation has declined, do the movement's ideas remain influential?
 
 ## References
