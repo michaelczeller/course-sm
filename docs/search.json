@@ -158,7 +158,7 @@
     "href": "content/index.html",
     "title": "Slides",
     "section": "",
-    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\n\n\n\n\nClass 2 Lecture video - part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClass 2 Lecture video - part 2\n\n\n\n\n\n\n\n\n\n\n\nClass 3\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 4\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 5\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 6\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 7\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 8\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 9\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 10\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 11\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 12\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 13\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 14\n\n View all slides in new window  Download PDF of all slides"
+    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClass 3\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 4\n\n\nClass 5\n\n\nClass 6\n\n\nClass 7\n\n\nClass 8\n\n\nClass 9\n\n\nClass 10\n\n\nClass 11\n\n\nClass 12\n\n\nClass 13\n\n\nClass 14"
   },
   {
     "objectID": "schedule/index.html",
@@ -1921,8 +1921,8 @@
     "objectID": "slides/slides_05.html#presentation-groups",
     "href": "slides/slides_05.html#presentation-groups",
     "title": "Class 5: Aspects of Social Movement Activity",
-    "section": "Presentation groups",
-    "text": "Presentation groups\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\nDaichi, Seongyeon, Jehyun\nTBD\n\n\n18 Dec:\nAyla, Tara, Theresa, Annabelle\nTBD\n\n\n15 Jan:\nLuna, Emilene, Raffa, Sofia\nTBD"
+    "section": "",
+    "text": "Presentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\nDaichi, Seongyeon, Jehyun\nTBD\n\n\n18 Dec:\nAyla, Tara, Theresa, Annabelle\nTBD\n\n\n15 Jan:\nLuna, Emilene, Raffa, Sofia\nTBD"
   },
   {
     "objectID": "slides/slides_05.html#individuals-in-networks-summing-up",
@@ -2020,7 +2020,7 @@
     "href": "slides/slides_05.html#what-turns-identity-into-action-1",
     "title": "Class 5: Aspects of Social Movement Activity",
     "section": "What turns identity into action?",
-    "text": "What turns identity into action?\n\ngroup-based conflict within society can stimulate group identification\n\n\n\n\n\n\\(\\downarrow\\)\n\n\ncleavages are the most solid basis of group-based conflict\n\nfault lines of opposing identities, e.g.,\n\nclass - ‘I’m working class and you’re aristocracy’\nethnicity - ‘I’m Roma and you’re Hungarian’\nreligion - ‘I’m Catholic and you’re Protestant’\nregion/urban-rural - ‘I’m from the (northern) city and you’re from the (southern) countryside’\n(newer) postmaterialism/materialism, globalisation winners/ losers"
+    "text": "What turns identity into action?\n\ngroup-based conflict within society can stimulate group identification\n\n\n\n\n\n\\(\\downarrow\\)\n\n\n\ncleavages are the most solid basis of group-based conflict\n\nfault lines of opposing identities, e.g.,\n\nclass - ‘I’m working class and you’re aristocracy’\nethnicity - ‘I’m Roma and you’re Hungarian’\nreligion - ‘I’m Catholic and you’re Protestant’\nregion/urban-rural - ‘I’m from the (northern) city and you’re from the (southern) countryside’\n(newer) postmaterialism/materialism, globalisation winners/ losers"
   },
   {
     "objectID": "slides/slides_05.html#its-all-about",
@@ -4751,5 +4751,12 @@
     "title": "Class 12: Social Movements online, in effect, dying out, and going forward",
     "section": "Movement responses - explaining impact",
     "text": "Movement responses - explaining impact\nwhich factor best explains this movement’s success? \n\nm_explains_impactCounts = aq.from(surveyResults)\n  .groupby(\"m_explains_impact\", \"movement\")\n  .count()\n  .objects();\n\nplot_m_explains_impact = Plot.plot({\n  marks: [\n    Plot.frame({\n      fill: \"#f7f7f7\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    \n    Plot.barY(m_explains_impactCounts, {\n      fx: \"m_explains_impact\",\n      x: \"movement\",\n      y: \"count\",\n      fill: \"movement\",\n      stroke: \"white\"\n    })\n  ],\n\n  color: {\n    domain: movementOrder,\n    range: movementColors,\n    legend: true,\n    style: { fontSize: \"20px\" }\n  },\n\n  fx: {\n    // domain: likertOrder,\n    label: \"\",\n    tickRotate: -45\n  },\n\n  x: {\n    domain: movementOrder,\n    axis: null, // clears the entire x-axis (ticks and labels)\n    // tickFormat: () =&gt; \"\",\n    label: \"\"\n  },\n\n  y: {\n    label: \"\"\n  },\n\n  marginBottom: 250,\n  style: {\n    width: 900,\n    height: 500,\n    fontSize: 20\n  }\n});"
+  },
+  {
+    "objectID": "slides/slides_05.html",
+    "href": "slides/slides_05.html",
+    "title": "Class 5: Aspects of Social Movement Activity",
+    "section": "",
+    "text": "Open Stickerfrom Open Stickers\n\n\n\n\n\n\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\nDaichi, Seongyeon, Jehyun\nTBD\n\n\n18 Dec:\nAyla, Tara, Theresa, Annabelle\nTBD\n\n\n15 Jan:\nLuna, Emilene, Raffa, Sofia\nTBD"
   }
 ]

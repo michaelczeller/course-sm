@@ -48,19 +48,19 @@ xaringanExtra::embed_xaringan(
 # }
 ```
 
-::: {.callout-important collapse="true"}
-## Class 2 Lecture video - part 1
+<!-- ::: {.callout-important collapse="true"} -->
+<!-- ## Class 2 Lecture video - part 1 -->
 
-{{< video sm_class2_lecture_part1.mp4 >}}
+<!-- {{< video pv_class2_lecture_part1.mp4 >}} -->
 
-:::
+<!-- ::: -->
 
-::: {.callout-important collapse="true"}
-## Class 2 Lecture video - part 2
+<!-- ::: {.callout-important collapse="true"} -->
+<!-- ## Class 2 Lecture video - part 2 -->
 
-{{< video sm_class2_lecture_part2.mp4 >}}
+<!-- {{< video pv_class2_lecture_part2.mp4 >}} -->
 
-:::
+<!-- ::: -->
 
 
 # Class 3
@@ -91,7 +91,7 @@ xaringanExtra::embed_xaringan(
 
 ```{r echo=FALSE, results="asis"}
 #| warning: false
-# if (Sys.Date() >= as.Date("2025-11-03")) {
+if (Sys.Date() >= as.Date("2026-11-26")) { 
 
 slide_buttons <- function(slide_id) {
   glue::glue('<p class="text-center buttons"><a class="btn btn-danger" target="_blank" href="{slide_id}.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="{slide_id}.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a></p>')
@@ -107,15 +107,15 @@ xaringanExtra::embed_xaringan(
   border = "none",
   margin = "0 auto"
 )
-# }
+}
 ```
-
 
 # Class 5
 
+
 ```{r echo=FALSE, results="asis"}
 #| warning: false
-# if (Sys.Date() >= as.Date("2025-11-10")) {
+if (Sys.Date() >= as.Date("2026-11-26")) { 
 
 slide_buttons <- function(slide_id) {
   glue::glue('<p class="text-center buttons"><a class="btn btn-danger" target="_blank" href="{slide_id}.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="{slide_id}.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a></p>')
@@ -131,15 +131,16 @@ xaringanExtra::embed_xaringan(
   border = "none",
   margin = "0 auto"
 )
-# }
+}
 ```
 
-# Class 6 
+
+# Class 6
 
 ```{r echo=FALSE, results="asis"}
 #| warning: false
-# if (Sys.Date() >= as.Date("2025-11-17")) {
-
+if (Sys.Date() >= as.Date("2026-11-26")) { 
+  
 slide_buttons <- function(slide_id) {
   glue::glue('<p class="text-center buttons"><a class="btn btn-danger" target="_blank" href="{slide_id}.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="{slide_id}.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a></p>')
 }
@@ -154,7 +155,7 @@ xaringanExtra::embed_xaringan(
   border = "none",
   margin = "0 auto"
 )
-# }
+}
 ```
 
 
@@ -162,8 +163,8 @@ xaringanExtra::embed_xaringan(
 
 ```{r echo=FALSE, results="asis"}
 #| warning: false
-# if (Sys.Date() >= as.Date("2025-11-24")) {
-
+if (Sys.Date() >= as.Date("2026-11-26")) { 
+  
 slide_buttons <- function(slide_id) {
   glue::glue('<p class="text-center buttons"><a class="btn btn-danger" target="_blank" href="{slide_id}.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="{slide_id}.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a></p>')
 }
@@ -178,7 +179,7 @@ xaringanExtra::embed_xaringan(
   border = "none",
   margin = "0 auto"
 )
-# }
+}
 ```
 
 
@@ -187,8 +188,8 @@ xaringanExtra::embed_xaringan(
 
 ```{r echo=FALSE, results="asis"}
 #| warning: false
-# if (Sys.Date() >= as.Date("2025-12-01")) {
-
+if (Sys.Date() >= as.Date("2026-11-26")) { 
+  
 slide_buttons <- function(slide_id) {
   glue::glue('<p class="text-center buttons"><a class="btn btn-danger" target="_blank" href="{slide_id}.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="{slide_id}.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a></p>')
 }
@@ -203,15 +204,16 @@ xaringanExtra::embed_xaringan(
   border = "none",
   margin = "0 auto"
 )
-# }
+}
 ```
+
 
 # Class 9 
 
 ```{r echo=FALSE, results="asis"}
 #| warning: false
-# if (Sys.Date() >= as.Date("2025-12-08")) {
-
+if (Sys.Date() >= as.Date("2026-11-26")) { 
+  
 slide_buttons <- function(slide_id) {
   glue::glue('<p class="text-center buttons"><a class="btn btn-danger" target="_blank" href="{slide_id}.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="{slide_id}.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a></p>')
 }
@@ -226,15 +228,17 @@ xaringanExtra::embed_xaringan(
   border = "none",
   margin = "0 auto"
 )
-# }
+}
 ```
+
+
 
 # Class 10 
 
 ```{r echo=FALSE, results="asis"}
 #| warning: false
-# if (Sys.Date() >= as.Date("2025-12-15")) {
-
+if (Sys.Date() >= as.Date("2026-11-26")) { 
+  
 slide_buttons <- function(slide_id) {
   glue::glue('<p class="text-center buttons"><a class="btn btn-danger" target="_blank" href="{slide_id}.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="{slide_id}.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a></p>')
 }
@@ -249,14 +253,14 @@ xaringanExtra::embed_xaringan(
   border = "none",
   margin = "0 auto"
 )
-# }
+}
 ```
 
 # Class 11 
 
 ```{r echo=FALSE, results="asis"}
 #| warning: false
-# if (Sys.Date() >= as.Date("2026-01-05")) {
+if (Sys.Date() >= as.Date("2026-11-26")) { 
 
 slide_buttons <- function(slide_id) {
   glue::glue('<p class="text-center buttons"><a class="btn btn-danger" target="_blank" href="{slide_id}.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="{slide_id}.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a></p>')
@@ -272,15 +276,15 @@ xaringanExtra::embed_xaringan(
   border = "none",
   margin = "0 auto"
 )
-# }
+}
 ```
 
 # Class 12 
 
 ```{r echo=FALSE, results="asis"}
 #| warning: false
-# if (Sys.Date() >= as.Date("2026-01-12")) {
-
+if (Sys.Date() >= as.Date("2026-11-26")) { 
+  
 slide_buttons <- function(slide_id) {
   glue::glue('<p class="text-center buttons"><a class="btn btn-danger" target="_blank" href="{slide_id}.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="{slide_id}.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a></p>')
 }
@@ -295,15 +299,15 @@ xaringanExtra::embed_xaringan(
   border = "none",
   margin = "0 auto"
 )
-# }
+}
 ```
 
 # Class 13 
 
 ```{r echo=FALSE, results="asis"}
 #| warning: false
-# if (Sys.Date() >= as.Date("2026-01-19")) {
-
+if (Sys.Date() >= as.Date("2026-11-26")) { 
+  
 slide_buttons <- function(slide_id) {
   glue::glue('<p class="text-center buttons"><a class="btn btn-danger" target="_blank" href="{slide_id}.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="{slide_id}.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a></p>')
 }
@@ -318,7 +322,7 @@ xaringanExtra::embed_xaringan(
   border = "none",
   margin = "0 auto"
 )
-# }
+}
 ```
 
 
@@ -326,7 +330,7 @@ xaringanExtra::embed_xaringan(
 
 ```{r echo=FALSE, results="asis"}
 #| warning: false
-# if (Sys.Date() >= as.Date("2026-01-26")) {
+if (Sys.Date() >= as.Date("2026-11-26")) { 
 
 slide_buttons <- function(slide_id) {
   glue::glue('<p class="text-center buttons"><a class="btn btn-danger" target="_blank" href="{slide_id}.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="{slide_id}.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a></p>')
@@ -342,7 +346,7 @@ xaringanExtra::embed_xaringan(
   border = "none",
   margin = "0 auto"
 )
-# }
+}
 ```
 
 
