@@ -58,6 +58,37 @@ Remember: topic to me at least by Week 4
 
 <!-- []{style="font-size:10px;"} -->
 
+# Assigning groups for in-depth study {background-color="#2c844c"}
+
+<!-- Deployment ID: AKfycbwCEr23kuMmKbZV3hyzBuCchjwT5aldL8rgF0pr0GnFiNtcc4je_8C0U6t9shoPMW5h -->
+
+<!-- Web app link: <https://script.google.com/macros/s/AKfycbwCEr23kuMmKbZV3hyzBuCchjwT5aldL8rgF0pr0GnFiNtcc4je_8C0U6t9shoPMW5h/exec> -->
+
+:::: {.columns}
+:::{.column width="35%"}
+![](slide_files/sm_group_assignment_app.png){fig-alt="A QR code to get an assigned group to study."}
+
+:::
+
+::: {.column width="65%" .center}
+<!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
+To get assigned a group to study in depth, scan the QR code or click this **[LINK](https://script.google.com/macros/s/AKfycbwCEr23kuMmKbZV3hyzBuCchjwT5aldL8rgF0pr0GnFiNtcc4je_8C0U6t9shoPMW5h/exec)**
+
+::: {style="margin-top: -5px; font-size: 0.9em;"} 
+You will be randomly assigned one of these groups:
+
+- Antifa
+- FFF - Fridays for Future
+- LG - Letzte Generation
+- PEGIDA
+- Identitarians
+- Querdenker
+
+:::
+
+:::
+:::: 
+
 
 # Social movement theories covered so far {background-color="#2c844c"}
 
@@ -990,6 +1021,10 @@ Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 pagedown::chrome_print(file.path("..", "docs/slides", "slides_03.html"))
 ```
+
+<hr>
+
+[Questions about movements next meeting]{style="color:violet;"}: (1) Does joining this movement require high level of commitment? (2) Does the movement rely heavily on social media? (3) Which setting plays the biggest role in mobilising support? (4) How are most participants recruited? (5) Which resource seems most important for this movement's success?
 
 
 ## References
