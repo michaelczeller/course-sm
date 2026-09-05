@@ -35,9 +35,7 @@ bibliography: ../../../library.bib
 
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
-| 4 Dec:  | Daichi, Seongyeon, Jehyun        | TBD    | 
-| 18 Dec: | Ayla, Tara, Theresa, Annabelle   | TBD    | 
-| 15 Jan: | Luna, Emilene, Raffa, Sofia      | TBD    | 
+|         |                                  |        | 
 
 : Presentations line-up
 
@@ -619,8 +617,223 @@ How do social networks affect decisions to participate in collective action? [-@
     width="90%" 
     height="90%" >}}
 
+# Open data - suffragette networks {background-color="#ffe0b2"}
 
-# Poll: org. change and youth  {background-color="#2c844c"}
+::: panel-tabset
+### 1908 
+
+```{r suff_net1908, warning=FALSE, message=FALSE}
+library(readr)
+library(igraph)
+library(visNetwork)
+library(scales)
+
+raw <- read_csv("../resources/data/suffragettes/50_1908_VISIT_AFF.csv", show_col_types = FALSE)
+names(raw)[1] <- "person"
+
+mat <- as.matrix(raw[, -1])
+rownames(mat) <- raw$person
+diag(mat) <- 0
+
+g <- graph_from_adjacency_matrix(mat, mode = "undirected", weighted = TRUE, diag = FALSE)
+g <- delete_vertices(g, degree(g) == 0)
+
+V(g)$degree <- degree(g)
+V(g)$size   <- rescale(V(g)$degree, to = c(15, 45))
+V(g)$color  <- ifelse(V(g)$name == "Blathwayt Family", "gold", "steelblue")
+V(g)$title  <- paste0(V(g)$name, " (", V(g)$degree, " connections)")
+E(g)$width  <- E(g)$weight * 1.5
+
+visIgraph(g, idToLabel = TRUE) %>%
+  visIgraphLayout(layout = "layout_with_fr", physics = FALSE) %>%
+  visNodes(font = list(size = 16), borderWidth = 1,
+           color = list(border = "white", highlight = "red")) %>%
+  visEdges(color = list(color = "lightgrey", highlight = "red"), smooth = FALSE) %>%
+  visOptions(highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE),
+             nodesIdSelection = TRUE) %>%
+  visLegend(main = "1908 co-visitation network", width = 0.15)
+```
+
+### 1909 
+
+```{r suff_net1909, warning=FALSE, message=FALSE}
+library(readr)
+library(igraph)
+library(visNetwork)
+library(scales)
+
+raw <- read_csv("../resources/data/suffragettes/50_1909_VISIT_AFF.csv", show_col_types = FALSE)
+names(raw)[1] <- "person"
+
+mat <- as.matrix(raw[, -1])
+rownames(mat) <- raw$person
+diag(mat) <- 0
+
+g <- graph_from_adjacency_matrix(mat, mode = "undirected", weighted = TRUE, diag = FALSE)
+g <- delete_vertices(g, degree(g) == 0)
+
+V(g)$degree <- degree(g)
+V(g)$size   <- rescale(V(g)$degree, to = c(15, 45))
+V(g)$color  <- ifelse(V(g)$name == "Blathwayt Family", "gold", "steelblue")
+V(g)$title  <- paste0(V(g)$name, " (", V(g)$degree, " connections)")
+E(g)$width  <- E(g)$weight * 1.5
+
+visIgraph(g, idToLabel = TRUE) %>%
+  visIgraphLayout(layout = "layout_with_fr", physics = FALSE) %>%
+  visNodes(font = list(size = 16), borderWidth = 1,
+           color = list(border = "white", highlight = "red")) %>%
+  visEdges(color = list(color = "lightgrey", highlight = "red"), smooth = FALSE) %>%
+  visOptions(highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE),
+             nodesIdSelection = TRUE) %>%
+  visLegend(main = "1909 co-visitation network", width = 0.15)
+```
+
+### 1910 
+
+```{r suff_net1910, warning=FALSE, message=FALSE}
+library(readr)
+library(igraph)
+library(visNetwork)
+library(scales)
+
+raw <- read_csv("../resources/data/suffragettes/50_1910_VISIT_AFF.csv", show_col_types = FALSE)
+names(raw)[1] <- "person"
+
+mat <- as.matrix(raw[, -1])
+rownames(mat) <- raw$person
+diag(mat) <- 0
+
+g <- graph_from_adjacency_matrix(mat, mode = "undirected", weighted = TRUE, diag = FALSE)
+g <- delete_vertices(g, degree(g) == 0)
+
+V(g)$degree <- degree(g)
+V(g)$size   <- rescale(V(g)$degree, to = c(15, 45))
+V(g)$color  <- ifelse(V(g)$name == "Blathwayt Family", "gold", "steelblue")
+V(g)$title  <- paste0(V(g)$name, " (", V(g)$degree, " connections)")
+E(g)$width  <- E(g)$weight * 1.5
+
+visIgraph(g, idToLabel = TRUE) %>%
+  visIgraphLayout(layout = "layout_with_fr", physics = FALSE) %>%
+  visNodes(font = list(size = 16), borderWidth = 1,
+           color = list(border = "white", highlight = "red")) %>%
+  visEdges(color = list(color = "lightgrey", highlight = "red"), smooth = FALSE) %>%
+  visOptions(highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE),
+             nodesIdSelection = TRUE) %>%
+  visLegend(main = "1910 co-visitation network", width = 0.15)
+```
+
+### 1911 
+
+```{r suff_net1911, warning=FALSE, message=FALSE}
+library(readr)
+library(igraph)
+library(visNetwork)
+library(scales)
+
+raw <- read_csv("../resources/data/suffragettes/50_1911_VISIT_AFF.csv", show_col_types = FALSE)
+names(raw)[1] <- "person"
+
+mat <- as.matrix(raw[, -1])
+rownames(mat) <- raw$person
+diag(mat) <- 0
+
+g <- graph_from_adjacency_matrix(mat, mode = "undirected", weighted = TRUE, diag = FALSE)
+g <- delete_vertices(g, degree(g) == 0)
+
+V(g)$degree <- degree(g)
+V(g)$size   <- rescale(V(g)$degree, to = c(15, 45))
+V(g)$color  <- ifelse(V(g)$name == "Blathwayt Family", "gold", "steelblue")
+V(g)$title  <- paste0(V(g)$name, " (", V(g)$degree, " connections)")
+E(g)$width  <- E(g)$weight * 1.5
+
+visIgraph(g, idToLabel = TRUE) %>%
+  visIgraphLayout(layout = "layout_with_fr", physics = FALSE) %>%
+  visNodes(font = list(size = 16), borderWidth = 1,
+           color = list(border = "white", highlight = "red")) %>%
+  visEdges(color = list(color = "lightgrey", highlight = "red"), smooth = FALSE) %>%
+  visOptions(highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE),
+             nodesIdSelection = TRUE) %>%
+  visLegend(main = "1911 co-visitation network", width = 0.15)
+```
+
+### 1912 
+
+```{r suff_net1912, warning=FALSE, message=FALSE}
+library(readr)
+library(igraph)
+library(visNetwork)
+library(scales)
+
+raw <- read_csv("../resources/data/suffragettes/50_1912_VISIT_AFF.csv", show_col_types = FALSE)
+names(raw)[1] <- "person"
+
+mat <- as.matrix(raw[, -1])
+rownames(mat) <- raw$person
+diag(mat) <- 0
+
+g <- graph_from_adjacency_matrix(mat, mode = "undirected", weighted = TRUE, diag = FALSE)
+g <- delete_vertices(g, degree(g) == 0)
+
+V(g)$degree <- degree(g)
+V(g)$size   <- rescale(V(g)$degree, to = c(15, 45))
+V(g)$color  <- ifelse(V(g)$name == "Blathwayt Family", "gold", "steelblue")
+V(g)$title  <- paste0(V(g)$name, " (", V(g)$degree, " connections)")
+E(g)$width  <- E(g)$weight * 1.5
+
+visIgraph(g, idToLabel = TRUE) %>%
+  visIgraphLayout(layout = "layout_with_fr", physics = FALSE) %>%
+  visNodes(font = list(size = 16), borderWidth = 1,
+           color = list(border = "white", highlight = "red")) %>%
+  visEdges(color = list(color = "lightgrey", highlight = "red"), smooth = FALSE) %>%
+  visOptions(highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE),
+             nodesIdSelection = TRUE) %>%
+  visLegend(main = "1912 co-visitation network", width = 0.15)
+```
+
+### 1913 
+
+```{r suff_net1913, warning=FALSE, message=FALSE}
+library(readr)
+library(igraph)
+library(visNetwork)
+library(scales)
+
+raw <- read_csv("../resources/data/suffragettes/50_1913_VISIT_AFF.csv", show_col_types = FALSE)
+names(raw)[1] <- "person"
+
+mat <- as.matrix(raw[, -1])
+rownames(mat) <- raw$person
+diag(mat) <- 0
+
+g <- graph_from_adjacency_matrix(mat, mode = "undirected", weighted = TRUE, diag = FALSE)
+g <- delete_vertices(g, degree(g) == 0)
+
+V(g)$degree <- degree(g)
+V(g)$size   <- rescale(V(g)$degree, to = c(15, 45))
+V(g)$color  <- ifelse(V(g)$name == "Blathwayt Family", "gold", "steelblue")
+V(g)$title  <- paste0(V(g)$name, " (", V(g)$degree, " connections)")
+E(g)$width  <- E(g)$weight * 1.5
+
+visIgraph(g, idToLabel = TRUE) %>%
+  visIgraphLayout(layout = "layout_with_fr", physics = FALSE) %>%
+  visNodes(font = list(size = 16), borderWidth = 1,
+           color = list(border = "white", highlight = "red")) %>%
+  visEdges(color = list(color = "lightgrey", highlight = "red"), smooth = FALSE) %>%
+  visOptions(highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE),
+             nodesIdSelection = TRUE) %>%
+  visLegend(main = "1913 co-visitation network", width = 0.15)
+```
+
+
+### Explanatory note
+
+Data source: Blathwayt "Eagle House" garden visitors' book, Bristol/Bath area; Manchester Mitchell Centre for Social Network Analysis, Suffragettes dataset: <https://sites.google.com/site/ucinetsoftware/datasets/covert-networks/suffragettes>. Collected by Gemma Edwards based on archival material of about UK suffragettes. 
+
+::: 
+
+## COULD ADD VIS OF NETWORK OVER TIME {visibility="hidden"}
+
+# Poll: org. change and youth {background-color="#2c844c"}
 
 :::: {.columns}
 :::{.column width="35%"}

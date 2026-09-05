@@ -591,6 +591,106 @@ plot_bridging = Plot.plot({
 ::::
 
 
+# Open data - FR framing of COVID-19 {background-color="#ffe0b2"}
+
+::: panel-tabset
+### Table 
+
+```{r warning=FALSE, message=FALSE}
+library(readxl)
+library(dplyr)
+library(reactable)
+
+t1 <- read_excel("../resources/data/McNeil-Willson/Framing_Table1_reach.xlsx") %>%
+  mutate(first_covid_post = as.Date(first_covid_post))
+
+t1 <- t1 %>% select(organisation_full, ideology, followers, posts, covid_posts, pct_covid, first_covid_post)
+
+reactable(
+  t1,
+  style = list(fontSize = "20px"),
+  columns = list(
+    # organisation      = colDef(name = "Org."),
+    organisation_full  = colDef(name = "Organisation", minWidth = 200),
+    ideology           = colDef(name = "Ideological strand", filterable = TRUE),
+    followers          = colDef(name = "Followers (22 Apr 2020)", format = colFormat(separators = TRUE)),
+    posts              = colDef(name = "Posts (22 Feb-22 Apr 2020)"),
+    covid_posts        = colDef(name = "COVID-19 posts"),
+    pct_covid          = colDef(name = "% COVID-19", format = colFormat(suffix = "%", digits = 1),
+                                 style = function(value) {
+                                   list(background = paste0("rgba(178, 24, 43,", value / 100, ")"))
+                                 }),
+    first_covid_post   = colDef(name = "First COVID-19 post", format = colFormat(date = TRUE))
+  ),
+  defaultSorted = "pct_covid",
+  defaultSortOrder = "desc",
+  searchable = TRUE,
+  filterable = TRUE,
+  striped = TRUE,
+  highlight = TRUE,
+  bordered = TRUE,
+  defaultPageSize = 6
+)
+```
+
+### Bar chart 
+
+```{r warning=FALSE, message=FALSE}
+library(readxl)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(ggiraph)
+
+t2 <- read_excel("../resources/data/McNeil-Willson/Framing_Table2_frames.xlsx") %>%
+  filter(organisation != "TOTAL")
+
+frame_labels <- c(
+  F1_Migration      = "F1: Migration",
+  F2_Globalisation  = "F2: Globalisation",
+  F3_Governance     = "F3: Governance",
+  F4_Liberty        = "F4: Liberty",
+  F5_Resilience     = "F5: Resilience",
+  F6_Conspiracy     = "F6: Conspiracy"
+)
+
+t2_long <- t2 %>%
+  select(organisation, names(frame_labels)) %>%
+  pivot_longer(-organisation, names_to = "frame", values_to = "n") %>%
+  mutate(
+    frame   = recode(frame, !!!frame_labels),
+    tooltip = paste0(organisation, " - ", frame, ": ", n, " posts")
+  )
+
+p <- ggplot(t2_long, aes(x = frame, y = n, fill = organisation,
+                          tooltip = tooltip, data_id = organisation)) +
+  geom_col_interactive(position = position_dodge(width = 0.8), width = 0.75) +
+  labs(x = NULL, y = "No. of posts using frame",
+       fill = "Movement organisation",
+       title = "Use of COVID-19 'crisis frames' by Far Right organisations",
+       subtitle = "22 February-22 April 2020 (n = 209 posts); McNeil-Willson (2020)") +
+  theme_minimal(base_size = 18) +
+  theme(axis.text.x = element_text(angle = 50, hjust = 1))
+
+girafe(
+  ggobj = p, # width_svg = 9, height_svg = 5.5,
+  options = list(
+    opts_hover(css = "stroke:black;stroke-width:1.5px;"),
+    opts_hover_inv(css = "opacity:0.3;"),
+    opts_tooltip(css = "background-color:white;padding:4px;border-radius:3px;")
+  )
+)
+```
+
+
+### Explanatory note
+
+The data represented on this slide comes from McNeil-Willson's 2020 article on far-right movement organisations' framing activities on social media during the early stages of the COVID-19 pandemic.
+
+Data source: McNeil-Willson, R. (2020) “Framing in times of crisis: Responses to COVID-19 amongst Far Right movements and organisations”, ICCT Research Paper. Full text: <https://icct.nl/publication/framing-times-crisis-responses-covid-19-amongst-far-right-movements-and-organisations>
+
+::: 
+
 
 # Civil society: An alternative approach to understand social movements? {background-color="#2c844c"}
 

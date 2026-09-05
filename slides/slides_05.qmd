@@ -35,9 +35,7 @@ bibliography: ../../../library.bib
 
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
-| 4 Dec:  | Daichi, Seongyeon, Jehyun        | TBD    | 
-| 18 Dec: | Ayla, Tara, Theresa, Annabelle   | TBD    | 
-| 15 Jan: | Luna, Emilene, Raffa, Sofia      | TBD    | 
+|         |                                  |        | 
 
 : Presentations line-up
 
@@ -253,6 +251,208 @@ bibliography: ../../../library.bib
     + *healthy for protest participation in a democracy*
 
 > Activists may define their identities in different ways **[depending on the strategic situation]{style="color:darkorange;"}**. If they are representing their group to a public audience, they may cast themselves as more unified and more homogeneous than they would in a setting of fellow activists.
+
+# Open data - PEGIDA demonstrations {background-color="#ffe0b2"}
+
+::: {style="margin-top: -30px;"}
+[common elements of collective identity among PEGIDA participants?]{style="color:indigo;"}
+::: 
+
+::: panel-tabset
+### Bar chart 
+
+```{r warning=FALSE, message=FALSE}
+library(dplyr)
+library(tidyr)
+library(lubridate)
+library(xts)
+library(dygraphs)
+library(htmlwidgets)
+
+pegpad <- read.csv("../resources/data/pegpad/pegpad_events_final_V1.1.csv", stringsAsFactors = FALSE)
+pegpad$event_date <- as.Date(pegpad$event_date)
+
+monthly <- pegpad %>%
+  mutate(month = floor_date(event_date, "month")) %>%
+  group_by(month, side) %>%
+  summarise(n_events = sum(events), .groups = "drop") %>%
+  pivot_wider(names_from = side, values_from = n_events, values_fill = 0) %>%
+  mutate(total_events = `pro-pegida` + `anti-pegida`) %>%
+  arrange(month)
+
+monthly_xts <- xts(
+  monthly[, c("total_events", "pro-pegida", "anti-pegida")],
+  order.by = monthly$month
+)
+colnames(monthly_xts) <- c("Total", "Pegida", "Anti-Pegida")
+
+# dygraph(monthly_xts, main = "Pegida and counter-mobilisation events, 2014-2018") %>%
+#   dySeries("Total", color = "black", strokeWidth = 2.5) %>%
+#   dySeries("Pegida", color = "#b2182b") %>%
+#   dySeries("Anti-Pegida", color = "#2166ac") %>%
+#   dyRangeSelector(dateWindow = c("2014-10-01", "2018-02-01")) %>%
+#   dyAxis("x", axisLabelFormatter = JS("function(d){ return d.getFullYear() }")) %>%
+#   dyLegend(width = 400) %>%
+#   dyOptions(fillGraph = FALSE)
+
+dygraph(monthly_xts, main = "Pegida and counter-mobilisation events, 2014-2018") %>%
+  dyRangeSelector(dateWindow = c("2014-10-01", "2018-02-01")) %>%
+  dyMultiColumnGroup(c("Pegida", "Anti-Pegida")) %>% 
+  dyFilledLine("Total", color = "black", strokeWidth = 2.5) %>%
+  dyAxis("x", axisLabelFormatter = JS("function(d){ return d.getFullYear() }")) %>%
+  dyLegend(width = 400) %>%
+  dyOptions(fillGraph = FALSE)
+
+```
+
+### Map
+
+```{r warning=FALSE, message=FALSE}
+library(dplyr)
+library(lubridate)
+library(sf)
+library(mapview)
+library(leafpop)
+
+city_coords <- tibble::tribble(
+  ~city, ~lat, ~lon,
+  "Aachen", 50.7753, 6.0839,
+  "Berlin", 52.52, 13.405,
+  "Bielefeld", 52.0302, 8.5325,
+  "Bonn", 50.7374, 7.0982,
+  "Braunschweig", 52.2689, 10.5268,
+  "Bremen", 53.0793, 8.8017,
+  "Chemnitz", 50.8278, 12.9214,
+  "Cottbus", 51.7563, 14.3329,
+  "Darmstadt", 49.8728, 8.6512,
+  "Dortmund", 51.5136, 7.4653,
+  "Dresden", 51.0504, 13.7373,
+  "Duisburg", 51.4344, 6.7623,
+  "Düsseldorf", 51.2277, 6.7735,
+  "Erfurt", 50.9848, 11.0299,
+  "Flensburg", 54.7937, 9.4468,
+  "Frankfurt am Main", 50.1109, 8.6821,
+  "Freiburg", 47.999, 7.8421,
+  "Fürth", 49.4783, 10.9903,
+  "Görlitz", 51.1526, 14.9877,
+  "Halle", 51.4969, 11.9695,
+  "Hamburg", 53.5511, 9.9937,
+  "Hannover", 52.3759, 9.732,
+  "Heidelberg", 49.3988, 8.6724,
+  "Jena", 50.9271, 11.5892,
+  "Karlsruhe", 49.0069, 8.4037,
+  "Kassel", 51.3127, 9.4797,
+  "Köln", 50.9375, 6.9603,
+  "Leipzig", 51.3397, 12.3731,
+  "Leverkusen", 51.0459, 6.9847,
+  "Ludwigshafen am Rhein", 49.4741, 8.434,
+  "Lübeck", 53.8655, 10.6866,
+  "Magdeburg", 52.1205, 11.6276,
+  "Mainz", 49.9929, 8.2473,
+  "Mannheim", 49.4875, 8.466,
+  "Mönchengladbach", 51.1805, 6.4428,
+  "München", 48.1351, 11.582,
+  "Münster", 51.9607, 7.6261,
+  "Nürnberg", 49.4521, 11.0767,
+  "Osnabrück", 52.2799, 8.0472,
+  "Paderborn", 51.7189, 8.7575,
+  "Plauen", 50.4947, 12.1382,
+  "Potsdam", 52.3906, 13.0645,
+  "Regensburg", 49.0134, 12.1016,
+  "Rostock", 54.0887, 12.14,
+  "Saarbrücken", 49.2401, 6.9969,
+  "Schwerin", 53.6355, 11.4012,
+  "Stuttgart", 48.7758, 9.1829,
+  "Trier", 49.7596, 6.6441,
+  "Ulm", 48.4011, 9.9876,
+  "Wiesbaden", 50.0782, 8.2398,
+  "Wuppertal", 51.2562, 7.1508,
+  "Würzburg", 49.7913, 9.9534
+)
+
+pegpad_geo <- pegpad %>%
+  left_join(city_coords, by = "city") %>%
+  mutate(year = year(event_date)) %>%
+  filter(!is.na(lat))
+
+# jitter points slightly so fully overlapping events at the same city remain
+# individually visible/clickable, per your request to show each protest as
+# its own point rather than aggregating
+pegpad_sf <- st_as_sf(pegpad_geo, coords = c("lon", "lat"), crs = 4326) %>%
+  st_jitter(amount = 0.1)
+
+# build one mapview layer per year, each with its own matching popup,
+# then combine with `+` so they appear as separate, togglable layers.
+# (doing it this way avoids a known mapview bug where combining `burst`
+# with a pre-built `popup` vector throws a length-mismatch error)
+years <- sort(unique(pegpad_sf$year))
+
+year_layers <- lapply(years, function(yr) {
+  sub <- pegpad_sf[pegpad_sf$year == yr, ]
+  mapview(
+    sub,
+    zcol = "side",
+    col.regions = c("pro-pegida" = "#b2182b", "anti-pegida" = "#2166ac"),
+    popup = popupTable(
+      sub,
+      zcol = c("city", "event_date", "side", "events", "participants_mean", "part_violence")
+    ),
+    layer.name = paste("Pegida events", yr)
+  )
+})
+
+Reduce(`+`, year_layers)
+
+```
+
+### Explanatory note
+
+The data is the event-level version of PEGPAD (from Vullers & Hellmeier 2022, "Does counter-mobilization contain right-wing populist movements? Evidence from Germany", *European Journal of Political Research 61*: 21-45). The dygraph plots total monthly events as the filled black line, with the two sides as coloured bars.
+
+### Data table 
+
+
+```{r}
+library(reactable)
+
+reactable::reactable(monthly,
+  defaultPageSize = 5,
+  style = list(fontSize = "25px"),
+  defaultColDef = colDef(
+    align = "left",
+    minWidth = 50,
+    headerStyle = list(background = "#fabf68", fontWeight = "bold") # #f7f7f8
+  )
+  # ,
+  # columns=list(
+  #   iyear=colDef(name="Year", align="center", minWidth=50),
+  #   gname=colDef(name="Group", minWidth=300), # , maxWidth=200
+  #   attacks=colDef(name="Attacks", minWidth=100)
+  # )
+)
+  
+```
+
+::: {.callout-note collapse="true" style="margin-top: -15px;"}
+#### Data download
+
+```{r echo = F, collapse = TRUE, comment = "#>", message = FALSE, warning=FALSE}
+library(downloadthis)
+
+monthly %>% download_this(
+    output_name = "PEGPAD_monthly",
+    output_extension = ".csv",
+    button_label = "Download dataset as csv",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
+
+:::
+
+::: 
+
 
 # Poll: identities and emotions {background-color="#2c844c"}
 
