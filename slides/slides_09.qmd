@@ -1364,6 +1364,79 @@ plot_m_strengthened_or_weakened = Plot.plot({
 
 ```
 
+# Open data - POLDEM protest repertoires {background-color="#ffe0b2"}
+
+::: panel-tabset
+### Visualisation
+
+```{r warning=FALSE, message=FALSE}
+library(data.table)
+library(sf)
+library(mapview)
+library(leafpop)
+
+# acled <- fread("../resources/data/acled/ACLEDdata.csv",
+#                select = c("event_date", "interaction", "region", "country",
+#                           "location", "latitude", "longitude", "fatalities", "notes"))
+# acled[, event_date := as.Date(event_date)]
+# 
+# state_protester <- acled[interaction == "State forces-Protesters" &
+#                             region == "Europe" &
+#                             event_date >= as.Date("2022-01-01")]
+# state_protester[, year := format(event_date, "%Y")]
+# 
+# write.csv(state_protester, file = "acled_state_protester.csv")
+
+acled <- fread("../resources/data/acled/acled_state_protester.csv",)
+
+state_protester <- acled[interaction == "State forces-Protesters" &
+                            region == "Europe" &
+                            event_date >= as.Date("2022-01-01")]
+state_protester[, year := format(event_date, "%Y")]
+
+state_sf <- st_as_sf(state_protester, coords = c("longitude", "latitude"), crs = 4326)
+
+mapview(
+  state_sf,
+  zcol = "year",
+  layer.name = "State forces vs. protesters",
+  popup = popupTable(
+    state_sf,
+    zcol = c("event_date", "country", "location", "fatalities", "notes")
+  )
+)
+
+# to widen the scope (slower to render), e.g. all years and/or all regions:
+# state_protester <- acled[interaction == "State forces-Protesters" & region == "Europe"]
+# state_protester <- acled[interaction == "State forces-Protesters"]
+
+```
+
+### Explanatory note
+
+Data source: ACLED (Armed Conflict Location & Event Data Project, <https://acleddata.com/>). Each point is an event where ACLED's `interaction` variable is coded `"State forces-Protesters"` (i.e. direct engagement between state forces and protesters, from crowd-control interventions to violent crackdowns). This is limited to `region == "Europe"` and 2022 onwards (\~3,000 points). Clicking a point opens a popup table including the `notes` field, so students can read what actually happened at a given event.
+
+### Data download 
+
+::: {.callout-note collapse="true" style="margin-top: -15px;"}
+#### Data download
+
+```{r echo = F, collapse = TRUE, comment = "#>", message = FALSE, warning=FALSE}
+library(downloadthis)
+
+state_protester %>% download_this(
+    output_name = "ACLED_state_protester",
+    output_extension = ".csv",
+    button_label = "Download dataset as csv",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
+
+:::
+
+::: 
 
 
 # Research closer look {background-color="#2c844c"}

@@ -1216,6 +1216,7 @@ plot_m_party_allies = Plot.plot({
 
 :::: {.columns}
 :::{.column width="50%"}
+- Open data
 - @HeinzeWeisskricher2022
     + research questions
     + types of party responses 
@@ -1229,6 +1230,106 @@ plot_m_party_allies = Plot.plot({
 
 :::
 ::::
+
+## Open data - POLDEM issues {background-color="#ffe0b2"}
+
+::: panel-tabset
+### Visualisation
+
+```{r warning=FALSE, message=FALSE}
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(ggiraph)
+
+poldem <- read.csv("../resources/data/poldem/poldem-protest_30.csv", stringsAsFactors = FALSE)
+
+party_labels <- c(
+  actor_party_left    = "Left party",
+  actor_party_right   = "Right party",
+  actor_party_unknown = "Unknown/unclear party"
+)
+
+party_yearly <- poldem %>%
+  select(year, all_of(names(party_labels))) %>%
+  pivot_longer(-year, names_to = "actor", values_to = "flag") %>%
+  filter(flag == "yes") %>%
+  mutate(actor = recode(actor, !!!party_labels)) %>%
+  count(year, actor) %>%
+  mutate(tooltip = paste0(actor, ", ", year, ": ", n, " events"))
+
+p <- ggplot(party_yearly, aes(x = year, y = n, fill = actor,
+                               tooltip = tooltip, data_id = actor)) +
+  geom_col_interactive(position = position_dodge(width = 0.8), width = 0.7) +
+  scale_x_continuous(breaks = seq(2000, 2015, 1)) +
+  labs(x = NULL, y = "No. of protest events",
+       fill = "Party actor involved",
+       title = "Protest events with party involvement, by orientation",
+       subtitle = "30 European countries, 2000-2015 (PolDem)") +
+  theme_minimal(base_size = 13) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+girafe(
+  ggobj = p, width_svg = 10, height_svg = 5.5,
+  options = list(
+    opts_hover(css = "stroke:black;stroke-width:1.5px;"),
+    opts_hover_inv(css = "opacity:0.3;"),
+    opts_tooltip(css = "background-color:white;padding:4px;border-radius:3px;")
+  )
+)
+
+```
+
+### Explanatory note
+
+Data source: Kriesi et al. 2020, [PolDem-Protest Dataset](https://poldem.eui.eu/) 30 European Countries, Version 1.
+
+### Data table 
+
+```{r}
+library(reactable)
+
+party_yearly <- party_yearly %>% select(year, actor, n)
+
+reactable::reactable(party_yearly,
+  defaultPageSize = 5,
+  style = list(fontSize = "25px"),
+  defaultColDef = colDef(
+    align = "left",
+    minWidth = 20,
+    headerStyle = list(background = "#fabf68", fontWeight = "bold") # #f7f7f8
+  )
+  # ,
+  # columns=list(
+  #   iyear=colDef(name="Year", align="center", minWidth=50),
+  #   gname=colDef(name="Group", minWidth=300), # , maxWidth=200
+  #   attacks=colDef(name="Attacks", minWidth=100)
+  # )
+)
+  
+```
+
+::: {.callout-note collapse="true" style="margin-top: -15px;"}
+#### Data download
+
+```{r echo = F, collapse = TRUE, comment = "#>", message = FALSE, warning=FALSE}
+library(downloadthis)
+
+party_yearly %>% download_this(
+    output_name = "PolDem_party_yearly",
+    output_extension = ".csv",
+    button_label = "Download dataset as csv",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
+
+:::
+
+::: 
+
+
 
 ## @HeinzeWeisskricher2022 - RQ
 

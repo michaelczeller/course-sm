@@ -37,9 +37,7 @@ bibliography: ../../../library.bib
 
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
-| 4 Dec:  | Daichi, Seongyeon, Jehyun        | ethnography | 
-| 8 Jan:  | Ayla, Tara, Theresa, Annabelle   | discourse analysis | 
-| 15 Jan: | Luna, Emilene, Raffa             | interviewing | 
+|         |                                  |        | 
 
 : Presentations line-up
 
@@ -638,6 +636,114 @@ If have an opinion on these points in the comments:
     start="1"
     width="90%" 
     height="90%" >}}
+
+# Open data - Campaign outcomes {background-color="#ffe0b2"}
+
+::: panel-tabset
+### Visualisation
+
+```{r warning=FALSE, message=FALSE}
+library(readxl)
+library(dplyr)
+library(plotly)
+
+navco <- read_excel("../resources/data/NAVCO_files/NAVCO2-1_ForPublication.xls", guess_max = 20000)
+
+campaigns <- navco %>%
+  group_by(id, camp_name) %>%
+  summarise(
+    start_year     = first(start_year),
+    end_year       = first(end_year),
+    camp_duration  = first(camp_duration),
+    prim_meth      = first(prim_meth),
+    success        = max(success, na.rm = TRUE),
+    total_part     = first(total_part),
+    target_country = first(target_country),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    method  = recode(as.character(prim_meth), "0" = "Violent campaign", "1" = "Nonviolent campaign"),
+    outcome = recode(as.character(success), "0" = "Not successful", "1" = "Successful"),
+    total_part = ifelse(total_part < 0, NA, total_part),
+    tooltip = paste0(
+      camp_name, " (", target_country, ")<br>",
+      start_year, "-", end_year, " - ", method, "<br>",
+      "Outcome: ", outcome,
+      ifelse(!is.na(total_part), paste0("<br>Participants: ", format(total_part, big.mark = ",")), "")
+    )
+  )
+
+plot_ly(
+  campaigns,
+  x = ~start_year,
+  y = ~camp_duration,
+  type = "scatter",
+  width = "100%",
+  height = "100%",
+  mode = "markers",
+  color = ~method,
+  colors = c("Nonviolent campaign" = "#2166ac", "Violent campaign" = "#b2182b"),
+  symbol = ~outcome,
+  symbols = c("Successful" = "circle", "Not successful" = "x"),
+  size = ~total_part,
+  sizes = c(30, 800),
+  marker = list(sizemode = "area", opacity = 0.65, line = list(width = 0.5, color = "white")),
+  text = ~tooltip,
+  hoverinfo = "text"
+) %>%
+  layout(
+    title = "Onset, duration and outcome of resistance campaigns, 1945-2013 (NAVCO 2.1)",
+    xaxis = list(
+      title = list(
+        text = "Campaign start year",
+        font = list(size = 20)
+      ),
+      tickfont = list(size = 18)
+    ),
+    yaxis = list(
+      title = list(
+        text = "Campaign duration (years)",
+        font = list(size = 18)
+      ),
+      tickfont = list(size = 18)
+    ),
+    legend = list(
+      orientation = "h", y = -0.3,
+      font = list(size = 16)
+    ),
+    hoverlabel = list(
+      font = list(size = 18)
+    )
+  )
+
+```
+
+### Explanatory note
+
+Data source: NAVCO2-1_ForPublication.xls (Chenoweth & Shay, NAVCO 2.1 - campaign-year panel, 1945-2013). Unlike the earlier dygraphs/bar charts/maps, this is a plotly bubble scatter: x = when the campaign started, y = how long it lasted, colour = nonviolent vs. violent, marker shape = successful vs. not, and bubble size = total participants. Students can see that non-violent campaigns succeed faster and more often, and hover any point for the campaign name and country.
+
+### Data download 
+
+::: {.callout-note collapse="true" style="margin-top: -15px;"}
+#### Data download
+
+```{r echo = F, collapse = TRUE, comment = "#>", message = FALSE, warning=FALSE}
+library(downloadthis)
+
+campaigns %>% download_this(
+    output_name = "NAVCO_campaigns",
+    output_extension = ".csv",
+    button_label = "Download dataset as csv",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
+
+:::
+
+::: 
+
 
 # Poll: impacts {background-color="#2c844c"}
 

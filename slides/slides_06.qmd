@@ -170,6 +170,212 @@ post-war Labour government, witnessing low-level fascist-party organising and ag
 
 [documentary about 43 Group: <https://www.youtube.com/watch?v=oBusQBSCAHY>]{style="font-size:23px;"} 
 
+# Open data - ACLED protest repertoires {background-color="#ffe0b2"}
+
+
+::: panel-tabset
+### Visualisation
+
+```{r warning=FALSE, message=FALSE}
+library(data.table)
+library(dplyr)
+library(tidyr)
+library(lubridate)
+library(xts)
+library(dygraphs)
+library(htmlwidgets)
+library(tidyverse)
+
+# acled <- fread("../resources/data/acled/ACLEDdata.csv", select = c("event_date", "event_type"))
+
+# acled <- fread("../resources/data/acled/ACLEDdata.csv", select = c("event_date", "event_type", "country"))
+# acled <- acled[country == "Germany"]
+# 
+# write.csv(acled, file = "acled_de.csv")
+
+acled <- fread("../resources/data/acled/acled_de.csv", select = c("event_date", "event_type", "country"))
+
+acled[, event_date := as.Date(event_date)]
+acled[, month := floor_date(event_date, "month")]
+
+monthly <- acled[, .N, by = .(month, event_type)] |>
+  as_tibble() |>
+  pivot_wider(names_from = event_type, values_from = N, values_fill = 0) |>
+  arrange(month)
+
+event_types <- setdiff(names(monthly), "month")
+
+monthly_xts <- xts(monthly[, event_types], order.by = monthly$month)
+
+# dygraph(monthly_xts, main = "Repertoires of contention in Europe, 2016-2025 (ACLED)") %>%
+#   dyOptions(stackedGraph = TRUE, colors = RColorBrewer::brewer.pal(length(event_types), "Set2")) %>%
+#   dyRangeSelector(dateWindow = c("2018-01-01", "2025-03-01")) %>%
+#   dyAxis("x", axisLabelFormatter = JS("function(d){ return d.getFullYear() }")) %>%
+#   dyLegend(width = 500)
+
+dygraph(monthly_xts, main = "Repertoires of contention in Germany, 2020-2025 (ACLED)") %>%
+  dyRangeSelector(dateWindow = c("2019-12-01", "2025-03-01")) %>%
+  dyMultiColumnGroup(c("Strategic developments", "Explosions/Remote violence", "Riots", "Battles", "Violence against civilians")) %>% 
+  dySeries("Protests", color="black", strokeWidth=2.5, axis='y2') %>% 
+  dyAxis("x", axisLabelFormatter = JS("function(d){ return d.getFullYear() }")) %>%
+  dyLegend(width = 500)
+
+# dygraph(monthly_xts, main = "Pegida and counter-mobilisation events, 2014-2018") %>%
+#   dyRangeSelector(dateWindow = c("2014-10-01", "2018-02-01")) %>%
+#   dyMultiColumnGroup(c("Pegida", "Anti-Pegida")) %>% 
+#   dyFilledLine("Total", color = "black", strokeWidth = 2.5) %>%
+#   dyAxis("x", axisLabelFormatter = JS("function(d){ return d.getFullYear() }")) %>%
+#   dyLegend(width = 400) %>%
+#   dyOptions(fillGraph = FALSE)
+
+```
+
+### Explanatory note
+
+Data source: ACLED (Armed Conflict Location & Event Data Project, <https://acleddata.com/>). Coverage is thin for 2016-2017 (ACLED expanded its European monitoring progressively), so the early part of the series should be read with caution. The plot area shows monthly counts of ACLED’s six event_type categories, with a line for protests which is by far the most common type in Germany.
+
+### Data table 
+
+```{r}
+library(reactable)
+
+reactable::reactable(monthly,
+  defaultPageSize = 5,
+  style = list(fontSize = "25px"),
+  defaultColDef = colDef(
+    align = "left",
+    minWidth = 50,
+    headerStyle = list(background = "#fabf68", fontWeight = "bold") # #f7f7f8
+  )
+  # ,
+  # columns=list(
+  #   iyear=colDef(name="Year", align="center", minWidth=50),
+  #   gname=colDef(name="Group", minWidth=300), # , maxWidth=200
+  #   attacks=colDef(name="Attacks", minWidth=100)
+  # )
+)
+  
+```
+
+::: {.callout-note collapse="true" style="margin-top: -15px;"}
+#### Data download
+
+```{r echo = F, collapse = TRUE, comment = "#>", message = FALSE, warning=FALSE}
+library(downloadthis)
+
+monthly %>% download_this(
+    output_name = "ACLED_monthly",
+    output_extension = ".csv",
+    button_label = "Download dataset as csv",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
+
+:::
+
+::: 
+
+# Open data - POLDEM protest repertoires {background-color="#ffe0b2"}
+
+::: panel-tabset
+### Visualisation
+
+```{r warning=FALSE, message=FALSE}
+library(dplyr)
+library(tidyr)
+library(lubridate)
+library(xts)
+library(dygraphs)
+library(htmlwidgets)
+
+poldem <- read.csv("../resources/data/poldem/poldem-protest_30.csv", stringsAsFactors = FALSE)
+poldem$date <- as.Date(poldem$date)
+poldem$month <- floor_date(poldem$date, "month")
+
+action_form_labels <- c(
+  "demonstrations"              = "Demonstrations",
+  "violent protest"             = "Violent protest",
+  "strikes"                     = "Strikes",
+  "confrontations, blockades"   = "Blockades/confrontations",
+  "petitions, symbolic actions" = "Petitions/symbolic",
+  "other protest"               = "Other"
+)
+poldem$action_form <- recode(poldem$action_form, !!!action_form_labels)
+
+form_monthly <- poldem %>%
+  count(month, action_form) %>%
+  pivot_wider(names_from = action_form, values_from = n, values_fill = 0) %>%
+  arrange(month)
+
+radical_monthly <- poldem %>%
+  group_by(month) %>%
+  summarise(pct_radical = 100 * mean(radical_action != "not radical"), .groups = "drop")
+
+combined <- left_join(form_monthly, radical_monthly, by = "month")
+action_forms <- setdiff(names(form_monthly), "month")
+
+combined_xts <- xts(combined[, c(action_forms, "pct_radical")], order.by = combined$month)
+
+dygraph(combined_xts, main = "Protest repertoires and radicalisation, 30 European countries (2000-2015)") %>%
+  dyRangeSelector(dateWindow = c("2000-01-01", "2015-12-01")) %>%
+  dyMultiColumnGroup(action_forms) %>%
+  dyFilledLine("pct_radical", axis = "y2", color = "black", strokeWidth = 2) %>%
+  dyAxis("y2", label = "% radical (confrontational + violent)", valueRange = c(0, 100)) %>%
+  dyAxis("x", axisLabelFormatter = JS("function(d){ return d.getFullYear() }")) %>%
+  dyLegend(width = 500, labelsSeparateLines = TRUE)
+
+```
+
+### Explanatory note
+
+Data source: Kriesi et al. 2020, [PolDem-Protest Dataset](https://poldem.eui.eu/) 30 European Countries, Version 1. The stacked bars show the monthly composition of `action_form` (the protest repertoire), and the black line (right-hand axis) overlays the share of events per month coded as `radical_action` (confrontational or violent, vs. not radical). You can see both which tactics are used and how confrontational the overall repertoire is at any point in time.
+
+### Data table 
+
+```{r}
+library(reactable)
+
+reactable::reactable(combined,
+  defaultPageSize = 4,
+  style = list(fontSize = "19px"),
+  defaultColDef = colDef(
+    align = "left",
+    minWidth = 50,
+    headerStyle = list(background = "#fabf68", fontWeight = "bold") # #f7f7f8
+  )
+  # ,
+  # columns=list(
+  #   iyear=colDef(name="Year", align="center", minWidth=50),
+  #   gname=colDef(name="Group", minWidth=300), # , maxWidth=200
+  #   attacks=colDef(name="Attacks", minWidth=100)
+  # )
+)
+  
+```
+
+::: {.callout-note collapse="true" style="margin-top: -15px;"}
+#### Data download
+
+```{r echo = F, collapse = TRUE, comment = "#>", message = FALSE, warning=FALSE}
+library(downloadthis)
+
+combined %>% download_this(
+    output_name = "POLDEM_monthly",
+    output_extension = ".csv",
+    button_label = "Download dataset as csv",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
+
+:::
+
+::: 
+
+
 # Poll: strategy formation and effect {background-color="#2c844c"}
 
 :::: {.columns}

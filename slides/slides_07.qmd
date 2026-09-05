@@ -670,6 +670,107 @@ plot_slacktivism = Plot.plot({
 :::
 ::::
 
+# Open data - POLDEM issues {background-color="#ffe0b2"}
+
+::: panel-tabset
+### Visualisation
+
+```{r warning=FALSE, message=FALSE}
+library(dplyr)
+library(tidyr)
+library(lubridate)
+library(xts)
+library(dygraphs)
+library(htmlwidgets)
+
+issue_cols <- c("issue_econ_private", "issue_econ_public", "issue_cult_lib",
+                 "issue_environment", "issue_political", "issue_regional",
+                 "issue_cult_cons", "issue_xeno", "issue_other")
+
+issue_labels <- c(
+  issue_econ_private = "Economy (private)",
+  issue_econ_public   = "Economy (public)",
+  issue_cult_lib      = "Cultural liberalism",
+  issue_environment   = "Environment",
+  issue_political     = "Political/institutional",
+  issue_regional      = "Regionalism",
+  issue_cult_cons     = "Cultural conservatism",
+  issue_xeno          = "Xenophobia",
+  issue_other         = "Other"
+)
+
+poldem <- read.csv("../resources/data/poldem/poldem-protest_30.csv", stringsAsFactors = FALSE)
+poldem$date <- as.Date(poldem$date)
+poldem$month <- floor_date(poldem$date, "month")
+
+issues_monthly <- poldem %>%
+  select(month, all_of(issue_cols)) %>%
+  pivot_longer(-month, names_to = "issue", values_to = "flag") %>%
+  filter(flag == "yes") %>%
+  mutate(issue = recode(issue, !!!issue_labels)) %>%
+  count(month, issue) %>%
+  pivot_wider(names_from = issue, values_from = n, values_fill = 0) %>%
+  arrange(month)
+
+issue_names <- setdiff(names(issues_monthly), "month")
+
+issues_xts <- xts(issues_monthly[, issue_names], order.by = issues_monthly$month)
+
+dygraph(issues_xts, main = "Issues raised at protest events, 30 European countries (2000-2015)") %>%
+  dyOptions(stackedGraph = TRUE) %>%
+  dyRangeSelector(dateWindow = c("2000-01-01", "2015-12-01")) %>%
+  dyAxis("x", axisLabelFormatter = JS("function(d){ return d.getFullYear() }")) %>%
+  dyLegend(width = 500, labelsSeparateLines = TRUE)
+```
+
+### Explanatory note
+
+Data source: Kriesi et al. 2020, [PolDem-Protest Dataset](https://poldem.eui.eu/) 30 European Countries, Version 1. Since PolDem’s events are coded from English-language newswire reports rather than movement or national-press sources. This series is itself a picture of which issues make it into the international media over time, which is useful to pair with the codebook’s discussion of source bias (pp. 9-10, 47-51) when talking about media gatekeeping of movement issues.
+
+### Data table 
+
+```{r}
+library(reactable)
+
+reactable::reactable(issues_monthly,
+  defaultPageSize = 4,
+  style = list(fontSize = "18px"),
+  defaultColDef = colDef(
+    align = "left",
+    minWidth = 50,
+    headerStyle = list(background = "#fabf68", fontWeight = "bold") # #f7f7f8
+  )
+  # ,
+  # columns=list(
+  #   iyear=colDef(name="Year", align="center", minWidth=50),
+  #   gname=colDef(name="Group", minWidth=300), # , maxWidth=200
+  #   attacks=colDef(name="Attacks", minWidth=100)
+  # )
+)
+  
+```
+
+::: {.callout-note collapse="true" style="margin-top: -15px;"}
+#### Data download
+
+```{r echo = F, collapse = TRUE, comment = "#>", message = FALSE, warning=FALSE}
+library(downloadthis)
+
+issues_monthly %>% download_this(
+    output_name = "PolDem_issues_monthly",
+    output_extension = ".csv",
+    button_label = "Download dataset as csv",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
+
+:::
+
+::: 
+
+
 
 # Movements and (traditional) media coverage {background-color="#2c844c"}
 

@@ -299,6 +299,100 @@ bibliography: ../../../library.bib
 
 [even *modestly successful* [movements can change how people understand issues (through framing)]{style="color:forestgreen;"} and set the stage for later (more successful) movements]{style="font-size:45px;"} 
 
+## Open data - POLDEM {background-color="#ffe0b2"}
+
+::: panel-tabset
+### Visualisation
+
+```{r warning=FALSE, message=FALSE}
+library(dplyr)
+library(tidyr)
+library(lubridate)
+library(xts)
+library(dygraphs)
+library(htmlwidgets)
+
+poldem <- read.csv("../resources/data/poldem/poldem-protest_30.csv", stringsAsFactors = FALSE)
+poldem$date  <- as.Date(poldem$date)
+poldem$month <- floor_date(poldem$date, "month")
+
+env_events  <- poldem %>% filter(issue_environment == "yes")
+xeno_events <- poldem %>% filter(issue_xeno == "yes")
+
+env_monthly  <- env_events  %>% count(month) %>% rename(Environment = n)
+xeno_monthly <- xeno_events %>% count(month) %>% rename(Xenophobia = n)
+
+issues_ts <- full_join(env_monthly, xeno_monthly, by = "month") %>%
+  arrange(month) %>%
+  mutate(across(c(Environment, Xenophobia), ~replace_na(.x, 0)))
+
+issues_xts <- xts(issues_ts[, c("Environment", "Xenophobia")], order.by = issues_ts$month)
+
+dygraph(issues_xts, main = "Environmental vs. xenophobic/anti-immigration protest events over time") %>%
+  dySeries("Environment", color = "#1b9e77") %>%
+  dySeries("Xenophobia", color = "#d95f02") %>%
+  dyRangeSelector(dateWindow = c("2000-01-01", "2015-12-01")) %>%
+  dyAxis("x", axisLabelFormatter = JS("function(d){ return d.getFullYear() }")) %>%
+  dyLegend(width = 400)
+
+```
+
+### Map
+
+```{r warning=FALSE, message=FALSE}
+library(dplyr)
+library(sf)
+library(mapview)
+library(leafpop)
+library(maps)
+
+data(world.cities)
+
+city_lookup <- world.cities %>%
+  arrange(desc(pop)) %>%
+  mutate(name_key = tolower(name)) %>%
+  distinct(name_key, .keep_all = TRUE) %>%
+  select(name_key, lat, long)
+
+geocode_issue <- function(df) {
+  df %>%
+    mutate(name_key = tolower(community)) %>%
+    filter(!is.na(name_key), !grepl("entire country", name_key)) %>%
+    left_join(city_lookup, by = "name_key") %>%
+    filter(!is.na(lat))
+}
+
+env_geo  <- geocode_issue(env_events)
+xeno_geo <- geocode_issue(xeno_events)
+
+env_sf  <- st_as_sf(env_geo,  coords = c("long", "lat"), crs = 4326) %>% st_jitter(amount = 0.02)
+xeno_sf <- st_as_sf(xeno_geo, coords = c("long", "lat"), crs = 4326) %>% st_jitter(amount = 0.02)
+
+m_env <- mapview(
+  env_sf, color = "#1b9e77", col.regions = "#1b9e77",
+  layer.name = "Environmental protests",
+  popup = popupTable(env_sf, zcol = c("date", "country_name", "community", "action_form", "part_all"))
+)
+
+m_xeno <- mapview(
+  xeno_sf, color = "#d95f02", col.regions = "#d95f02",
+  layer.name = "Anti-immigration protests",
+  popup = popupTable(xeno_sf, zcol = c("date", "country_name", "community", "action_form", "part_all"))
+)
+
+m_env + m_xeno
+
+```
+
+
+### Explanatory note
+
+Data source: Kriesi et al. 2020, [PolDem-Protest Dataset](https://poldem.eui.eu/) 30 European Countries, Version 1. Two subsets, events flagged `issue_environment == "yes"` and events flagged `issue_xeno == "yes"`, plotted as monthly counts against each other, to compare the ebb and flow of environmental vs. xenophobic/anti-immigration mobilisation over the 2000-2015 window (e.g. the latter's rise around the 2015 "refugee crisis" period).
+
+
+::: 
+
+
 ## UN Global Compact for **Migration** (GCM) 
 
 ::: panel-tabset
