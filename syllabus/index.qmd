@@ -25,16 +25,16 @@ library(lubridate) # for submission date of assignments
 #You can set days of the week for course meetings (e.g. Monday and Wednesday).
 #Semester start and end dates are selected and then university holidays like spring break are specified.
 #Days of the week that the course meets. Must be full day name in quotes.
-Days <- c("Thursday")
+Days <- c("Monday")
 #Semester start date for classes as YYYY/M/D.
-SemesterStart <- as.Date("2025/10/16")
+SemesterStart <- as.Date("2026/10/11")
 #Semester end date for classes as YYYY/M/D.
-SemesterEnd <- as.Date("2026/2/7")
+SemesterEnd <- as.Date("2027/2/5")
 #Fall break start and stop date.
 WinterBreak <-
   seq.Date(
-    from = as.Date("2025/12/22"),
-    to = as.Date("2026/1/6"),
+    from = as.Date("2026/12/24"),
+    to = as.Date("2027/1/6"),
     by = "day"
   )
 #Spring break start and stop date.
@@ -250,13 +250,13 @@ rub %>%
 <!-- PAST QUESTIONS: -->
 
 <!-- 2025-6 -->
-- A core feature of social movements is that they generate a 'collective identity' among their members. What is collective identity, what does it consist of, how is it produced, and why is it important for movements?
-- How can movements impact politics and society? Discuss with examples.
-- How do movements frame issues? What different sorts of frames are used? Why are they important for movements?
+<!-- - A core feature of social movements is that they generate a 'collective identity' among their members. What is collective identity, what does it consist of, how is it produced, and why is it important for movements? -->
+<!-- - How can movements impact politics and society? Discuss with examples. -->
+<!-- - How do movements frame issues? What different sorts of frames are used? Why are they important for movements? -->
 
-- What are the elements of a social movement's strategy? How do movement organisations form their strategy? Discuss with examples. 
-- Movements often provoke responses from state and/or other social actors. Describe (with examples) how state actors can respond to movements; and describe (with examples) how other social actors (such as countermovements) can respond to movements.
-- Why do movement organisations form coalitions; what are the advantages and risks? What factors (within organisations, between organisations, and contextually) influence whether movement organisations form coalitions?
+<!-- - What are the elements of a social movement's strategy? How do movement organisations form their strategy? Discuss with examples.  -->
+<!-- - Movements often provoke responses from state and/or other social actors. Describe (with examples) how state actors can respond to movements; and describe (with examples) how other social actors (such as countermovements) can respond to movements. -->
+<!-- - Why do movement organisations form coalitions; what are the advantages and risks? What factors (within organisations, between organisations, and contextually) influence whether movement organisations form coalitions? -->
 
 <!-- 2024-5 -->
 <!-- - What elements do social movement strategies consist of? How do different strategies seek to effect change? Discuss with examples. -->
@@ -296,6 +296,8 @@ A good response to this prompt (and others) would likely consist of four parts: 
 (4) **Concluding summary**, e.g.:    
     - To assess whether and in what ways movements can emerge, whether and in what ways movements can have an impact, it is essential to consider relevant POS aspects. Movements exercise their agency within the limitations created by POS.
 
+**Once you have read this far: please send me an email before the second class stating your favourite city and what (if any) social movement(s) you are particularly interested in learning about.**
+
 ## Essay (*Hausarbeit*)
 
 Students that are required by their degree programme to write a final essay will write an analytical data report on a social movement phenomenon, such as protest activity (or in a specific country, or in a sub-national area) or online posting activity by a social movement organisation(s). The report should be 2000-3000 words (excluding citations). It should briefly introduce the subject, briefly discuss relevant research literature, and (particularly important) **should gather and present (in a tablular and/or graphic format) some data relevant to understanding the social movement phenomenon** (e.g., a report on a social movement group might present protest events associated with that group; or a report on online activity might present the quantity and characteristics of online posts by the platform account associated with a group(s)). Please note that introduction and literature review are to be *brief*. **The intention of this report is for you to gather data and generate analytical insights**. Imagine that you are describing this social movement phenomenon to someone (a policymaker or researcher) with no specific knowledge of it; your job is to provide context briefly, offer specific knowledge, and why that knowledge is important. 
@@ -315,8 +317,6 @@ Under exceptional circumstances, the instructor may accept late submissions of t
 An [example data report](../report/index.qmd) is provided on this website. It is a slightly modified version of a previous student's submission and shows an example of a very good data report.
 
 Finally, a suggested (purely voluntary, but perhaps to your ultimate benefit) mode of conducting work on your report: students may find it advantageous to work in [R](https://www.r-project.org/about.html) and [Rstudio](https://posit.co/download/rstudio-desktop/). This is a powerful data management and analysis tool. It combines the capability to import and visualise data, conduct sophisticated analyses, and even present them in nicely formatted documents (whether Word, PDF, or HTML). Students interested in working with datasets in their theses, going on to advanced academic studies, or pursuing a career in research will benefit enormously from engaging with this tool early and often. The course introduction will provide some tips for using this tool. For further information, please turn to the vast material related to R online or inquire with the instructor. Nevertheless, [students are free to work with whatever tools they are most comfortable with, including Microsoft Office programmes.]{style="color:red;"}
-
-**Once you have read this far: please send me an email before second class stating your favourite city and what (if any) social movement(s) you are particularly interested in learning about.**
 
 ::: {.callout-caution collapse="true"}
 ## Scoring rubric
