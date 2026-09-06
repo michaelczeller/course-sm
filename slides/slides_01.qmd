@@ -289,7 +289,7 @@ kable(data.frame(
 
 - attend class and actively participate
     + do required reading
-    <!-- + develop knowledge of assigned politically violent group -->
+    + develop knowledge of assigned social movement group
     
 ## Course assessment - *Presentation*
 
