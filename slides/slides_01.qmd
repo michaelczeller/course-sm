@@ -402,7 +402,13 @@ kable(data.frame(
 . . . 
 
 - in extreme case (lots of material uncovered) I will upload a video to the course website
-- also, if class is cancelled, you will receive an email and a replacement video will be uploaded on the slides page
+
+## In case class cannot meet... 
+
+- If it is not possible to convene in-person,
+    + you will receive an email: 
+    1. the class will meet online via Zoom (link in email), or
+    2. the class will be cancelled, a recorded lecture uploaded on the 'Slides' page of the website, and a short review at the start of the next meeting
 
 ## Colour scheme for course slides 
 
