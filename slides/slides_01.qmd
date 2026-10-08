@@ -105,6 +105,104 @@ Take the survey at **<https://forms.gle/iXweLEsJ7VTANrmGA>**
 
 - [What are some examples that you know (now or historically)?]{style="color:indigo;"}
 
+## A current example - French student protests
+
+```{r warning=FALSE, message=FALSE}
+
+library(dplyr)
+library(lubridate)
+library(sf)
+library(mapview)
+library(leafpop)
+library(jsonlite)
+library(tidyr)
+
+url <- "https://datarealis.fr/wp-content/uploads/2026/10/incidents.json?v=1791404540924"
+
+data <- fromJSON(url, flatten = TRUE)
+
+incidents <- data$incidents %>%
+  mutate(
+    date = as.Date(date),
+    dept = as.character(dept),
+    lat = as.numeric(lat),
+    lon = as.numeric(lon),
+    cats = sapply(cats, paste, collapse = ", ")
+  )
+
+## summary data
+bilans <- data$bilans %>%
+  bind_rows(.id = "date") %>%
+  mutate(date = as.Date(date))
+
+## jitter slightly so events in same location remain visible
+incidents_sf <- st_as_sf(incidents, coords = c("lon", "lat"), crs = 4326) %>%
+  st_jitter(amount = 0.1)
+
+date_cols <- c(
+  "#666666",
+  "#1f78b4",
+  "#7570b3",
+  "#a6761d",
+  "#66a61e",
+  "#1b9e77",
+  "#e6ab02",
+  "#d95f02",
+  "#e7298a"
+)
+
+# build one mapview layer per day, each with its own matching popup,
+# then combine with `+` so they appear as separate, togglable layers.
+dates <- sort(unique(incidents_sf$date))
+
+# dates_layers <- lapply(dates, function(day) {
+#   sub <- incidents_sf[incidents_sf$date == day, ]
+#   mapview(
+#     sub,
+#     map.types = c("OpenStreetMap"),
+#     col.regions = date_cols[i],
+#     # zcol = "cats",
+#     # col.regions = c("pro-pegida" = "#b2182b", "anti-pegida" = "#2166ac"),
+#     popup = popupTable(
+#       sub,
+#       zcol = c("date", "commune", "lieu", "cats", "desc", "source")
+#     ),
+#     layer.name = paste("Student protests", day)
+#   )
+# })
+# 
+# Reduce(`+`, dates_layers)
+
+dates_layers <- lapply(seq_along(dates), function(i) {
+  day <- dates[i]
+  
+  sub <- incidents_sf[incidents_sf$date == day, ]
+  
+  mapview(
+    sub,
+    map.types = "OpenStreetMap",
+    col.regions = date_cols[i],
+    popup = popupTable(
+      sub,
+      zcol = c("date", "commune", "lieu", "cats", "desc", "source")
+    ),
+    layer.name = paste("Student protests", day)
+  )
+})
+
+m <- Reduce(`+`, dates_layers)
+
+m@map %>%
+  leaflet::setView(
+    lng = 2.35,
+    lat = 48.86,
+    zoom = 5
+  )
+
+```
+
+*protests through 8 October 2026*
+
 ## Connection to Prof. Bolleyer's lecture
 
 - This course is one of the Grundkurse for Prof. Bolleyer's **Einführung in das politische System Deutschlands**
@@ -435,7 +533,8 @@ since [lower indoor C02 improves cognition](https://doi.org/10.1111/ina.12706)..
 - If it is not possible to convene in-person,
     + you will receive an email: 
     1. the class will meet online via Zoom (link in email), or
-    2. the class will be cancelled, a recorded lecture uploaded on the 'Slides' page of the website, and a short review at the start of the next meeting
+    2. the class will be cancelled, a recorded lecture uploaded on the 'Slides' page of the website, and a short review at the start of the next meeting 
+        * 7 December (Class 9) will be cancelled and replaced with a recorded lecture
 
 ## Colour scheme for course slides 
 
