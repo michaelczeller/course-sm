@@ -28,7 +28,7 @@ bibliography: ../../../library.bib
 
 ::: {.column width="65%" .center}
 <!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
-Take the survey at **<https://forms.gle/iXweLEsJ7VTANrmGA>**
+Take the survey at **<https://forms.gle/VjCpAoBw2LmBiYni7>**
 
 - Most influential in success of a social movement?
 - Any social movement organisations you are interested in studying?
