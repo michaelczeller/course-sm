@@ -28,6 +28,10 @@ bibliography: ../../../library.bib
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 ```
 
+## Syllabus reading check 
+
+![](slide_files/02/sm_syllabus_check.png)
+
 ## Students' favourite cities
 
 ```{r}
@@ -41,9 +45,9 @@ library(rnaturalearthdata)
 library(dplyr)
 
 places <- data.frame(
-  city = c("Nuremberg", "Munich", "Taormina"),
-  country = c("Germany", "Germany", "Italy"),
-  likes = c(1, 2, 1),
+  city = c("Istanbul", "Geneva", "Taormina"),
+  country = c("Turkey", "Switzerland", "Italy"),
+  likes = c(1, 1, 1),
   stringsAsFactors = FALSE
 )
 
@@ -290,7 +294,7 @@ POS: *Astra inclinant, sed non obligant.* ('The stars incline us, they do not bi
 
 *In a nutshell, this is what Kitschelt sets out to test*
 
-## @Kitschelt1986 - quick student question on the reading 
+## @Kitschelt1986 - quick student question on the reading {visibility="hidden"}
 
 ::: {style="text-align: center;"}
 **[What does Kitschelt mean here?]{style="color:indigo; font-size:60px;"}** 
@@ -635,9 +639,10 @@ kbl(df,
 # Social movements in/around Germany {background-color="#2c844c"}
 
 :::: {.columns}
-:::{.column width="50%"}
-- roster of movement organisations
-- discussion of causes
+:::{.column width="50%"} 
+- open to discussion on all sorts of movements 
+- highlighting movement organisations to be assigned next week 
+- introduction of cases
 
 :::
 
@@ -646,34 +651,62 @@ kbl(df,
 :::
 ::::
 
+## All sorts of movements 
+
+::: {style="margin-top: -30px;"} 
+- case assignment (six possibilities) next week; selected because...
+    + were/are active in Germany (most for long periods)
+    + have been researched extensively 
+    + represent a mix of frames and topical focuses 
+
+::: 
+
+. . . 
+
+::: {style="margin-top: -30px;"} 
+- we will also discuss other cases (e.g., U.S. Civil Rights Movement) 
+- we can discuss cases you are interested in, just remember: 
+    + we aim to *analyse* and *understand* movements; we are not here to arbitrate their claims/demands or engage in activism 
+
+::: 
+
+. . . 
+
+::: {style="margin-top: -30px;"} 
+- some movements involve charged political issues, so remember:
+    + treat each other with mutual respect 
+    + most are working in 2nd/3rd/4th language, so do not assume provocation if you disagree with an expression 
+
+:::
+
 ## Social movements in/around Germany
 
 > “Those who only know one country, know no country” - Seymour Martin Lipset (inspired by Alexis de Tocqueville)
 
 - well-known and covered in media and research literature
 - diverse strategies, objectives, and ideological characteristics
-- active in Germany and/or EU
+- active in Germany (and elsewhere in the EU)
 
 ## Social movements in/around Germany {.scrollable}
 
-*[Animal Rights Watch]{style="color:goldenrod;"}* (ARIWA),   
-*[Anti-Nuclear]{style="color:goldenrod;"}* (Anti-Atomkraft),   
-*[Autonome]{style="color:goldenrod;"}* (leftist),     
-*[Demos für Alle]{style="color:goldenrod;"}* (anti-gender),   
-*[Extinction Rebellion]{style="color:goldenrod;"}* (XR, climate),   
+<!-- *[Animal Rights Watch]{style="color:goldenrod;"}* (ARIWA),    -->
+<!-- *[Anti-Nuclear]{style="color:goldenrod;"}* (Anti-Atomkraft),    -->
+<!-- *[Autonome]{style="color:goldenrod;"}* (leftist),      -->
+<!-- *[Demos für Alle]{style="color:goldenrod;"}* (anti-gender),    -->
+<!-- *[Extinction Rebellion]{style="color:goldenrod;"}* (XR, climate),    -->
 *[Federation of Antifascists]{style="color:goldenrod;"}* (VVN-BdA),   
 *[Fridays for Future]{style="color:goldenrod;"}* (FFF, climate),   
 *[Identitarian]{style="color:goldenrod;"}* (ethno-pluralism),   
 *[Letzte Generation]{style="color:goldenrod;"}* (LG, climate),   
-*['Ohne mich' Bewegung]{style="color:goldenrod;"}* (peace movement),   
+<!-- *['Ohne mich' Bewegung]{style="color:goldenrod;"}* (peace movement),    -->
 *[PEGIDA]{style="color:goldenrod;"}* (ethno-pluralism),   
-*[Reichsbürgerbewegung]{style="color:goldenrod;"}* (sovereigntist),   
+<!-- *[Reichsbürgerbewegung]{style="color:goldenrod;"}* (sovereigntist),    -->
 *[Querdenken 711]{style="color:goldenrod;"}* (anti-vaccination/lockdown),   
-*[Sozialistischer Deutscher Studentenbund]{style="color:goldenrod;"}* (leftist, 68ers),    
-*[Squatters movement]{style="color:goldenrod;"}* (leftist, housing),  
-*[Vier Pfoten]{style="color:goldenrod;"}* (animal rights)    
+<!-- *[Sozialistischer Deutscher Studentenbund]{style="color:goldenrod;"}* (leftist, 68ers),     -->
+<!-- *[Squatters movement]{style="color:goldenrod;"}* (leftist, housing),   -->
+<!-- *[Vier Pfoten]{style="color:goldenrod;"}* (animal rights)     -->
 
-## Animal Rights Watch (ARIWA)
+## Animal Rights Watch (ARIWA) {visibility="hidden"}
 
 :::: {.columns}
 :::{.column width="50%"}
@@ -689,7 +722,7 @@ kbl(df,
 :::
 ::::
 
-## Anti-Atomkraft
+## Anti-Atomkraft {visibility="hidden"}
 
 :::: {.columns}
 :::{.column width="50%"}
@@ -705,7 +738,7 @@ kbl(df,
 :::
 ::::
 
-## Autonome Bewegung
+## Autonome Bewegung {visibility="hidden"}
 
 :::: {.columns}
 :::{.column width="50%"}
@@ -721,7 +754,7 @@ kbl(df,
 :::
 ::::
 
-## Demos für alle
+## Demos für alle {visibility="hidden"}
 
 :::: {.columns}
 :::{.column width="50%"}
@@ -737,9 +770,7 @@ kbl(df,
 :::
 ::::
 
-
-
-## Extinction Rebellion
+## Extinction Rebellion {visibility="hidden"}
 
 :::: {.columns}
 :::{.column width="50%"}
@@ -789,7 +820,7 @@ kbl(df,
 :::
 ::::
 
-## Hausbesetzung (Squatters) movement
+## Hausbesetzung (Squatters) movement {visibility="hidden"}
 
 :::: {.columns}
 :::{.column width="60%"}
@@ -837,7 +868,7 @@ kbl(df,
 :::
 ::::
 
-## 'Ohne mich'/Peace movement
+## 'Ohne mich'/Peace movement {visibility="hidden"}
 
 :::: {.columns}
 :::{.column width="50%"}
@@ -869,7 +900,7 @@ kbl(df,
 :::
 ::::
 
-## Reichsbürgerbewegung
+## Reichsbürgerbewegung {visibility="hidden"}
 
 :::: {.columns}
 :::{.column width="50%"}
@@ -901,7 +932,7 @@ kbl(df,
 :::
 ::::
 
-## Sozialistischer Deutscher Studentenbund
+## Sozialistischer Deutscher Studentenbund {visibility="hidden"}
 
 :::: {.columns}
 :::{.column width="50%"}
@@ -917,7 +948,7 @@ kbl(df,
 :::
 ::::
 
-## Vier Pfoten
+## Vier Pfoten {visibility="hidden"}
 
 :::: {.columns}
 :::{.column width="50%"}
