@@ -407,6 +407,101 @@ Injustice frames are often the core of **[diagnosing]{style="color:darkred;"}** 
     + *[experiential commensurability]{style="color:forestgreen;"}* - does it fit with the experience of potential members/participants? 
     + *[narrative fidelity]{style="color:forestgreen;"}* - does it accord with wider cultural narratives/traditions?
 
+## Transnational framing example [@tronina2026TransnationalizationAntiGenderPolitics]
+
+@tronina2026TransnationalizationAntiGenderPolitics looks at anti-gender social movement organisations' (SMOs) activity online 
+
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+![](slide_files/03/tronina_case_en.png){.fragment .absolute top=160 width=400 data-fragment-index="2"}
+
+![](slide_files/03/tronina_case_pl.png){.fragment .absolute top=200 width=400 data-fragment-index="3"}
+
+![](slide_files/03/tronina_case_de1.png){.fragment .absolute top=240 width=400 data-fragment-index="4"}
+
+![](slide_files/03/tronina_case_de2.png){.fragment .absolute top=400 width=500 data-fragment-index="5"}
+
+
+:::
+
+::: {.column width="50%"}
+
+::: {.fragment .fade-in-then-semi-out data-fragment-index="2" style="margin-top: -50px;"}
+transnational set of SMOs campaigning against 'gender' (e.g., framing it in opposition to 'family') 
+
+:::
+
+::: {.fragment .fade-in-then-semi-out data-fragment-index="3" style="margin-top: -20px;"}
+likening **gender** and **LGBT** to 'profanity' and 'propaganda' 
+
+:::
+
+::: {.fragment .fade-in-then-semi-out data-fragment-index="4" style="margin-top: -20px;"}
+frames specific to local context (e.g., gendering in German)
+
+:::
+
+::: {.fragment .fade-in-then-semi-out data-fragment-index="5" style="margin-top: -20px;"}
+and connecting online frames to offline actions 
+
+:::
+
+::: {.fragment .fade-in-then-semi-out data-fragment-index="6" style="margin-top: 20px;"}
+investigating this activity through Twitter/X accounts of SMOs in [Croatia (9)]{style="color:forestgreen;"}, [Germany (26)]{style="color:darkorange;"}, [France (41)]{style="color:goldenrod;"}, [Italy (43)]{style="color:violet;"}, and [Poland (29)]{style="color:cadetblue;"}
+
+:::
+
+:::
+
+:::
+
+## Transnational framing example [@tronina2026TransnationalizationAntiGenderPolitics]
+
+Most Transnationally Connective Hashtags Per Year 
+
+![](slide_files/03/tronina1.png)
+
+## Transnational framing example [@tronina2026TransnationalizationAntiGenderPolitics]
+
+Most Transnationally Connective Hashtags Per Year 
+
+*[Dissemination]{style="color:cadetblue;"}* - getting the word out 
+
+![](slide_files/03/tronina2.png)
+
+## Transnational framing example [@tronina2026TransnationalizationAntiGenderPolitics]
+
+Most Transnationally Connective Hashtags Per Year 
+
+*[Dissemination]{style="color:cadetblue;"}* - getting the word out 
+
+![](slide_files/03/tronina3.png)
+
+## Transnational framing example [@tronina2026TransnationalizationAntiGenderPolitics]
+
+Most Transnationally Connective Hashtags Per Year 
+
+*[Mobilisation]{style="color:cadetblue;"}* 
+
+![](slide_files/03/tronina4.png)
+
+## Transnational framing example [@tronina2026TransnationalizationAntiGenderPolitics]
+
+Most Transnationally Connective Hashtags Per Year 
+
+*[Extension]{style="color:cadetblue;"}* - connecting to other issues 
+
+
+![](slide_files/03/tronina5.png)
+
+::: {.fragment .fade-up style="margin-top: -15px;"}
+Check out Tronina's [-@tronina2026TransnationalizationAntiGenderPolitics] article for more!
+
+:::
+
 ## Further on framing... interview with William Gamson:
 
 <!-- Aspect ratios include 1x1, 4x3, 16x9 (the default), and 21x9. -->
