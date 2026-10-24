@@ -28,6 +28,12 @@ bibliography: ../../../library.bib
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 ```
 
+## Movements in the news 
+
+![](slide_files/03/news/macron_protest_bans.png){.fragment .absolute top=50 left=5 width=800}
+
+![](slide_files/03/news/student_protest_serbia.png){.fragment .absolute bottom=50 right=5 width=800}
+
 ## Presentation groups
 
 Remember: topic to me at least by Week 4
