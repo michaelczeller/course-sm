@@ -28,6 +28,8 @@ bibliography: ../../../library.bib
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 ```
 
+- please try to do the readings assigned for the week *prior to that week's class*
+
 ## Movements in the news 
 
 ![](slide_files/03/news/macron_protest_bans.png){.fragment .absolute top=50 left=5 width=800}
