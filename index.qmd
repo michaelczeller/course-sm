@@ -1,5 +1,5 @@
 ---
-title: "Social Movements in Germany"
+title: "Social Movements"
 ---
 
 Instructor: Dr. Michael C. Zeller    
@@ -151,7 +151,7 @@ Weights <- tribble(
 ## Course description
 <!-- Kompetenzen -->
 
-Social movements, long an area of inquiry in the social sciences, have attracted a great deal of attention in recent years. How and why do people engage in collective action? In what ways do they organise and mobilise? What tactics and strategies do they use? How do movements succeed---and how do they fail? This course will introduce students to the scholarship that addresses these questions. We will draw on literature about social movements generally and about specific movement cases, especially (but not exclusively) in Germany. Students will acquire detailed knowledge about the theories guiding past and present social movement research as well as expertise about specific cases of social movement activity.
+Social movements, long an area of inquiry in the social sciences, have attracted a great deal of attention in recent years. How and why do people engage in collective action? In what ways do they organise and mobilise? What tactics and strategies do they use? How do movements succeed---and how do they fail? This course will introduce students to the scholarship that addresses these questions. We will draw on literature about social movements generally and about specific movement cases, in Germany and elsewhere. Students will acquire detailed knowledge about the theories guiding past and present social movement research as well as expertise about specific cases of social movement activity.
 
 ## Course schedule overview
 

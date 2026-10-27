@@ -1,5 +1,5 @@
 ---
-title: "Class 1: Social Movements in Germany"
+title: "Class 1: Social Movements"
 subtitle: "Introduction and the development of social movements"
 author: "[Dr. Michael C. Zeller](https://michaelzeller.de)"
 format: 
