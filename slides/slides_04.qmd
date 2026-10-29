@@ -28,33 +28,32 @@ bibliography: ../../../library.bib
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 ```
 
+- clarification: assigned SM groups are **not** for a presentation or a groupwork assignment; they are for you to study independently and discuss in class (to help apply and clarify concepts)
+
 ## Presentation groups
 
-<!-- ::: panel-tabset -->
-<!-- ## December -->
+::: panel-tabset
+## December
 
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
-|         |                                  |        | 
+| 7 Dec:  |                                  | TBD    | 
+| 14 Dec: |                                  | TBD    | 
+| 21 Dec: |                                  | TBD    | 
 
 : Presentations line-up
 
-<!-- | 11 Dec: |                                  | TBD    |  -->
+## January
 
+| Date    | Presenters                       | Method |
+| -------:|:---------------------------------|:------:|
+| 11 Jan: |                                  | TBD    | 
+| 18 Jan: |                                  | TBD    | 
+| 25 Jan: |                                  | TBD    | 
 
-<!-- ## January -->
+: Presentations line-up
 
-<!-- | Date    | Presenters                       | Method | -->
-<!-- | -------:|:---------------------------------|:------:| -->
-<!-- | 15 Jan: | Luna, Emilene, Raffa             | TBD    |  -->
-
-<!-- : Presentations line-up -->
-
-<!-- | 8 Jan:  |                                  | TBD    |  -->
-<!-- | 22 Jan: |                                  | TBD    |  -->
-<!-- | 29 Jan: |                                  | TBD    |  -->
-
-<!-- ::: -->
+:::
 
 <!-- []{style="font-size:10px;"} -->
 
