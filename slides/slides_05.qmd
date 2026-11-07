@@ -202,6 +202,13 @@ bibliography: ../../../library.bib
 [Is *collective identity* a '**process**' or a '**product**'? (What about in cases you know of?)]{style="color:indigo; font-size:80px;"}
 :::
 
+::: {.fragment .fade-up style="margin-top: 45px;"} 
+### Podcast about Suffragette Constance Bulwer-Lytton (a.k.a. Jane Warton)
+
+<https://www.bbc.co.uk/programmes/m002ld5q>
+
+:::
+
 ## Visible collective identity, example
 
 [anyone know what's going on here?]{style="color:indigo;"}
