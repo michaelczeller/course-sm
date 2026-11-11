@@ -474,7 +474,7 @@ monthly %>% download_this(
 <!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
 Take the survey at **<https://forms.gle/TY9iAYvw4KXvuMZMA>**
 
-[Questions about movements next meeting]{style="color:violet;"}
+[Questions about your movements]{style="color:violet;"}:
 
 - which identity is most emphasised?
 - which 'out-group' is most often part of the group's narratives
