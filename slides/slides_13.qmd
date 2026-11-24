@@ -29,18 +29,18 @@ bibliography: ../../../library.bib
 ```
 
 
-## Presentation groups
+<!-- ## Presentation groups -->
 
 <!-- ::: panel-tabset -->
 <!-- ## December -->
 
-| Date    | Presenters                       | Method |
-| -------:|:---------------------------------|:------:|
-| 4 Dec:  | Daichi, Seongyeon, Jehyun        | ethnography | 
-| 8 Jan:  | Ayla, Tara, Theresa, Annabelle   | discourse analysis | 
-| 15 Jan: | Luna, Emilene, Raffa, Sofia      | TBD    | 
+<!-- | Date    | Presenters                       | Method | -->
+<!-- | -------:|:---------------------------------|:------:| -->
+<!-- | 4 Dec:  | Daichi, Seongyeon, Jehyun        | ethnography |  -->
+<!-- | 8 Jan:  | Ayla, Tara, Theresa, Annabelle   | discourse analysis |  -->
+<!-- | 15 Jan: | Luna, Emilene, Raffa, Sofia      | TBD    |  -->
 
-: Presentations line-up
+<!-- : Presentations line-up -->
 
 <!-- | 11 Dec: |                                  | TBD    |  -->
 
@@ -1502,9 +1502,9 @@ Anonymous feedback here: <https://forms.gle/AjHt6fcnwZxkSg4X8>
 Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 
 
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-pagedown::chrome_print(file.path("..", "docs/slides", "slides_13.html"))
-```
+<!-- ```{r echo=FALSE, message=FALSE, warning=FALSE} -->
+<!-- pagedown::chrome_print(file.path("..", "docs/slides", "slides_13.html")) -->
+<!-- ``` -->
 
 <hr>
 
